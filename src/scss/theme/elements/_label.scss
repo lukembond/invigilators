@@ -1,0 +1,14 @@
+label {
+    display: block;
+    margin: 0px 0px 5px;
+}
+
+label > span {
+    float: left;
+    width: 20%;
+    text-align: right;
+    padding-right: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+

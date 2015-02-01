@@ -1,0 +1,36 @@
+{
+  "name": "invigilators",
+  "version": "0.9.0",
+  "description": "Invigilators Website hosted on github!",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lukembond/invigilators.git"
+  },
+  "author": "lukembond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lukembond/invigilators/issues"
+  },
+  "homepage": "https://github.com/lukembond/invigilators",
+  "dependencies": {},
+  "devDependencies": {
+    "bower": "^1.8.14",
+    "del": "^8.0.1",
+    "ejs": "^3.1.10",
+    "express": "^5.2.1",
+    "gulp": "^5.0.1",
+    "gulp-bower": "0.0.15",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-load-plugins": "^2.0.8",
+    "gulp-sass": "^6.0.1",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.6",
+    "sass": "^1.94.2"
+  }
+}

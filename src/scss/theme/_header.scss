@@ -1,0 +1,134 @@
+header {
+  min-width: 640px;
+  margin: 0;
+  width: 100%;
+  float: left;
+  position: absolute;
+
+  .beta {
+    position: fixed;
+    z-index: 100000;
+    overflow: visible;
+    top: 0;
+    left: 0;
+  }
+
+  .betabanner {
+    a {
+      display: none;
+      background: #e0d7a9;
+      color: #8c0a17;
+      text-decoration: none;
+      font-family: AvantGardeDemi, arial, sans-serif;
+      text-align: center;
+      font-weight: bold;
+      padding: 5px 40px;
+      font-size: 1rem;
+      line-height: 2rem;
+      position: relative;
+      transition: 0.5s;
+    
+      &:hover {
+        background: #8c0a17;
+        color: #e0d7a9;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 800px) {
+    .betabanner {
+      position: fixed;
+      display: block;
+      top: -20px; 
+      left: -20px;
+      width: 200px;
+      overflow: hidden;
+      height: 200px;
+      z-index: 9999;
+    }
+    
+    .betabanner a {
+      width: 200px;
+      position: absolute;
+      top: 60px;
+      left: -60px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.8);
+    }
+  }
+
+  h1 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    z-index: 2000;
+  }
+
+  &.fixed {
+    position: fixed;
+    float: none;
+    top: 0;
+    margin: 0;
+    z-index: 100000;
+
+    h1 {
+      padding-top: 8px;
+    }
+
+    nav {
+      margin: 0;
+      width: 100%;
+      padding: 0 50px;
+      border-radius: 0;
+
+      ul {
+        width: 100%;
+      }
+    }
+  }
+
+  nav {
+    float: left;
+    margin: 0 0 0 150px;
+    position: relative;
+    clear: none;
+    border: 1px solid #000;
+    background: #421114;
+    border-radius: 0 0 2px 2px;
+    z-index: 10;
+
+    ul {
+      margin: 0;
+      padding: 0;
+
+      li {
+        float: left;
+        padding: 0.5em 0 0;
+        margin: 0;
+        border-bottom: 4px solid #8c0a17;
+
+        &:hover {
+          background-color: #8c0a17;
+          border-bottom: 4px solid #b2a379;
+        }
+
+        a {
+          font: 15px/30px AvantGardeMedium, helvetica, arial, sans-serif;
+          padding: 1em 1.5em;
+          color: #8c0a17;
+          text-decoration: none;
+          text-transform: uppercase;
+
+          &:hover {
+            color: #b2a379;
+          }
+        }
+      }
+    }
+  }
+}

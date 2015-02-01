@@ -1,0 +1,3 @@
+define(['libs.min'], function () {
+
+});
