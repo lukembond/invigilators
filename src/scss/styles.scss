@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+/*
+  Main Stylesheet
+
+  The main file that pulls all of the project stylesheets into one place.
+  It allows the development team to split up the CSS into manageable chunks
+  rather than work with one large file. It also allows for more granular tracking
+  through a version control system.
+*/
+
+@import "vendor/_normalize.scss";
+@import "vendor/_boilerplate.scss";
+
+@import "theme/_font-face.scss";
+@import "theme/_base.scss";
+@import "theme/_header.scss";
+@import "theme/_backgrounds.scss";
+@import "theme/_article.scss";
+@import "theme/_header.scss";
+@import "theme/_footer.scss";

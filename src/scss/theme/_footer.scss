@@ -1,0 +1,74 @@
+footer {
+  min-width: 640px;
+  min-height: 90px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2000;
+
+  h2 {
+    position: relative;
+    font: 40px/40px AvantGardeMedium, helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    color: #e0d7a9;
+    margin: 0;
+    padding: 4px 0 0 0;
+    z-index: 9001;
+    text-shadow: 0 0 1px rgba(33, 13, 18, 0.5), 1px 1px 0 #210d12, 1px 1px 0 #210d12, 1px 1px 0 #210d12, 1px 1px 0 #210d12;
+  }
+
+  a {
+    color: #8c0a17;
+    text-decoration: none;
+  }
+
+  ul,
+  ol {
+    padding: 0 5px 0 20px;
+  }
+
+  .info {
+    max-width: 500px;
+    float: left;
+  }
+
+  .social {
+    padding: 20px;
+
+    .feed {
+      width: 340px;
+      height: 350px;
+      float: left;
+      margin: 0 20px 0 0;
+      background: #e0d7a9;
+    }
+  }
+
+  .twitter-share-button {
+    overflow: hidden;
+    width: 98px !important;
+  }
+
+  .fb-like {
+    position: absolute !important;
+    left: 179px;
+    top: 15px;
+  }
+
+  .fb_edge_comment_widget iframe {
+    position: absolute;
+    top: -300px;
+  }
+
+  .tagline {
+    text-align: right;
+    position: relative;
+    clear: both;
+    padding: 4em 0 0;
+    margin: 0;
+    opacity: 0.4;
+    font: 14px/20px AvantGardeLight, helvetica, arial, sans-serif;
+  }
+}

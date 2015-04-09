@@ -1,0 +1,63 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: #210d12;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#210d12), to(#421114));
+  background-image: -webkit-linear-gradient(top, #210d12, #421114);
+  background-image: -moz-linear-gradient(top, #210d12, #421114);
+  background-image: -ms-linear-gradient(top, #210d12, #421114);
+  background-image: -o-linear-gradient(top, #210d12, #421114);
+  background-image: linear-gradient(top, #210d12, #421114);
+  background-attachment: fixed;
+  background-repeat: repeat-x;
+  color: #fff;
+  font: helvetica, arial, sans-serif;
+  margin: 0;
+  min-width: 980px;
+  padding: 90px 0 0 0;
+}
+
+.ie-bg {
+  //filter: progid: DXImageTransform.Microsoft.gradient(startColorStr='$darkbrown', EndColorStr='$midbrown');
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+section {
+  overflow: hidden;
+  width: 100%;
+}
+
+code {
+  font-family: monaco, courier new, monospace;
+  font-size: 17px;
+}
+
+h1 {
+  font: 72px/72px AvantGardeDemi, helvetica, arial, sans-serif;
+  padding: 20px 22px 40px 62px;
+  text-shadow: 0 0 60px rgba(140, 10, 23, 0.5), 1px 1px 0 #b2a379, 2px 2px 0 #b2a379, 2px 2px 0 #b2a379, 2px 2px 0 #b2a379;
+  letter-spacing: -0.07em;
+
+  &:hover {
+    text-shadow: 0 0 60px rgba(224, 215, 169, 0.65), 1px 1px 0 #8c0a17, 2px 2px 0 #8c0a17, 3px 3px 0 #8c0a17, 4px 4px 0 #8c0a17;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  span {
+    font: 38px/38px AvantGardeDemi, helvetica, arial, sans-serif;
+    letter-spacing: -0.06em;
+  }
+}
