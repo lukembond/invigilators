@@ -1,11 +1,11 @@
 footer {
+  background: inherit;
+  display: block;
   min-width: 640px;
   min-height: 90px;
-  width: 100%;
-  display: block;
   overflow: hidden;
   position: relative;
-  z-index: 2000;
+  width: 100%;
 
   h2 {
     position: relative;
