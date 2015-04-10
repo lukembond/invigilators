@@ -16,6 +16,10 @@ article {
   -webkit-box-align: center;
   align-items: center;
 
+  &.intro {
+    background: #ccc;
+  }
+
   .parallaxbg {
       position: absolute;
       right: 40px;

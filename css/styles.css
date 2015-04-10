@@ -459,10 +459,14 @@ textarea {
    Chrome Frame prompt
    ========================================================================== */
 .chromeframe {
-  margin: 0.2em 0;
+  margin: 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
+  z-index: 9001;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.75; }
 
 /* ==========================================================================
    Helper classes
@@ -623,8 +627,7 @@ body {
   color: #fff;
   font: helvetica, arial, sans-serif;
   margin: 0;
-  min-width: 980px;
-  padding: 90px 0 0 0; }
+  min-width: 980px; }
 
 .ie-bg {
   height: 100%;
@@ -658,12 +661,10 @@ h1 {
 
 header {
   min-width: 640px;
-  min-height: 90px;
-  margin: -90px 0;
+  margin: 0;
   width: 100%;
   float: left;
-  position: relative;
-  z-index: 2000; }
+  position: absolute; }
   header .beta {
     position: fixed;
     z-index: 100000;
@@ -692,12 +693,13 @@ header {
         width: 100%; }
   header nav {
     float: left;
-    margin: 0 0 0 120px;
+    margin: 0 0 0 150px;
     position: relative;
     clear: none;
     border: 1px solid #000;
     background: #421114;
-    border-radius: 0 0 2px 2px; }
+    border-radius: 0 0 2px 2px;
+    z-index: 10; }
     header nav ul {
       margin: 0;
       padding: 0; }
@@ -717,6 +719,17 @@ header {
           text-transform: uppercase; }
           header nav ul li a:hover {
             color: #b2a379; }
+
+#video_background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  opacity: 0.6; }
 
 #ah016 {
   background-image: url("../img/ah016.jpg"); }
@@ -783,6 +796,8 @@ article {
   -webkit-align-items: center;
   -webkit-box-align: center;
   align-items: center; }
+  article.intro {
+    background: #ccc; }
   article .parallaxbg {
     position: absolute;
     right: 40px;
@@ -959,12 +974,10 @@ article {
 
 header {
   min-width: 640px;
-  min-height: 90px;
-  margin: -90px 0;
+  margin: 0;
   width: 100%;
   float: left;
-  position: relative;
-  z-index: 2000; }
+  position: absolute; }
   header .beta {
     position: fixed;
     z-index: 100000;
@@ -993,12 +1006,13 @@ header {
         width: 100%; }
   header nav {
     float: left;
-    margin: 0 0 0 120px;
+    margin: 0 0 0 150px;
     position: relative;
     clear: none;
     border: 1px solid #000;
     background: #421114;
-    border-radius: 0 0 2px 2px; }
+    border-radius: 0 0 2px 2px;
+    z-index: 10; }
     header nav ul {
       margin: 0;
       padding: 0; }

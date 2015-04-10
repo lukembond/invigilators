@@ -5,7 +5,7 @@ var STELLARJS = {
       $(window).stellar();
 
       //Cache some variables
-      var links = $('.navigation').find('li');
+      var links = $('nav').find('li');
       var slide = $('article');
       var button = $('.button');
       var mywindow = $(window);
@@ -20,7 +20,7 @@ var STELLARJS = {
           //If the user scrolls up change the navigation link that has the same data-slide attribute as the slide to active and
           //remove the active class from the previous navigation link
           if (direction === 'down') {
-              $('.navigation li[data-slide="' + dataslide + '"]')
+              $('nav li[data-slide="' + dataslide + '"]')
                 .addClass('active')
                 .prev()
                 .removeClass('active');
@@ -28,7 +28,7 @@ var STELLARJS = {
           // else If the user scrolls down change the navigation link that has the same data-slide attribute as the slide to active and
           //remove the active class from the next navigation link
           else {
-              $('.navigation li[data-slide="' + dataslide + '"]')
+              $('nav li[data-slide="' + dataslide + '"]')
                 .addClass('active')
                 .next()
                 .removeClass('active');
@@ -40,8 +40,8 @@ var STELLARJS = {
       //from navigation link slide 2 and adds it to navigation link slide 1.
       mywindow.scroll(function () {
           if (mywindow.scrollTop() === 0) {
-              $('.navigation li[data-slide="1"]').addClass('active');
-              $('.navigation li[data-slide="2"]').removeClass('active');
+              $('nav li[data-slide="1"]').addClass('active');
+              $('nav li[data-slide="2"]').removeClass('active');
           }
       });
 
