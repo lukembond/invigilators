@@ -886,7 +886,7 @@ article {
         padding: 0 0 0 1.5em; }
       article .content .tracklist ol, article .content .tracklist ul {
         padding-left: 20px; }
-        article .content .tracklist ol .tracks, article .content .tracklist ul .tracks {
+        article .content .tracklist ol.tracks, article .content .tracklist ul.tracks {
           list-style-type: none;
           padding: 0; }
         article .content .tracklist ol li, article .content .tracklist ul li {
@@ -903,7 +903,7 @@ article {
         font: 20px/20px AvantGardeMedium, helvetica, arial, sans-serif;
         letter-spacing: -2px;
         color: #e0d7a9;
-        margin: 0;
+        margin: 32px 0 0 0;
         padding: 4px 0 0 0;
         opacity: 0.6;
         z-index: 9001;
