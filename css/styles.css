@@ -645,6 +645,65 @@ code {
   font-family: monaco, courier new, monospace;
   font-size: 17px; }
 
+#video_background {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  overflow: hidden;
+  opacity: 0.6; }
+
+#ah016 {
+  background-image: url("../img/ah016.jpg"); }
+
+#ah015 {
+  background-image: url("../img/ah015.jpg"); }
+
+#ah014 {
+  background-image: url("../img/ah014.jpg"); }
+
+#ah013 {
+  background-image: url("../img/ah013.jpg"); }
+
+#ah012 {
+  background-image: url("../img/ah012.jpg"); }
+
+#ah011 {
+  background-image: url("../img/ah011.jpg"); }
+
+#ah010 {
+  background-image: url("../img/ah010.jpg"); }
+
+#ah009 {
+  background-image: url("../img/ah009.jpg"); }
+
+#ah008 {
+  background-image: url("../img/ah008.jpg"); }
+
+#ah007 {
+  background-image: url("../img/ah007.jpg"); }
+
+#ah006 {
+  background-image: url("../img/ah006.jpg"); }
+
+#ah005 {
+  background-image: url("../img/ah005.jpg"); }
+
+#ah004 {
+  background-image: url("../img/ah004.jpg"); }
+
+#ah003 {
+  background-image: url("../img/ah003.jpg"); }
+
+#ah002 {
+  background-image: url("../img/ah002.jpg"); }
+
+#ah001 {
+  background-image: url("../img/ah001.jpg"); }
+
 h1 {
   font: 72px/72px AvantGardeDemi, helvetica, arial, sans-serif;
   padding: 20px 22px 40px 62px;
@@ -719,65 +778,6 @@ header {
           text-transform: uppercase; }
           header nav ul li a:hover {
             color: #b2a379; }
-
-#video_background {
-  position: absolute;
-  bottom: 0px;
-  right: 0px;
-  min-width: 100%;
-  min-height: 100%;
-  width: auto;
-  height: auto;
-  overflow: hidden;
-  opacity: 0.6; }
-
-#ah016 {
-  background-image: url("../img/ah016.jpg"); }
-
-#ah015 {
-  background-image: url("../img/ah015.jpg"); }
-
-#ah014 {
-  background-image: url("../img/ah014.jpg"); }
-
-#ah013 {
-  background-image: url("../img/ah013.jpg"); }
-
-#ah012 {
-  background-image: url("../img/ah012.jpg"); }
-
-#ah011 {
-  background-image: url("../img/ah011.jpg"); }
-
-#ah010 {
-  background-image: url("../img/ah010.jpg"); }
-
-#ah009 {
-  background-image: url("../img/ah009.jpg"); }
-
-#ah008 {
-  background-image: url("../img/ah008.jpg"); }
-
-#ah007 {
-  background-image: url("../img/ah007.jpg"); }
-
-#ah006 {
-  background-image: url("../img/ah006.jpg"); }
-
-#ah005 {
-  background-image: url("../img/ah005.jpg"); }
-
-#ah004 {
-  background-image: url("../img/ah004.jpg"); }
-
-#ah003 {
-  background-image: url("../img/ah003.jpg"); }
-
-#ah002 {
-  background-image: url("../img/ah002.jpg"); }
-
-#ah001 {
-  background-image: url("../img/ah001.jpg"); }
 
 article {
   width: 100%;
@@ -971,67 +971,6 @@ article {
     article .button:hover {
       background-color: #494949;
       cursor: pointer; }
-
-header {
-  min-width: 640px;
-  margin: 0;
-  width: 100%;
-  float: left;
-  position: absolute; }
-  header .beta {
-    position: fixed;
-    z-index: 100000;
-    overflow: visible;
-    top: 0;
-    left: 0; }
-  header h1 {
-    position: fixed;
-    top: 0;
-    right: 0;
-    margin: 0;
-    z-index: 2000; }
-  header.fixed {
-    position: fixed;
-    float: none;
-    top: 0;
-    margin: 0; }
-    header.fixed h1 {
-      padding-top: 8px; }
-    header.fixed nav {
-      margin: 0;
-      width: 100%;
-      padding: 0 50px;
-      border-radius: 0; }
-      header.fixed nav ul {
-        width: 100%; }
-  header nav {
-    float: left;
-    margin: 0 0 0 150px;
-    position: relative;
-    clear: none;
-    border: 1px solid #000;
-    background: #421114;
-    border-radius: 0 0 2px 2px;
-    z-index: 10; }
-    header nav ul {
-      margin: 0;
-      padding: 0; }
-      header nav ul li {
-        float: left;
-        padding: 0.5em 0 0;
-        margin: 0;
-        border-bottom: 4px solid #8c0a17; }
-        header nav ul li:hover {
-          background-color: #8c0a17;
-          border-bottom: 4px solid #b2a379; }
-        header nav ul li a {
-          font: 15px/30px AvantGardeMedium, helvetica, arial, sans-serif;
-          padding: 1em 1.5em;
-          color: #8c0a17;
-          text-decoration: none;
-          text-transform: uppercase; }
-          header nav ul li a:hover {
-            color: #b2a379; }
 
 footer {
   background: inherit;

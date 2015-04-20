@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+/*
+  Admin pages Stylesheet
+
+  The file that pulls all of the project stylesheets into one place.
+  It allows the development team to split up the CSS into manageable chunks
+  rather than work with one large file. It also allows for more granular tracking
+  through a version control system.
+*/
+
+@import "vendor/_normalize.scss";
+@import "vendor/_boilerplate.scss";
+
+@import "theme/_font-face.scss";
+
+@import "theme/admin/_base.scss";
+
+@import "theme/_form.scss";
+
+@import "theme/elements/_headings.scss";
+
+@import "theme/_header.scss";
+@import "theme/_footer.scss";

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>The Invigilators Admin</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width">
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicons/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicons/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicons/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicons/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicons/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicons/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicons/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicons/apple-touch-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon-180x180.png">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="/img/favicons/android-chrome-192x192.png" sizes="192x192">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="/img/favicons/manifest.json">
+  <link rel="shortcut icon" href="/img/favicons/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="msapplication-TileImage" content="/img/favicons/mstile-144x144.png">
+  <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen, projection" />
+  <script type="text/javascript" src="js/libs.js"></script>
+  <script type="text/javascript" src="js/admin.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 7]>
+    <p class="chromeframe"><span>You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</span></p>
+  <![endif]-->
+  <a class="visuallyhidden" name="top">Top of page</a>
+  <header>
+    <h1><a href="index.html"><span>the </span>Invigilators</a></h1>
+    <div class="beta">
+      <img src="img/beta.png" alt="Still totally in beta..." />
+    </div>
+  </header>
+
+  <article>
+    <form class="ahgenerator" action="">
+      <div class="flex-container">
+        <fieldset id="setInfo">
+          <h2>Set Information</h2>
+          <ul>
+            <li>
+              <label for="epId">Episode ID:</label>
+              <input type="text" id="epId" name="epId" placeholder="e.g. ah007" pattern="[a-z]{2}\d\d\d" required />
+            </li>
+            <li>
+              <label for="location">Location:</label>
+              <input type="text" id="location" name="location" placeholder="e.g. London, UK" required />
+            </li>
+            <li>
+              <label for="date">Date:</label>
+              <input type="date" id="date" name="date" placeholder="e.g. 2004-05-01" required />
+            </li>
+            <li>
+              <label for="length">Length:</label>
+              <input type="text" id="length" name="length" placeholder="e.g. hh:mm:ss" pattern="(\d{2}:)?\d\d:\d\d" required />
+            </li>
+            <li>
+              <label for="description">Description:</label>
+              <textarea id="description" name="description" placeholder="Add some <html> shiz here"></textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="fileInfo">
+          <h2>File Information</h2>
+          <ul>
+            <li>
+              <label for="urlBgImg">Background:</label>
+              <input type="text" id="urlBgImg" name="urlBgImg" value="/img/" required />
+            </li>
+            <li>
+              <label for="urlMp3">Mp3:</label>
+              <input type="url" id="urlMp3" name="urlMp3" value="https://db.tt/" required />
+            </li>
+            <li>
+              <label for="sizeMp3">Mp3 size (MB):</label>
+              <input type="number" id="sizeMp3" name="sizeMp3" placeholder="e.g. 65" required />
+            </li>
+            <li>
+              <label for="urlCue">Cue:</label>
+              <input type="url" id="urlCue" name="urlCue" value="https://db.tt/" />
+            </li>
+          </ul>
+        </fieldset>
+        <fieldset id="trackInfo">
+          <h2>Tracklist Information</h2>
+          <p>%artist% - %title% [%label%]</p>
+          <label for="tracklist">Tracklist:</label>
+          <textarea id="tracklist" name="tracklist" rows="5" cols="10"></textarea>
+        </fieldset>
+      </div>
+      <div class="clearfix">
+        <input type="submit" name="save" id="save" value="JSONERATE" />
+      </div>
+    </form>
+  </article>
+  <footer>
+    <h4>Nuttin down here!</h4>
+    <p class="tagline">website built using some cool html5, css3 and js gubbins, and does not take kindly to versions of IE under flavour 9.
+      <br/>is also still very unfinished.
+      <br/>Now hosted on github!</p>
+  </footer>
+
+  <!-- Facebook SDK -->
+  <div id="fb-root"></div>
+  <script>
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "//connect.facebook.net/en_GB/all.js#xfbml=1&appId=47894446961";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
+
+  <!-- Google Analytics -->
+  <script>
+    var _gaq = [['_setAccount', 'UA-35394379-1'], ['_trackPageview']];
+    (function (d, t) {
+      var g = d.createElement(t),
+        s = d.getElementsByTagName(t)[0];
+      g.src = ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g, s)
+    }(document, 'script'));
+  </script>
+</body>
+
+</html>

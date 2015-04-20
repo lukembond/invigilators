@@ -14,8 +14,11 @@
 
 @import "theme/_font-face.scss";
 @import "theme/_base.scss";
-@import "theme/_header.scss";
+
 @import "theme/_backgrounds.scss";
-@import "theme/_article.scss";
+
+@import "theme/elements/_headings.scss";
+
 @import "theme/_header.scss";
+@import "theme/_article.scss";
 @import "theme/_footer.scss";

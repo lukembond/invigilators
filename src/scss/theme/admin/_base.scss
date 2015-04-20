@@ -1,0 +1,25 @@
+article {
+  display: block;
+  width: 100%;
+  padding: 50px;
+}
+
+.flex-container {
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+
+  fieldset {
+    width: 300px;
+    flex-grow: 1;
+    webkit-flex-grow: 1;
+
+    li {
+      list-style-type: none;
+    }
+  }
+}
