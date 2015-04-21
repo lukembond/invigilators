@@ -1,7 +1,11 @@
 var gulp = require('gulp'),
+    del = require('del'),
     plugins = require('gulp-load-plugins')();
 
 var path = {
+  apps:         "src/js/",
+  modules:      "src/js/app/",
+  libRequire:   "src/js/lib/requirejs/require.js",
   libs:         "src/js/lib/",
   libsFiles:    function(){ return [
                   this.libs + 'modernizr-lite/modernizr.js',
@@ -12,19 +16,39 @@ var path = {
   ]}
 };
 
-gulp.task('js', function () {
-   return gulp.src(['src/js/**/*.js', '!src/js/lib/**/*.js'])
+gulp.task('clean', function(cb) {
+  del([
+    'js/**',
+    'css/**'
+  ], cb);
+});
+
+gulp.task('js-modules', function () {
+   return gulp.src([path.modules + '**/*.js'])
       .pipe(plugins.jshint())
       .pipe(plugins.jshint.reporter('default'))
-      //.pipe(plugins.uglify())
-      .pipe(plugins.concat('application.js'))
+      //.pipe(plugins.concat('application.js'))
+      .pipe(gulp.dest('js/app'));
+});
+
+gulp.task('js-apps', function () {
+   return gulp.src([path.apps + '*.js'])
+      .pipe(plugins.jshint())
+      .pipe(plugins.jshint.reporter('default'))
+      //.pipe(plugins.concat('appAdmin.js'))
       .pipe(gulp.dest('js'));
 });
 
-gulp.task('jslibs', function () {
+gulp.task('requirejs', function () {
+   return gulp.src([path.libRequire])
+     //.pipe(plugins.concat('require.js'))
+     .pipe(gulp.dest('js/libs'));
+});
+
+gulp.task('js-libs', function () {
    return gulp.src(path.libsFiles())
-      .pipe(plugins.concat('libs.js'))
-      .pipe(gulp.dest('js'));
+      .pipe(plugins.concat('libs.min.js'))
+      .pipe(gulp.dest('js/libs'));
 });
 
 gulp.task('bower', function(){
@@ -42,4 +66,4 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('default', ['scss', 'bower', 'jslibs', 'js']);
+gulp.task('default', ['scss', 'bower', 'requirejs', 'js-modules', 'js-apps', 'js-libs']);

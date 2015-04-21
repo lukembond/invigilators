@@ -33,8 +33,11 @@
   <meta name="msapplication-config" content="/img/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
   <link rel="stylesheet" type="text/css" href="css/admin.css" media="screen, projection" />
+  <!--
   <script type="text/javascript" src="js/libs.js"></script>
   <script type="text/javascript" src="js/admin.js"></script>
+  -->
+  <script data-main="js/admin" src="js/libs/require.js"></script>
 </head>
 
 <body>
@@ -49,8 +52,8 @@
     </div>
   </header>
 
-  <article>
-    <form class="ahgenerator" action="">
+  <article class="ahgenerator">
+    <form action="#" method="get">
       <div class="flex-container">
         <fieldset id="setInfo">
           <h2>Set Information</h2>
@@ -100,15 +103,17 @@
         </fieldset>
         <fieldset id="trackInfo">
           <h2>Tracklist Information</h2>
-          <p>%artist% - %title% [%label%]</p>
+          <p>%tracknumber. %artist% - %title% [%label%]</p>
           <label for="tracklist">Tracklist:</label>
           <textarea id="tracklist" name="tracklist" rows="5" cols="10"></textarea>
         </fieldset>
       </div>
       <div class="clearfix">
-        <input type="submit" name="save" id="save" value="JSONERATE" />
+        <input class="button" type="submit" name="save" id="save" value="JSONERATE" />
       </div>
     </form>
+    <h3>Output JSONeration</h3>
+    <textarea id="output" name="output" rows="5" cols="10"></textarea>
   </article>
   <footer>
     <h4>Nuttin down here!</h4>
