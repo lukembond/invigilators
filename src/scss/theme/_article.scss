@@ -119,6 +119,12 @@ article {
         padding: 0 0 0 1.5em;
         border-bottom: 4px solid #fff;
       }
+
+      h2.mixnotfound {
+        font: 100px/100px AvantGardeDemi, helvetica, arial, sans-serif;
+        text-align: center;
+        opacity: 0.7;
+      }
     }
 
     .player {
@@ -143,6 +149,7 @@ article {
         &.tracks {
           list-style-type: none;
           padding: 0;
+          margin: 0;
         }
 
         li {

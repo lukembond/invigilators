@@ -717,6 +717,18 @@ code {
   overflow: hidden;
   opacity: 0.6; }
 
+#ah020 {
+  background-image: url("../img/ah020.jpg"); }
+
+#ah019 {
+  background-image: url("../img/ahNotFound.png"); }
+
+#ah018 {
+  background-image: url("../img/ah018.jpg"); }
+
+#ah017 {
+  background-image: url("../img/ah017.jpg"); }
+
 #ah016 {
   background-image: url("../img/ah016.jpg"); }
 
@@ -791,6 +803,42 @@ header {
     overflow: visible;
     top: 0;
     left: 0; }
+  header .betabanner a {
+    background: #e0d7a9;
+    color: #8c0a17;
+    text-decoration: none;
+    font-family: AvantGardeDemi, arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 40px;
+    font-size: 1rem;
+    line-height: 2rem;
+    position: relative;
+    transition: 0.5s; }
+    header .betabanner a:hover {
+      background: #8c0a17;
+      color: #e0d7a9; }
+  @media screen and (min-width: 800px) {
+    header .betabanner {
+      position: fixed;
+      display: block;
+      top: -20px;
+      left: -20px;
+      width: 200px;
+      overflow: hidden;
+      height: 200px;
+      z-index: 9999; }
+    header .betabanner a {
+      width: 200px;
+      position: absolute;
+      top: 60px;
+      left: -60px;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); } }
   header h1 {
     position: fixed;
     top: 0;
@@ -938,6 +986,10 @@ article {
         bottom: 0;
         padding: 0 0 0 1.5em;
         border-bottom: 4px solid #fff; }
+      article .content .description h2.mixnotfound {
+        font: 100px/100px AvantGardeDemi, helvetica, arial, sans-serif;
+        text-align: center;
+        opacity: 0.7; }
     article .content .player {
       background-color: rgba(232, 232, 232, 0.75); }
     article .content .tracklist {
@@ -954,7 +1006,8 @@ article {
         article .content .tracklist ol.tracks,
         article .content .tracklist ul.tracks {
           list-style-type: none;
-          padding: 0; }
+          padding: 0;
+          margin: 0; }
         article .content .tracklist ol li,
         article .content .tracklist ul li {
           font-size: 75%;
