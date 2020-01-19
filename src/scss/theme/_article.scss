@@ -48,7 +48,7 @@ article {
     position: relative;
     display: block;
     margin: 0 auto;
-    width: 650px;
+    width: 60vw;
     z-index: 10;
     border: 1px solid #333;
     border-radius: 2px;
@@ -110,7 +110,7 @@ article {
     }
 
     .description {
-      background-color: rgba(224, 215, 169, 0.5);
+      background-color: rgba(232, 232, 232, 0.75);
       position: relative;
       min-height: 100px;
 
@@ -118,12 +118,16 @@ article {
         font: 80px/80px AvantGardeMedium, helvetica, arial, sans-serif;
         bottom: 0;
         padding: 0 0 0 1.5em;
-        border-bottom: 4px solid #e0d7a9;
+        border-bottom: 4px solid #fff;
       }
     }
 
+    .player {
+      background-color: rgba(232, 232, 232, 0.75);
+    }
+
     .tracklist {
-      background-color: rgba(224, 215, 169, 0.5);
+      background-color: rgba(232, 232, 232, 0.75);
       position: relative;
       min-height: 100px;
 
@@ -144,7 +148,10 @@ article {
 
         li {
           font-size: 75%;
-          text-shadow: 1px 2px 2px #000;
+          font-family: AvantGardeMedium;
+          font-weight: bold;
+          color: #000;
+          text-shadow: 1px 1px 1px #fff;
         }
       }
     }
