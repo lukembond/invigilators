@@ -13,13 +13,25 @@
 /*
  * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
   display: block; }
 
 /*
  * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-audio, canvas, video {
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1; }
@@ -61,7 +73,11 @@ html {
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   font-family: sans-serif; }
 
 /*
@@ -82,7 +98,8 @@ a:focus {
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0; }
 
 /* ==========================================================================
@@ -126,7 +143,8 @@ abbr[title] {
 /*
  * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 blockquote {
@@ -148,13 +166,17 @@ mark {
 /*
  * Addresses margins set differently in IE 6/7.
  */
-p, pre {
+p,
+pre {
   margin: 1em 0; }
 
 /*
  * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, serif;
   _font-family: 'courier new', monospace;
   font-size: 1em; }
@@ -176,7 +198,8 @@ q {
 /*
  * Addresses `quotes` property not supported in Safari 4.
  */
-q:before, q:after {
+q:before,
+q:after {
   content: '';
   content: none; }
 
@@ -189,7 +212,8 @@ small {
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -207,7 +231,10 @@ sub {
 /*
  * Addresses margins set differently in IE 6/7.
  */
-dl, menu, ol, ul {
+dl,
+menu,
+ol,
+ul {
   margin: 1em 0; }
 
 dd {
@@ -216,13 +243,16 @@ dd {
 /*
  * Addresses paddings set differently in IE 6/7.
  */
-menu, ol, ul {
+menu,
+ol,
+ul {
   padding: 0 0 0 40px; }
 
 /*
  * Corrects list images handled incorrectly in IE 7.
  */
-nav ul, nav ol {
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none; }
 
@@ -291,7 +321,10 @@ legend {
  *    and Chrome.
  * 3. Improves appearance and consistency in all browsers.
  */
-button, input, select, textarea {
+button,
+input,
+select,
+textarea {
   font-size: 100%;
   /* 1 */
   margin: 0;
@@ -305,7 +338,8 @@ button, input, select, textarea {
  * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-button, input {
+button,
+input {
   line-height: normal; }
 
 /*
@@ -317,7 +351,10 @@ button, input {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -328,7 +365,8 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-button[disabled], input[disabled] {
+button[disabled],
+input[disabled] {
   cursor: default; }
 
 /*
@@ -337,7 +375,8 @@ button[disabled], input[disabled] {
  * 3. Removes excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -364,13 +403,15 @@ input[type="search"] {
  * Removes inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /*
  * Removes inner padding and border in Firefox 3+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -404,7 +445,11 @@ table {
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-html, button, input, select, textarea {
+html,
+button,
+input,
+select,
+textarea {
   color: #222; }
 
 body {
@@ -511,7 +556,8 @@ textarea {
  * Extends the .visuallyhidden class to allow the element to be focusable
  * when navigated to via the keyboard: h5bp.com/p
  */
-.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -536,7 +582,8 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-.clearfix:before, .clearfix:after {
+.clearfix:before,
+.clearfix:after {
   content: " ";
   /* 1 */
   display: table;
@@ -557,6 +604,12 @@ textarea {
    Theses examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */ }
+
 /* ==========================================================================
    Print styles.
    Inlined to avoid required HTTP connection: h5bp.com/r
@@ -568,7 +621,8 @@ textarea {
     /* Black prints faster: h5bp.com/s */
     box-shadow: none !important;
     text-shadow: none !important; }
-  a, a:visited {
+  a,
+  a:visited {
     text-decoration: underline; }
   a[href]:after {
     content: " (" attr(href) ")"; }
@@ -577,25 +631,31 @@ textarea {
   /*
      * Don't show links for images, or javascript/internal links
      */
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
     content: ""; }
-  pre, blockquote {
+  pre,
+  blockquote {
     border: 1px solid #999;
     page-break-inside: avoid; }
   thead {
     display: table-header-group;
     /* h5bp.com/t */ }
-  tr, img {
+  tr,
+  img {
     page-break-inside: avoid; }
   img {
     max-width: 100% !important; }
   @page {
     margin: 0.5cm; }
-
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     orphans: 3;
     widows: 3; }
-  h2, h3 {
+  h2,
+  h3 {
     page-break-after: avoid; } }
 
 @font-face {
@@ -678,7 +738,13 @@ label > span {
   color: #333;
   background-color: #EBEBEB; }
 
-input[type="text"], input[type="email"], input[type="date"], input[type="url"], input[type="number"], textarea, select {
+input[type="text"],
+input[type="email"],
+input[type="date"],
+input[type="url"],
+input[type="number"],
+textarea,
+select {
   border: none;
   color: #525252;
   height: 25px;
@@ -696,8 +762,8 @@ input[type="text"], input[type="email"], input[type="date"], input[type="url"], 
   background: #DFDFDF; }
 
 select {
-  background: #DFDFDF url('down-arrow.png') no-repeat right;
-  background: #DFDFDF url('down-arrow.png') no-repeat right;
+  background: #DFDFDF url("down-arrow.png") no-repeat right;
+  background: #DFDFDF url("down-arrow.png") no-repeat right;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -753,7 +819,8 @@ header {
     position: fixed;
     float: none;
     top: 0;
-    margin: 0; }
+    margin: 0;
+    z-index: 100000; }
     header.fixed h1 {
       padding-top: 8px; }
     header.fixed nav {
@@ -813,7 +880,8 @@ footer {
   footer a {
     color: #8c0a17;
     text-decoration: none; }
-  footer ul, footer ol {
+  footer ul,
+  footer ol {
     padding: 0 5px 0 20px; }
   footer .info {
     max-width: 500px;
