@@ -901,7 +901,6 @@ article {
       position: absolute;
       right: 0.25em;
       letter-spacing: -4px;
-      color: #e0d7a9;
       margin: 0;
       padding: 0;
       opacity: 0.30;
@@ -933,7 +932,7 @@ article {
     article .content .description {
       background-color: rgba(232, 232, 232, 0.75);
       position: relative;
-      min-height: 100px; }
+      min-height: 80px; }
       article .content .description h3 {
         font: 80px/80px AvantGardeMedium, helvetica, arial, sans-serif;
         bottom: 0;
