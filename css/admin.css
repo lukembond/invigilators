@@ -810,6 +810,7 @@ header {
     top: 0;
     left: 0; }
   header .betabanner a {
+    display: none;
     background: #e0d7a9;
     color: #8c0a17;
     text-decoration: none;

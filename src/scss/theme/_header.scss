@@ -15,6 +15,7 @@ header {
 
   .betabanner {
     a {
+      display: none;
       background: #e0d7a9;
       color: #8c0a17;
       text-decoration: none;
@@ -34,7 +35,7 @@ header {
     }
   }
   
-  @media screen and (min-width:800px) {
+  @media screen and (min-width: 800px) {
     .betabanner {
       position: fixed;
       display: block;
