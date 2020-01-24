@@ -18,10 +18,16 @@
   "homepage": "https://github.com/lukembond/invigilators",
   "dependencies": {
     "ejs": "^2.3.1",
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "jquery": "^3.4.1",
+    "jquery.easing": "^1.4.1",
+    "jquery.stellar": "^0.6.2",
+    "modernizr": "^3.8.0",
+    "pug": "^2.0.4",
+    "requirejs": "^2.3.6",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
-    "bower": "^1.8.8",
     "del": "^1.1.1",
     "gulp": "^3.8.11",
     "gulp-bower": "0.0.10",

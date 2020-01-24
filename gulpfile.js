@@ -1,22 +1,24 @@
 var gulp = require('gulp'),
-    del = require('del'),
-    plugins = require('gulp-load-plugins')();
+  del = require('del'),
+  plugins = require('gulp-load-plugins')();
 
 var path = {
-  apps:         "src/js/",
-  modules:      "src/js/app/",
-  libRequire:   "src/js/lib/requirejs/require.js",
-  libs:         "src/js/lib/",
-  libsFiles:    function(){ return [
-                  this.libs + 'modernizr-lite/modernizr.js',
-                  this.libs + 'jquery/dist/jquery.min.js',
-                  this.libs + 'jquery.easing/js/jquery.easing.min.js',
-                  this.libs + 'jquery.stellar/jquery.stellar.min.js',
-                  this.libs + 'waypoints/lib/jquery.waypoints.min.js'
-  ]}
+  apps: "src/js/",
+  modules: "src/js/app/",
+  libRequire: "src/js/lib/requirejs/require.js",
+  libs: "src/js/lib/",
+  libsFiles: function () {
+    return [
+      this.libs + 'modernizr-lite/modernizr.js',
+      this.libs + 'jquery/dist/jquery.min.js',
+      this.libs + 'jquery.easing/js/jquery.easing.min.js',
+      this.libs + 'jquery.stellar/jquery.stellar.min.js',
+      this.libs + 'waypoints/lib/jquery.waypoints.min.js'
+    ]
+  }
 };
 
-gulp.task('clean', function(cb) {
+gulp.task('clean', function (cb) {
   del([
     'js/**',
     'css/**'
@@ -24,39 +26,39 @@ gulp.task('clean', function(cb) {
 });
 
 gulp.task('js-modules', function () {
-   return gulp.src([path.modules + '**/*.js'])
-      .pipe(plugins.jshint())
-      .pipe(plugins.jshint.reporter('default'))
-      //.pipe(plugins.concat('application.js'))
-      .pipe(gulp.dest('js/app'));
+  return gulp.src([path.modules + '**/*.js'])
+    .pipe(plugins.jshint())
+    .pipe(plugins.jshint.reporter('default'))
+    //.pipe(plugins.concat('application.js'))
+    .pipe(gulp.dest('js/app'));
 });
 
 gulp.task('js-apps', function () {
-   return gulp.src([path.apps + '*.js'])
-      .pipe(plugins.jshint())
-      .pipe(plugins.jshint.reporter('default'))
-      //.pipe(plugins.concat('appAdmin.js'))
-      .pipe(gulp.dest('js'));
+  return gulp.src([path.apps + '*.js'])
+    .pipe(plugins.jshint())
+    .pipe(plugins.jshint.reporter('default'))
+    //.pipe(plugins.concat('appAdmin.js'))
+    .pipe(gulp.dest('js'));
 });
 
 gulp.task('requirejs', function () {
-   return gulp.src([path.libRequire])
-     //.pipe(plugins.concat('require.js'))
-     .pipe(gulp.dest('js/libs'));
+  return gulp.src([path.libRequire])
+    //.pipe(plugins.concat('require.js'))
+    .pipe(gulp.dest('js/libs'));
 });
 
 gulp.task('js-libs', function () {
-   return gulp.src(path.libsFiles())
-      .pipe(plugins.concat('libs.min.js'))
-      .pipe(gulp.dest('js/libs'));
+  return gulp.src(path.libsFiles())
+    .pipe(plugins.concat('libs.min.js'))
+    .pipe(gulp.dest('js/libs'));
 });
 
-gulp.task('bower', function(){
+gulp.task('bower', function () {
   return plugins.bower()
-      .pipe(gulp.dest('src/js/lib'));
+    .pipe(gulp.dest('src/js/lib'));
 });
 
-gulp.task('scss', function() {
+gulp.task('scss', function () {
   return gulp.src('src/scss/*.scss')
     .pipe(plugins.sass({
       sourcemap: true,
@@ -66,4 +68,4 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('default', ['scss', 'bower', 'requirejs', 'js-modules', 'js-apps', 'js-libs']);
+gulp.task('default', ['scss', 'requirejs', 'js-modules', 'js-apps', 'js-libs']);
