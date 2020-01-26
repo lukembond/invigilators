@@ -1,0 +1,34 @@
+<footer>
+    <a class="visuallyhidden" name="footer">Footer</a>
+    <div class="social">
+      <h2>all that social stuff</h2>
+      <div class="twitter feed">
+        <a class="twitter-timeline" href="https://twitter.com/theInvigilators" data-widget-id="255073311384539136"
+          data-width="340">Tweets by @theInvigilators</a>
+        <script>
+          ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (!d.getElementById(id)) {
+              js = d.createElement(s);
+              js.id = id;
+              js.src = "//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "twitter-wjs");
+        </script>
+      </div>
+      <div class="facebook feed">
+        <%- include('_facebook') %>
+        <div class="fb-like-box" data-href="http://www.facebook.com/theInvigilators" data-width="340"
+          data-show-faces="false" data-stream="true" data-header="false"></div>
+      </div>
+    </div>
+    <div class="info">
+      <p>More will appear here as it happens. For the moment, check out our <a
+          href="http://www.facebook.com/theInvigilators">Facebook page</a> for more info.</p>
+    </div>
+    <p class="tagline">website built using some cool html5, css3 and js gubbins, and does not take kindly to versions of
+      IE under flavour 9.
+      <br />is also still very unfinished.
+      <br />Now hosted on github!</p>
+</footer>

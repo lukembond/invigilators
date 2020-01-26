@@ -1,71 +1,60 @@
-var gulp = require('gulp'),
-  del = require('del'),
-  plugins = require('gulp-load-plugins')();
+const { src, dest, series, parallel } = require('gulp');
+const del = require('del');
+const scss = require('gulp-sass');
+const minifyJS = require('gulp-minify');
+const minifyCSS = require('gulp-csso');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 
-var path = {
-  apps: "src/js/",
-  modules: "src/js/app/",
-  libRequire: "src/js/lib/requirejs/require.js",
-  libs: "src/js/lib/",
-  libsFiles: function () {
-    return [
-      this.libs + 'modernizr-lite/modernizr.js',
-      this.libs + 'jquery/dist/jquery.min.js',
-      this.libs + 'jquery.easing/js/jquery.easing.min.js',
-      this.libs + 'jquery.stellar/jquery.stellar.min.js',
-      this.libs + 'waypoints/lib/jquery.waypoints.min.js'
-    ]
-  }
+const path = {
+    apps: "src/js/",
+    modules: "src/js/app/",
+    libRequire: "src/js/lib/requirejs/require.js",
+    libs: "src/js/lib/",
+    libsFiles: function () {
+      return [
+        this.libs + 'modernizr-lite/modernizr.js',
+        this.libs + 'jquery/dist/jquery.min.js',
+        this.libs + 'jquery.easing/js/jquery.easing.min.js',
+        this.libs + 'jquery.stellar/jquery.stellar.min.js',
+        this.libs + 'waypoints/lib/jquery.waypoints.min.js'
+      ]
+    }
 };
 
-gulp.task('clean', function (cb) {
-  del([
-    'js/**',
-    'css/**'
-  ], cb);
-});
+function clean(cb) {
+    del([
+      'js/**',
+      'css/**'
+    ], cb);
+}
 
-gulp.task('js-modules', function () {
-  return gulp.src([path.modules + '**/*.js'])
-    .pipe(plugins.jshint())
-    .pipe(plugins.jshint.reporter('default'))
-    //.pipe(plugins.concat('application.js'))
-    .pipe(gulp.dest('js/app'));
-});
+function html() {
+    return
+//   return src('client/templates/*.pug')
+//     .pipe(pug())
+//     .pipe(dest('build/html'))
+}
 
-gulp.task('js-apps', function () {
-  return gulp.src([path.apps + '*.js'])
-    .pipe(plugins.jshint())
-    .pipe(plugins.jshint.reporter('default'))
-    //.pipe(plugins.concat('appAdmin.js'))
-    .pipe(gulp.dest('js'));
-});
-
-gulp.task('requirejs', function () {
-  return gulp.src([path.libRequire])
-    //.pipe(plugins.concat('require.js'))
-    .pipe(gulp.dest('js/libs'));
-});
-
-gulp.task('js-libs', function () {
-  return gulp.src(path.libsFiles())
-    .pipe(plugins.concat('libs.min.js'))
-    .pipe(gulp.dest('js/libs'));
-});
-
-gulp.task('bower', function () {
-  return plugins.bower()
-    .pipe(gulp.dest('src/js/lib'));
-});
-
-gulp.task('scss', function () {
-  return gulp.src('src/scss/*.scss')
-    .pipe(plugins.sass({
-      sourcemap: true,
-      trace: true,
-      loadPath: __dirname + 'src/scss'
+function css() {
+  return src('src/scss/*.scss')
+    .pipe(scss({
+        sourcemap: true,
+        trace: true,
+        loadPath: __dirname + 'src/scss'
     }))
-    .pipe(gulp.dest('css/'));
-});
+    .pipe(minifyCSS())
+    .pipe(dest('css/'))
+}
 
-gulp.task('default', ['scss', 'requirejs', 'js-modules', 'js-apps', 'js-libs']);
+function requirejs() {
+  return src([path.libRequire], { sourcemaps: true })
+    .pipe(minifyJS())
+    .pipe(dest('js/libs'))
+}
+
+exports.clean = clean;
+exports.css = css;
+exports.html = html;
+exports.requirejs = requirejs;
+exports.default = series(clean, parallel(/*html,*/ css, /*requirejs*/));
