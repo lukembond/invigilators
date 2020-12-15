@@ -12,7 +12,8 @@ var path = {
                   this.libs + 'jquery/dist/jquery.min.js',
                   this.libs + 'jquery.easing/js/jquery.easing.min.js',
                   this.libs + 'jquery.stellar/jquery.stellar.min.js',
-                  this.libs + 'waypoints/lib/jquery.waypoints.min.js'
+                  this.libs + 'waypoints/lib/jquery.waypoints.min.js',
+                  this.libs + 'lozad/dist/lozad.min.js',
   ]}
 };
 
