@@ -46,8 +46,9 @@ article {
     display: flex;
     align-items: center;
     z-index: 10;
-    background: rgba(255,255,255,0.8);
-    border: 1px solid #333;
+    background: rgba(255,255,255,0.2);
+    border-left: 1px solid #333;
+    border-right: 1px solid #333;
     border-radius: 2px;
 
     @media screen and (max-width: 800px) {
