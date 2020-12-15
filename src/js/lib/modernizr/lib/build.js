@@ -23,8 +23,8 @@ var baseRequireConfig = {
   include: ['modernizr-init'],
   fileExclusionRegExp: /^(.git|node_modules|modulizr|media|test)$/,
   wrap: {
-    start: '\n;(function(window, document, undefined){',
-    end: '})(window, document);'
+    start: '\n;(function(scriptGlobalObject, window, document, undefined){',
+    end: '})(window, window, document);'
   },
   onBuildWrite: function(id, path, contents) {
     if (this.optimize === 'uglify') {
@@ -83,7 +83,7 @@ function build(generate, generateBanner, pkg) {
     }
 
     if(config.scriptGlobalName) {
-      requireConfig.wrap.end = '})(' + config.scriptGlobalName + ', document);';
+      requireConfig.wrap.end = '})(' + config.scriptGlobalName + ', window, document);';
     }
 
     requireConfig.out = function(output) {
@@ -138,14 +138,14 @@ if (inBrowser) {
 } else {
   var requirejs = require('requirejs');
   var metadata = require('./metadata')();
-  var pkg = require('../package.json');
+  var pkgj = require('../package.json');
 
   requirejs.define('metadata', [], function() {return metadata;});
-  requirejs.define('package', function() {return pkg;});
+  requirejs.define('package', function() {return pkgj;});
 
   baseRequireConfig.baseUrl = __dirname + '/../src';
   baseRequireConfig.paths = {
-    lodash: __dirname + '/../node_modules/lodash/lodash',
+    lodash: require.resolve('lodash').replace(/\.[^/.]+$/, ""),
     test: __dirname + '/../feature-detects',
     lib: __dirname
   };
@@ -158,9 +158,9 @@ if (inBrowser) {
 } else {
   var generateBanner = requirejs(__dirname + '/generate-banner.js');
   var generate = requirejs('generate');
-  var pkg = requirejs('package');
+  var pakg = requirejs('package');
   var _build = build;
   module.exports = function build() {
-    return _build(generate, generateBanner, pkg).apply(undefined, arguments);
+    return _build(generate, generateBanner, pakg).apply(undefined, arguments);
   };
 }

@@ -1,4 +1,4 @@
-/* global UAParser */
+/*global UAParser*/
 window.caniusecb = function(caniuse) {
 
   var ua = new UAParser(navigator.userAgent).getResult();
@@ -13,6 +13,9 @@ window.caniusecb = function(caniuse) {
   describe('caniuse', function() {
     var unusedModernizr = [];
     var unusedCaniuse = _.keys(caniuse.data);
+    // TODO:: This map could (theoretically!) be build automatically by going through all feature-detects and look into
+    // the docs where property and caniuse tags are written down. One should anyway look if some are missing here or in
+    // the feature detect docs
     var map = {
       adownload: 'download',
       ambientlight: 'ambient-light',
@@ -264,7 +267,7 @@ window.caniusecb = function(caniuse) {
       // atleast some of our inputtypes.
       if (o.ciufeature === 'forms') {
         return it('Caniuse result for forms matches Modernizr\'s result for inputtypes', function() {
-          return expect(ciubool).to.be(_.some(Modernizr.inputtypes, function(modernizrResult) {
+          return expect(ciubool).to.be.equal(_.some(Modernizr.inputtypes, function(modernizrResult) {
             return modernizrResult;
           }));
         });
@@ -301,14 +304,14 @@ window.caniusecb = function(caniuse) {
       if (o.caniuseResult.indexOf('a') === 0) {
         return it(o.browser + o.version + ': Caniuse reported partial support for ' + o.ciufeature, function() {
           var modernizrResult = o.result instanceof Boolean ? o.result.valueOf() : !!o.result;
-          expect(ciubool).to.equal(modernizrResult);
+          expect(ciubool).to.be.equal(modernizrResult);
         });
       }
 
       // where we actually do most our assertions
       it(o.browser + o.version + ': Caniuse result for ' + o.ciufeature + ' matches Modernizr\'s ' + (o.fp ? '*false positive*' : 'result') + ' for ' + o.feature, function() {
         var modernizrResult = o.result instanceof Boolean ? o.result.valueOf() : !!o.result;
-        expect(ciubool).to.equal(modernizrResult);
+        expect(ciubool).to.be.equal(modernizrResult);
       });
     }
 
