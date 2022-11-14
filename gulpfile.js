@@ -1,5 +1,6 @@
 var gulp = require('gulp'),
     del = require('del'),
+    sass = require('gulp-sass')(require('sass')),
     plugins = require('gulp-load-plugins')();
 
 var path = {
@@ -59,7 +60,7 @@ gulp.task('bower', function(){
 
 gulp.task('scss', function() {
   return gulp.src('src/scss/*.scss')
-    .pipe(plugins.sass({
+    .pipe(sass({
       sourcemap: true,
       trace: true,
       loadPath: __dirname + 'src/scss'
@@ -67,4 +68,4 @@ gulp.task('scss', function() {
     .pipe(gulp.dest('css/'));
 });
 
-gulp.task('default', ['scss', 'bower', 'requirejs', 'js-modules', 'js-apps', 'js-libs']);
+gulp.task('default', gulp.series('scss', 'bower', 'requirejs', 'js-modules', 'js-apps', 'js-libs'));
