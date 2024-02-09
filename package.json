@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "bower": "^1.8.14",
-    "del": "^7.0.0",
+    "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-bower": "0.0.15",
     "gulp-concat": "^2.6.1",
