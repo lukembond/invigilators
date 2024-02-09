@@ -1,5 +1,9 @@
+async function importDel() {
+  const { del } = await import('del')
+}
+importDel()
+
 var gulp = require('gulp'),
-    del = require('del'),
     sass = require('gulp-sass')(require('sass')),
     plugins = require('gulp-load-plugins')();
 
