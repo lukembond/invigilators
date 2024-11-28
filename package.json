@@ -28,7 +28,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-jshint": "^2.1.0",
     "gulp-load-plugins": "^2.0.8",
-    "gulp-sass": "^5.1.0",
+    "gulp-sass": "^6.0.0",
     "gulp-uglify": "^3.0.2",
     "jshint": "^2.13.6",
     "sass": "^1.80.7"
