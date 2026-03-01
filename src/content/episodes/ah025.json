@@ -1,0 +1,28 @@
+{
+  "id": "ah025",
+  "type": "aural-homework",
+  "title": "Aural Homework 025",
+  "date": "2017-11-26",
+  "location": "London, UK",
+  "length": "1:00:00",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-025-2017-11-26",
+  "image": "/img/ah025.png",
+  "description": "And we're back again already, with episode 25. More from the trance spectrum on this one, with a bit more banter in there for you too.",
+  "tracks": [
+    { "n": 1, "artist": "PureNRG", "title": "Midnight Blue", "label": "" },
+    {
+      "n": 2,
+      "artist": "Paul Oakenfold",
+      "title": "Dreamstate Theme (M.I.K.E. Push Remix)",
+      "label": ""
+    },
+    { "n": 3, "artist": "Robert Nickson", "title": "Somewhere In Spacetime", "label": "" },
+    { "n": 4, "artist": "Nitrous Oxide & 2sher", "title": "Chimera (Trance Mix)", "label": "" },
+    { "n": 5, "artist": "The Cracken", "title": "Shadows Of The Night", "label": "" },
+    { "n": 6, "artist": "Factor B", "title": "Liberator", "label": "" },
+    { "n": 7, "artist": "Joint Operations Centre", "title": "Pathological Effect", "label": "" },
+    { "n": 8, "artist": "James Kitcher", "title": "Rain Cedes To Sunlight", "label": "" },
+    { "n": 9, "artist": "Tranceye", "title": "Distant Dream", "label": "" },
+    { "n": 10, "artist": "Giuseppe Ottaviani", "title": "Lumina", "label": "" }
+  ]
+}

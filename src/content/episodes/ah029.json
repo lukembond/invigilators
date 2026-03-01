@@ -1,0 +1,61 @@
+{
+  "id": "ah029",
+  "type": "aural-homework",
+  "title": "Aural Homework 029",
+  "date": "2020-03-01",
+  "location": "London, UK",
+  "length": "1:12:28",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-029-2020-03-01",
+  "image": "/img/ah029.webp",
+  "description": "Another Invigilators mix, this time off the back of spending Friday evening at a nice small music venue near King's Cross in London listening to the sounds of Tinlicker playing a nice intimate set.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Lemon & Einar K",
+      "title": "Hope (Alex Byrka Remix)",
+      "label": "Flashover"
+    },
+    {
+      "n": 2,
+      "artist": "Darren Tate vs. Jono Grant",
+      "title": "Let The Light Shine In (Drival Remix)",
+      "label": "Armada Captivating"
+    },
+    {
+      "n": 3,
+      "artist": "Orkidea",
+      "title": "Forward Forever (Indecent Noise Remix)",
+      "label": "Pure Trance NEON"
+    },
+    { "n": 4, "artist": "Dan Thompson", "title": "Spectrum", "label": "Nocturnal Animals" },
+    {
+      "n": 5,
+      "artist": "Rapid Eye",
+      "title": "Circa Forever (Sean Tyas Remix)",
+      "label": "Armada Captivating"
+    },
+    {
+      "n": 6,
+      "artist": "Lost In Noise",
+      "title": "Heeding The Call",
+      "label": "Who's Afraid Of 138?!"
+    },
+    { "n": 7, "artist": "Scot Project", "title": "H (Hypnotize)", "label": "Outburst" },
+    { "n": 8, "artist": "Tastexperience", "title": "Time (Madwave Remix)", "label": "Black Hole" },
+    {
+      "n": 9,
+      "artist": "Solarstone & Robert Nickson",
+      "title": "Voyager II (Club Mix)",
+      "label": "Black Hole"
+    },
+    { "n": 10, "artist": "Les Hemstock", "title": "Ascension (2019 mix)", "label": "Neural Music" },
+    { "n": 11, "artist": "Sean Tyas & John Askew", "title": "Unkonscious", "label": "VII" },
+    { "n": 12, "artist": "Giuseppe Ottaviani", "title": "Moscow River", "label": "Black Hole" },
+    {
+      "n": 13,
+      "artist": "Simon O'Shine & Ahmed Romel",
+      "title": "The Love Potion (Aly & Fila Remix)",
+      "label": "Future Sound Of Egypt"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "id": "ah002",
+  "type": "aural-homework",
+  "title": "Aural Homework 002",
+  "date": "2009-06-24",
+  "location": "Canberra, AU",
+  "length": "1:13:21",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-002-2009-06-24",
+  "image": "/img/ah002.webp",
+  "description": "Wassup everybody and thank you for tuning in to Aural Homework number two. Tonight on the show we serve up a delicious platter of new and old tunes for you to study.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Oceanlab",
+      "title": "Lonely Girl (Gareth Emery Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 2, "artist": "Ferry Corsten", "title": "Radio Crash", "label": "Flashover" },
+    { "n": 3, "artist": "Adymus", "title": "Kaleidoscope Eyes", "label": "Enhanced" },
+    { "n": 4, "artist": "Ummet Ozcan", "title": "Time Wave Zero", "label": "Doorn" },
+    { "n": 5, "artist": "Ilya Soloviev", "title": "Universal Universe", "label": "Timeline" },
+    {
+      "n": 6,
+      "artist": "Mungo",
+      "title": "Under The Sea (Sebastian Brandt's Vela Remix)",
+      "label": "A State of Trance"
+    },
+    {
+      "n": 7,
+      "artist": "David Forbes",
+      "title": "Foldback (Mike Foyle Remix)",
+      "label": "Fraction"
+    },
+    {
+      "n": 8,
+      "artist": "Jose Amnesia",
+      "title": "Follow Me (Giuseppe Ottaviani Remix)",
+      "label": "Digital Only"
+    },
+    {
+      "n": 9,
+      "artist": "Saints & Sinners",
+      "title": "Peace (Breakfast Remix)",
+      "label": "Lost Language"
+    },
+    { "n": 10, "artist": "Activa", "title": "This World", "label": "Discover" },
+    {
+      "n": 11,
+      "artist": "A.M.R.",
+      "title": "Sand Dunes (Daniel Kandi Remix)",
+      "label": "Enhanced"
+    },
+    { "n": 12, "artist": "Andy Blueman", "title": "Nyctalopia", "label": "Digital Only" }
+  ]
+}

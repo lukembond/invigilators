@@ -1,0 +1,30 @@
+{
+  "id": "myk002",
+  "type": "mykonos",
+  "title": "Mykonos Sessions - Part 2 - Friday Pre-Party",
+  "date": "2016-09-30",
+  "location": "Mykonos, GR",
+  "length": "0:33:24",
+  "mixcloud": "theInvigilators/the-invigilators-mykonos-sessions-part-2-friday-party-2016-09-30",
+  "image": "/img/myk002.webp",
+  "description": "Here's Part 2 of the Mykonos Sessions recorded live in Greece. This set is from Chris as a quick warm up to get the party started.",
+  "tracks": [
+    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "" },
+    {
+      "n": 2,
+      "artist": "Chicane feat. Moya Brennan",
+      "title": "Saltwater (Jody Wisternoff Remix)",
+      "label": ""
+    },
+    { "n": 3, "artist": "Orkidea", "title": "Nana (Gai Barone Remix)", "label": "" },
+    { "n": 4, "artist": "Super8 & Tab", "title": "Nino", "label": "" },
+    { "n": 5, "artist": "Jaytech", "title": "Awakening (Club Mix)", "label": "" },
+    {
+      "n": 6,
+      "artist": "ReLocate vs. Robert Nickson & Carol Lee",
+      "title": "Built To Last (RNX Remix)",
+      "label": ""
+    },
+    { "n": 7, "artist": "Driftmoon", "title": "Grindstone (Original Guitar Mix)", "label": "" }
+  ]
+}

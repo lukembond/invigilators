@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Nav from "../components/Nav.astro";
+import EpisodesList from "../components/EpisodesList.astro";
+import Footer from "../components/Footer.astro";
+import { getEpisodes } from "../services/episodes";
+
+const episodes = await getEpisodes();
+const INITIAL_LOAD = 5;
+---
+
+<Layout title="The Invigilators">
+  <Hero />
+  
+  <div id="main-content" class="hidden">
+    <Nav />
+    <EpisodesList allEpisodes={episodes} initialLoad={INITIAL_LOAD} />
+    <Footer />
+  </div>
+</Layout>
+
+<script define:vars={{ episodes, INITIAL_LOAD }}>
+  window.episodes = episodes;
+  window.INITIAL_LOAD = INITIAL_LOAD;
+</script>
+
+<script>
+  import { initApp } from "../scripts/app";
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    initApp();
+  });
+</script>

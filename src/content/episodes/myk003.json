@@ -1,0 +1,53 @@
+{
+  "id": "myk003",
+  "type": "mykonos",
+  "title": "Mykonos Sessions - Part 3 - Saturday DnB Session",
+  "date": "2016-10-01",
+  "location": "Mykonos, GR",
+  "length": "1:37:33",
+  "mixcloud": "theInvigilators/the-invigilators-mykonos-sessions-part-3-saturday-dnb-session-2016-10-01",
+  "image": "/img/myk003.webp",
+  "description": "Part 3 - Some Drum & Bass from Luke played by the pool to kick off a chilled day for Chris' birthday day itself with something a bit different!",
+  "tracks": [
+    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "" },
+    { "n": 2, "artist": "Tritonal", "title": "Blackout (Cyantific Remix)", "label": "" },
+    { "n": 3, "artist": "Cyantific", "title": "No More Heroes", "label": "" },
+    { "n": 4, "artist": "Nu:Logic", "title": "Watercolours", "label": "" },
+    {
+      "n": 5,
+      "artist": "GLXY feat. Peta Oneir",
+      "title": "Expressions & Impressions",
+      "label": ""
+    },
+    { "n": 6, "artist": "SpectraSoul feat. Lily McKenzie", "title": "Shelter VIP", "label": "" },
+    { "n": 7, "artist": "deadmau5", "title": "Strobe (Dimension Remix)", "label": "" },
+    { "n": 8, "artist": "Cyantific", "title": "Little Green Men", "label": "" },
+    { "n": 9, "artist": "Mind Vortex", "title": "Bigger Than That", "label": "" },
+    { "n": 10, "artist": "deadmau5", "title": "Some Chords (Cyantific Remix)", "label": "" },
+    { "n": 11, "artist": "Rene LaVice", "title": "Where My Ladies At", "label": "" },
+    { "n": 12, "artist": "Maduk feat. Veela", "title": "Got Me Thinking", "label": "" },
+    { "n": 13, "artist": "Cyantific", "title": "OutaTime", "label": "" },
+    { "n": 14, "artist": "Friction & Karma", "title": "No Return", "label": "" },
+    {
+      "n": 15,
+      "artist": "Seven Lions",
+      "title": "Polarized (Matrix & Futurebound Remix)",
+      "label": ""
+    },
+    { "n": 16, "artist": "Bensley", "title": "Next Generation", "label": "" },
+    { "n": 17, "artist": "Syncopix", "title": "Swollen", "label": "" },
+    { "n": 18, "artist": "Liz-E", "title": "On My Mind", "label": "" },
+    {
+      "n": 19,
+      "artist": "Etherwood",
+      "title": "Falling Out Of Consciousness (Keeno Rmx)",
+      "label": ""
+    },
+    { "n": 20, "artist": "Fred V & Grafix", "title": "Stay Here", "label": "" },
+    { "n": 21, "artist": "Total Science", "title": "See Your Face", "label": "" },
+    { "n": 22, "artist": "Divine Elements", "title": "Midnight Express", "label": "" },
+    { "n": 23, "artist": "Calyx & Teebee", "title": "Where We Go", "label": "" },
+    { "n": 24, "artist": "Noisia & The Upbeats", "title": "Dead Limit", "label": "" },
+    { "n": 25, "artist": "Jauz & Netsky", "title": "Higher (Prototypes Rmx)", "label": "" }
+  ]
+}

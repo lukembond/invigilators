@@ -1,0 +1,61 @@
+{
+  "id": "ah013",
+  "type": "aural-homework",
+  "title": "Aural Homework 013",
+  "date": "2014-01-26",
+  "location": "London, UK",
+  "length": "1:16:08",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-013-2014-01-26",
+  "image": "/img/ah013.webp",
+  "description": "It's another fun rainy weekend in London for Australia day! Put this trancey lot together for your listening goodness.",
+  "tracks": [
+    { "n": 1, "artist": "Orjan Nilsen", "title": "Violetta", "label": "Armind" },
+    { "n": 2, "artist": "Will Atkinson", "title": "Damage", "label": "Perfecto Fluoro" },
+    {
+      "n": 3,
+      "artist": "J.O.C. vs. Sied van Riel",
+      "title": "Adagio For Wings",
+      "label": "Subculture"
+    },
+    { "n": 4, "artist": "Tim Besamusca", "title": "Hyperscape", "label": "Trance All-Stars" },
+    { "n": 5, "artist": "Super8 & Tab", "title": "L.A. (Juventa Remix)", "label": "Anjunabeats" },
+    { "n": 6, "artist": "Marcos", "title": "Summer Solstice", "label": "Vandit" },
+    {
+      "n": 7,
+      "artist": "Six Senses & Terk Dawn",
+      "title": "Dedication (Suncatcher Remix)",
+      "label": "Blue Soho"
+    },
+    {
+      "n": 8,
+      "artist": "Ferry Corsten feat. Jenny Wahlstrom",
+      "title": "Many Ways (Will Atkinson Midnight Remix)",
+      "label": "Flashover"
+    },
+    {
+      "n": 9,
+      "artist": "Manuel Le Saul feat. TranceEye",
+      "title": "Beautiful Moments Of Life",
+      "label": "Discover"
+    },
+    {
+      "n": 10,
+      "artist": "Driftmoon",
+      "title": "Howl At The Moon (Solarstone Pure Mix)",
+      "label": "Pure Trance"
+    },
+    {
+      "n": 11,
+      "artist": "Andrew Stets",
+      "title": "Prometheus (Araya Remix)",
+      "label": "Trance All-Stars"
+    },
+    { "n": 12, "artist": "Jamie Walker", "title": "Boulevard", "label": "Subculture" },
+    {
+      "n": 13,
+      "artist": "RAM & Susana",
+      "title": "RAMelia (Tribute To Amelia)",
+      "label": "Future Sound Of Egypt"
+    }
+  ]
+}

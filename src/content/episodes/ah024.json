@@ -1,0 +1,41 @@
+{
+  "id": "ah024",
+  "type": "aural-homework",
+  "title": "Aural Homework 024",
+  "date": "2017-08-05",
+  "location": "London, UK",
+  "length": "1:41:39",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-024-2017-08-05",
+  "image": "/img/ah024.webp",
+  "description": "A selection of large ones for you! Mixed live in Luke's living room in London, we double up the ironing boards this time out to bring you a double dose of bangers.",
+  "tracks": [
+    { "n": 1, "artist": "Gai Barone", "title": "Lost in Music (Solarstone Pure Mix)", "label": "" },
+    { "n": 2, "artist": "Tranceye", "title": "Night's Watch", "label": "" },
+    { "n": 3, "artist": "Giuseppe Ottaviani", "title": "Countdown (OnAir Mix)", "label": "" },
+    { "n": 4, "artist": "Sean Tyas & Darren Porter", "title": "The Potion", "label": "" },
+    { "n": 5, "artist": "Mike Sanders", "title": "The Eye Of The Storm", "label": "" },
+    { "n": 6, "artist": "Chris Schweizer", "title": "Loaded", "label": "" },
+    {
+      "n": 7,
+      "artist": "Ratty",
+      "title": "Sunrise (Indecent Noise's Dreamstate Remix)",
+      "label": ""
+    },
+    {
+      "n": 8,
+      "artist": "Solarstone & Alex Karweit",
+      "title": "Breakaway (John Askew Remix)",
+      "label": ""
+    },
+    { "n": 9, "artist": "Mark Sixma", "title": "Visionary (Vlind Remix)", "label": "" },
+    { "n": 10, "artist": "Simon Patterson", "title": "Spike", "label": "" },
+    { "n": 11, "artist": "Myde", "title": "Night Rider (Myde's Night Rider Mix)", "label": "" },
+    { "n": 12, "artist": "Arctic Moon", "title": "Nocturnal Horizons", "label": "" },
+    { "n": 13, "artist": "Jens Jakob & Diego Morrill", "title": "Hacksaw", "label": "" },
+    { "n": 14, "artist": "RAM", "title": "RAMexico", "label": "" },
+    { "n": 15, "artist": "DT8 Project", "title": "Destination (James Dymond Remix)", "label": "" },
+    { "n": 16, "artist": "Robert Nickson", "title": "Euphorica", "label": "" },
+    { "n": 17, "artist": "Daniel Kandi & Andrew Visior", "title": "Freedom", "label": "" },
+    { "n": 18, "artist": "John Askew", "title": "Black Coffee", "label": "" }
+  ]
+}

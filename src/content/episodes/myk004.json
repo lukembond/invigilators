@@ -1,0 +1,40 @@
+{
+  "id": "myk004",
+  "type": "mykonos",
+  "title": "Mykonos Sessions - Part 4 - Saturday Pre-Party",
+  "date": "2016-10-01",
+  "location": "Mykonos, GR",
+  "length": "0:58:58",
+  "mixcloud": "theInvigilators/the-invigilators-mykonos-sessions-part-4-saturday-party-2016-10-01",
+  "image": "/img/myk004.webp",
+  "description": "Part 4 - Some weekend warmup time and for the first time Luke & Chris get B2B and deliver some trancier goodness to get you going!",
+  "tracks": [
+    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "" },
+    { "n": 2, "artist": "Sean Tyas", "title": "9am (Dualitik Remix)", "label": "" },
+    {
+      "n": 3,
+      "artist": "Above & Beyond",
+      "title": "Alone Tonight (Jason Ross Remix)",
+      "label": ""
+    },
+    { "n": 4, "artist": "Kyau vs. Albert", "title": "Velvet Morning (Genix Remix)", "label": "" },
+    { "n": 5, "artist": "Jaytech", "title": "Zulu", "label": "" },
+    {
+      "n": 6,
+      "artist": "Andain",
+      "title": "Summer Calling (Daniel Wanrooy & Mark Green Remix)",
+      "label": ""
+    },
+    { "n": 7, "artist": "Matt Holliday", "title": "Nothing Lasts Forever", "label": "" },
+    { "n": 8, "artist": "Sunny Lax", "title": "Aeons", "label": "" },
+    { "n": 9, "artist": "Ashley Wallbridge", "title": "Es Vedra", "label": "" },
+    { "n": 10, "artist": "Jordan Suckley", "title": "Contaminated (Argy Remix)", "label": "" },
+    { "n": 11, "artist": "Stoneface & Terminal", "title": "Keep Going (Dub)", "label": "" },
+    {
+      "n": 12,
+      "artist": "Boom Jinx & Aruna",
+      "title": "Light As A Feather (Sunny Lax Remix)",
+      "label": ""
+    }
+  ]
+}

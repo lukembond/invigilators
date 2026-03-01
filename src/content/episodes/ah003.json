@@ -1,0 +1,72 @@
+{
+  "id": "ah003",
+  "type": "aural-homework",
+  "title": "Aural Homework 003",
+  "date": "2009-12-21",
+  "location": "Canberra, AU",
+  "length": "1:20:37",
+  "mixcloud": "",
+  "image": "/img/ah003.webp",
+  "description": "Finally got around to recording another Aural Homework after finishing uni, forever! Got some awesome tunes that we've been rockin' of late.",
+  "tracks": [
+    { "n": 1, "artist": "Oliver Smith", "title": "Cadence", "label": "Anjunabeats" },
+    { "n": 2, "artist": "Daniel Heatcliff", "title": "Phoenix", "label": "In Trance We Trust" },
+    { "n": 3, "artist": "Solarity", "title": "Terminal 6 (Jaytech Remix)", "label": "Anjunadeep" },
+    {
+      "n": 4,
+      "artist": "Above & Beyond",
+      "title": "Anjunabeach (Jerome Isma-ae Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 5, "artist": "Boom Jinx & Andrew Bayer", "title": "To The Six", "label": "Anjunadeep" },
+    {
+      "n": 6,
+      "artist": "Sia",
+      "title": "Buttons (Markus Schulz Coldharbour Dub)",
+      "label": "Ultra"
+    },
+    {
+      "n": 7,
+      "artist": "Dakota",
+      "title": "Steel Libido (Ashley Wallbridge Remix)",
+      "label": "Coldharbour"
+    },
+    {
+      "n": 8,
+      "artist": "Delerium vs. Gareth Emery",
+      "title": "This Is That Silence (Myon Collision)",
+      "label": "CDR"
+    },
+    { "n": 9, "artist": "Lange & Andy Moor", "title": "Stadium Four", "label": "AVA" },
+    {
+      "n": 10,
+      "artist": "Bakke & Ljungquist",
+      "title": "Fanatic (Invigilators Edit)",
+      "label": "CDR"
+    },
+    {
+      "n": 11,
+      "artist": "John O'Callaghan feat. Josie",
+      "title": "Out of Nowhere (Stoneface & Terminal Remix)",
+      "label": "Captivating Sounds"
+    },
+    {
+      "n": 12,
+      "artist": "Van Der Vleuten",
+      "title": "Find My Way (Michael de Kooker Remix)",
+      "label": "Combined Forces"
+    },
+    {
+      "n": 13,
+      "artist": "Josh Gabriel pres. Winter Kills",
+      "title": "Deep Down (Alex M.O.R.P.H. Remix)",
+      "label": "Different Pieces"
+    },
+    {
+      "n": 14,
+      "artist": "Ali Wilson",
+      "title": "Boombox (Jochen Miller Remix)",
+      "label": "In Charge"
+    }
+  ]
+}

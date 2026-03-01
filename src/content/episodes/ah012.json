@@ -1,0 +1,80 @@
+{
+  "id": "ah012",
+  "type": "aural-homework",
+  "title": "Aural Homework 012",
+  "date": "2013-08-17",
+  "location": "London, UK",
+  "length": "1:44:22",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-012-2013-08-17",
+  "image": "/img/ah012.webp",
+  "description": "Mixed out on the deck on the only beautiful summer's day London gets, this one is another full on trance set.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Simon Patterson & Blazer",
+      "title": "Contraband (Simon Patterson Remix)",
+      "label": "Perfecto Fluoro"
+    },
+    {
+      "n": 2,
+      "artist": "Photographer",
+      "title": "Airport (Wrechiski Remix)",
+      "label": "Monster Digital"
+    },
+    {
+      "n": 3,
+      "artist": "Greg Downey",
+      "title": "Vivid Intent (Giuseppe Ottaviani & Marc Van Linden Remix)",
+      "label": "Discover"
+    },
+    {
+      "n": 4,
+      "artist": "John O'Callaghan feat. Ria",
+      "title": "I'll Follow (Menno de Jong Remix)",
+      "label": "Subculture"
+    },
+    { "n": 5, "artist": "Aizen", "title": "Refractive Sensor", "label": "Discover" },
+    { "n": 6, "artist": "Eddie Bitar", "title": "Juggernaut", "label": "Mental Asylum" },
+    { "n": 7, "artist": "Activa", "title": "Transmission", "label": "Discover" },
+    { "n": 8, "artist": "Greg Downey", "title": "For You", "label": "Global Code" },
+    { "n": 9, "artist": "Indecent Noise", "title": "Battlestar", "label": "Discover" },
+    {
+      "n": 10,
+      "artist": "Darren Porter & Manuel Le Saux",
+      "title": "Stormchaser",
+      "label": "Extrema Global"
+    },
+    {
+      "n": 11,
+      "artist": "The Thrillseekers with York feat. Asheni",
+      "title": "Daydream (Lostly Remix)",
+      "label": "Adjusted"
+    },
+    {
+      "n": 12,
+      "artist": "The Noble Six",
+      "title": "Discovering The Sphinx (Philippe El Sisi Remix)",
+      "label": "Blue Soho"
+    },
+    {
+      "n": 13,
+      "artist": "Aly & Fila vs. Amadeus",
+      "title": "A Dream Of Peace (Neptune Project Remix)",
+      "label": "Discover"
+    },
+    { "n": 14, "artist": "John O'Callaghan", "title": "Vendetta", "label": "Discover Dark" },
+    { "n": 15, "artist": "A.R.D.I.", "title": "Beyond The Time", "label": "A State of Trance" },
+    {
+      "n": 16,
+      "artist": "Ratty",
+      "title": "Sunrise (Here I Am) (Mark Sherry's 2005 Sunburst Mix)",
+      "label": "Monster Classics"
+    },
+    {
+      "n": 17,
+      "artist": "Carl B & Breaking Benjamin",
+      "title": "The Diary Of Jane (Sean Tyas Rework)",
+      "label": "CDR"
+    }
+  ]
+}

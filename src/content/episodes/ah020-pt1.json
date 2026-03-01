@@ -1,0 +1,63 @@
+{
+  "id": "ah020-pt1",
+  "type": "aural-homework",
+  "title": "Aural Homework 020 - Part 1 - Light Mix",
+  "date": "2016-07-30",
+  "location": "London, UK",
+  "length": "1:26:29",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-020-2016-07-30-part-1-light-mix",
+  "image": "/img/ah020.webp",
+  "description": "Episode 20 of Aural Homework is actually a 2 mix special for you! We've put together a light mix and a dark mix for you this time out so you end up with double the dose of homework!",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Sean Tyas",
+      "title": "Reach Out (Giuseppe Ottaviani Remix Edit)",
+      "label": ""
+    },
+    { "n": 2, "artist": "Standerwick & Jennifer Rene", "title": "All Of Us", "label": "" },
+    { "n": 3, "artist": "Manuel le Saux", "title": "Bushido", "label": "" },
+    { "n": 4, "artist": "Local Heroes", "title": "Ares (Uplifting Mix)", "label": "" },
+    { "n": 5, "artist": "RAM", "title": "Heartfelt (Allen Watts Remix)", "label": "" },
+    {
+      "n": 6,
+      "artist": "Martin Roth & Alex Bartlett",
+      "title": "Off The World (Eddie Bitar Remix)",
+      "label": ""
+    },
+    { "n": 7, "artist": "Miroslav Vrlik", "title": "Fly Away", "label": "" },
+    { "n": 8, "artist": "Aly & Fila with Ahmed Romel", "title": "Kingdoms", "label": "" },
+    { "n": 9, "artist": "James Dymond", "title": "Defector", "label": "" },
+    { "n": 10, "artist": "Suncatcher", "title": "Clue Is In The Title", "label": "" },
+    {
+      "n": 11,
+      "artist": "Filo & Peri feat. Aruna",
+      "title": "Ashley (Maria Healy Remix)",
+      "label": ""
+    },
+    {
+      "n": 12,
+      "artist": "Sneijder & Giuseppe Ottaviani",
+      "title": "Nero (Solarstone Retouch)",
+      "label": ""
+    },
+    {
+      "n": 13,
+      "artist": "Giuseppe Ottaviani & Orkidea",
+      "title": "North Star (Factor B Southern Star Remix)",
+      "label": ""
+    },
+    {
+      "n": 14,
+      "artist": "Andy Moor vs. Orkidea",
+      "title": "Year Zero (Mike Sanders Remix)",
+      "label": ""
+    },
+    {
+      "n": 15,
+      "artist": "John O'Callaghan & Clare Stagg",
+      "title": "Lies Cost Nothing (Will Atkinson Remix)",
+      "label": ""
+    }
+  ]
+}
