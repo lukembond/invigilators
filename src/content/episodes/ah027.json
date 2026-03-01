@@ -1,0 +1,56 @@
+{
+  "id": "ah027",
+  "type": "aural-homework",
+  "title": "Aural Homework 027",
+  "date": "2018-11-17",
+  "location": "London, UK",
+  "length": "1:29:13",
+  "mixcloud": "theInvigilators/aural-homework-027-2018-11-17",
+  "image": "/img/ah027.webp",
+  "description": "This time out The Invigilators go back to basics with a vinyl trance mix for you to sink your ears into, covering some classics from years gone by.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "24",
+      "title": "The Longest Day (Armin van Buuren Remix)",
+      "label": "Nebula"
+    },
+    { "n": 2, "artist": "Michael Dow", "title": "Ascent", "label": "Captivating Sounds" },
+    {
+      "n": 3,
+      "artist": "Lost Tribe",
+      "title": "Gamemaster (Matt Darey Remix)",
+      "label": "Hooj Choons"
+    },
+    {
+      "n": 4,
+      "artist": "Chicane",
+      "title": "Autumn Tactics (Thrillseekers Remix)",
+      "label": "Xtravaganza"
+    },
+    { "n": 5, "artist": "Tranquility Base", "title": "Oceanic", "label": "Anjunabeats" },
+    { "n": 6, "artist": "Cass & Slide", "title": "Perception", "label": "Whitelabel" },
+    {
+      "n": 7,
+      "artist": "Sebastian Sand",
+      "title": "Strange Bends (K&A Remix)",
+      "label": "euphonic"
+    },
+    { "n": 8, "artist": "Thomas Bronzwaer", "title": "Resound", "label": "Vandit" },
+    { "n": 9, "artist": "J00F & Simple Minds", "title": "Belfast Trance", "label": "Nebula" },
+    { "n": 10, "artist": "Sophie Sugar", "title": "Day Seven", "label": "A State Of Trance" },
+    {
+      "n": 11,
+      "artist": "Mike Foyle vs. Signalrunners",
+      "title": "Love Theme Dusk",
+      "label": "Armind"
+    },
+    {
+      "n": 12,
+      "artist": "Signalrunners",
+      "title": "Electric Sheep (Nitrous Oxide Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 13, "artist": "Dogzilla", "title": "Frozen", "label": "Maelstrom" }
+  ]
+}

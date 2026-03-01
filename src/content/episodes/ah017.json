@@ -1,0 +1,76 @@
+{
+  "id": "ah017",
+  "type": "aural-homework",
+  "title": "Aural Homework 017",
+  "date": "2015-02-08",
+  "location": "London, UK",
+  "length": "1:29:09",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-017-2015-02-08",
+  "image": "/img/ah017.jpg",
+  "description": "Some more lovingly selected songs chosen by us to get listening to in this one and a half hour long mix for you!",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "The Blizzard",
+      "title": "Piercing The Fog (Matt Fax Remix)",
+      "label": "ARVAS"
+    },
+    {
+      "n": 2,
+      "artist": "Danilo Ercole",
+      "title": "Flash (Max Freegrant Remix)",
+      "label": "Freegrant Music"
+    },
+    {
+      "n": 3,
+      "artist": "Eco & Brooke Forman",
+      "title": "Liberation",
+      "label": "Black Hole Recordings"
+    },
+    { "n": 4, "artist": "4 Strings & Katty Heath", "title": "Hold In Silence", "label": "Liquid" },
+    { "n": 5, "artist": "Soundprank", "title": "Hold On", "label": "Enhanced" },
+    {
+      "n": 6,
+      "artist": "Paul Oakenfold & Cassandra Fox",
+      "title": "Touch Me (Mike Koglin 2.0 Remix)",
+      "label": "Perfecto"
+    },
+    { "n": 7, "artist": "LTN & Roni Joni", "title": "In Between", "label": "Arrival" },
+    { "n": 8, "artist": "ilan Bluestone", "title": "Tesseract", "label": "Anjunabeats" },
+    { "n": 9, "artist": "Darren Tate", "title": "Twisted Robot", "label": "Mondo" },
+    {
+      "n": 10,
+      "artist": "Kenneth Thomas feat. Colleen Riley",
+      "title": "Ghost In The Machine 2014 (LTN Dub)",
+      "label": "Alter Ego"
+    },
+    {
+      "n": 11,
+      "artist": "The Thrillseekers",
+      "title": "This Is All We Have (Andy Moor Remix)",
+      "label": "Adjusted Music"
+    },
+    {
+      "n": 12,
+      "artist": "Speed Limits & Jaco feat. Joni Fatora",
+      "title": "Palm Of Your Hand (Kago Pengchi Remix)",
+      "label": "Enhanced"
+    },
+    {
+      "n": 13,
+      "artist": "Fisher & Mike Shiver",
+      "title": "Priceless",
+      "label": "Black Hole Recordings"
+    },
+    { "n": 14, "artist": "Mike Sonar", "title": "Why So Serious", "label": "AVA" },
+    {
+      "n": 15,
+      "artist": "First State feat. Quilla",
+      "title": "Where You Are",
+      "label": "Black Hole"
+    },
+    { "n": 16, "artist": "BXT", "title": "White Lynx", "label": "Arrival" },
+    { "n": 17, "artist": "Pacific Nation", "title": "Waterfall", "label": "Go On Air" },
+    { "n": 18, "artist": "Chicane feat. Paul Aiden", "title": "Motion", "label": "Modena" }
+  ]
+}

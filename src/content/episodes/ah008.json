@@ -1,0 +1,48 @@
+{
+  "id": "ah008",
+  "type": "aural-homework",
+  "title": "Aural Homework 008",
+  "date": "2012-06-15",
+  "location": "London, UK",
+  "length": "1:19:43",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-008-2012-06-15",
+  "image": "/img/ah008.jpg",
+  "description": "Recorded Live @ The Emirates, in London. This mix was recorded over a nice hungover spring's afternoon to celebrate Queenie's diamond jubilee.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Fast Distance",
+      "title": "Alpine (Karanda Intro Remix)",
+      "label": "Digital Society"
+    },
+    { "n": 2, "artist": "Anton Firtich & Cramp", "title": "Amazing", "label": "Re*Brand" },
+    { "n": 3, "artist": "MarLo", "title": "Showgrounds", "label": "A State Of Trance" },
+    {
+      "n": 4,
+      "artist": "Tritonal feat. Cristina Soto",
+      "title": "Everafter",
+      "label": "Air Up There"
+    },
+    { "n": 5, "artist": "Solarstone", "title": "Pure (MarLo Remix)", "label": "Black Hole" },
+    { "n": 6, "artist": "Erick Strong vs. Dart Rayne", "title": "Shamballa", "label": "Armada" },
+    {
+      "n": 7,
+      "artist": "Ferry Corsten",
+      "title": "Live Forever (Shogun Remix)",
+      "label": "Black Hole"
+    },
+    { "n": 8, "artist": "Norin & Rad", "title": "Zion", "label": "Anjunabeats" },
+    { "n": 9, "artist": "Orjan Nilsen", "title": "Endymion", "label": "Armind" },
+    { "n": 10, "artist": "Wezz Devall", "title": "Stadium", "label": "Captivating Sounds" },
+    { "n": 11, "artist": "Radion 6", "title": "Watch Out", "label": "Reset Records" },
+    { "n": 12, "artist": "Ashley Wallbridge", "title": "Zorro", "label": "AVA" },
+    { "n": 13, "artist": "Genix", "title": "Aura", "label": "Anjunabeats" },
+    { "n": 14, "artist": "Nitrous Oxide", "title": "Tiburon", "label": "Anjunabeats" },
+    {
+      "n": 15,
+      "artist": "BT",
+      "title": "Flaming June (Laptop Symphony Rework)",
+      "label": "Black Hole"
+    }
+  ]
+}

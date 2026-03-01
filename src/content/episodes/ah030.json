@@ -1,0 +1,47 @@
+{
+  "id": "ah030",
+  "type": "aural-homework",
+  "title": "Aural Homework 030",
+  "date": "2020-07-19",
+  "location": "London, UK",
+  "length": "0:55:05",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-030-2020-07-19",
+  "image": "/img/ah030.webp",
+  "description": "Right. So. Really into full 2020 mode now. Pandemic upon us, we managed to find a small window in which we could meet up and get some tunes together. And in a new change or scenery too!",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Svenson & Gielen",
+      "title": "Beachbreeze (Remember The Summer) (Beachbreeze Mix)",
+      "label": "Dance Jive"
+    },
+    {
+      "n": 2,
+      "artist": "Andain",
+      "title": "Summer Calling (DJ Dazzle's R.A.F. Remix)",
+      "label": "Black Hole UK"
+    },
+    {
+      "n": 3,
+      "artist": "Kyau vs. Albert",
+      "title": "Made Of Sun (KvA Hard Dub)",
+      "label": "euphonic"
+    },
+    {
+      "n": 4,
+      "artist": "DT8 Project",
+      "title": "The Sun Is Shining (Down On Me) (Darren Tate Dub)",
+      "label": "Spinnin'"
+    },
+    { "n": 5, "artist": "Breakfast", "title": "The Sunlight", "label": "Flashover" },
+    {
+      "n": 6,
+      "artist": "Mike Foyle vs. Signalrunners",
+      "title": "Love Theme Dusk (Signalrunners Sunrise Mix)",
+      "label": "Armind"
+    },
+    { "n": 7, "artist": "Dogzilla", "title": "Without You", "label": "High Contrast" },
+    { "n": 8, "artist": "Insigma", "title": "Open Your Eyes (Goldenscan Remix)", "label": "ATCR" },
+    { "n": 9, "artist": "Nitrous Oxide", "title": "Amnesia", "label": "Anjunabeats" }
+  ]
+}

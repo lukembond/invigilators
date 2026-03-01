@@ -1,0 +1,63 @@
+{
+  "id": "ah006",
+  "type": "aural-homework",
+  "title": "Aural Homework 006",
+  "date": "2012-04-30",
+  "location": "Coventry, UK",
+  "length": "1:19:43",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-006-2012-04-30",
+  "image": "/img/ah006.jpg",
+  "description": "Musically, we just seemingly play the Anjuna back catalogue in this one. There is a nice selection of delightful progressive trance tunes.",
+  "tracks": [
+    { "n": 1, "artist": "Wellenrausch", "title": "Shape Of Berlin", "label": "" },
+    { "n": 2, "artist": "VillaNaranjos", "title": "Granadella", "label": "" },
+    { "n": 3, "artist": "Jaytech", "title": "Synergy", "label": "" },
+    { "n": 4, "artist": "Ashley Wallbridge", "title": "Mumbai Traffic", "label": "" },
+    {
+      "n": 5,
+      "artist": "Ferry Corsten feat. Ben Hague",
+      "title": "Ain't No Stoppin'",
+      "label": ""
+    },
+    { "n": 6, "artist": "Ost & Meyer", "title": "Safari (Maor Levi Remix)", "label": "" },
+    { "n": 7, "artist": "Styller", "title": "All That Remains (Basil O'Glue Remix)", "label": "" },
+    { "n": 8, "artist": "Rex Mundi", "title": "Shocking Blue", "label": "" },
+    {
+      "n": 9,
+      "artist": "Solarstone & Haris C",
+      "title": "Ultraviolet (Solarstone Pure Mix)",
+      "label": ""
+    },
+    { "n": 10, "artist": "Heatbeat", "title": "Rocker Monster", "label": "" },
+    {
+      "n": 11,
+      "artist": "Cosmic Gate & Jes",
+      "title": "Flying Blind (Norin & Rad Remix)",
+      "label": ""
+    },
+    {
+      "n": 12,
+      "artist": "Above & Beyond feat. Zoe Johnston",
+      "title": "Love Is Not Enough (Maor Levi & Bluestone Remix)",
+      "label": ""
+    },
+    {
+      "n": 13,
+      "artist": "Gabriel & Dresden",
+      "title": "No Reservations (Khomha Remix)",
+      "label": ""
+    },
+    {
+      "n": 14,
+      "artist": "Wezz Devall",
+      "title": "Kill Of The Year (Dave Schiemann MILF Revenge Remix)",
+      "label": ""
+    },
+    {
+      "n": 15,
+      "artist": "Markus Schulz & Departure with Gabriel & Dresden",
+      "title": "Without You Near (Gabriel & Dresden Mix)",
+      "label": ""
+    }
+  ]
+}

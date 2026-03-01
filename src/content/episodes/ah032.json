@@ -1,0 +1,55 @@
+{
+  "id": "ah032",
+  "type": "aural-homework",
+  "title": "Aural Homework 032",
+  "date": "2021-11-14",
+  "location": "London, UK",
+  "length": "1:14:09",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-032-2021-11-14",
+  "image": "/img/ah032.jpg",
+  "description": "We're back sooner rather than later with another episode! Another set on vinyl with some more trance classics for you to listen to :)",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Jan Johnston",
+      "title": "Flesh (Tilt's Going Home Mix)",
+      "label": "Perfecto"
+    },
+    { "n": 2, "artist": "Menno de Jong", "title": "Guanxi", "label": "Anjunabeats" },
+    { "n": 3, "artist": "Mono", "title": "Rise", "label": "Armada" },
+    { "n": 4, "artist": "Moonstone", "title": "Galaxia (Solarstone Remix)", "label": "Heat" },
+    { "n": 5, "artist": "Agnelli & Nelson", "title": "Everyday", "label": "Xtravaganza" },
+    {
+      "n": 6,
+      "artist": "Maor Levi",
+      "title": "Shapes (Oliver Smith Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 7,
+      "artist": "Tiesto",
+      "title": "Urban Train (Marc O'Tool Dub)",
+      "label": "VC Recordings"
+    },
+    { "n": 8, "artist": "Nic Chagall", "title": "What You Need", "label": "High Contrast" },
+    {
+      "n": 9,
+      "artist": "Lost Tribe",
+      "title": "Gamemaster (Lost Tribe's '99 Mix)",
+      "label": "Hooj Choons"
+    },
+    { "n": 10, "artist": "Daniel Kandi", "title": "Soraya", "label": "Fundamental" },
+    {
+      "n": 11,
+      "artist": "The Thrillseekers with York & Asheni",
+      "title": "Daydream (Will Atkinson Dreamy Mix)",
+      "label": "Adjusted Music"
+    },
+    {
+      "n": 12,
+      "artist": "Above & Beyond",
+      "title": "Tri State (Robert Nickson Remix)",
+      "label": "Anjunabeats"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "id": "ah026",
+  "type": "aural-homework",
+  "title": "Aural Homework 026",
+  "date": "2019-03-08",
+  "location": "London, UK",
+  "length": "0:34:45",
+  "mixcloud": "theInvigilators/aural-homework-026-2019-03-08",
+  "image": "/img/ah026.webp",
+  "description": "Back after a bit of a gap with a short mini mix ahead of a Trance Sanctuary event from March 2019.",
+  "tracks": [
+    { "n": 1, "artist": "Factor B & Lostly", "title": "Strandloper", "label": "Pure Trance" },
+    {
+      "n": 2,
+      "artist": "Greg Downey & Alex Di Stefano",
+      "title": "Among Us",
+      "label": "Skullduggery"
+    },
+    {
+      "n": 3,
+      "artist": "Nitrous Oxide & 2sher",
+      "title": "Calopsia (SoundLift Remix)",
+      "label": "Phatbull"
+    },
+    { "n": 4, "artist": "Sean Tyas", "title": "Chrome", "label": "VII" },
+    { "n": 5, "artist": "Sneijder", "title": "Back Home", "label": "Pure Trance NEON" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ah014",
+  "type": "aural-homework",
+  "title": "Aural Homework 014",
+  "date": "2014-03-16",
+  "location": "London, UK",
+  "length": "2:06:31",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-014-2014-03-16",
+  "image": "/img/ah014.jpg",
+  "description": "Classics time! 'Nuff said.",
+  "tracks": [
+    { "n": 1, "artist": "PPK", "title": "ResuRection (Trailer Trash Remix)", "label": "Perfecto" },
+    { "n": 2, "artist": "GTR", "title": "Mistral", "label": "Five AM" },
+    { "n": 3, "artist": "Filterheadz", "title": "Yimanya", "label": "ID&T" },
+    { "n": 4, "artist": "DJ Tiësto", "title": "Traffic", "label": "Magik Muzik" },
+    { "n": 5, "artist": "Solid Globe", "title": "North Pole", "label": "Fundamental" },
+    {
+      "n": 6,
+      "artist": "Holden & Thompson",
+      "title": "Nothing (93 Returning Mix)",
+      "label": "Loaded"
+    },
+    { "n": 7, "artist": "Gaia", "title": "4 Elements", "label": "Captivating Sounds" },
+    { "n": 8, "artist": "Saltwater", "title": "The Legacy (Alphazone Remix)", "label": "Zenith" },
+    { "n": 9, "artist": "Solarstone", "title": "Solarcoaster", "label": "Solaris" },
+    { "n": 10, "artist": "Dogzilla", "title": "Without You", "label": "Maelstrom" },
+    {
+      "n": 11,
+      "artist": "Solid Sessions",
+      "title": "Janeiro (Armin van Buuren Remix)",
+      "label": "Positiva"
+    },
+    { "n": 12, "artist": "Binary Finary", "title": "1998 (Gouryella Remix)", "label": "Positiva" },
+    { "n": 13, "artist": "Traveller", "title": "Bright Sign", "label": "Suck Me Plasma" },
+    { "n": 14, "artist": "Push", "title": "Strange World (2000 Remake)", "label": "Bonzai" },
+    {
+      "n": 15,
+      "artist": "Nalin & Kane",
+      "title": "Beachball (Original Club Mix)",
+      "label": "Urban"
+    },
+    {
+      "n": 16,
+      "artist": "Paul van Dyk feat. Second Sun",
+      "title": "Crush (PvD Original Mix)",
+      "label": "Vandit"
+    },
+    {
+      "n": 17,
+      "artist": "BT feat. Jes",
+      "title": "Every Other Way (Armin Van Buuren Remix)",
+      "label": "Black Hole"
+    },
+    {
+      "n": 18,
+      "artist": "Conjure One",
+      "title": "Tears From The Moon (DJ Tiësto's In Search Of Sunrise Mix)",
+      "label": "Nettwerk"
+    },
+    { "n": 19, "artist": "Aly & Fila", "title": "Lost Language", "label": "Soundpiercing" },
+    {
+      "n": 20,
+      "artist": "Paul van Dyk",
+      "title": "For An Angel (Pvd E-Werk Club Mix)",
+      "label": "Vandit"
+    }
+  ]
+}

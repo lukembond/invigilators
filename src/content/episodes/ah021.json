@@ -1,0 +1,67 @@
+{
+  "id": "ah021",
+  "type": "aural-homework",
+  "title": "Aural Homework 021",
+  "date": "2016-12-29",
+  "location": "London, UK",
+  "length": "1:13:57",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-021-2016-12-29",
+  "image": "/img/ah021.webp",
+  "description": "One final Aural Homework recorded to end out 2016, recorded in London. A late upload is better than no upload at all...",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Indecent Noise & Johann Stone",
+      "title": "Rimur",
+      "label": "FSOE Clandestine"
+    },
+    { "n": 2, "artist": "Liquid Soul & Neodyne", "title": "Believe", "label": "Iboga Records" },
+    {
+      "n": 3,
+      "artist": "Standerwick & Chris Schweizer",
+      "title": "Predator",
+      "label": "Who's Afraid Of 138?!"
+    },
+    {
+      "n": 4,
+      "artist": "Sentinel & Biocycle",
+      "title": "Crossing the 4th Dimension (Spectro Boy Remix)",
+      "label": "EDM Records"
+    },
+    { "n": 5, "artist": "Allen Watts & Jak Aggas", "title": "Spitfire", "label": "Rielism" },
+    {
+      "n": 6,
+      "artist": "Oberon",
+      "title": "Spoonbender (Chris Liberator & The Geezer Remix)",
+      "label": "Discover Dark"
+    },
+    {
+      "n": 7,
+      "artist": "Ben Gold",
+      "title": "Atomic (Coming Soon!!! Extended Remix)",
+      "label": "Who's Afraid Of 138?!"
+    },
+    { "n": 8, "artist": "Sean Tyas", "title": "Matter Of Time", "label": "Degenerate Records" },
+    { "n": 9, "artist": "Serjan", "title": "The Cyborgs Are Here", "label": "Pharmacy" },
+    {
+      "n": 10,
+      "artist": "James Dymond",
+      "title": "Show The World",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 11, "artist": "G8", "title": "Albino Pigs Are Cute", "label": "Discover Dark" },
+    { "n": 12, "artist": "Astrix", "title": "Deep Jungle Walk", "label": "HOMmega Productions" },
+    {
+      "n": 13,
+      "artist": "Hilight Tribe",
+      "title": "Free Tibet (Vini Vici Remix)",
+      "label": "Iboga Records"
+    },
+    {
+      "n": 14,
+      "artist": "Alex M.O.R.P.H. & Aimoon",
+      "title": "Astra (Club Mix Extended)",
+      "label": "Vandit"
+    }
+  ]
+}

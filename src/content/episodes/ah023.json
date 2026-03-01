@@ -1,0 +1,91 @@
+{
+  "id": "ah023",
+  "type": "aural-homework",
+  "title": "Aural Homework 023",
+  "date": "2017-05-20",
+  "location": "London, UK",
+  "length": "1:42:15",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-023-2017-05-20",
+  "image": "/img/ah023.webp",
+  "description": "Aural Homework, Episode 023. A bunch of trance tunes for ya. Need to get more descriptive descriptions.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Chicane vs. Robert Miles",
+      "title": "Bruised Water Children (Serg Alfarero Mashup)",
+      "label": "CDR"
+    },
+    {
+      "n": 2,
+      "artist": "Sied van Riel & Leaving Atlantis",
+      "title": "Solitaire",
+      "label": "Rielism"
+    },
+    { "n": 3, "artist": "The Cracken", "title": "Aphrodisiac", "label": "Digital Society" },
+    {
+      "n": 4,
+      "artist": "Indecent Noise",
+      "title": "Daybreak (Ferry Tayle Remix)",
+      "label": "Mental Asylum"
+    },
+    {
+      "n": 5,
+      "artist": "Midway",
+      "title": "Cobra (Niko Zografos Remix)",
+      "label": "In Trance We Trust"
+    },
+    {
+      "n": 6,
+      "artist": "Jurgen Vries",
+      "title": "The Theme (Radion6 Remix)",
+      "label": "Captivating"
+    },
+    {
+      "n": 7,
+      "artist": "The Thrillseekers with Shannon Hurley",
+      "title": "Stay (Here With Me) (Club Mix)",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 8, "artist": "Sneijder", "title": "Vaporize", "label": "Subculture" },
+    {
+      "n": 9,
+      "artist": "Re:Order",
+      "title": "Spirit Of Ecstasy",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 10,
+      "artist": "Robert Nickson feat. Cat Martin",
+      "title": "Every Sun (Factor B's Perfect Sunrise Remix)",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 11,
+      "artist": "Ahmed Romel vs. A&Z",
+      "title": "Revive",
+      "label": "Who's Afraid Of 138?!"
+    },
+    { "n": 12, "artist": "Miroslav Vrlik", "title": "Blue Moon", "label": "Full On 140" },
+    {
+      "n": 13,
+      "artist": "Delerium feat. Sarah McLachlan",
+      "title": "Silence (RAM Remix)",
+      "label": "CDR"
+    },
+    { "n": 14, "artist": "Sean Tyas", "title": "Black & White", "label": "VII" },
+    { "n": 15, "artist": "John O'Callaghan", "title": "Two Trees", "label": "Subculture" },
+    { "n": 16, "artist": "The Digital Blonde", "title": "Symposium", "label": "Joof Mantra" },
+    {
+      "n": 17,
+      "artist": "Stoneface & Terminal",
+      "title": "Berlin '99",
+      "label": "FSOE Clandestine"
+    },
+    {
+      "n": 18,
+      "artist": "Craig Connelly feat. Jessica Lawrence",
+      "title": "How Can I (John O'Callaghan Remix)",
+      "label": "Subculture"
+    }
+  ]
+}

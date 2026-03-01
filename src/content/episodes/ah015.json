@@ -1,0 +1,54 @@
+{
+  "id": "ah015",
+  "type": "aural-homework",
+  "title": "Aural Homework 015",
+  "date": "2014-04-13",
+  "location": "London, UK",
+  "length": "1:03:37",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-015-2014-04-13",
+  "image": "/img/ah015.jpg",
+  "description": "Here is the first one of the thought to be gone InvigiLostTapes! A progressive tip recorded for an hour's worth of killer proggy houseness.",
+  "tracks": [
+    { "n": 1, "artist": "Matt Lange", "title": "Only You", "label": "Anjunadeep" },
+    {
+      "n": 2,
+      "artist": "Above & Beyond feat. Zoe Johnston",
+      "title": "Alchemy (Jody Wisternoff Remix)",
+      "label": "Anjunadeep"
+    },
+    {
+      "n": 3,
+      "artist": "Blood Groove & Kikis feat. Victoria Ray",
+      "title": "Free Like A Bird (Original Dub Mix)",
+      "label": "Silk Digital"
+    },
+    {
+      "n": 4,
+      "artist": "Soundprank",
+      "title": "Burner (Shingo Nakamura Remix)",
+      "label": "Silk Digital"
+    },
+    { "n": 5, "artist": "London Grammar", "title": "Strong (Judah Remix)", "label": "CDR" },
+    { "n": 6, "artist": "Ad Brown & Shawn Mitiska", "title": "Pulse", "label": "Black Hole" },
+    {
+      "n": 7,
+      "artist": "SNR & Rikkaz feat. Jan Johnston",
+      "title": "Beautiful Change (Dan & Sam Remix)",
+      "label": "Arrival"
+    },
+    { "n": 8, "artist": "PROFF", "title": "What It Feels Like", "label": "Intricate" },
+    {
+      "n": 9,
+      "artist": "Lian July feat. Eli",
+      "title": "Surrender (LTN Dub Remix)",
+      "label": "Silk Digital"
+    },
+    { "n": 10, "artist": "Shingo Nakamura", "title": "Days", "label": "Otographic" },
+    {
+      "n": 11,
+      "artist": "Thomas Hayes",
+      "title": "Some Things Never Change (Mrmilkcarton Remix)",
+      "label": "Arrival"
+    }
+  ]
+}

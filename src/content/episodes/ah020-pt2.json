@@ -1,0 +1,29 @@
+{
+  "id": "ah020-pt2",
+  "type": "aural-homework",
+  "title": "Aural Homework 020 - Part 2 - Dark Mix",
+  "date": "2016-07-30",
+  "location": "London, UK",
+  "length": "1:33:30",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-020-2016-07-30-part-2-dark-mix",
+  "image": "/img/ah020.jpg",
+  "description": "Episode 20 of Aural Homework, Part 2. The deep and darker side of things to kick things around a bit to continue on with.",
+  "tracks": [
+    { "n": 1, "artist": "Darren Porter", "title": "To Feel Again", "label": "" },
+    { "n": 2, "artist": "Factor B", "title": "Sapera", "label": "" },
+    { "n": 3, "artist": "Abstract Vision & Aimoon", "title": "#energy", "label": "" },
+    { "n": 4, "artist": "Mark Sherry", "title": "Gravitational Waves", "label": "" },
+    { "n": 5, "artist": "M.I.K.E. Push pres. Plastic Boy", "title": "Now & Forever", "label": "" },
+    { "n": 6, "artist": "Fady & Mina", "title": "The Temple", "label": "" },
+    { "n": 7, "artist": "Indecent Noise", "title": "Blade Dancer", "label": "" },
+    { "n": 8, "artist": "Sean Tyas", "title": "Now You See (Darren Porter Remix)", "label": "" },
+    { "n": 9, "artist": "Jase Thirlwall", "title": "Standby (Indecent Noise Remix)", "label": "" },
+    { "n": 10, "artist": "Neelix", "title": "Born & Raised (Harmonika Remix)", "label": "" },
+    { "n": 11, "artist": "Reverse", "title": "Distant Destiny (Magnus Remix)", "label": "" },
+    { "n": 12, "artist": "John Askew", "title": "A Million Stars", "label": "" },
+    { "n": 13, "artist": "John 00 Fleming & Ovnimoon", "title": "Ascension", "label": "" },
+    { "n": 14, "artist": "Vini Vici & Ace Ventura", "title": "The Calling", "label": "" },
+    { "n": 15, "artist": "Astrix", "title": "Type 1 (Sideform Remix)", "label": "" },
+    { "n": 16, "artist": "Vini Vici", "title": "The Tribe", "label": "" }
+  ]
+}

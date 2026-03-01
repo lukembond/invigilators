@@ -1,0 +1,66 @@
+{
+  "id": "ah011",
+  "type": "aural-homework",
+  "title": "Aural Homework 011",
+  "date": "2012-11-11",
+  "location": "London, UK",
+  "length": "1:18:02",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-011-2012-11-11",
+  "image": "/img/ah011.jpg",
+  "description": "It's another fun weekend in London. Good tunes all weekend, culminating in this next mix for you all.",
+  "tracks": [
+    { "n": 1, "artist": "Bluestone", "title": "Capetown", "label": "Anjunabeats" },
+    {
+      "n": 2,
+      "artist": "Paul van Dyk feat. Plumb",
+      "title": "I Don't Deserve You (Maor Levi & Bluestone Remix)",
+      "label": "Vandit"
+    },
+    { "n": 3, "artist": "Juventa", "title": "Metamorphose", "label": "Enhanced" },
+    { "n": 4, "artist": "Andy Moor feat. Sue McLaren", "title": "Trespass", "label": "AVA" },
+    {
+      "n": 5,
+      "artist": "Andrew Rayel feat. Jano",
+      "title": "How Do I Know (Club Mix)",
+      "label": "Armind"
+    },
+    { "n": 6, "artist": "Running Man pres. Inca", "title": "Freefall", "label": "Unearthed Red" },
+    {
+      "n": 7,
+      "artist": "Giuseppe Ottaviani feat. Amba Shepherd",
+      "title": "Lost For Words (On Air Mix)",
+      "label": "Vandit"
+    },
+    { "n": 8, "artist": "A.R.D.I. & Ren", "title": "Infinity", "label": "Arisa" },
+    {
+      "n": 9,
+      "artist": "Pedro del Mar with ReOrder feat. Fisher",
+      "title": "Reaching Out (Banging Dub Version)",
+      "label": "In-Telligance"
+    },
+    {
+      "n": 10,
+      "artist": "Federation",
+      "title": "Innocent Desire (Dub Mix)",
+      "label": "Perfecto Fluoro"
+    },
+    {
+      "n": 11,
+      "artist": "Bryan Kearney & Indecent Noise",
+      "title": "Uncommon World (James Dymond Remix)",
+      "label": "Mental Asylum"
+    },
+    {
+      "n": 12,
+      "artist": "Simon O'Shine",
+      "title": "Your Distant World",
+      "label": "Trance All-Stars"
+    },
+    {
+      "n": 13,
+      "artist": "Tritonal feat. Cristina Soto",
+      "title": "Still With Me (Suncatcher's Digitally Enhanced Outro Mix)",
+      "label": "Air Up There"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "id": "ah031",
+  "type": "aural-homework",
+  "title": "Aural Homework 031",
+  "date": "2021-07-02",
+  "location": "London, UK",
+  "length": "1:44:13",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-031-2021-07-02",
+  "image": "/img/ah031.webp",
+  "description": "Only a year between drinks... Here's another Aural Homework edition recorded in London, again after Luke's bday - this time in 2021. A vinyl selection of classic trance tunes, some of which we've probably played before.",
+  "tracks": [
+    { "n": 1, "artist": "Way Out West", "title": "Killa (Orkidea Mix)", "label": "Solaris" },
+    {
+      "n": 2,
+      "artist": "Johan Gielen",
+      "title": "Okinawa Sunset (Tom Cloud Remix)",
+      "label": "Maelstrom"
+    },
+    {
+      "n": 3,
+      "artist": "The Thrillseekers pres. Hydra",
+      "title": "Amber",
+      "label": "Adjusted Music"
+    },
+    {
+      "n": 4,
+      "artist": "Rapid Eye",
+      "title": "Circa Forever (Pedro del Mar vs. DJ Shah Remix)",
+      "label": "ATCR"
+    },
+    {
+      "n": 5,
+      "artist": "Kirsty Hawkshaw meets Tenishia",
+      "title": "Outsiders (Cosmic Gate Remix)",
+      "label": "Armind"
+    },
+    {
+      "n": 6,
+      "artist": "Above & Beyond pres. Tranquility Base",
+      "title": "Razorfish (Bart Claessen 2007 Rework)",
+      "label": "Anjunabeats"
+    },
+    { "n": 7, "artist": "Super8 & Tab", "title": "Needs To Feel", "label": "Anjunabeats" },
+    {
+      "n": 8,
+      "artist": "The Thrillseekers feat. Aruna",
+      "title": "Waiting Here For You (Breakfast Club Mix)",
+      "label": "Adjusted Music"
+    },
+    {
+      "n": 9,
+      "artist": "Terry Ferminal",
+      "title": "Deep Inside (Re-Work)",
+      "label": "High Contrast"
+    },
+    { "n": 10, "artist": "Above & Beyond", "title": "Can't Sleep", "label": "Anjunabeats" },
+    {
+      "n": 11,
+      "artist": "Sunlounger",
+      "title": "In & Out (DJ Shah Rework)",
+      "label": "A State Of Trance"
+    },
+    { "n": 12, "artist": "P.O.S.", "title": "Gravity", "label": "Anjunabeats" },
+    { "n": 13, "artist": "Tenth Planet", "title": "Ghosts", "label": "Nebula" },
+    { "n": 14, "artist": "Rusch & Murray", "title": "The Promise", "label": "Anjunabeats" },
+    { "n": 15, "artist": "Super8", "title": "Alba", "label": "Anjunabeats" },
+    {
+      "n": 16,
+      "artist": "Delerium",
+      "title": "Underwater (Above & Beyond's 21st Century Mix)",
+      "label": "Nettwerk"
+    }
+  ]
+}
