@@ -1,0 +1,64 @@
+{
+  "id": "ah016",
+  "type": "aural-homework",
+  "title": "Aural Homework 016",
+  "date": "2014-04-20",
+  "location": "Coventry, UK",
+  "length": "1:30:58",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-016-2014-04-20",
+  "image": "/img/ah016.jpg",
+  "description": "What once was lost is now found and ready for you to listen to... better late than never!",
+  "tracks": [
+    { "n": 1, "artist": "Eximinds", "title": "Phoenix", "label": "A State of Trance" },
+    { "n": 2, "artist": "Aeon Flux & Anna Miracles", "title": "Why", "label": "Muz-Flame" },
+    {
+      "n": 3,
+      "artist": "Kyau & Albert",
+      "title": "Do You Still Know (Joseph Areas Dirty Rock Mix)",
+      "label": "Euphonic"
+    },
+    {
+      "n": 4,
+      "artist": "Bissen & Tiff Lacey",
+      "title": "Don't Walk Away",
+      "label": "Discover Digital"
+    },
+    { "n": 5, "artist": "Johan Vilborg", "title": "Fall", "label": "Silk Royal" },
+    { "n": 6, "artist": "Gabriel & Dresden", "title": "Rise Up", "label": "Organized Nature" },
+    { "n": 7, "artist": "Ad Brown", "title": "Marimba", "label": "Perspectives Digital" },
+    { "n": 8, "artist": "Inva", "title": "Lonely Tonight", "label": "InfraProgressive" },
+    {
+      "n": 9,
+      "artist": "PROFF",
+      "title": "Starstruck (Shingo Nakamura Remix)",
+      "label": "Silk Royal"
+    },
+    { "n": 10, "artist": "LTN", "title": "Fair Isle", "label": "Aropa" },
+    { "n": 11, "artist": "Russell G", "title": "Solstice", "label": "Pilot 6 (Armada)" },
+    { "n": 12, "artist": "Elfsong", "title": "Seldarine", "label": "Pure Trance" },
+    {
+      "n": 13,
+      "artist": "19 Hz",
+      "title": "Round & Round (Sundriver Remix)",
+      "label": "Silk Royal"
+    },
+    {
+      "n": 14,
+      "artist": "Max Graham feat. Jessica Jacobs",
+      "title": "I Know You're Gone",
+      "label": "Shine Music"
+    },
+    {
+      "n": 15,
+      "artist": "Greg Downey & Mansun",
+      "title": "(I'm In A) Wide Open Space",
+      "label": "Nebula"
+    },
+    {
+      "n": 16,
+      "artist": "Above & Beyond feat. Zoë Johnston vs. Arty",
+      "title": "You Got To Believe",
+      "label": "Anjunabeats"
+    }
+  ]
+}

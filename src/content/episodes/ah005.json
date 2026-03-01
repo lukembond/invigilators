@@ -1,0 +1,64 @@
+{
+  "id": "ah005",
+  "type": "aural-homework",
+  "title": "Aural Homework 005",
+  "date": "2012-01-29",
+  "location": "London, UK",
+  "length": "1:34:35",
+  "mixcloud": "",
+  "image": "/img/ah005.jpg",
+  "description": "Recorded at one of Luke's ever changing abodes in North London, this mix was recorded to an intimate audience of 2 other housemates.",
+  "tracks": [
+    { "n": 1, "artist": "Andain", "title": "Promises (Soundprank Remix)", "label": "Black Hole" },
+    { "n": 2, "artist": "Alex Pich", "title": "Heavens (Dezza Remix)", "label": "Colorize" },
+    { "n": 3, "artist": "Creak", "title": "Days (Super8 & Tab Remix)", "label": "Young Turks" },
+    { "n": 4, "artist": "Norin & Rad", "title": "Bloom", "label": "Anjunabeats" },
+    {
+      "n": 5,
+      "artist": "Ad Brown feat. Kerry Leva",
+      "title": "Memorial (You Were Loved) (Maor Levi Remix)",
+      "label": "Enhanced Progressive"
+    },
+    {
+      "n": 6,
+      "artist": "Cosmic Gate",
+      "title": "London Rain (New Club Mix)",
+      "label": "Black Hole"
+    },
+    { "n": 7, "artist": "Ashley Wallbridge", "title": "Jynx", "label": "AVA" },
+    { "n": 8, "artist": "Orjan Nilsen", "title": "Viking", "label": "Armind" },
+    {
+      "n": 9,
+      "artist": "Matt Darey feat. Leah",
+      "title": "Hold Your Breath (Khomha Remix)",
+      "label": "S107"
+    },
+    { "n": 10, "artist": "W&W", "title": "AK-47", "label": "Captivating Sounds" },
+    {
+      "n": 11,
+      "artist": "Above & Beyond feat. Richard Bedford",
+      "title": "Every Little Beat (Myon & Shane54 Summer Of Love Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 12,
+      "artist": "Emery & Kirsch",
+      "title": "Lose Yourself (Tritonal's Air Up There Remix)",
+      "label": "Enhanced"
+    },
+    {
+      "n": 13,
+      "artist": "Boom Jinx feat. Justine Suissa",
+      "title": "Phoenix From The Flames (Omnia & The Blizzard Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 14,
+      "artist": "Bobina feat. Betsie Larkin",
+      "title": "You Belong To Me (Original Dub Mix)",
+      "label": "Maelstrom"
+    },
+    { "n": 15, "artist": "tyDi", "title": "Acting Crazy (Tom Fall Remix)", "label": "S107" },
+    { "n": 16, "artist": "Gareth Emery", "title": "Tokyo (Ben Gold Remix)", "label": "Garuda" }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "id": "ah009",
+  "type": "aural-homework",
+  "title": "Aural Homework 009",
+  "date": "2012-08-12",
+  "location": "London, UK",
+  "length": "1:32:17",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-009-2012-08-12",
+  "image": "/img/ah009.jpg",
+  "description": "A bit of a more bangin' mix this time out, enjoy some more uplifting selections from our favourite artists!",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Lange & Gareth Emery",
+      "title": "This Is All Out (Heatbeat vs. Andy Moor Remix / Lange Mashup)",
+      "label": "Lange Recordings"
+    },
+    {
+      "n": 2,
+      "artist": "Sean Tyas & Giuseppe Ottaviani",
+      "title": "Arcobaleno (Classic Mix)",
+      "label": "Vandit"
+    },
+    { "n": 3, "artist": "Activa", "title": "The Fall (John Askew Remix)", "label": "Discover" },
+    { "n": 4, "artist": "Vast Vision", "title": "Black Shores", "label": "Future Sound Of Egypt" },
+    { "n": 5, "artist": "James Dymond", "title": "Paladin", "label": "Soundpiercing" },
+    { "n": 6, "artist": "Ralphie B", "title": "Icarus", "label": "A State Of Trance" },
+    {
+      "n": 7,
+      "artist": "Luke Bond feat. Emel",
+      "title": "Amaze",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 8,
+      "artist": "Vast Vision feat. Fisher",
+      "title": "Hurricane (Ost & Meyer Remix)",
+      "label": "Enhanced"
+    },
+    {
+      "n": 9,
+      "artist": "Rapid Eye",
+      "title": "Circa Forever (Rapid Eye's Mix)",
+      "label": "A Trance Communication Release"
+    },
+    {
+      "n": 10,
+      "artist": "Akira Kayosa & Hugh Tolland",
+      "title": "Disconnected (Classic Mix)",
+      "label": "Perceptive"
+    },
+    {
+      "n": 11,
+      "artist": "John O'Callaghan",
+      "title": "Smokescreen (Sneijder Remix)",
+      "label": "Armada"
+    },
+    { "n": 12, "artist": "Estigma", "title": "Renovatio", "label": "Perceptive" },
+    {
+      "n": 13,
+      "artist": "Poshout feat. Ange",
+      "title": "Beside (Daniel Kandi Dub Mix)",
+      "label": "Timeline Music"
+    },
+    { "n": 14, "artist": "Andy Moor", "title": "In Your Arms (Aly & Fila Remix)", "label": "AVA" },
+    { "n": 15, "artist": "RAM", "title": "RAMplify", "label": "Digital Society" }
+  ]
+}

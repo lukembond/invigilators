@@ -1,0 +1,55 @@
+{
+  "id": "ah001",
+  "type": "aural-homework",
+  "title": "Aural Homework 001",
+  "date": "2009-05-15",
+  "location": "Canberra, AU",
+  "length": "1:15:18",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-001-2009-05-15",
+  "image": "/img/ah001.jpg",
+  "description": "Mixed up using 2x turntables, 1x microphone and a stack of newly received vinyl, oh as well as 2x Invigilators. Includes a nice bootleg to get things started, then mixes new with old.",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Lustral & Terry Bones vs. Karen Overton",
+      "title": "Put Your Satellite Around Me (Bootleg Mix)",
+      "label": "White Label"
+    },
+    { "n": 2, "artist": "Jaytech", "title": "Sundance", "label": "Anjunadeep" },
+    {
+      "n": 3,
+      "artist": "David West",
+      "title": "Suffering Island (Joonas Hahmo Remix)",
+      "label": "Solaris"
+    },
+    { "n": 4, "artist": "Gabriel Batz", "title": "Decepcionaide", "label": "Coldharbour" },
+    {
+      "n": 5,
+      "artist": "Selu Vibra",
+      "title": "Divine (Funabashi Remix)",
+      "label": "Somantic Sense"
+    },
+    {
+      "n": 6,
+      "artist": "Geert Huinick & Sied Van Riel",
+      "title": "Minimal Symphony",
+      "label": "Liquid"
+    },
+    {
+      "n": 7,
+      "artist": "West Out West",
+      "title": "The Fall (Richard Durand Remix)",
+      "label": "Black Hole"
+    },
+    { "n": 8, "artist": "Mat Zo", "title": "Out Of Minority", "label": "Coldharbour" },
+    { "n": 9, "artist": "Menno de Jong", "title": "Nothold (Extended Mix)", "label": "Intuition" },
+    { "n": 10, "artist": "Rafael Frost", "title": "Red", "label": "Flashover" },
+    {
+      "n": 11,
+      "artist": "Above & Beyond",
+      "title": "Far From In Love (Airbase Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 12, "artist": "Nu NRG", "title": "Freefall", "label": "Monster Tunes" }
+  ]
+}

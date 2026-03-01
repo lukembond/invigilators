@@ -1,0 +1,78 @@
+{
+  "id": "ah022",
+  "type": "aural-homework",
+  "title": "Aural Homework 022",
+  "date": "2017-01-01",
+  "location": "London, UK",
+  "length": "1:29:41",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-022-2017-01-01",
+  "image": "/img/ah022.webp",
+  "description": "Episode 22 is here. Recorded New Years Day 2017, it's an hour and a half of uplifting tunes for you!",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "The Thrillseekers pres. Hydra",
+      "title": "Amber",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 2,
+      "artist": "Mark Sherry & Alex Di Stefano",
+      "title": "Everyone Is Looking For Us",
+      "label": "Outburst"
+    },
+    { "n": 3, "artist": "Factor B", "title": "Endless", "label": "Pure Trance" },
+    {
+      "n": 4,
+      "artist": "Solarstone & Ferry Tayle",
+      "title": "Lifeline (Epic Mix)",
+      "label": "Pure Trance"
+    },
+    { "n": 5, "artist": "Ferry Corsten pres. Gouryella", "title": "Neba", "label": "Flashover" },
+    {
+      "n": 6,
+      "artist": "The Thrillseekers",
+      "title": "Halcyon 2016",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 7, "artist": "Jorn Van Deynhoven", "title": "Space Girl", "label": "A State Of Trance" },
+    {
+      "n": 8,
+      "artist": "Matt Bukovski & Katty Heath",
+      "title": "Hold Back The Storm (Myde Remix)",
+      "label": "Amsterdam Trance"
+    },
+    {
+      "n": 9,
+      "artist": "Stoneface & Terminal",
+      "title": "Tale In Verse",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 10, "artist": "PureNRG", "title": "Secret of the Sahara", "label": "Black Hole" },
+    {
+      "n": 11,
+      "artist": "Coast 2 Coast feat. Discovery",
+      "title": "Home (Scott Bond & Charlie Walker GC23 Extended Remix)",
+      "label": "Who's Afraid Of 138?!"
+    },
+    {
+      "n": 12,
+      "artist": "Kyau & Albert",
+      "title": "Kiksu (The Noble Six 2016 Remix)",
+      "label": "Euphonic"
+    },
+    { "n": 13, "artist": "Lostly", "title": "Rage At The Stars", "label": "Outburst Twilight" },
+    {
+      "n": 14,
+      "artist": "Driftmoon",
+      "title": "Beggar In Your Own Kingdom",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 15,
+      "artist": "Midway",
+      "title": "Monkey Forest (Casey Rasch Remix)",
+      "label": "In Trance We Trust"
+    }
+  ]
+}

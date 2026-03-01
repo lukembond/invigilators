@@ -1,0 +1,58 @@
+{
+  "id": "ah007",
+  "type": "aural-homework",
+  "title": "Aural Homework 007",
+  "date": "2012-05-05",
+  "location": "Coventry, UK",
+  "length": "1:14:10",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-007-2012-05-05",
+  "image": "/img/ah007.jpg",
+  "description": "Recorded in Coventry @ Chris' place, this mix begins with the nostalgic sounds of the most popular N64 game ever, to mark the 007th outing.",
+  "tracks": [
+    { "n": 0, "artist": "Goldeneye 007", "title": "Intro", "label": "Nintendo" },
+    { "n": 1, "artist": "Super8", "title": "Alba (Maor Levi Remix)", "label": "Anjunabeats" },
+    {
+      "n": 2,
+      "artist": "P.O.S.",
+      "title": "Gravity (Andrew Bayer & James Grant Remix)",
+      "label": "Anjunadeep"
+    },
+    { "n": 3, "artist": "Soundprank", "title": "Boundless Energy", "label": "Anjunadeep" },
+    { "n": 4, "artist": "Aaron Camz", "title": "Aqwa", "label": "Coldharbour Red" },
+    { "n": 5, "artist": "Ad Brown", "title": "Far From The End", "label": "Colorize" },
+    { "n": 6, "artist": "Protoculture", "title": "Cobalt", "label": "Re*Brand" },
+    { "n": 7, "artist": "Speed Limits", "title": "Bris", "label": "Enhanced Progressive" },
+    {
+      "n": 8,
+      "artist": "Andian",
+      "title": "Much Too Much (Mike Shiver Remix)",
+      "label": "Black Hole"
+    },
+    { "n": 9, "artist": "Porter Robinson", "title": "Language", "label": "Big Beat" },
+    {
+      "n": 10,
+      "artist": "Daniel Kandi",
+      "title": "Insert Generic Title (Daniel Kandi vs. Dennis Pedersen Remix)",
+      "label": "Enhanced"
+    },
+    {
+      "n": 11,
+      "artist": "Eximinds",
+      "title": "Robobeats (Tom Fall Remix)",
+      "label": "Enhanced Progressive"
+    },
+    { "n": 12, "artist": "Marc Marberg & Kyau & Albert", "title": "Robotron", "label": "Euphonic" },
+    {
+      "n": 13,
+      "artist": "The Blizzard",
+      "title": "Piercing The Fog",
+      "label": "A State Of Trance"
+    },
+    {
+      "n": 14,
+      "artist": "Andrew Bayer feat. Molly Bancroft",
+      "title": "Keep Your Secrets (Myon & Shane 54 Summer Of Love Remix)",
+      "label": "Anjunabeats"
+    }
+  ]
+}

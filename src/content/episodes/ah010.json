@@ -1,0 +1,57 @@
+{
+  "id": "ah010",
+  "type": "aural-homework",
+  "title": "Aural Homework 010",
+  "date": "2012-10-01",
+  "location": "Coventry, UK",
+  "length": "1:16:30",
+  "mixcloud": "theInvigilators/the-invigilators-aural-homework-010-2012-10-01",
+  "image": "/img/ah010.jpg",
+  "description": "It's Chris' birthday! And we've got a new website to show off as well! So enjoy both of those things.",
+  "tracks": [
+    { "n": 1, "artist": "Dinka", "title": "Lotus (Johan Vilborg Remix)", "label": "Silk Royal" },
+    {
+      "n": 2,
+      "artist": "Velvetine",
+      "title": "The Great Divide (Soundprank Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 3,
+      "artist": "Solis & Sean Truby feat. Andy Tau",
+      "title": "Summer Heights (Karanda Remix)",
+      "label": "Infra Progressive"
+    },
+    { "n": 4, "artist": "Bobina", "title": "The Space Track", "label": "Magik Muzik" },
+    { "n": 5, "artist": "Bluestone", "title": "Namaste", "label": "Anjunabeats" },
+    { "n": 6, "artist": "Jochen Miller & W&W", "title": "Summer", "label": "Mainstage" },
+    {
+      "n": 7,
+      "artist": "Artur Akopov",
+      "title": "Starwalker (Andrew StetS Remix)",
+      "label": "Vendace"
+    },
+    { "n": 8, "artist": "Skytech", "title": "Comet", "label": "Coldharbour" },
+    {
+      "n": 9,
+      "artist": "Poison Pro & Miusha",
+      "title": "Alien (Shingo Nakamura Remix)",
+      "label": "Proton"
+    },
+    { "n": 10, "artist": "Ashley Wallbridge", "title": "Grenade", "label": "AVA" },
+    {
+      "n": 11,
+      "artist": "Above & Beyond",
+      "title": "Anjunabeach (Jerome Isma-Ae Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 12,
+      "artist": "Andain",
+      "title": "Turn Up The Sound (Gabriel & Dresden Remix)",
+      "label": "Black Hole"
+    },
+    { "n": 13, "artist": "Airsoul", "title": "Asia", "label": "Alter Ego" },
+    { "n": 14, "artist": "Andy Moor", "title": "K Ta", "label": "AVA" }
+  ]
+}

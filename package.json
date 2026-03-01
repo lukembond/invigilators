@@ -1,36 +1,27 @@
 {
   "name": "invigilators",
-  "version": "0.9.0",
-  "description": "Invigilators Website hosted on github!",
-  "main": "gulpfile.js",
+  "type": "module",
+  "version": "1.0.0",
   "scripts": {
-    "gulp": "gulp",
-    "test": "test"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "lint": "eslint src --ext .astro,.js,.ts",
+    "format": "prettier --write src/**/*.{astro,js,ts,json,css}"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/lukembond/invigilators.git"
+  "dependencies": {
+    "astro": "^5.18.0"
   },
-  "author": "lukembond",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/lukembond/invigilators/issues"
-  },
-  "homepage": "https://github.com/lukembond/invigilators",
-  "dependencies": {},
   "devDependencies": {
-    "bower": "^1.8.14",
-    "del": "^8.0.1",
-    "ejs": "^3.1.10",
-    "express": "^5.2.1",
-    "gulp": "^5.0.1",
-    "gulp-bower": "0.0.15",
-    "gulp-concat": "^2.6.1",
-    "gulp-jshint": "^2.1.0",
-    "gulp-load-plugins": "^2.0.8",
-    "gulp-sass": "^6.0.1",
-    "gulp-uglify": "^3.0.2",
-    "jshint": "^2.13.6",
-    "sass": "^1.94.2"
+    "@tailwindcss/vite": "^4.2.1",
+    "eslint": "^10.0.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-astro": "^1.6.0",
+    "globals": "^17.4.0",
+    "prettier": "^3.8.1",
+    "prettier-plugin-astro": "^0.14.1",
+    "tailwindcss": "^4.2.1",
+    "typescript-eslint": "^8.56.1"
   }
 }
