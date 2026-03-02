@@ -59,8 +59,8 @@ body {
 }
 
 .sticky-nav {
-  position: sticky;
-  top: 0;
+  position: sticky !important;
+  top: 0 !important;
   z-index: 50;
   backdrop-filter: blur(8px);
 }
