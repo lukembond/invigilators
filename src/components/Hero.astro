@@ -1,0 +1,35 @@
+---
+---
+
+<section class="relative w-full min-h-screen">
+  <video
+    id="video_background"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="absolute top-0 left-0 w-full h-full object-cover"
+  >
+    <source src="/video/invigivideo-1-2009.webm" type="video/webm" />
+    <source src="/video/invigivideo-1-2009.mp4" type="video/mp4" />
+  </video>
+  
+  <div class="absolute inset-0 bg-linear-to-b from-black/50 via-black/30 to-black/60"></div>
+
+  <div class="absolute top-6 right-6 z-20">
+    <h1 class="text-[8rem] md:text-7xl font-bold">
+      <a href="/" class="logo-text transition-colors">
+        <span class="text-4xl md:text-3xl">the</span> Invigilators
+      </a>
+    </h1>
+  </div>
+
+  <div class="absolute inset-0 flex items-center justify-center">
+    <button
+      id="enter-btn"
+      class="enter-btn cursor-pointer text-white text-xl md:text-2xl border-2 border-white px-8 py-4 hover:bg-white hover:text-black transition-all duration-300"
+    >
+      Open Booklet
+    </button>
+  </div>
+</section>
