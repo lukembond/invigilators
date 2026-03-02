@@ -19,11 +19,6 @@ export interface Episode {
   tracks: Track[];
 }
 
-function extractEpisodeNumber(title: string): number {
-  const match = title.match(/(\d+)/);
-  return match ? parseInt(match[1], 10) : 0;
-}
-
 export async function getEpisodes(): Promise<Episode[]> {
   const episodesDir = "./src/content/episodes";
   const fs = await import("node:fs");
@@ -32,9 +27,11 @@ export async function getEpisodes(): Promise<Episode[]> {
     .filter((f) => f.endsWith(".json"))
     .map((f) => JSON.parse(fs.readFileSync(`${episodesDir}/${f}`, "utf-8")))
     .sort((a, b) => {
-      const numA = extractEpisodeNumber(a.title);
-      const numB = extractEpisodeNumber(b.title);
-      // Sort by episode number descending (higher first)
-      return numB - numA;
+      const dateA = new Date(a.date).getTime();
+      const dateB = new Date(b.date).getTime();
+      // Sort by date newest first
+      if (dateA !== dateB) return dateB - dateA;
+      // Same date - sort by title descending (Part 2 before Part 1)
+      return b.title.localeCompare(a.title);
     });
 }

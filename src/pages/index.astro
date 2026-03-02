@@ -21,16 +21,12 @@ const INITIAL_LOAD = 5;
 </Layout>
 
 <script define:vars={{ episodes, INITIAL_LOAD }}>
-  function extractEpisodeNumber(title: string): number {
-    const match = title.match(/(\d+)/);
-    return match ? parseInt(match[1], 10) : 0;
-  }
-  
-  // Sort by episode number descending (higher first)
+  // Sort by date newest first, then by title descending (Part 2 before Part 1)
   const sortedEpisodes = [...episodes].sort((a, b) => {
-    const numA = extractEpisodeNumber(a.title);
-    const numB = extractEpisodeNumber(b.title);
-    return numB - numA;
+    const dateA = new Date(a.date).getTime();
+    const dateB = new Date(b.date).getTime();
+    if (dateA !== dateB) return dateB - dateA;
+    return b.title.localeCompare(a.title);
   });
   window.episodes = sortedEpisodes;
   window.INITIAL_LOAD = INITIAL_LOAD;
