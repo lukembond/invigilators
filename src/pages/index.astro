@@ -1,337 +1,45 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Episode from "../components/Episode.astro";
-import fs from "node:fs";
+import Hero from "../components/Hero.astro";
+import Nav from "../components/Nav.astro";
+import EpisodesList from "../components/EpisodesList.astro";
+import Footer from "../components/Footer.astro";
+import { getEpisodes } from "../services/episodes";
 
-interface EpisodeData {
-  id: string;
-  type: string;
-  title: string;
-  date: string;
-  location: string;
-  length: string;
-  mixcloud: string;
-  hearthis?: string;
-  image: string;
-  description: string;
-  tracks: Array<{
-    n: number;
-    artist: string;
-    title: string;
-    label: string;
-  }>;
-}
-
-const episodesDir = "./src/content/episodes";
-const files = fs.readdirSync(episodesDir);
-const episodes: EpisodeData[] = files
-  .filter((f) => f.endsWith(".json"))
-  .map((f) => JSON.parse(fs.readFileSync(`${episodesDir}/${f}`, "utf-8")))
-  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
-
+const episodes = await getEpisodes();
 const INITIAL_LOAD = 5;
-const initialEpisodes = episodes.slice(0, INITIAL_LOAD);
 ---
 
 <Layout title="The Invigilators">
-  <!-- Video Hero -->
-  <section class="hero-video relative w-full min-h-screen overflow-hidden">
-    <video
-      id="video_background"
-      autoplay
-      loop
-      muted
-      playsinline
-      class="absolute top-0 left-0 w-full h-full object-cover"
-    >
-      <source src="/video/invigivideo-1-2009.webm" type="video/webm" />
-      <source src="/video/invigivideo-1-2009.mp4" type="video/mp4" />
-    </video>
-    <!-- Subtle washout/overlay -->
-    <div class="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-
-    <!-- Logo in top left of hero -->
-    <div class="absolute top-6 left-6 z-20">
-      <h1 class="text-7xl md:text-3xl font-bold">
-        <a href="/" class="logo-text transition-colors">
-          <span class="text-4xl md:text-base">the</span> Invigilators
-        </a>
-      </h1>
-    </div>
-
-    <div class="absolute inset-0 flex items-center justify-center">
-      <a
-        href="#episodes"
-        class="enter-btn text-white text-xl md:text-2xl border-2 border-white px-8 py-4 hover:bg-white hover:text-black transition-all duration-300"
-      >
-        Start Homework
-      </a>
-    </div>
-  </section>
-
-  <!-- Header -->
-  <header
-    class="sticky-nav bg-black/90 py-4 shadow-lg hover:shadow-red-900/50 transition-shadow duration-300 top-0"
-  >
-    <div class="container mx-auto px-4">
-      <h1 class="text-2xl md:text-3xl font-bold text-white">
-        <a href="/" class="logo-text transition-colors">
-          <span class="text-base md:text-sm">the</span> Invigilators
-        </a>
-      </h1>
-    </div>
-  </header>
-
-  <!-- Episodes Section -->
-  <main id="episodes" class="episodes-container">
-    <div id="episodes-list" data-initial={INITIAL_LOAD}>
-      {initialEpisodes.map((episode, index) => <Episode {...episode} index={index} />)}
-    </div>
-
-    {
-      episodes.length > INITIAL_LOAD && (
-        <div id="load-more" class="py-16 text-center">
-          <button
-            id="load-more-btn"
-            class="bg-red-600 hover:bg-red-700 text-white px-8 py-3 rounded text-lg transition-colors"
-            data-offset={INITIAL_LOAD}
-          >
-            Load More
-          </button>
-        </div>
-      )
-    }
-
-    <div id="loading" class="hidden py-16 text-center">
-      <p class="text-white text-lg">Loading...</p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-black py-8 mt-16">
-    <div class="container mx-auto px-4 text-center">
-      <p class="text-gray-400 text-sm">Built with Astro + Tailwind CSS. Hosted on GitHub Pages.</p>
-    </div>
-  </footer>
+  <Hero />
+  
+  <div id="main-content" class="hidden">
+    <Nav />
+    <EpisodesList allEpisodes={episodes} initialLoad={INITIAL_LOAD} />
+    <Footer />
+  </div>
 </Layout>
 
 <script define:vars={{ episodes, INITIAL_LOAD }}>
-  let currentOffset = INITIAL_LOAD;
-  let isLoading = false;
-
-  function attachTracklistListeners() {
-    document.querySelectorAll(".toggle-tracklist").forEach((btn) => {
-      btn.addEventListener("click", () => {
-        const targetId = btn.getAttribute("data-target");
-        const tracklist = document.getElementById(targetId || "");
-        if (tracklist) {
-          const isExpanded = tracklist.style.maxHeight && tracklist.style.maxHeight !== "0px";
-          tracklist.style.maxHeight = isExpanded ? "0px" : "2000px";
-          btn.textContent = isExpanded ? "Show Tracklist" : "Hide Tracklist";
-        }
-      });
-    });
+  function extractEpisodeNumber(title: string): number {
+    const match = title.match(/(\d+)/);
+    return match ? parseInt(match[1], 10) : 0;
   }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    attachTracklistListeners();
-
-    // Load more function
-    const loadMoreEpisodes = () => {
-      if (isLoading) return;
-
-      const remaining = episodes.slice(currentOffset, currentOffset + 5);
-      if (remaining.length === 0) {
-        const loadMoreBtn = document.getElementById("load-more");
-        if (loadMoreBtn) loadMoreBtn.remove();
-        return;
-      }
-
-      isLoading = true;
-      const loading = document.getElementById("loading");
-      const loadMoreBtn = document.getElementById("load-more-btn");
-      const episodesList = document.getElementById("episodes-list");
-
-      if (loadMoreBtn) loadMoreBtn.classList.add("hidden");
-      if (loading) loading.classList.remove("hidden");
-
-      setTimeout(() => {
-        remaining.forEach((episode, idx) => {
-          const article = createEpisodeElement(episode, currentOffset + idx);
-          if (episodesList) episodesList.appendChild(article);
-        });
-
-        attachTracklistListeners();
-        
-        currentOffset += 5;
-        isLoading = false;
-        if (loading) loading.classList.add("hidden");
-
-        if (currentOffset >= episodes.length) {
-          const loadMore = document.getElementById("load-more");
-          if (loadMore) loadMore.remove();
-        } else if (loadMoreBtn) {
-          loadMoreBtn.classList.remove("hidden");
-        }
-      }, 300);
-    };
-
-    // Infinite scroll - auto-load when scrolling near bottom
-    let scrollTimeout;
-    window.addEventListener("scroll", () => {
-      clearTimeout(scrollTimeout);
-      scrollTimeout = setTimeout(() => {
-        const scrollPosition = window.innerHeight + window.scrollY;
-        const pageHeight = document.documentElement.scrollHeight;
-
-        // Load more when within 500px of bottom
-        if (pageHeight - scrollPosition < 500) {
-          loadMoreEpisodes();
-        }
-      }, 100);
-    });
-
-    // Load more button click
-    const loadMoreBtn = document.getElementById("load-more-btn");
-    if (loadMoreBtn) {
-      loadMoreBtn.addEventListener("click", loadMoreEpisodes);
-    }
+  
+  // Sort by episode number descending (higher first)
+  const sortedEpisodes = [...episodes].sort((a, b) => {
+    const numA = extractEpisodeNumber(a.title);
+    const numB = extractEpisodeNumber(b.title);
+    return numB - numA;
   });
-
-  function createEpisodeElement(episode, index) {
-    const article = document.createElement("article");
-    article.className = "episode relative min-h-screen flex items-center justify-center parallax";
-    article.dataset.id = episode.id;
-    article.dataset.parallaxRatio = "0.5";
-    article.style.backgroundImage = `url('${episode.image}')`;
-
-    const parallaxOverlay = document.createElement("div");
-    parallaxOverlay.className = "absolute inset-0 bg-black/30 backdrop-blur-sm";
-    article.appendChild(parallaxOverlay);
-
-    const content = document.createElement("div");
-    content.className = "relative z-10 w-full max-w-4xl mx-4 my-16";
-
-    const inner = document.createElement("div");
-    inner.className = "bg-black/20 backdrop-blur-md rounded-lg p-6 md:p-8 border border-white/10";
-
-    // Header
-    const header = document.createElement("div");
-    header.className = "flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6";
-
-    const titleDiv = document.createElement("div");
-    const title = document.createElement("h2");
-    title.className = "text-3xl md:text-4xl font-bold text-white mb-2";
-    title.textContent = episode.title;
-    const dateP = document.createElement("p");
-    dateP.className = "text-gray-400";
-    dateP.textContent = `${episode.date} • ${episode.location}`;
-    titleDiv.appendChild(title);
-    titleDiv.appendChild(dateP);
-
-    const lengthDiv = document.createElement("div");
-    lengthDiv.className = "text-right";
-    lengthDiv.innerHTML = `
-      <p class="text-gray-400 text-sm">Length</p>
-      <p class="text-white text-xl">${episode.length}</p>
-    `;
-
-    header.appendChild(titleDiv);
-    header.appendChild(lengthDiv);
-    inner.appendChild(header);
-
-    // Description
-    const desc = document.createElement("p");
-    desc.className = "text-gray-300 mb-6";
-    desc.textContent = episode.description;
-    inner.appendChild(desc);
-
-    // Player
-    if (episode.mixcloud) {
-      const player = document.createElement("div");
-      player.className = "player-container mb-6";
-      player.innerHTML = `
-        <iframe
-          src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2F${episode.mixcloud}%2F"
-          title="${episode.title}"
-          allow="autoplay"
-          loading="lazy"
-        ></iframe>
-      `;
-      inner.appendChild(player);
-    }
-
-    // Tracklist toggle
-    const toggleBtn = document.createElement("button");
-    toggleBtn.className =
-      "toggle-tracklist text-white bg-red-600 hover:bg-red-700 px-4 py-2 rounded transition-colors cursor-pointer";
-    toggleBtn.textContent = "Show Tracklist";
-    toggleBtn.dataset.target = `tracklist-${episode.id}`;
-    toggleBtn.addEventListener("click", () => {
-      const tracklist = document.getElementById(`tracklist-${episode.id}`);
-      if (tracklist) {
-        const isExpanded = tracklist.style.maxHeight && tracklist.style.maxHeight !== "0px";
-        tracklist.style.maxHeight = isExpanded ? "0px" : "2000px";
-        toggleBtn.textContent = isExpanded ? "Show Tracklist" : "Hide Tracklist";
-      }
-    });
-    inner.appendChild(toggleBtn);
-
-    // Tracklist
-    const tracklist = document.createElement("div");
-    tracklist.id = `tracklist-${episode.id}`;
-    tracklist.className = "tracklist mt-4 overflow-hidden transition-all duration-300";
-    tracklist.style.maxHeight = "0px";
-
-    if (episode.tracks && episode.tracks.length > 0) {
-      const tracklistHeader = document.createElement("h3");
-      tracklistHeader.className = "text-xl text-white mb-4";
-      tracklistHeader.textContent = "Tracklist";
-      tracklist.appendChild(tracklistHeader);
-
-      const trackUl = document.createElement("ul");
-      trackUl.className = "space-y-2";
-
-      episode.tracks.forEach((track) => {
-        const li = document.createElement("li");
-        li.className = "text-gray-300 text-sm";
-        li.innerHTML = `<span class="text-red-500">#${String(track.n).padStart(2, "0")}</span> ${track.artist} - ${track.title}${track.label ? ` [${track.label}]` : ""}`;
-        trackUl.appendChild(li);
-      });
-
-      tracklist.appendChild(trackUl);
-    }
-    inner.appendChild(tracklist);
-
-    content.appendChild(inner);
-    article.appendChild(content);
-
-    return article;
-  }
+  window.episodes = sortedEpisodes;
+  window.INITIAL_LOAD = INITIAL_LOAD;
 </script>
 
 <script>
-  // Simple parallax effect
-  window.addEventListener("scroll", () => {
-    const episodes = document.querySelectorAll(".episode");
-    const scrollY = window.scrollY;
-
-    episodes.forEach((episode) => {
-      const rect = episode.getBoundingClientRect();
-      if (rect.top < window.innerHeight && rect.bottom > 0) {
-        const ratio = parseFloat(episode.getAttribute("data-parallax-ratio") || "0.5");
-        const yPos = (scrollY - episode.offsetTop) * ratio;
-        (episode as HTMLElement).style.backgroundPositionY = `${yPos * 0.1}px`;
-      }
-    });
+  import { initApp } from "../scripts/app";
+  
+  document.addEventListener("DOMContentLoaded", () => {
+    initApp();
   });
 </script>
-
-<style>
-  .parallax {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-</style>

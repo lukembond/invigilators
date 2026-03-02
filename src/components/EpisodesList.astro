@@ -1,0 +1,38 @@
+---
+import Episode from "./Episode.astro";
+import type { Episode as EpisodeType } from "../services/episodes";
+
+interface Props {
+  allEpisodes: EpisodeType[];
+  initialLoad: number;
+}
+
+const { allEpisodes, initialLoad } = Astro.props;
+---
+
+<main id="episodes" class="episodes-container">
+  <div id="episodes-list">
+    {allEpisodes.map((episode, index) => (
+      <div class={`episode-wrapper ${index >= initialLoad ? 'hidden' : ''}`} data-index={index}>
+        <Episode {...episode} index={index} />
+      </div>
+    ))}
+  </div>
+
+  {
+    allEpisodes.length > initialLoad && (
+      <div id="load-more" class="py-16 text-center">
+        <button
+          id="load-more-btn"
+          class="bg-[#8c0a17] hover:bg-[#6a0812] text-white px-8 py-3 rounded text-lg transition-colors"
+        >
+          Load More
+        </button>
+      </div>
+    )
+  }
+
+  <div id="loading" class="hidden py-16 text-center">
+    <p class="text-white text-lg">Loading...</p>
+  </div>
+</main>

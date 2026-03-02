@@ -32,79 +32,52 @@
 
 @theme {
   --font-avant-garde: "Avant Garde", sans-serif;
+  --color-bg: #0a0a0a;
+  --color-text: #f5f5f5;
+  --color-text-muted: #9ca3af;
+  --color-red: #dc143c;
+  --color-red-dark: #8c0a17;
+  --color-border: rgba(255, 255, 255, 0.1);
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 body {
   font-family: var(--font-avant-garde);
-  background-color: #0a0a0a;
-  color: #f5f5f5;
+  background-color: var(--color-bg);
+  color: var(--color-text);
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
-.parallax {
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.sticky-nav {
-  position: sticky !important;
-  top: 0 !important;
-  z-index: 50;
-  backdrop-filter: blur(8px);
-}
-
 .visuallyhidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
+  @apply absolute w-0 h-0 p-0 -m-px overflow-hidden whitespace-nowrap border-0;
   clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-.tracklist {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.3s ease-out;
-}
-
-.tracklist.expanded {
-  max-height: 2000px;
-  transition: max-height 0.5s ease-in;
-}
-
-.player-container iframe {
-  width: 100%;
-  height: 60px;
-  border: none;
 }
 
 .logo-text {
-  font-family: var(--font-avant-garde);
   letter-spacing: -0.07em;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .logo-text:hover {
-  text-shadow: 0 0 60px rgba(224, 215, 169, 0.65), 1px 1px 0 #8c0a17, 2px 2px 0 #8c0a17, 3px 3px 0 #8c0a17, 4px 4px 0 #8c0a17;
+  text-shadow:
+    0 0 60px rgba(224, 215, 169, 0.65),
+    1px 1px 0 var(--color-red-dark),
+    2px 2px 0 var(--color-red-dark),
+    3px 3px 0 var(--color-red-dark),
+    4px 4px 0 var(--color-red-dark);
 }
 
-/* Page transition - Enter button */
 .enter-btn {
   animation: pulse 2s ease-in-out infinite;
 }
@@ -115,8 +88,72 @@ body {
   box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
+.nav-btn {
+  animation: throb 1.5s ease-in-out infinite;
+}
+
+.nav-btn.active {
+  animation: throb-fast 0.2s ease-in-out;
+  border-color: var(--color-red);
+  background-color: rgba(220, 20, 60, 0.2);
+  box-shadow: 0 0 15px rgba(220, 20, 60, 0.6);
+}
+
+@keyframes throb {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes throb-fast {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.nav-btn.active {
+  animation: throb-fast 0.3s ease-in-out;
+  border-color: var(--color-red-dark);
+  box-shadow: 0 0 10px rgba(140, 10, 23, 0.5);
+}
+
+@keyframes throb {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes throb-fast {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -124,28 +161,35 @@ body {
   }
 }
 
-/* Episode scroll transition */
 .episode {
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease forwards;
 }
 
-.episode:nth-child(1) { animation-delay: 0.1s; }
-.episode:nth-child(2) { animation-delay: 0.2s; }
-.episode:nth-child(3) { animation-delay: 0.3s; }
-.episode:nth-child(4) { animation-delay: 0.4s; }
-.episode:nth-child(5) { animation-delay: 0.5s; }
+.episode:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.episode:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.episode:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.episode:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.episode:nth-child(5) {
+  animation-delay: 0.5s;
+}
 
 @keyframes fadeInUp {
   to {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 80px;
 }
