@@ -1,4 +1,9 @@
 ---
+const types = [
+  { value: "all", label: "All" },
+  { value: "aural-homework", label: "Aural Homework" },
+  { value: "mykonos", label: "Mykonos Sessions" },
+];
 ---
 
 <header 
@@ -12,17 +17,33 @@
         <span class="text-base md:text-sm">the</span> Invigilators
       </a>
     </h1>
-    <div class="flex items-center gap-1">
-      <button id="nav-up" class="nav-btn text-white/70 hover:text-white px-2 py-1 rounded border border-white/20 bg-white/5 transition-all" aria-label="Previous episode">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
-        </svg>
-      </button>
-      <button id="nav-down" class="nav-btn text-white/70 hover:text-white px-2 py-1 rounded border border-white/20 bg-white/5 transition-all" aria-label="Next episode">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-        </svg>
-      </button>
+    <div class="flex items-center gap-3">
+      <div class="flex items-center gap-1">
+        {types.map((type) => (
+          <button
+            class={`filter-btn cursor-pointer text-xs md:text-sm px-2 md:px-3 py-1 rounded border transition-all ${
+              type.value === "all" 
+                ? "bg-white text-black border-white" 
+                : "text-white/70 border-white/20 hover:border-white/50"
+            }`}
+            data-filter={type.value}
+          >
+            {type.label}
+          </button>
+        ))}
+      </div>
+      <div class="flex items-center gap-1">
+        <button id="nav-up" class="nav-btn text-white/70 hover:text-white px-2 py-1 rounded border border-white/20 bg-white/5 transition-all" aria-label="Previous episode">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+          </svg>
+        </button>
+        <button id="nav-down" class="nav-btn text-white/70 hover:text-white px-2 py-1 rounded border border-white/20 bg-white/5 transition-all" aria-label="Next episode">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+      </div>
     </div>
   </div>
 </header>
