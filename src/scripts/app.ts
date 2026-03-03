@@ -4,15 +4,23 @@ declare global {
   interface Window {
     episodes: Episode[];
     INITIAL_LOAD: number;
+    currentEpisodeIndex: number;
+    loadedCounts: Record<string, number>;
+    currentFilter: string;
   }
 }
 
 export const initApp = () => {
+  window.currentEpisodeIndex = 0;
+  window.loadedCounts = { all: window.INITIAL_LOAD || 5 };
+  window.currentFilter = "all";
   initEnterButton();
   initMixcloud();
   initInfiniteScroll();
   initKeyboardNav();
-}
+  initNavScrollBehavior();
+  initFilters();
+};
 
 const initEnterButton = () => {
   const enterBtn = document.getElementById("enter-btn");
@@ -44,7 +52,37 @@ const initEnterButton = () => {
       }, 100);
     });
   }
-}
+};
+
+const initNavScrollBehavior = () => {
+  const nav = document.getElementById("nav");
+  const mainContent = document.getElementById("main-content");
+
+  if (!nav || !mainContent) return;
+
+  const hero = document.querySelector("section");
+
+  const handleNavVisibility = () => {
+    if (!hero) return;
+
+    const heroRect = hero.getBoundingClientRect();
+    const mainContentRect = mainContent.getBoundingClientRect();
+
+    const isPastHero = heroRect.bottom <= 0;
+    const isInMainContent = mainContentRect.top <= 100;
+
+    if (isPastHero && isInMainContent) {
+      nav.style.opacity = "1";
+      nav.style.pointerEvents = "auto";
+    } else if (!isPastHero) {
+      nav.style.opacity = "0";
+      nav.style.pointerEvents = "none";
+    }
+  };
+
+  window.addEventListener("scroll", handleNavVisibility, { passive: true });
+  handleNavVisibility();
+};
 
 const loadMixcloudEmbed = (container: Element) => {
   const mixcloud = (container as HTMLElement).dataset.mixcloud;
@@ -74,7 +112,7 @@ const loadMixcloudEmbed = (container: Element) => {
       ></iframe>
     `;
   }, 500);
-}
+};
 
 export const initMixcloud = () => {
   const mixcloudObserver = new IntersectionObserver(
@@ -95,17 +133,25 @@ export const initMixcloud = () => {
     });
     mixcloudObserver.observe(container);
   });
-}
+};
 
 export const initInfiniteScroll = () => {
   const loadMoreBtn = document.getElementById("load-more-btn");
-  const initialLoad = window.INITIAL_LOAD || 5;
-  let currentCount = initialLoad;
+
+  const getVisibleHidden = () => {
+    const wrappers = document.querySelectorAll(".episode-wrapper.hidden");
+    const filter = window.currentFilter || "all";
+    return Array.from(wrappers).filter((w) => {
+      const type = (w as HTMLElement).dataset.type;
+      return filter === "all" || type === filter;
+    });
+  };
 
   if (loadMoreBtn) {
     loadMoreBtn.addEventListener("click", () => {
+      const filter = window.currentFilter || "all";
       const loading = document.getElementById("loading");
-      const wrappers = document.querySelectorAll(".episode-wrapper.hidden");
+      const wrappers = getVisibleHidden();
 
       if (wrappers.length === 0) {
         loadMoreBtn.remove();
@@ -116,17 +162,17 @@ export const initInfiniteScroll = () => {
       if (loading) loading.classList.remove("hidden");
 
       setTimeout(() => {
-        // Show next batch of episodes (5 at a time)
-        const toShow = Array.from(wrappers).slice(0, 5);
+        const toShow = wrappers.slice(0, 5);
         toShow.forEach((wrapper) => {
           wrapper.classList.remove("hidden");
         });
 
-        currentCount += toShow.length;
+        const currentLoaded = window.loadedCounts[filter] || 0;
+        window.loadedCounts[filter] = currentLoaded + toShow.length;
+
         if (loading) loading.classList.add("hidden");
 
-        // Check if there are more to load
-        const remaining = document.querySelectorAll(".episode-wrapper.hidden");
+        const remaining = getVisibleHidden();
         if (remaining.length === 0) {
           loadMoreBtn.remove();
         } else {
@@ -136,7 +182,6 @@ export const initInfiniteScroll = () => {
     });
   }
 
-  // Auto-load when scrolling near bottom
   let scrollTimeout: number;
   window.addEventListener("scroll", () => {
     clearTimeout(scrollTimeout);
@@ -150,42 +195,44 @@ export const initInfiniteScroll = () => {
       }
     }, 100);
   });
-}
+};
 
 export const initKeyboardNav = () => {
   const navUp = document.getElementById("nav-up");
   const navDown = document.getElementById("nav-down");
-  let currentEpisodeIndex = 0;
 
   const getEpisodes = () => {
     return Array.from(document.querySelectorAll(".episode-wrapper:not(.hidden)"));
-  }
+  };
 
   const updateNavButtons = (episodes: Element[]) => {
     if (navUp) {
-      navUp.classList.toggle("opacity-30", currentEpisodeIndex === 0);
-      navUp.classList.toggle("pointer-events-none", currentEpisodeIndex === 0);
+      navUp.classList.toggle("opacity-30", window.currentEpisodeIndex === 0);
+      navUp.classList.toggle("pointer-events-none", window.currentEpisodeIndex === 0);
     }
     if (navDown) {
-      navDown.classList.toggle("opacity-30", currentEpisodeIndex >= episodes.length - 1);
-      navDown.classList.toggle("pointer-events-none", currentEpisodeIndex >= episodes.length - 1);
+      navDown.classList.toggle("opacity-30", window.currentEpisodeIndex >= episodes.length - 1);
+      navDown.classList.toggle(
+        "pointer-events-none",
+        window.currentEpisodeIndex >= episodes.length - 1
+      );
     }
-  }
+  };
 
   const scrollToEpisode = (index: number) => {
     const episodes = getEpisodes();
     if (index < 0 || index >= episodes.length) return;
-    currentEpisodeIndex = index;
+    window.currentEpisodeIndex = index;
     const ep = episodes[index] as HTMLElement;
     window.scrollTo({
       top: ep.offsetTop,
       behavior: "smooth",
     });
     updateNavButtons(episodes);
-  }
+  };
 
-  navUp?.addEventListener("click", () => scrollToEpisode(currentEpisodeIndex - 1));
-  navDown?.addEventListener("click", () => scrollToEpisode(currentEpisodeIndex + 1));
+  navUp?.addEventListener("click", () => scrollToEpisode(window.currentEpisodeIndex - 1));
+  navDown?.addEventListener("click", () => scrollToEpisode(window.currentEpisodeIndex + 1));
 
   document.addEventListener("keydown", (e) => {
     const episodes = getEpisodes();
@@ -193,12 +240,12 @@ export const initKeyboardNav = () => {
       e.preventDefault();
       navUp?.classList.add("active");
       setTimeout(() => navUp?.classList.remove("active"), 300);
-      scrollToEpisode(currentEpisodeIndex - 1);
+      scrollToEpisode(window.currentEpisodeIndex - 1);
     } else if (e.key === "ArrowDown") {
       e.preventDefault();
       navDown?.classList.add("active");
       setTimeout(() => navDown?.classList.remove("active"), 300);
-      scrollToEpisode(currentEpisodeIndex + 1);
+      scrollToEpisode(window.currentEpisodeIndex + 1);
     }
     updateNavButtons(episodes);
   });
@@ -213,11 +260,79 @@ export const initKeyboardNav = () => {
       const epEl = ep as HTMLElement;
       const epTop = epEl.offsetTop;
       if (scrollPos >= epTop && scrollPos < epTop + rect.height) {
-        currentEpisodeIndex = i;
+        window.currentEpisodeIndex = i;
       }
     });
     updateNavButtons(episodes);
   });
 
   updateNavButtons(getEpisodes());
-}
+};
+
+export const initFilters = () => {
+  const filterBtns = document.querySelectorAll(".filter-btn");
+  const initialLoad = window.INITIAL_LOAD || 5;
+
+  filterBtns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const filter = (btn as HTMLElement).dataset.filter || "all";
+      window.currentFilter = filter;
+      window.currentEpisodeIndex = 0;
+
+      filterBtns.forEach((b) => {
+        b.classList.remove("bg-white", "text-black", "border-white");
+        b.classList.add("text-white/70", "border-white/20");
+      });
+      btn.classList.remove("text-white/70", "border-white/20");
+      btn.classList.add("bg-white", "text-black", "border-white");
+
+      const wrappers = document.querySelectorAll(".episode-wrapper");
+      const loadedCount = window.loadedCounts[filter] || initialLoad;
+      let visibleCount = 0;
+
+      wrappers.forEach((wrapper) => {
+        const type = (wrapper as HTMLElement).dataset.type;
+        const shouldShow = filter === "all" || type === filter;
+
+        if (shouldShow) {
+          if (visibleCount < loadedCount) {
+            wrapper.classList.remove("hidden");
+          } else {
+            wrapper.classList.add("hidden");
+          }
+          visibleCount++;
+        } else {
+          wrapper.classList.add("hidden");
+        }
+      });
+
+      const loadMore = document.getElementById("load-more");
+      const loadMoreBtn = document.getElementById("load-more-btn");
+
+      if (visibleCount > loadedCount && loadMore && loadMoreBtn) {
+        loadMore.classList.remove("hidden");
+        loadMoreBtn.classList.remove("hidden");
+      } else if (loadMore && loadMoreBtn) {
+        loadMore.classList.add("hidden");
+        loadMoreBtn.classList.add("hidden");
+      }
+
+      const navUp = document.getElementById("nav-up");
+      const navDown = document.getElementById("nav-down");
+      if (navUp) {
+        navUp.classList.add("opacity-30", "pointer-events-none");
+      }
+      if (navDown) {
+        navDown.classList.add("opacity-30", "pointer-events-none");
+      }
+
+      const episodesSection = document.getElementById("episodes");
+      if (episodesSection) {
+        const ep = episodesSection.querySelector(".episode-wrapper:not(.hidden)") as HTMLElement;
+        if (ep) {
+          window.scrollTo({ top: ep.offsetTop, behavior: "smooth" });
+        }
+      }
+    });
+  });
+};

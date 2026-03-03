@@ -13,7 +13,11 @@ const { allEpisodes, initialLoad } = Astro.props;
 <main id="episodes" class="episodes-container">
   <div id="episodes-list">
     {allEpisodes.map((episode, index) => (
-      <div class={`episode-wrapper ${index >= initialLoad ? 'hidden' : ''}`} data-index={index}>
+      <div 
+        class={`episode-wrapper ${index >= initialLoad ? 'hidden' : ''}`} 
+        data-index={index}
+        data-type={episode.type}
+      >
         <Episode {...episode} index={index} />
       </div>
     ))}
