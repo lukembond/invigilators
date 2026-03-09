@@ -83,8 +83,17 @@ const { id, title, date, location, length, mixcloud, hearthis, image, descriptio
 
       <!-- Right: Tracklist -->
       <div class="bg-black/20 backdrop-blur-md rounded-lg p-4 border border-white/10">
-        <h3 class="text-lg text-white mb-3">Tracklist</h3>
-        <ul class="space-y-1">
+        <button 
+          class="tracklist-toggle md:hidden w-full flex items-center justify-between text-white"
+          aria-expanded="false"
+        >
+          <h3 class="text-lg">Tracklist</h3>
+          <svg class="tracklist-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="transform: rotate(0deg);">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          </svg>
+        </button>
+        <h3 class="hidden md:block text-lg text-white mb-3">Tracklist</h3>
+        <ul class="tracklist-content hidden md:block space-y-1">
           {
             tracks.map((track) => (
               <li class="text-gray-400 text-xs leading-tight border-b border-white/5 pb-1 last:border-0">
