@@ -20,6 +20,7 @@ export const initApp = () => {
   initKeyboardNav();
   initNavScrollBehavior();
   initFilters();
+  initTracklistToggle();
 };
 
 const initEnterButton = () => {
@@ -332,6 +333,29 @@ export const initFilters = () => {
         if (ep) {
           window.scrollTo({ top: ep.offsetTop, behavior: "smooth" });
         }
+      }
+    });
+  });
+};
+
+const initTracklistToggle = () => {
+  document.querySelectorAll(".tracklist-toggle").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const article = btn.closest("article");
+      if (!article) return;
+      
+      const content = article.querySelector(".tracklist-content") as HTMLElement;
+      const icon = article.querySelector(".tracklist-icon") as HTMLElement;
+      const isExpanded = btn.getAttribute("aria-expanded") === "true";
+      
+      btn.setAttribute("aria-expanded", String(!isExpanded));
+      
+      if (isExpanded) {
+        content?.classList.add("hidden");
+        if (icon) icon.style.transform = "rotate(0deg)";
+      } else {
+        content?.classList.remove("hidden");
+        if (icon) icon.style.transform = "rotate(180deg)";
       }
     });
   });
