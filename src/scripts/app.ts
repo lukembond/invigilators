@@ -343,13 +343,13 @@ const initTracklistToggle = () => {
     btn.addEventListener("click", () => {
       const article = btn.closest("article");
       if (!article) return;
-      
+
       const content = article.querySelector(".tracklist-content") as HTMLElement;
       const icon = article.querySelector(".tracklist-icon") as HTMLElement;
       const isExpanded = btn.getAttribute("aria-expanded") === "true";
-      
+
       btn.setAttribute("aria-expanded", String(!isExpanded));
-      
+
       if (isExpanded) {
         content?.classList.add("hidden");
         if (icon) icon.style.transform = "rotate(0deg)";

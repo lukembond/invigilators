@@ -4,9 +4,10 @@
   "title": "Aural Homework 007",
   "date": "2012-05-05",
   "location": "Coventry, UK",
-  "length": "1:14:10",
+  "length": "1:14:24",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-007-2012-05-05",
-  "image": "/img/ah007.webp",
+  "image_cover": "/img/episode-cover/ah007.webp",
+  "image_bg": "/img/episode-bg/ah007.webp",
   "description": "Recorded in Coventry @ Chris' place, this mix begins with the nostalgic sounds of the most popular N64 game ever, to mark the 007th outing.",
   "tracks": [
     { "n": 0, "artist": "Goldeneye 007", "title": "Intro", "label": "Nintendo" },

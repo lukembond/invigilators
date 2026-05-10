@@ -12,7 +12,9 @@
       "files": [
         "*.astro"
       ],
-      "parser": "astro"
+      "options": {
+        "parser": "astro"
+      }
     }
   ]
 }

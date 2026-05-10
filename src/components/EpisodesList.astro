@@ -12,15 +12,17 @@ const { allEpisodes, initialLoad } = Astro.props;
 
 <main id="episodes" class="episodes-container">
   <div id="episodes-list">
-    {allEpisodes.map((episode, index) => (
-      <div 
-        class={`episode-wrapper ${index >= initialLoad ? 'hidden' : ''}`} 
-        data-index={index}
-        data-type={episode.type}
-      >
-        <Episode {...episode} index={index} />
-      </div>
-    ))}
+    {
+      allEpisodes.map((episode, index) => (
+        <div
+          class={`episode-wrapper ${index >= initialLoad ? "hidden" : ""}`}
+          data-index={index}
+          data-type={episode.type}
+        >
+          <Episode {...episode} index={index} />
+        </div>
+      ))
+    }
   </div>
 
   {
@@ -28,7 +30,7 @@ const { allEpisodes, initialLoad } = Astro.props;
       <div id="load-more" class="py-16 text-center">
         <button
           id="load-more-btn"
-          class="bg-[#8c0a17] hover:bg-[#6a0812] text-white px-8 py-3 rounded text-lg transition-colors"
+          class="bg-red-dark hover:bg-[#6a0812] text-white px-8 py-3 rounded text-lg transition-colors"
         >
           Load More
         </button>

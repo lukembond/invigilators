@@ -4,9 +4,10 @@
   "title": "Aural Homework 014",
   "date": "2014-03-16",
   "location": "London, UK",
-  "length": "2:06:31",
+  "length": "2:07:26",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-014-2014-03-16",
-  "image": "/img/ah014.webp",
+  "image_cover": "/img/episode-cover/ah014.webp",
+  "image_bg": "/img/episode-bg/ah014.webp",
   "description": "Classics time! 'Nuff said.",
   "tracks": [
     { "n": 1, "artist": "PPK", "title": "ResuRection (Trailer Trash Remix)", "label": "Perfecto" },

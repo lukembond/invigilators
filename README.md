@@ -54,7 +54,7 @@ Add new episode JSON files to `src/content/episodes/`:
   "location": "London, UK",
   "length": "1:00:00",
   "mixcloud": "theInvigilators/...",
-  "image": "/img/ah033.jpg",
+  "image": "/img/episode-bg/ah033.jpg",
   "description": "Episode description...",
   "tracks": [
     { "n": 1, "artist": "Artist", "title": "Track Title", "label": "Label" }

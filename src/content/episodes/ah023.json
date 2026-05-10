@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "1:42:15",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-023-2017-05-20",
-  "image": "/img/ah023.webp",
+  "image_cover": "/img/episode-cover/ah023.webp",
+  "image_bg": "/img/episode-bg/ah023.webp",
   "description": "Aural Homework, Episode 023. A bunch of trance tunes for ya. Need to get more descriptive descriptions.",
   "tracks": [
     {

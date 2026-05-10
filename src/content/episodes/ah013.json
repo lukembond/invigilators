@@ -4,9 +4,10 @@
   "title": "Aural Homework 013",
   "date": "2014-01-26",
   "location": "London, UK",
-  "length": "1:16:08",
+  "length": "1:17:04",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-013-2014-01-26",
-  "image": "/img/ah013.webp",
+  "image_cover": "/img/episode-cover/ah013.webp",
+  "image_bg": "/img/episode-bg/ah013.webp",
   "description": "It's another fun rainy weekend in London for Australia day! Put this trancey lot together for your listening goodness.",
   "tracks": [
     { "n": 1, "artist": "Orjan Nilsen", "title": "Violetta", "label": "Armind" },

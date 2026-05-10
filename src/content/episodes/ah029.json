@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "1:12:28",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-029-2020-03-01",
-  "image": "/img/ah029.webp",
+  "image_cover": "/img/episode-cover/ah029.webp",
+  "image_bg": "/img/episode-bg/ah029.webp",
   "description": "Another Invigilators mix, this time off the back of spending Friday evening at a nice small music venue near King's Cross in London listening to the sounds of Tinlicker playing a nice intimate set.",
   "tracks": [
     {

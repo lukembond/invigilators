@@ -4,9 +4,10 @@
   "title": "Aural Homework 001",
   "date": "2009-05-15",
   "location": "Canberra, AU",
-  "length": "1:15:18",
+  "length": "1:16:13",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-001-2009-05-15",
-  "image": "/img/ah001.webp",
+  "image_cover": "/img/episode-cover/ah001.webp",
+  "image_bg": "/img/episode-bg/ah001.webp",
   "description": "Mixed up using 2x turntables, 1x microphone and a stack of newly received vinyl, oh as well as 2x Invigilators. Includes a nice bootleg to get things started, then mixes new with old.",
   "tracks": [
     {
@@ -42,7 +43,7 @@
       "label": "Black Hole"
     },
     { "n": 8, "artist": "Mat Zo", "title": "Out Of Minority", "label": "Coldharbour" },
-    { "n": 9, "artist": "Menno de Jong", "title": "Nothold (Extended Mix)", "label": "Intuition" },
+    { "n": 9, "artist": "Menno de Jong", "title": "Nothold", "label": "Intuition" },
     { "n": 10, "artist": "Rafael Frost", "title": "Red", "label": "Flashover" },
     {
       "n": 11,

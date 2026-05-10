@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "1:29:41",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-022-2017-01-01",
-  "image": "/img/ah022.webp",
+  "image_cover": "/img/episode-cover/ah022.webp",
+  "image_bg": "/img/episode-bg/ah022.webp",
   "description": "Episode 22 is here. Recorded New Years Day 2017, it's an hour and a half of uplifting tunes for you!",
   "tracks": [
     {
@@ -52,7 +53,7 @@
     {
       "n": 11,
       "artist": "Coast 2 Coast feat. Discovery",
-      "title": "Home (Scott Bond & Charlie Walker GC23 Extended Remix)",
+      "title": "Home (Scott Bond & Charlie Walker GC23 Remix)",
       "label": "Who's Afraid Of 138?!"
     },
     {

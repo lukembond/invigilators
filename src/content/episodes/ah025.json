@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "1:00:00",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-025-2017-11-26",
-  "image": "/img/ah025.png",
+  "image_cover": "/img/episode-cover/ah025.webp",
+  "image_bg": "/img/episode-bg/ah025.webp",
   "description": "And we're back again already, with episode 25. More from the trance spectrum on this one, with a bit more banter in there for you too.",
   "tracks": [
     { "n": 1, "artist": "PureNRG", "title": "Midnight Blue", "label": "" },

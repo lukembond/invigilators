@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "0:34:45",
   "mixcloud": "theInvigilators/aural-homework-026-2019-03-08",
-  "image": "/img/ah026.webp",
+  "image_cover": "/img/episode-cover/ah026.webp",
+  "image_bg": "/img/episode-bg/ah026.webp",
   "description": "Back after a bit of a gap with a short mini mix ahead of a Trance Sanctuary event from March 2019.",
   "tracks": [
     { "n": 1, "artist": "Factor B & Lostly", "title": "Strandloper", "label": "Pure Trance" },

@@ -4,9 +4,10 @@
   "title": "Aural Homework 015",
   "date": "2014-04-13",
   "location": "London, UK",
-  "length": "1:03:37",
+  "length": "1:04:32",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-015-2014-04-13",
-  "image": "/img/ah015.webp",
+  "image_cover": "/img/episode-cover/ah015.webp",
+  "image_bg": "/img/episode-bg/ah015.webp",
   "description": "Here is the first one of the thought to be gone InvigiLostTapes! A progressive tip recorded for an hour's worth of killer proggy houseness.",
   "tracks": [
     { "n": 1, "artist": "Matt Lange", "title": "Only You", "label": "Anjunadeep" },
@@ -19,7 +20,7 @@
     {
       "n": 3,
       "artist": "Blood Groove & Kikis feat. Victoria Ray",
-      "title": "Free Like A Bird (Original Dub Mix)",
+      "title": "Free Like A Bird (Dub Mix)",
       "label": "Silk Digital"
     },
     {

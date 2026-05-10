@@ -14,20 +14,32 @@ interface Props {
   length: string;
   mixcloud: string;
   hearthis?: string;
-  image: string;
+  image_cover: string;
+  image_bg: string;
   description: string;
   tracks: Track[];
   index: number;
 }
 
-const { id, title, date, location, length, mixcloud, hearthis, image, description, tracks } =
-  Astro.props;
+const {
+  id,
+  title,
+  date,
+  location,
+  length,
+  mixcloud,
+  hearthis,
+  image_cover,
+  image_bg,
+  description,
+  tracks,
+} = Astro.props;
 ---
 
 <article
   class="episode relative min-h-screen flex flex-col justify-center bg-cover bg-center"
   data-id={id}
-  style={`background-image: url('${image}');`}
+  style={`background-image: url('${image_bg}');`}
 >
   <div class="relative z-10 w-full max-w-7xl mx-auto py-12">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center justify-items-center">
@@ -83,13 +95,20 @@ const { id, title, date, location, length, mixcloud, hearthis, image, descriptio
 
       <!-- Right: Tracklist -->
       <div class="bg-black/20 backdrop-blur-md rounded-lg p-4 border border-white/10">
-        <button 
+        <button
           class="tracklist-toggle md:hidden w-full flex items-center justify-between text-white"
           aria-expanded="false"
         >
           <h3 class="text-lg">Tracklist</h3>
-          <svg class="tracklist-icon w-5 h-5 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor" style="transform: rotate(0deg);">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+          <svg
+            class="tracklist-icon w-5 h-5 transition-transform duration-200"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            style="transform: rotate(0deg);"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"
+            ></path>
           </svg>
         </button>
         <h3 class="hidden md:block text-lg text-white mb-3">Tracklist</h3>

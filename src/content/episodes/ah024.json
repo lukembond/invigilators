@@ -6,7 +6,8 @@
   "location": "London, UK",
   "length": "1:41:39",
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-024-2017-08-05",
-  "image": "/img/ah024.webp",
+  "image_cover": "/img/episode-cover/ah024.webp",
+  "image_bg": "/img/episode-bg/ah024.webp",
   "description": "A selection of large ones for you! Mixed live in Luke's living room in London, we double up the ironing boards this time out to bring you a double dose of bangers.",
   "tracks": [
     { "n": 1, "artist": "Gai Barone", "title": "Lost in Music (Solarstone Pure Mix)", "label": "" },
