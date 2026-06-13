@@ -16,6 +16,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v6
 
+      - name: Install CI tools
+        run: apt-get update && apt-get install -y unzip
+
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
