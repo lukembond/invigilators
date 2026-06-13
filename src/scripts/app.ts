@@ -3,360 +3,234 @@ import type { Episode } from "../services/episodes";
 declare global {
   interface Window {
     episodes: Episode[];
-    INITIAL_LOAD: number;
-    currentEpisodeIndex: number;
-    loadedCounts: Record<string, number>;
-    currentFilter: string;
   }
 }
 
 export const initApp = () => {
-  window.currentEpisodeIndex = 0;
-  window.loadedCounts = { all: window.INITIAL_LOAD || 5 };
-  window.currentFilter = "all";
+  initLandingVideo();
   initEnterButton();
-  initMixcloud();
-  initInfiniteScroll();
-  initKeyboardNav();
-  initNavScrollBehavior();
-  initFilters();
-  initTracklistToggle();
+  initTileImageFallbacks();
+  initAlbumOverlay();
+};
+
+const initLandingVideo = () => {
+  const video = document.getElementById("video_background") as HTMLVideoElement | null;
+  if (!video) return;
+
+  video.muted = true;
+  video.loop = true;
+  video.playsInline = true;
+  video.preload = "auto";
+
+  const playVideo = () => {
+    const playPromise = video.play();
+    if (playPromise) {
+      playPromise.catch(() => {
+        video.setAttribute("data-playback-blocked", "true");
+      });
+    }
+  };
+
+  video.load();
+  playVideo();
+  video.addEventListener("loadeddata", playVideo, { once: true });
+  video.addEventListener("canplay", playVideo, { once: true });
+
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && video.paused) playVideo();
+  });
+};
+
+const OVERLAY_TRANSITION_MS = 280;
+
+const initTileImageFallbacks = () => {
+  document.querySelectorAll<HTMLImageElement>(".album-tile img").forEach((image) => {
+    image.addEventListener("error", () => {
+      const fallback = image.dataset.fallbackSrc || "/img/episode-bg/ahNotFound.png";
+      if (image.src.endsWith(fallback)) {
+        image.src = "/img/episode-bg/ahNotFound.png";
+        return;
+      }
+      image.src = fallback;
+    });
+  });
 };
 
 const initEnterButton = () => {
   const enterBtn = document.getElementById("enter-btn");
-  const mainContent = document.getElementById("main-content");
+  const landing = document.getElementById("landing");
+  const booklet = document.getElementById("booklet");
 
-  if (enterBtn && mainContent) {
+  if (enterBtn && landing && booklet) {
     enterBtn.addEventListener("click", () => {
-      enterBtn.classList.add("hidden");
-      mainContent.classList.remove("hidden");
-
-      const nav = document.getElementById("nav");
-      if (nav) {
-        nav.style.position = "fixed";
-        nav.style.top = "0";
-        nav.style.left = "0";
-        nav.style.right = "0";
-        nav.style.zIndex = "100";
-        nav.style.opacity = "1";
-      }
-
-      setTimeout(() => {
-        const episodesSection = document.getElementById("episodes");
-        if (episodesSection) {
-          const ep = episodesSection.querySelector(".episode-wrapper") as HTMLElement;
-          if (ep) {
-            window.scrollTo({ top: ep.offsetTop, behavior: "smooth" });
-          }
-        }
-      }, 100);
+      landing.classList.add("is-exiting");
+      window.setTimeout(() => {
+        landing.classList.add("hidden");
+        booklet.classList.remove("hidden");
+        booklet.classList.add("is-visible");
+        document.querySelector<HTMLElement>(".album-tile")?.focus();
+      }, 260);
     });
   }
 };
 
-const initNavScrollBehavior = () => {
-  const nav = document.getElementById("nav");
-  const mainContent = document.getElementById("main-content");
+const formatType = (type: string) => (type === "mykonos" ? "Mykonos Sessions" : "Aural Homework");
 
-  if (!nav || !mainContent) return;
-
-  const hero = document.querySelector("section");
-
-  const handleNavVisibility = () => {
-    if (!hero) return;
-
-    const heroRect = hero.getBoundingClientRect();
-    const mainContentRect = mainContent.getBoundingClientRect();
-
-    const isPastHero = heroRect.bottom <= 0;
-    const isInMainContent = mainContentRect.top <= 100;
-
-    if (isPastHero && isInMainContent) {
-      nav.style.opacity = "1";
-      nav.style.pointerEvents = "auto";
-    } else if (!isPastHero) {
-      nav.style.opacity = "0";
-      nav.style.pointerEvents = "none";
-    }
-  };
-
-  window.addEventListener("scroll", handleNavVisibility, { passive: true });
-  handleNavVisibility();
+const getEpisodeImage = (episode: Episode) => {
+  return episode.image_cover || episode.image_bg || "/img/episode-bg/ahNotFound.png";
 };
 
-const loadMixcloudEmbed = (container: Element) => {
-  const mixcloud = (container as HTMLElement).dataset.mixcloud;
-  const title = (container as HTMLElement).dataset.title;
-  if (!mixcloud) return;
+const getEpisodeBackground = (episode: Episode) => {
+  return episode.image_bg || episode.image_cover || "/img/episode-bg/ahNotFound.png";
+};
 
-  // Show loading state
+const escapeHtml = (value: string | undefined) => {
+  return String(value || "").replace(/[&<>"]/g, (char) => {
+    const entities: Record<string, string> = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+    };
+    return entities[char];
+  });
+};
+
+const renderPlayer = (container: HTMLElement, mixcloud: string, title: string) => {
+  if (!mixcloud) {
+    container.innerHTML = "";
+    return;
+  }
+
   container.innerHTML = `
-    <div class="w-full h-full bg-gray-900/50 border border-white/10 rounded flex items-center justify-center text-gray-400 text-sm gap-2">
-      <svg class="animate-spin h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-      </svg>
-      <span>Loading player...</span>
-    </div>
+    <iframe
+      class="block h-15 w-full border-0"
+      src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2F${encodeURIComponent(mixcloud)}%2F"
+      title="${escapeHtml(title)}"
+      allow="autoplay"
+      loading="lazy"
+    ></iframe>
   `;
-
-  // Actually load the iframe after a brief delay
-  setTimeout(() => {
-    container.innerHTML = `
-      <iframe
-        class="w-full h-full border-0"
-        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2F${mixcloud}%2F"
-        title="${title}"
-        allow="autoplay"
-        loading="lazy"
-      ></iframe>
-    `;
-  }, 500);
 };
 
-export const initMixcloud = () => {
-  const mixcloudObserver = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          loadMixcloudEmbed(entry.target);
-          mixcloudObserver.unobserve(entry.target);
-        }
-      });
-    },
-    { rootMargin: "200px" }
-  );
+const initAlbumOverlay = () => {
+  const overlay = document.getElementById("mix-overlay");
+  const closeButton = document.getElementById("overlay-close");
+  const prevButton = document.getElementById("overlay-prev") as HTMLButtonElement | null;
+  const nextButton = document.getElementById("overlay-next") as HTMLButtonElement | null;
+  const counter = document.getElementById("overlay-counter");
+  const navTitle = document.getElementById("overlay-nav-title");
+  const image = document.getElementById("overlay-image") as HTMLImageElement | null;
+  const kicker = document.getElementById("overlay-kicker");
+  const title = document.getElementById("overlay-title");
+  const date = document.getElementById("overlay-date");
+  const location = document.getElementById("overlay-location");
+  const length = document.getElementById("overlay-length");
+  const description = document.getElementById("overlay-description");
+  const player = document.getElementById("overlay-player");
+  const tracks = document.getElementById("overlay-tracks");
+  const trackPanel = document.getElementById("overlay-track-panel");
+  const trackCount = document.getElementById("overlay-track-count");
+  let currentIndex = -1;
+  let closeTimer: number | undefined;
 
-  document.querySelectorAll(".mixcloud-container").forEach((container) => {
-    (container as HTMLElement).addEventListener("click", () => loadMixcloudEmbed(container), {
-      once: true,
-    });
-    mixcloudObserver.observe(container);
-  });
-};
-
-export const initInfiniteScroll = () => {
-  const loadMoreBtn = document.getElementById("load-more-btn");
-
-  const getVisibleHidden = () => {
-    const wrappers = document.querySelectorAll(".episode-wrapper.hidden");
-    const filter = window.currentFilter || "all";
-    return Array.from(wrappers).filter((w) => {
-      const type = (w as HTMLElement).dataset.type;
-      return filter === "all" || type === filter;
-    });
-  };
-
-  if (loadMoreBtn) {
-    loadMoreBtn.addEventListener("click", () => {
-      const filter = window.currentFilter || "all";
-      const loading = document.getElementById("loading");
-      const wrappers = getVisibleHidden();
-
-      if (wrappers.length === 0) {
-        loadMoreBtn.remove();
-        return;
-      }
-
-      loadMoreBtn.classList.add("hidden");
-      if (loading) loading.classList.remove("hidden");
-
-      setTimeout(() => {
-        const toShow = wrappers.slice(0, 5);
-        toShow.forEach((wrapper) => {
-          wrapper.classList.remove("hidden");
-        });
-
-        const currentLoaded = window.loadedCounts[filter] || 0;
-        window.loadedCounts[filter] = currentLoaded + toShow.length;
-
-        if (loading) loading.classList.add("hidden");
-
-        const remaining = getVisibleHidden();
-        if (remaining.length === 0) {
-          loadMoreBtn.remove();
-        } else {
-          loadMoreBtn.classList.remove("hidden");
-        }
-      }, 300);
-    });
+  if (
+    !overlay ||
+    !closeButton ||
+    !prevButton ||
+    !nextButton ||
+    !counter ||
+    !navTitle ||
+    !image ||
+    !kicker ||
+    !title ||
+    !date ||
+    !location ||
+    !length ||
+    !description ||
+    !player ||
+    !tracks ||
+    !trackPanel ||
+    !trackCount
+  ) {
+    return;
   }
 
-  let scrollTimeout: number;
-  window.addEventListener("scroll", () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = window.setTimeout(() => {
-      const btn = document.getElementById("load-more-btn");
-      if (!btn || btn.classList.contains("hidden")) return;
-
-      const rect = btn.getBoundingClientRect();
-      if (rect.top < window.innerHeight + 400) {
-        btn.click();
-      }
-    }, 100);
-  });
-};
-
-export const initKeyboardNav = () => {
-  const navUp = document.getElementById("nav-up");
-  const navDown = document.getElementById("nav-down");
-
-  const getEpisodes = () => {
-    return Array.from(document.querySelectorAll(".episode-wrapper:not(.hidden)"));
+  const closeOverlay = () => {
+    const tile = document.querySelector<HTMLElement>(`.album-tile[data-index="${currentIndex}"]`);
+    overlay.classList.remove("is-open");
+    overlay.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("overlay-open");
+    window.clearTimeout(closeTimer);
+    closeTimer = window.setTimeout(() => {
+      overlay.classList.add("hidden");
+      player.innerHTML = "";
+      tile?.focus();
+    }, OVERLAY_TRANSITION_MS);
   };
 
-  const updateNavButtons = (episodes: Element[]) => {
-    if (navUp) {
-      navUp.classList.toggle("opacity-30", window.currentEpisodeIndex === 0);
-      navUp.classList.toggle("pointer-events-none", window.currentEpisodeIndex === 0);
-    }
-    if (navDown) {
-      navDown.classList.toggle("opacity-30", window.currentEpisodeIndex >= episodes.length - 1);
-      navDown.classList.toggle(
-        "pointer-events-none",
-        window.currentEpisodeIndex >= episodes.length - 1
-      );
-    }
+  const openOverlay = (episode: Episode, index: number) => {
+    currentIndex = index;
+    image.src = getEpisodeImage(episode);
+    image.alt = episode.title;
+    kicker.textContent = formatType(episode.type);
+    title.textContent = episode.title;
+    navTitle.textContent = episode.title;
+    counter.textContent = `${index + 1} / ${window.episodes.length}`;
+    date.textContent = episode.date;
+    location.textContent = episode.location;
+    length.textContent = episode.length;
+    description.textContent = episode.description;
+    trackCount.textContent = `Tracklist - ${episode.tracks.length} tracks`;
+    trackPanel.style.backgroundImage = `linear-gradient(90deg, rgba(13, 2, 5, 0.94) 0%, rgba(13, 2, 5, 0.82) 42%, rgba(13, 2, 5, 0.68) 100%), linear-gradient(0deg, rgba(13, 2, 5, 0.62), rgba(13, 2, 5, 0.62)), url("${getEpisodeBackground(episode)}")`;
+    prevButton.disabled = index <= 0;
+    nextButton.disabled = index >= window.episodes.length - 1;
+    tracks.innerHTML = episode.tracks
+      .map(
+        (track) => `
+          <div class="track-row grid h-10.5 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_52px] items-center gap-3 border-b border-(--border) px-8 transition-colors duration-120 hover:bg-[rgba(140,10,23,0.07)] max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px] max-[700px]:h-auto max-[700px]:min-h-13 max-[700px]:grid-cols-[32px_minmax(0,1fr)] max-[700px]:py-2.25">
+            <span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>
+            <strong class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium tracking-[0.03em] text-(--foreground)">${escapeHtml(track.title)}</strong>
+            <em class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-light not-italic text-(--muted-foreground) max-[700px]:col-start-2">${escapeHtml(track.artist)}</em>
+            <small class="overflow-hidden text-ellipsis whitespace-nowrap font-mono text-[9px] text-[rgba(154,96,104,0.7)] max-[700px]:col-start-2 max-[700px]:hidden">${escapeHtml(track.label || "-")}</small>
+            <b class="text-right font-mono text-[10px] font-normal text-(--accent) max-[900px]:hidden">-</b>
+          </div>
+        `
+      )
+      .join("");
+
+    player.innerHTML = "";
+    renderPlayer(player, episode.mixcloud, episode.title);
+    window.clearTimeout(closeTimer);
+    overlay.classList.remove("hidden");
+    overlay.setAttribute("aria-hidden", "false");
+    document.body.classList.add("overlay-open");
+    window.requestAnimationFrame(() => overlay.classList.add("is-open"));
+    closeButton.focus();
   };
 
-  const scrollToEpisode = (index: number) => {
-    const episodes = getEpisodes();
-    if (index < 0 || index >= episodes.length) return;
-    window.currentEpisodeIndex = index;
-    const ep = episodes[index] as HTMLElement;
-    window.scrollTo({
-      top: ep.offsetTop,
-      behavior: "smooth",
-    });
-    updateNavButtons(episodes);
+  const openByIndex = (index: number) => {
+    const episode = window.episodes[index];
+    if (episode) openOverlay(episode, index);
   };
 
-  navUp?.addEventListener("click", () => scrollToEpisode(window.currentEpisodeIndex - 1));
-  navDown?.addEventListener("click", () => scrollToEpisode(window.currentEpisodeIndex + 1));
-
-  document.addEventListener("keydown", (e) => {
-    const episodes = getEpisodes();
-    if (e.key === "ArrowUp") {
-      e.preventDefault();
-      navUp?.classList.add("active");
-      setTimeout(() => navUp?.classList.remove("active"), 300);
-      scrollToEpisode(window.currentEpisodeIndex - 1);
-    } else if (e.key === "ArrowDown") {
-      e.preventDefault();
-      navDown?.classList.add("active");
-      setTimeout(() => navDown?.classList.remove("active"), 300);
-      scrollToEpisode(window.currentEpisodeIndex + 1);
-    }
-    updateNavButtons(episodes);
-  });
-
-  window.addEventListener("scroll", () => {
-    const episodes = getEpisodes();
-    if (episodes.length === 0) return;
-
-    const scrollPos = window.scrollY + window.innerHeight / 2;
-    episodes.forEach((ep, i) => {
-      const rect = ep.getBoundingClientRect();
-      const epEl = ep as HTMLElement;
-      const epTop = epEl.offsetTop;
-      if (scrollPos >= epTop && scrollPos < epTop + rect.height) {
-        window.currentEpisodeIndex = i;
-      }
-    });
-    updateNavButtons(episodes);
-  });
-
-  updateNavButtons(getEpisodes());
-};
-
-export const initFilters = () => {
-  const filterBtns = document.querySelectorAll(".filter-btn");
-  const initialLoad = window.INITIAL_LOAD || 5;
-
-  filterBtns.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const filter = (btn as HTMLElement).dataset.filter || "all";
-      window.currentFilter = filter;
-      window.currentEpisodeIndex = 0;
-
-      filterBtns.forEach((b) => {
-        b.classList.remove("bg-white", "text-black", "border-white");
-        b.classList.add("text-white/70", "border-white/20");
-      });
-      btn.classList.remove("text-white/70", "border-white/20");
-      btn.classList.add("bg-white", "text-black", "border-white");
-
-      const wrappers = document.querySelectorAll(".episode-wrapper");
-      const loadedCount = window.loadedCounts[filter] || initialLoad;
-      let visibleCount = 0;
-
-      wrappers.forEach((wrapper) => {
-        const type = (wrapper as HTMLElement).dataset.type;
-        const shouldShow = filter === "all" || type === filter;
-
-        if (shouldShow) {
-          if (visibleCount < loadedCount) {
-            wrapper.classList.remove("hidden");
-          } else {
-            wrapper.classList.add("hidden");
-          }
-          visibleCount++;
-        } else {
-          wrapper.classList.add("hidden");
-        }
-      });
-
-      const loadMore = document.getElementById("load-more");
-      const loadMoreBtn = document.getElementById("load-more-btn");
-
-      if (visibleCount > loadedCount && loadMore && loadMoreBtn) {
-        loadMore.classList.remove("hidden");
-        loadMoreBtn.classList.remove("hidden");
-      } else if (loadMore && loadMoreBtn) {
-        loadMore.classList.add("hidden");
-        loadMoreBtn.classList.add("hidden");
-      }
-
-      const navUp = document.getElementById("nav-up");
-      const navDown = document.getElementById("nav-down");
-      if (navUp) {
-        navUp.classList.add("opacity-30", "pointer-events-none");
-      }
-      if (navDown) {
-        navDown.classList.add("opacity-30", "pointer-events-none");
-      }
-
-      const episodesSection = document.getElementById("episodes");
-      if (episodesSection) {
-        const ep = episodesSection.querySelector(".episode-wrapper:not(.hidden)") as HTMLElement;
-        if (ep) {
-          window.scrollTo({ top: ep.offsetTop, behavior: "smooth" });
-        }
-      }
+  document.querySelectorAll(".album-tile").forEach((tile) => {
+    tile.addEventListener("click", () => {
+      const index = Number((tile as HTMLElement).dataset.index);
+      openByIndex(index);
     });
   });
-};
 
-const initTracklistToggle = () => {
-  document.querySelectorAll(".tracklist-toggle").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      const article = btn.closest("article");
-      if (!article) return;
-
-      const content = article.querySelector(".tracklist-content") as HTMLElement;
-      const icon = article.querySelector(".tracklist-icon") as HTMLElement;
-      const isExpanded = btn.getAttribute("aria-expanded") === "true";
-
-      btn.setAttribute("aria-expanded", String(!isExpanded));
-
-      if (isExpanded) {
-        content?.classList.add("hidden");
-        if (icon) icon.style.transform = "rotate(0deg)";
-      } else {
-        content?.classList.remove("hidden");
-        if (icon) icon.style.transform = "rotate(180deg)";
-      }
-    });
+  closeButton.addEventListener("click", closeOverlay);
+  prevButton.addEventListener("click", () => openByIndex(currentIndex - 1));
+  nextButton.addEventListener("click", () => openByIndex(currentIndex + 1));
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) closeOverlay();
+  });
+  document.addEventListener("keydown", (event) => {
+    if (!overlay.classList.contains("is-open")) return;
+    if (event.key === "Escape") closeOverlay();
+    if (event.key === "ArrowLeft") openByIndex(currentIndex - 1);
+    if (event.key === "ArrowRight") openByIndex(currentIndex + 1);
   });
 };

@@ -4,41 +4,230 @@ import type { Episode as EpisodeType } from "../services/episodes";
 
 interface Props {
   allEpisodes: EpisodeType[];
-  initialLoad: number;
 }
 
-const { allEpisodes, initialLoad } = Astro.props;
+const allEpisodes = Astro.props.allEpisodes ?? [];
 ---
 
-<main id="episodes" class="episodes-container">
-  <div id="episodes-list">
-    {
-      allEpisodes.map((episode, index) => (
-        <div
-          class={`episode-wrapper ${index >= initialLoad ? "hidden" : ""}`}
-          data-index={index}
-          data-type={episode.type}
-        >
-          <Episode {...episode} index={index} />
-        </div>
-      ))
-    }
+<main
+  id="booklet"
+  class="booklet-view hidden h-screen w-screen flex-col overflow-hidden bg-(--background)"
+  aria-label="Album collage booklet"
+>
+  <div
+    class="booklet-topbar grid h-14 shrink-0 grid-cols-[1fr_auto_1fr] items-center border-b border-(--border) bg-(--background) px-8 max-[700px]:grid-cols-[auto_1fr] max-[700px]:px-4"
+  >
+    <div
+      class="booklet-count justify-self-start font-mono text-[10px] tracking-[0.08em] text-(--muted-foreground)"
+      aria-label={`${allEpisodes.length} mixes`}
+    >
+      <span id="selected-counter">{allEpisodes.length} Mixes</span>
+    </div>
+    <div
+      class="booklet-wordmark col-start-3 flex flex-col items-end justify-self-end leading-none text-(--foreground) max-[700px]:col-start-2"
+      aria-label="the Invigilators"
+    >
+      <span
+        class="text-[9px] font-light uppercase tracking-[0.45em] text-[rgba(240,228,228,0.55)] indent-[0.45em]"
+        >the</span
+      >
+      <strong class="text-[17px] font-bold uppercase tracking-[0.18em] indent-[0.18em]"
+        >Invigilators</strong
+      >
+    </div>
   </div>
 
-  {
-    allEpisodes.length > initialLoad && (
-      <div id="load-more" class="py-16 text-center">
-        <button
-          id="load-more-btn"
-          class="bg-red-dark hover:bg-[#6a0812] text-white px-8 py-3 rounded text-lg transition-colors"
-        >
-          Load More
-        </button>
-      </div>
-    )
-  }
-
-  <div id="loading" class="hidden py-16 text-center">
-    <p class="text-white text-lg">Loading...</p>
+  <div
+    class="booklet-grid-wrap flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]"
+  >
+    <div
+      id="episodes-list"
+      class="collage-grid grid w-[min(100%,1360px)] gap-[clamp(10px,1.4vw,18px)] overflow-visible"
+    >
+      {allEpisodes.map((episode, index) => <Episode {...episode} index={index} />)}
+    </div>
   </div>
 </main>
+
+<section
+  id="mix-overlay"
+  class="mix-detail pointer-events-none fixed inset-0 z-100 hidden flex-col overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+>
+  <div
+    class="mix-detail-topbar flex h-14 shrink-0 items-center justify-between border-b border-(--border) bg-(--background) px-6 max-[900px]:px-4"
+  >
+    <div class="detail-nav-group flex items-center gap-1.5">
+      <button
+        id="overlay-prev"
+        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120"
+        type="button"
+        aria-label="Previous album"
+      >
+        <svg
+          class="size-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+          viewBox="0 0 24 24"
+          aria-hidden="true"><path d="m15 18-6-6 6-6"></path></svg
+        >
+      </button>
+      <button
+        id="overlay-next"
+        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120"
+        type="button"
+        aria-label="Next album"
+      >
+        <svg
+          class="size-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+          viewBox="0 0 24 24"
+          aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg
+        >
+      </button>
+      <span
+        id="overlay-counter"
+        class="detail-counter ml-2 font-(--font-mono) text-[10px] tracking-[0.08em] text-(--muted-foreground)"
+      ></span>
+    </div>
+    <div
+      id="overlay-nav-title"
+      class="detail-nav-title max-w-[40%] overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs font-semibold uppercase tracking-[0.22em] text-(--foreground) max-[700px]:hidden"
+    >
+    </div>
+    <button
+      id="overlay-close"
+      class="detail-close flex cursor-pointer items-center justify-center bg-transparent p-1.5 text-(--muted-foreground) transition-colors duration-150"
+      type="button"
+      aria-label="Close album detail"
+    >
+      <svg
+        class="size-4 fill-none stroke-current stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+        viewBox="0 0 24 24"
+        aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"></path></svg
+      >
+    </button>
+  </div>
+
+  <div
+    class="mix-detail-body grid flex-1 grid-cols-[380px_minmax(0,1fr)] overflow-hidden max-[900px]:grid-cols-[minmax(260px,36vw)_minmax(0,1fr)] max-[700px]:block max-[700px]:overflow-visible"
+  >
+    <aside
+      class="mix-detail-left flex flex-col overflow-hidden border-r border-(--border) bg-[#0a0104] max-[700px]:overflow-visible max-[700px]:border-r-0"
+    >
+      <div class="detail-art-panel relative shrink-0">
+        <img
+          id="overlay-image"
+          class="block aspect-square w-full object-cover max-[700px]:max-h-[42vh]"
+          src=""
+          alt=""
+        />
+      </div>
+
+      <div
+        class="detail-art-caption shrink-0 border-b border-(--border) bg-[rgba(13,2,5,0.72)] p-5"
+      >
+        <p
+          id="overlay-kicker"
+          class="mb-1.25 font-mono text-[9px] uppercase tracking-[0.16em] text-(--accent)"
+        >
+        </p>
+        <h2
+          id="overlay-title"
+          class="text-xl font-bold leading-[1.1] tracking-[0.04em] text-(--foreground)"
+        >
+        </h2>
+      </div>
+
+      <div class="detail-meta-panel flex flex-col gap-2.5 border-b border-(--border) px-5 py-4">
+        <p
+          class="flex items-center gap-2 font-mono text-[10px] tracking-[0.04em] text-(--muted-foreground)"
+        >
+          <svg
+            class="size-4 shrink-0 fill-none stroke-(--primary) stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            ><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 1 1 16 0Z"></path><circle
+              cx="12"
+              cy="10"
+              r="3"></circle></svg
+          ><span id="overlay-location"></span>
+        </p>
+        <p
+          class="flex items-center gap-2 font-mono text-[10px] tracking-[0.04em] text-(--muted-foreground)"
+        >
+          <svg
+            class="size-4 shrink-0 fill-none stroke-(--primary) stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            ><path d="M8 2v4M16 2v4M3 10h18"></path><rect x="3" y="4" width="18" height="18" rx="2"
+            ></rect></svg
+          ><span id="overlay-date"></span>
+        </p>
+        <p
+          class="flex items-center gap-2 font-mono text-[10px] tracking-[0.04em] text-(--muted-foreground)"
+        >
+          <svg
+            class="size-4 shrink-0 fill-none stroke-(--primary) stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            ><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg
+          ><span id="overlay-length"></span>
+        </p>
+      </div>
+
+      <div
+        class="detail-description-panel flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible"
+      >
+        <p
+          id="overlay-description"
+          class="text-[11px] font-light leading-[1.75] text-(--muted-foreground)"
+        >
+        </p>
+      </div>
+
+      <div class="detail-player-panel shrink-0 px-5 py-4">
+        <p
+          class="mb-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground)"
+        >
+          Listen
+        </p>
+        <div
+          id="overlay-player"
+          class="overlay-player overflow-hidden border border-(--border) bg-(--card)"
+        >
+        </div>
+      </div>
+    </aside>
+
+    <section
+      id="overlay-track-panel"
+      class="mix-detail-right flex flex-col overflow-hidden bg-bg bg-cover bg-center bg-no-repeat max-[700px]:overflow-visible"
+    >
+      <div
+        class="tracklist-heading flex shrink-0 items-center gap-2.5 border-b border-(--border) px-8 pb-3.5 pt-4.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground)"
+      >
+        <svg
+          class="size-4 shrink-0 fill-none stroke-(--primary) stroke-2 [stroke-linecap:round] [stroke-linejoin:round]"
+          viewBox="0 0 24 24"
+          aria-hidden="true"
+          ><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle
+            cx="18"
+            cy="16"
+            r="3"></circle></svg
+        >
+        <span id="overlay-track-count"></span>
+      </div>
+      <div
+        class="tracklist-columns grid shrink-0 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_52px] gap-3 border-b border-(--border) px-8 py-2.5 font-mono text-[8px] uppercase tracking-[0.14em] text-(--muted-foreground) max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px] max-[700px]:hidden [&>span:last-child]:max-[900px]:hidden"
+        aria-hidden="true"
+      >
+        <span>#</span>
+        <span>Title</span>
+        <span>Artist</span>
+        <span>Label</span>
+        <span>Time</span>
+      </div>
+      <div id="overlay-tracks" class="overlay-tracks flex-1 overflow-y-auto"></div>
+    </section>
+  </div>
+</section>

@@ -14,7 +14,8 @@ export interface Episode {
   length: string;
   mixcloud: string;
   hearthis?: string;
-  image: string;
+  image_cover?: string;
+  image_bg?: string;
   description: string;
   tracks: Track[];
 }
