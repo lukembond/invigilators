@@ -171,7 +171,13 @@ body.overlay-open {
   grid-template-columns: repeat(auto-fill, minmax(min(100%, var(--tile-min)), 1fr));
 }
 
+.mix-detail {
+  display: none;
+}
+
 .mix-detail.is-open {
+  display: flex;
+  flex-direction: column;
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0) scale(1);
@@ -193,6 +199,68 @@ body.overlay-open {
 .detail-close:focus-visible {
   color: var(--accent);
   outline: none;
+}
+
+.detail-description-panel,
+.overlay-tracks {
+  scrollbar-color: rgba(196, 17, 42, 0.42) rgba(13, 2, 5, 0.42);
+  scrollbar-width: thin;
+}
+
+.detail-description-panel::-webkit-scrollbar,
+.overlay-tracks::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.detail-description-panel::-webkit-scrollbar-track,
+.overlay-tracks::-webkit-scrollbar-track {
+  background: rgba(13, 2, 5, 0.42);
+}
+
+.detail-description-panel::-webkit-scrollbar-thumb,
+.overlay-tracks::-webkit-scrollbar-thumb {
+  border: 2px solid rgba(13, 2, 5, 0.42);
+  background: rgba(196, 17, 42, 0.38);
+}
+
+.detail-description-panel::-webkit-scrollbar-thumb:hover,
+.overlay-tracks::-webkit-scrollbar-thumb:hover {
+  background: rgba(196, 17, 42, 0.58);
+}
+
+@media (min-width: 701px) {
+  .detail-art-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a0104;
+  }
+
+  #overlay-image {
+    height: min(380px, 44vh);
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 701px) and (max-height: 700px) {
+  #overlay-image {
+    height: min(300px, 30vh);
+  }
+
+  .detail-art-caption,
+  .detail-description-panel,
+  .detail-player-panel {
+    padding: 0.875rem 1.25rem;
+  }
+
+  .detail-meta-panel {
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .detail-player-panel p {
+    margin-bottom: 0.5rem;
+  }
 }
 
 @keyframes fadeIn {

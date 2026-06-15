@@ -51,7 +51,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
 
 <section
   id="mix-overlay"
-  class="mix-detail pointer-events-none fixed inset-0 z-100 hidden flex-col overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
+  class="mix-detail pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
   aria-hidden="true"
   role="dialog"
   aria-modal="true"
@@ -109,10 +109,10 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
   </div>
 
   <div
-    class="mix-detail-body grid flex-1 grid-cols-[380px_minmax(0,1fr)] overflow-hidden max-[900px]:grid-cols-[minmax(260px,36vw)_minmax(0,1fr)] max-[700px]:block max-[700px]:overflow-visible"
+    class="mix-detail-body grid min-h-0 flex-1 grid-cols-[380px_minmax(0,1fr)] overflow-hidden max-[900px]:grid-cols-[minmax(260px,36vw)_minmax(0,1fr)] max-[700px]:block max-[700px]:overflow-visible"
   >
     <aside
-      class="mix-detail-left flex flex-col overflow-hidden border-r border-(--border) bg-[#0a0104] max-[700px]:overflow-visible max-[700px]:border-r-0"
+      class="mix-detail-left flex min-h-0 flex-col overflow-hidden border-r border-(--border) bg-[#0a0104] max-[700px]:overflow-visible max-[700px]:border-r-0"
     >
       <div class="detail-art-panel relative shrink-0">
         <img
@@ -126,11 +126,6 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
       <div
         class="detail-art-caption shrink-0 border-b border-(--border) bg-[rgba(13,2,5,0.72)] p-5"
       >
-        <p
-          id="overlay-kicker"
-          class="mb-1.25 font-mono text-[9px] uppercase tracking-[0.16em] text-(--accent)"
-        >
-        </p>
         <h2
           id="overlay-title"
           class="text-xl font-bold leading-[1.1] tracking-[0.04em] text-(--foreground)"
@@ -176,7 +171,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
       </div>
 
       <div
-        class="detail-description-panel flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible"
+        class="detail-description-panel min-h-0 flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible"
       >
         <p
           id="overlay-description"
@@ -201,7 +196,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
 
     <section
       id="overlay-track-panel"
-      class="mix-detail-right flex flex-col overflow-hidden bg-bg bg-cover bg-center bg-no-repeat max-[700px]:overflow-visible"
+      class="mix-detail-right flex min-h-0 flex-col overflow-hidden bg-bg bg-cover bg-center bg-no-repeat max-[700px]:overflow-visible"
     >
       <div
         class="tracklist-heading flex shrink-0 items-center gap-2.5 border-b border-(--border) px-8 pb-3.5 pt-4.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground)"
@@ -227,7 +222,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         <span>Label</span>
         <span>Time</span>
       </div>
-      <div id="overlay-tracks" class="overlay-tracks flex-1 overflow-y-auto"></div>
+      <div id="overlay-tracks" class="overlay-tracks min-h-0 flex-1 overflow-y-auto"></div>
     </section>
   </div>
 </section>

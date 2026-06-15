@@ -183,6 +183,48 @@ test.describe("Render Mix collage", () => {
     expect(backgroundImage).toContain("linear-gradient");
   });
 
+  test("keeps long desktop tracklists scrollable with the player visible", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 600 });
+    await openBooklet(page);
+
+    const longestEpisode = await page.evaluate(() => {
+      const episodes = (globalThis as unknown as { episodes: BrowserEpisode[] }).episodes;
+      return episodes.reduce(
+        (longest, episode, index) => {
+          if (episode.tracks.length > longest.trackCount) {
+            return { index, trackCount: episode.tracks.length };
+          }
+
+          return longest;
+        },
+        { index: 0, trackCount: 0 }
+      );
+    });
+    await page.locator(`.album-tile[data-index="${longestEpisode.index}"]`).click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+
+    const overlayMetrics = await page.evaluate(() => {
+      const tracks = document.getElementById("overlay-tracks");
+      const playerPanel = document.querySelector<HTMLElement>(".detail-player-panel");
+      const playerRect = playerPanel?.getBoundingClientRect();
+      if (tracks) tracks.scrollTop = 160;
+
+      return {
+        tracksClientHeight: tracks?.clientHeight,
+        tracksScrollHeight: tracks?.scrollHeight,
+        tracksScrollTop: tracks?.scrollTop,
+        playerBottom: playerRect?.bottom,
+        playerTop: playerRect?.top,
+        viewportHeight: window.innerHeight,
+      };
+    });
+
+    expect(overlayMetrics.tracksScrollHeight || 0).toBeGreaterThan(overlayMetrics.tracksClientHeight || 0);
+    expect(overlayMetrics.tracksScrollTop).toBe(160);
+    expect(overlayMetrics.playerTop || 0).toBeLessThan(overlayMetrics.viewportHeight);
+    expect(overlayMetrics.playerBottom || 0).toBeLessThanOrEqual(overlayMetrics.viewportHeight);
+  });
+
   test("navigates overlay albums and closes with Escape", async ({ page }) => {
     await openBooklet(page);
 
