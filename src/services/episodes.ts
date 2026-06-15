@@ -12,7 +12,7 @@ export interface Episode {
   date: string;
   location: string;
   length: string;
-  mixcloud: string;
+  mixcloud?: string;
   hearthis?: string;
   image_cover?: string;
   image_bg?: string;
