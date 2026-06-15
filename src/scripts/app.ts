@@ -74,8 +74,6 @@ const initEnterButton = () => {
   }
 };
 
-const formatType = (type: string) => (type === "mykonos" ? "Mykonos Sessions" : "Aural Homework");
-
 const getEpisodeImage = (episode: Episode) => {
   return episode.image_cover || episode.image_bg || "/img/episode-bg/ahNotFound.png";
 };
@@ -121,7 +119,6 @@ const initAlbumOverlay = () => {
   const counter = document.getElementById("overlay-counter");
   const navTitle = document.getElementById("overlay-nav-title");
   const image = document.getElementById("overlay-image") as HTMLImageElement | null;
-  const kicker = document.getElementById("overlay-kicker");
   const title = document.getElementById("overlay-title");
   const date = document.getElementById("overlay-date");
   const location = document.getElementById("overlay-location");
@@ -142,7 +139,6 @@ const initAlbumOverlay = () => {
     !counter ||
     !navTitle ||
     !image ||
-    !kicker ||
     !title ||
     !date ||
     !location ||
@@ -173,7 +169,6 @@ const initAlbumOverlay = () => {
     currentIndex = index;
     image.src = getEpisodeImage(episode);
     image.alt = episode.title;
-    kicker.textContent = formatType(episode.type);
     title.textContent = episode.title;
     navTitle.textContent = episode.title;
     counter.textContent = `${index + 1} / ${window.episodes.length}`;
