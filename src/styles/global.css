@@ -122,6 +122,18 @@ body.overlay-open {
   animation: titleTracking 5200ms 1700ms ease-in-out infinite;
 }
 
+@media (max-width: 700px) {
+  .landing-wordmark .wordmark-line--article {
+    --letter-spacing-base: 0.28em;
+    --letter-spacing-tight: 0.23em;
+  }
+
+  .landing-wordmark .wordmark-line--title {
+    --letter-spacing-base: 0.13em;
+    --letter-spacing-tight: 0.1em;
+  }
+}
+
 .wordmark-letter {
   animation: typeInLetter 420ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
   animation-delay: calc(180ms + (var(--letter-index) * 76ms));
