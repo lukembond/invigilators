@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   output: 'static',
   build: {
-    format: 'file'
+    format: 'directory'
   },
   vite: {
     plugins: [tailwindcss()]
