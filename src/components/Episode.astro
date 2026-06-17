@@ -13,7 +13,6 @@ const { id, type, title, length, image_cover, image_bg, index } = Astro.props;
 
 const tileImage = image_cover || image_bg || "/img/episode-bg/ahNotFound.png";
 const fallbackImage = image_bg || "/img/episode-bg/ahNotFound.png";
-const typeLabel = type === "mykonos" ? "Mykonos Sessions" : "Aural Homework";
 ---
 
 <a
@@ -36,10 +35,6 @@ const typeLabel = type === "mykonos" ? "Mykonos Sessions" : "Aural Homework";
     class="album-tile-overlay absolute inset-0 flex flex-col justify-end bg-linear-to-t from-[rgba(13,2,5,0.76)] via-[rgba(13,2,5,0.28)] to-transparent p-2.5 text-left opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100"
     aria-hidden="true"
   >
-    <span
-      class="album-tile-genre mb-0.75 overflow-hidden text-ellipsis whitespace-nowrap text-[9px] font-semibold uppercase tracking-[0.15em] text-(--accent)"
-      >{typeLabel}</span
-    >
     <strong
       class="overflow-hidden text-[10px] font-semibold leading-[1.3] text-(--foreground) [display:-webkit-box] [-webkit-box-orient:vertical] [-webkit-line-clamp:2]"
       >{title}</strong

@@ -42,7 +42,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
   >
     <div
       id="episodes-list"
-      class="collage-grid grid w-[min(100%,1360px)] gap-[clamp(10px,1.4vw,18px)] overflow-visible"
+      class="collage-grid grid w-[min(100%,1360px)] gap-[clamp(10px,1.4vw,18px)] overflow-visible [--tile-min:clamp(132px,18vw,220px)] grid-cols-[repeat(auto-fill,minmax(min(100%,var(--tile-min)),1fr))]"
     >
       {allEpisodes.map((episode, index) => <Episode {...episode} index={index} />)}
     </div>
@@ -62,7 +62,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
     <div class="detail-nav-group flex items-center gap-1.5">
       <button
         id="overlay-prev"
-        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120"
+        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120 enabled:hover:border-(--primary) enabled:hover:bg-[rgba(140,10,23,0.15)] enabled:hover:outline-none enabled:focus-visible:border-(--primary) enabled:focus-visible:bg-[rgba(140,10,23,0.15)] enabled:focus-visible:outline-none disabled:cursor-default disabled:opacity-30"
         type="button"
         aria-label="Previous album"
       >
@@ -74,7 +74,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
       </button>
       <button
         id="overlay-next"
-        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120"
+        class="detail-nav-button flex cursor-pointer items-center justify-center border border-(--border) bg-transparent px-2 py-1.25 text-(--foreground) transition-[color,border-color,background,opacity] duration-120 enabled:hover:border-(--primary) enabled:hover:bg-[rgba(140,10,23,0.15)] enabled:hover:outline-none enabled:focus-visible:border-(--primary) enabled:focus-visible:bg-[rgba(140,10,23,0.15)] enabled:focus-visible:outline-none disabled:cursor-default disabled:opacity-30"
         type="button"
         aria-label="Next album"
       >
@@ -96,7 +96,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
     </div>
     <button
       id="overlay-close"
-      class="detail-close flex cursor-pointer items-center justify-center bg-transparent p-1.5 text-(--muted-foreground) transition-colors duration-150"
+      class="detail-close flex cursor-pointer items-center justify-center bg-transparent p-1.5 text-(--muted-foreground) transition-colors duration-150 hover:text-(--accent) hover:outline-none focus-visible:text-(--accent) focus-visible:outline-none"
       type="button"
       aria-label="Close album detail"
     >
@@ -114,17 +114,17 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
     <aside
       class="mix-detail-left flex min-h-0 flex-col overflow-hidden border-r border-(--border) bg-[#0a0104] max-[700px]:overflow-visible max-[700px]:border-r-0"
     >
-      <div class="detail-art-panel relative shrink-0">
+      <div class="detail-art-panel relative shrink-0 min-[701px]:flex min-[701px]:items-center min-[701px]:justify-center min-[701px]:bg-[#0a0104]">
         <img
           id="overlay-image"
-          class="block aspect-square w-full object-cover max-[700px]:object-contain"
+          class="block aspect-square w-full object-cover max-[700px]:object-contain min-[701px]:h-[min(380px,44vh)] min-[701px]:object-contain [@media(min-width:701px)_and_(max-height:700px)]:h-[min(300px,30vh)]"
           src=""
           alt=""
         />
       </div>
 
       <div
-        class="detail-art-caption shrink-0 border-b border-(--border) bg-[rgba(13,2,5,0.72)] p-5"
+        class="detail-art-caption shrink-0 border-b border-(--border) bg-[rgba(13,2,5,0.72)] p-5 [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
       >
         <h2
           id="overlay-title"
@@ -133,7 +133,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         </h2>
       </div>
 
-      <div class="detail-meta-panel flex flex-col gap-2.5 border-b border-(--border) px-5 py-4">
+      <div class="detail-meta-panel flex flex-col gap-2.5 border-b border-(--border) px-5 py-4 [@media(min-width:701px)_and_(max-height:700px)]:gap-2 [@media(min-width:701px)_and_(max-height:700px)]:py-3">
         <p
           class="flex items-center gap-2 font-mono text-[10px] tracking-[0.04em] text-(--muted-foreground)"
         >
@@ -171,7 +171,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
       </div>
 
       <div
-        class="detail-description-panel min-h-0 flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible"
+        class="detail-description-panel min-h-0 flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
       >
         <p
           id="overlay-description"
@@ -180,9 +180,9 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         </p>
       </div>
 
-      <div class="detail-player-panel shrink-0 px-5 py-4">
+      <div class="detail-player-panel shrink-0 px-5 py-4 [@media(min-width:701px)_and_(max-height:700px)]:py-3.5">
         <p
-          class="mb-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground)"
+          class="mb-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground) [@media(min-width:701px)_and_(max-height:700px)]:mb-2"
         >
           Listen
         </p>

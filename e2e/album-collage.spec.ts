@@ -39,6 +39,18 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#booklet")).toBeVisible();
   });
 
+  test("uses an iris transition when opening the booklet", async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await page.goto("/");
+
+    await page.locator("#enter-btn").click();
+    await expect(page.locator("#landing")).toHaveClass(/is-iris-transition/);
+    await expect(page.locator("#landing")).toHaveCSS("--iris-target-x", /px/);
+    await expect(page.locator("#landing")).toHaveCSS("--iris-target-y", /px/);
+    await expect(page.locator("#landing")).toBeHidden();
+    await expect(page.locator("#booklet")).toBeVisible();
+  });
+
   test("renders tiles in the current episode order", async ({ page }) => {
     await openBooklet(page);
 
@@ -216,6 +228,22 @@ test.describe("Render Mix collage", () => {
     expect(getPathname(page)).toBe(`/episodes/${episodes[0].id}`);
   });
 
+  test("uses direction-specific page transitions for overlay navigation", async ({ page }) => {
+    await openBooklet(page);
+
+    await page.locator(".album-tile").first().click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+
+    await page.locator("#overlay-next").click();
+    await expect(page.locator(".mix-detail-body")).toHaveClass(/episode-page-transition--next/);
+    await expect(page.locator(".mix-detail-body")).toHaveClass(/episode-page-transition--out/);
+
+    await expect(page.locator(".mix-detail-body")).not.toHaveClass(/episode-page-transition/);
+    await page.keyboard.press("ArrowLeft");
+    await expect(page.locator(".mix-detail-body")).toHaveClass(/episode-page-transition--prev/);
+    await expect(page.locator(".mix-detail-body")).toHaveClass(/episode-page-transition--out/);
+  });
+
   test("handles browser back and forward for episode overlays", async ({ page }) => {
     await openBooklet(page);
 
@@ -306,5 +334,58 @@ test.describe("Render Mix collage", () => {
 
     await page.keyboard.press("Escape");
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+  });
+
+  test("uses an iris transition when opening and closing an episode overlay", async ({ page }) => {
+    await page.emulateMedia({ reducedMotion: "no-preference" });
+    await openBooklet(page);
+
+    await page.locator(".album-tile").first().click();
+    await expect(page.locator("#mix-overlay")).toHaveClass(/is-iris-opening/);
+    await expect(page.locator("#mix-overlay")).toHaveCSS("--iris-tile-x", /px/);
+    await expect(page.locator("#mix-overlay")).toHaveCSS("--iris-tile-y", /px/);
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+
+    await page.locator("#overlay-close").click();
+    await expect(page.locator("#mix-overlay")).toHaveClass(/is-iris-closing/);
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+  });
+
+  test("supports swipe nav between episodes on mobile", async ({ page, isMobile }) => {
+    test.skip(!isMobile, "swipe nav only enabled on mobile widths");
+    await openBooklet(page);
+
+    const episodes = await getEpisodes(page);
+    await page.locator(".album-tile").first().click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page.locator("#overlay-title")).toHaveText(episodes[0].title);
+
+    const overlayBox = await page.locator("#mix-overlay").boundingBox();
+    if (!overlayBox) throw new Error("overlay not visible");
+    const centerY = overlayBox.y + overlayBox.height / 2;
+    const startX = overlayBox.x + overlayBox.width - 30;
+    const endX = overlayBox.x + 30;
+
+    await page.locator("#mix-overlay").dispatchEvent("touchstart", {
+      touches: [{ clientX: startX, clientY: centerY }],
+      changedTouches: [{ clientX: startX, clientY: centerY }],
+    });
+    await page.locator("#mix-overlay").dispatchEvent("touchend", {
+      touches: [],
+      changedTouches: [{ clientX: endX, clientY: centerY }],
+    });
+
+    await expect(page.locator("#overlay-title")).toHaveText(episodes[1].title);
+
+    await page.locator("#mix-overlay").dispatchEvent("touchstart", {
+      touches: [{ clientX: endX, clientY: centerY }],
+      changedTouches: [{ clientX: endX, clientY: centerY }],
+    });
+    await page.locator("#mix-overlay").dispatchEvent("touchend", {
+      touches: [],
+      changedTouches: [{ clientX: startX, clientY: centerY }],
+    });
+
+    await expect(page.locator("#overlay-title")).toHaveText(episodes[0].title);
   });
 });
