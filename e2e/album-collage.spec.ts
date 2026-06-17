@@ -20,6 +20,8 @@ const openBooklet = async (page: Page) => {
   await expect(page.locator("#booklet")).toBeVisible();
 };
 
+const getPathname = (page: Page) => new URL(page.url()).pathname;
+
 test.describe("Render Mix collage", () => {
   test("loads the landing video and opens the collage", async ({ page }) => {
     await page.goto("/");
@@ -166,6 +168,70 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#overlay-description")).toHaveText(firstEpisode.description);
     await expect(page.locator("#overlay-tracks .track-row")).toHaveCount(firstEpisode.tracks.length);
     await expect(page.locator("#overlay-player iframe")).toHaveAttribute("src", /mixcloud\.com/);
+  });
+
+  test("opens an episode overlay from a direct deep link", async ({ page }) => {
+    await page.goto("/episodes/ah001");
+
+    const episodes = await getEpisodes(page);
+    const episode = episodes.find(({ id }) => id === "ah001");
+
+    expect(episode).toBeTruthy();
+    await expect(page.locator("#landing")).toBeHidden();
+    await expect(page.locator("#booklet")).toBeVisible();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page.locator("#overlay-title")).toHaveText(episode?.title || "");
+    await expect(page).toHaveTitle(`${episode?.title} | The Invigilators`);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/episodes\/ah001$/);
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /\/img\/episode-/);
+  });
+
+  test("updates the URL when opening and closing an episode", async ({ page }) => {
+    await openBooklet(page);
+
+    const [firstEpisode] = await getEpisodes(page);
+    await page.locator(".album-tile").first().click();
+
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    expect(getPathname(page)).toBe(`/episodes/${firstEpisode.id}`);
+
+    await page.locator("#overlay-close").click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+    expect(getPathname(page)).toBe("/");
+  });
+
+  test("keeps the deep link current while navigating overlay albums", async ({ page }) => {
+    await openBooklet(page);
+
+    const episodes = await getEpisodes(page);
+    await page.locator(".album-tile").first().click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+
+    await page.locator("#overlay-next").click();
+    await expect(page.locator("#overlay-title")).toHaveText(episodes[1].title);
+    expect(getPathname(page)).toBe(`/episodes/${episodes[1].id}`);
+
+    await page.locator("#overlay-prev").click();
+    await expect(page.locator("#overlay-title")).toHaveText(episodes[0].title);
+    expect(getPathname(page)).toBe(`/episodes/${episodes[0].id}`);
+  });
+
+  test("handles browser back and forward for episode overlays", async ({ page }) => {
+    await openBooklet(page);
+
+    const [firstEpisode] = await getEpisodes(page);
+    await page.locator(".album-tile").first().click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    expect(getPathname(page)).toBe(`/episodes/${firstEpisode.id}`);
+
+    await page.goBack();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+    expect(getPathname(page)).toBe("/");
+
+    await page.goForward();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page.locator("#overlay-title")).toHaveText(firstEpisode.title);
+    expect(getPathname(page)).toBe(`/episodes/${firstEpisode.id}`);
   });
 
   test("uses the selected album background behind the tracklist", async ({ page }) => {

@@ -16,12 +16,12 @@ const fallbackImage = image_bg || "/img/episode-bg/ahNotFound.png";
 const typeLabel = type === "mykonos" ? "Mykonos Sessions" : "Aural Homework";
 ---
 
-<button
+<a
+  href={`/episodes/${id}`}
   class="album-tile group relative block aspect-square w-full origin-center cursor-pointer overflow-hidden border-0 bg-black p-0 text-(--foreground) transition-[transform,box-shadow] duration-320 ease-[cubic-bezier(0.22,1,0.36,1)] transform-gpu will-change-transform backface-hidden hover:z-5 hover:scale-[1.08] hover:shadow-[0_16px_40px_rgba(0,0,0,0.5),0_0_0_1px_rgba(240,228,228,0.22)] focus-visible:z-4 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[rgba(255,255,255,0.86)] hover:focus-visible:z-5"
   data-id={id}
   data-index={index}
   data-type={type}
-  type="button"
   aria-label={`Open ${title}`}
 >
   <img
@@ -51,4 +51,4 @@ const typeLabel = type === "mykonos" ? "Mykonos Sessions" : "Aural Homework";
   <span
     class="album-tile-border pointer-events-none absolute inset-0 border border-[rgba(240,228,228,0)] transition-colors duration-120 group-hover:border-[rgba(240,228,228,0.38)] group-focus-visible:border-[rgba(240,228,228,0.38)]"
     aria-hidden="true"></span>
-</button>
+</a>

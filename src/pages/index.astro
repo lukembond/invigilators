@@ -5,6 +5,7 @@ import EpisodesList from "../components/EpisodesList.astro";
 import { getEpisodes } from "../services/episodes";
 
 const episodes = await getEpisodes();
+const initialEpisodeId = null;
 ---
 
 <Layout title="The Invigilators">
@@ -12,8 +13,9 @@ const episodes = await getEpisodes();
   <EpisodesList allEpisodes={episodes} />
 </Layout>
 
-<script define:vars={{ episodes }}>
+<script define:vars={{ episodes, initialEpisodeId }}>
   window.episodes = episodes;
+  window.initialEpisodeId = initialEpisodeId;
 </script>
 
 <script>

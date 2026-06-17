@@ -4,12 +4,20 @@ import "../styles/global.css";
 interface Props {
   title: string;
   description?: string;
+  canonicalPath?: string;
+  image?: string;
 }
 
 const {
   title,
   description = "Trance and progressive music mixers who create and upload dj sets from time to time.",
+  canonicalPath = "/",
+  image,
 } = Astro.props;
+
+const siteUrl = "https://www.theinvigilators.com";
+const canonicalUrl = new URL(canonicalPath, siteUrl).toString();
+const imageUrl = image ? new URL(image, siteUrl).toString() : undefined;
 ---
 
 <!doctype html>
@@ -19,20 +27,23 @@ const {
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="generator" content={Astro.generator} />
+    <link rel="canonical" href={canonicalUrl} />
 
     <!-- Twitter Card data -->
-    <meta property="twitter:card" content="summary" />
-    <meta property="twitter:url" content="https://www.theinvigilators.com/" />
+    <meta property="twitter:card" content={imageUrl ? "summary_large_image" : "summary"} />
+    <meta property="twitter:url" content={canonicalUrl} />
     <meta property="twitter:title" content={`${title}`} />
     <meta property="twitter:description" content={description} />
     <meta property="twitter:site" content="@theinvigilators" />
+    {imageUrl && <meta property="twitter:image" content={imageUrl} />}
 
     <!-- Open Graph data -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://www.theinvigilators.com/" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={`${title}`} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="The Invigilators" />
+    {imageUrl && <meta property="og:image" content={imageUrl} />}
     <meta property="fb:app_id" content="627980390669845" />
 
     <!-- Favicons -->
@@ -43,7 +54,7 @@ const {
     <meta name="theme-color" content="#dc143c" />
 
     <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZQ0PNZ57Y4"></script>
+    <script defer src="https://www.googletagmanager.com/gtag/js?id=G-ZQ0PNZ57Y4"></script>
     <script defer>
       window.dataLayer = window.dataLayer || [];
       function gtag() {

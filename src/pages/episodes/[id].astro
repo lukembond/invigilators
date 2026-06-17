@@ -1,0 +1,42 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+import EpisodesList from "../../components/EpisodesList.astro";
+import { getEpisodes } from "../../services/episodes";
+
+export async function getStaticPaths() {
+  const episodes = await getEpisodes();
+
+  return episodes.map((episode) => ({
+    params: { id: episode.id },
+    props: { episode, episodes },
+  }));
+}
+
+const { episode, episodes } = Astro.props;
+const initialEpisodeId = episode.id;
+const episodeImage = episode.image_cover || episode.image_bg;
+---
+
+<Layout
+  title={`${episode.title} | The Invigilators`}
+  description={episode.description}
+  canonicalPath={`/episodes/${episode.id}`}
+  image={episodeImage}
+>
+  <Hero />
+  <EpisodesList allEpisodes={episodes} />
+</Layout>
+
+<script define:vars={{ episodes, initialEpisodeId }}>
+  window.episodes = episodes;
+  window.initialEpisodeId = initialEpisodeId;
+</script>
+
+<script>
+  import { initApp } from "../../scripts/app";
+
+  document.addEventListener("DOMContentLoaded", () => {
+    initApp();
+  });
+</script>

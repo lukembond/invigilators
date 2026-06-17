@@ -1,7 +1,7 @@
 {
   "name": "invigilators",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -13,17 +13,14 @@
     "typecheck": "tsc --noEmit",
     "format": "prettier --write src/**/*.{astro,js,ts,json,css}"
   },
-  "dependencies": {
-    "@astrojs/check": "^0.9.9",
-    "astro": "^6.4.6",
-    "typescript": "^6"
-  },
   "devDependencies": {
+    "@astrojs/check": "^0.9.9",
     "@tailwindcss/vite": "^4.3.1",
     "@playwright/test": "^1.61.0",
     "@types/node": "^25",
     "@typescript-eslint/eslint-plugin": "^8.61.1",
     "@typescript-eslint/parser": "^8.61.1",
+    "astro": "^6.4.8",
     "astro-eslint-parser": "^1.4.0",
     "eslint": "^10",
     "eslint-config-prettier": "^10",
@@ -31,7 +28,8 @@
     "globals": "^17",
     "prettier": "^3",
     "prettier-plugin-astro": "^0.14.1",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^6"
   },
   "overrides": {
     "yocto-queue": "0.1.0"

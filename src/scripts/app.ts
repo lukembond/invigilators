@@ -3,6 +3,7 @@ import type { Episode } from "../services/episodes";
 declare global {
   interface Window {
     episodes: Episode[];
+    initialEpisodeId?: string | null;
   }
 }
 
@@ -42,6 +43,7 @@ const initLandingVideo = () => {
 };
 
 const OVERLAY_TRANSITION_MS = 280;
+const EPISODE_ROUTE_PATTERN = /^\/episodes\/([^/]+?)(?:\.html)?\/?$/;
 
 const initTileImageFallbacks = () => {
   document.querySelectorAll<HTMLImageElement>(".album-tile img").forEach((image) => {
@@ -63,15 +65,23 @@ const initEnterButton = () => {
 
   if (enterBtn && landing && booklet) {
     enterBtn.addEventListener("click", () => {
-      landing.classList.add("is-exiting");
-      window.setTimeout(() => {
-        landing.classList.add("hidden");
-        booklet.classList.remove("hidden");
-        booklet.classList.add("is-visible");
-        document.querySelector<HTMLElement>(".album-tile")?.focus();
-      }, 260);
+      showBooklet(true);
     });
   }
+};
+
+const showBooklet = (focusFirstTile = false) => {
+  const landing = document.getElementById("landing");
+  const booklet = document.getElementById("booklet");
+  if (!landing || !booklet) return;
+
+  landing.classList.add("is-exiting");
+  window.setTimeout(() => {
+    landing.classList.add("hidden");
+    booklet.classList.remove("hidden");
+    booklet.classList.add("is-visible");
+    if (focusFirstTile) document.querySelector<HTMLElement>(".album-tile")?.focus();
+  }, 260);
 };
 
 const getEpisodeImage = (episode: Episode) => {
@@ -109,6 +119,17 @@ const renderPlayer = (container: HTMLElement, mixcloud: string, title: string) =
       loading="lazy"
     ></iframe>
   `;
+};
+
+const getEpisodePath = (episode: Episode) => `/episodes/${episode.id}`;
+
+const getEpisodeIdFromPath = () => {
+  const match = window.location.pathname.match(EPISODE_ROUTE_PATTERN);
+  return match ? decodeURIComponent(match[1]) : null;
+};
+
+const shouldHandleTileClick = (event: MouseEvent) => {
+  return event.button === 0 && !event.metaKey && !event.ctrlKey && !event.shiftKey && !event.altKey;
 };
 
 const initAlbumOverlay = () => {
@@ -152,11 +173,14 @@ const initAlbumOverlay = () => {
     return;
   }
 
-  const closeOverlay = () => {
+  const closeOverlay = (updateUrl = true) => {
     const tile = document.querySelector<HTMLElement>(`.album-tile[data-index="${currentIndex}"]`);
     overlay.classList.remove("is-open");
     overlay.setAttribute("aria-hidden", "true");
     document.body.classList.remove("overlay-open");
+    if (updateUrl && window.location.pathname !== "/") {
+      window.history.replaceState({ episodeId: null }, "", "/");
+    }
     window.clearTimeout(closeTimer);
     closeTimer = window.setTimeout(() => {
       overlay.classList.add("hidden");
@@ -165,7 +189,7 @@ const initAlbumOverlay = () => {
     }, OVERLAY_TRANSITION_MS);
   };
 
-  const openOverlay = (episode: Episode, index: number) => {
+  const openOverlay = (episode: Episode, index: number, updateUrl: false | "push" | "replace" = false) => {
     currentIndex = index;
     image.src = getEpisodeImage(episode);
     image.alt = episode.title;
@@ -196,6 +220,13 @@ const initAlbumOverlay = () => {
 
     player.innerHTML = "";
     renderPlayer(player, episode.mixcloud, episode.title);
+    if (updateUrl) {
+      window.history[updateUrl === "push" ? "pushState" : "replaceState"](
+        { episodeId: episode.id },
+        "",
+        getEpisodePath(episode)
+      );
+    }
     window.clearTimeout(closeTimer);
     overlay.classList.remove("hidden");
     overlay.setAttribute("aria-hidden", "false");
@@ -204,28 +235,49 @@ const initAlbumOverlay = () => {
     closeButton.focus();
   };
 
-  const openByIndex = (index: number) => {
+  const openByIndex = (index: number, updateUrl: false | "push" | "replace" = false) => {
     const episode = window.episodes[index];
-    if (episode) openOverlay(episode, index);
+    if (episode) openOverlay(episode, index, updateUrl);
+  };
+
+  const openById = (episodeId: string | null, updateUrl: false | "push" | "replace" = false) => {
+    if (!episodeId) return;
+    const index = window.episodes.findIndex((episode) => episode.id === episodeId);
+    if (index >= 0) {
+      showBooklet(false);
+      openByIndex(index, updateUrl);
+    }
   };
 
   document.querySelectorAll(".album-tile").forEach((tile) => {
-    tile.addEventListener("click", () => {
+    tile.addEventListener("click", (event) => {
+      if (!shouldHandleTileClick(event as MouseEvent)) return;
+      event.preventDefault();
       const index = Number((tile as HTMLElement).dataset.index);
-      openByIndex(index);
+      openByIndex(index, "push");
     });
   });
 
-  closeButton.addEventListener("click", closeOverlay);
-  prevButton.addEventListener("click", () => openByIndex(currentIndex - 1));
-  nextButton.addEventListener("click", () => openByIndex(currentIndex + 1));
+  closeButton.addEventListener("click", () => closeOverlay());
+  prevButton.addEventListener("click", () => openByIndex(currentIndex - 1, "replace"));
+  nextButton.addEventListener("click", () => openByIndex(currentIndex + 1, "replace"));
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay) closeOverlay();
   });
   document.addEventListener("keydown", (event) => {
     if (!overlay.classList.contains("is-open")) return;
     if (event.key === "Escape") closeOverlay();
-    if (event.key === "ArrowLeft") openByIndex(currentIndex - 1);
-    if (event.key === "ArrowRight") openByIndex(currentIndex + 1);
+    if (event.key === "ArrowLeft") openByIndex(currentIndex - 1, "replace");
+    if (event.key === "ArrowRight") openByIndex(currentIndex + 1, "replace");
   });
+  window.addEventListener("popstate", () => {
+    const episodeId = getEpisodeIdFromPath();
+    if (episodeId) {
+      openById(episodeId);
+    } else {
+      closeOverlay(false);
+    }
+  });
+
+  openById(window.initialEpisodeId || getEpisodeIdFromPath());
 };
