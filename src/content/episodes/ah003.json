@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah003.webp",
   "image_bg": "/img/episode-bg/ah003.webp",
   "description": "Finally got around to recording another Aural Homework after finishing uni, forever! Got some awesome tunes that we've been rockin' of late.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_003.cue",
   "tracks": [
     { "n": 1, "artist": "Oliver Smith", "title": "Cadence", "label": "Anjunabeats" },
     { "n": 2, "artist": "Daniel Heatcliff", "title": "Phoenix", "label": "In Trance We Trust" },

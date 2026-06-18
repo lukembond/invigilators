@@ -9,22 +9,63 @@
   "image_cover": "/img/episode-cover/ah020-pt2.webp",
   "image_bg": "/img/episode-bg/ah020.webp",
   "description": "Episode 20 of Aural Homework, Part 2. The deep and darker side of things to kick things around a bit to continue on with.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_020-pt2.cue",
   "tracks": [
-    { "n": 1, "artist": "Darren Porter", "title": "To Feel Again", "label": "" },
-    { "n": 2, "artist": "Factor B", "title": "Sapera", "label": "" },
-    { "n": 3, "artist": "Abstract Vision & Aimoon", "title": "#energy", "label": "" },
-    { "n": 4, "artist": "Mark Sherry", "title": "Gravitational Waves", "label": "" },
-    { "n": 5, "artist": "M.I.K.E. Push pres. Plastic Boy", "title": "Now & Forever", "label": "" },
-    { "n": 6, "artist": "Fady & Mina", "title": "The Temple", "label": "" },
-    { "n": 7, "artist": "Indecent Noise", "title": "Blade Dancer", "label": "" },
-    { "n": 8, "artist": "Sean Tyas", "title": "Now You See (Darren Porter Remix)", "label": "" },
-    { "n": 9, "artist": "Jase Thirlwall", "title": "Standby (Indecent Noise Remix)", "label": "" },
-    { "n": 10, "artist": "Neelix", "title": "Born & Raised (Harmonika Remix)", "label": "" },
-    { "n": 11, "artist": "Reverse", "title": "Distant Destiny (Magnus Remix)", "label": "" },
-    { "n": 12, "artist": "John Askew", "title": "A Million Stars", "label": "" },
-    { "n": 13, "artist": "John 00 Fleming & Ovnimoon", "title": "Ascension", "label": "" },
-    { "n": 14, "artist": "Vini Vici & Ace Ventura", "title": "The Calling", "label": "" },
-    { "n": 15, "artist": "Astrix", "title": "Type 1 (Sideform Remix)", "label": "" },
-    { "n": 16, "artist": "Vini Vici", "title": "The Tribe", "label": "" }
+    {
+      "n": 1,
+      "artist": "Darren Porter",
+      "title": "To Feel Again",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 2, "artist": "Factor B", "title": "Sapera", "label": "Pure Trance" },
+    {
+      "n": 3,
+      "artist": "Abstract Vision & Aimoon",
+      "title": "#energy",
+      "label": "Who's Afraid Of 138?!"
+    },
+    { "n": 4, "artist": "Mark Sherry", "title": "Gravitational Waves", "label": "Outburst" },
+    {
+      "n": 5,
+      "artist": "M.I.K.E. Push pres. Plastic Boy",
+      "title": "Now & Forever",
+      "label": "A State Of Trance"
+    },
+    { "n": 6, "artist": "Fady & Mina", "title": "The Temple", "label": "Future Sound Of Egypt" },
+    {
+      "n": 7,
+      "artist": "Indecent Noise",
+      "title": "Blade Dancer",
+      "label": "Future Sound Of Egypt"
+    },
+    {
+      "n": 8,
+      "artist": "Sean Tyas",
+      "title": "Now You See (Darren Porter Remix)",
+      "label": "Black Hole"
+    },
+    {
+      "n": 9,
+      "artist": "Jase Thirlwall",
+      "title": "Standby (Indecent Noise Remix)",
+      "label": "Mental Asylum"
+    },
+    {
+      "n": 10,
+      "artist": "Neelix",
+      "title": "Born & Raised (Harmonika Remix)",
+      "label": "SpinTwist"
+    },
+    { "n": 11, "artist": "REverse", "title": "Distant Destiny (Magnus Remix)", "label": "Vandit" },
+    { "n": 12, "artist": "John Askew", "title": "A Million Stars", "label": "VII" },
+    {
+      "n": 13,
+      "artist": "John 00 Fleming & Ovnimoon",
+      "title": "Ascension",
+      "label": "Joof Mantra"
+    },
+    { "n": 14, "artist": "Vini Vici & Ace Ventura", "title": "The Calling", "label": "Iboga" },
+    { "n": 15, "artist": "Astrix", "title": "Type 1 (Sideform Remix)", "label": "Iboga" },
+    { "n": 16, "artist": "Vini Vici", "title": "The Tribe", "label": "Iboga" }
   ]
 }

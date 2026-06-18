@@ -201,7 +201,10 @@ const preloadImage = (src: string) => {
     const preload = new Image();
     preload.onload = () => {
       if (preload.decode) {
-        preload.decode().then(() => resolve(), () => resolve());
+        preload.decode().then(
+          () => resolve(),
+          () => resolve()
+        );
         return;
       }
       resolve();
@@ -346,7 +349,7 @@ const initAlbumOverlay = () => {
         player.innerHTML = "";
         tile?.focus();
       },
-      useIris ? OVERLAY_IRIS_CLOSE_MS : OVERLAY_TRANSITION_MS,
+      useIris ? OVERLAY_IRIS_CLOSE_MS : OVERLAY_TRANSITION_MS
     );
   };
 
@@ -354,7 +357,7 @@ const initAlbumOverlay = () => {
     episode: Episode,
     index: number,
     updateUrl: HistoryUpdate = false,
-    origin?: HTMLElement,
+    origin?: HTMLElement
   ) => {
     renderEpisode(episode, index);
     updateEpisodeHistory(episode, updateUrl);
@@ -400,7 +403,11 @@ const initAlbumOverlay = () => {
     if (!isPageTransitioning) return;
 
     clearEpisodePageTransition();
-    detailBody.classList.add("episode-page-transition", `episode-page-transition--${direction}`, "episode-page-transition--out");
+    detailBody.classList.add(
+      "episode-page-transition",
+      `episode-page-transition--${direction}`,
+      "episode-page-transition--out"
+    );
     window.clearTimeout(pageTransitionTimer);
     pageTransitionTimer = window.setTimeout(() => {
       renderEpisode(episode, index);
@@ -419,7 +426,7 @@ const initAlbumOverlay = () => {
     index: number,
     updateUrl: HistoryUpdate = false,
     direction?: EpisodeTransitionDirection,
-    origin?: HTMLElement,
+    origin?: HTMLElement
   ) => {
     const episode = window.episodes[index];
     if (!episode) return;
@@ -485,7 +492,7 @@ const initAlbumOverlay = () => {
       swipeStartY = event.touches[0].clientY;
       swipeActive = true;
     },
-    { passive: true },
+    { passive: true }
   );
   overlay.addEventListener(
     "touchend",
@@ -504,7 +511,7 @@ const initAlbumOverlay = () => {
         openByIndex(currentIndex - 1, "replace", "prev");
       }
     },
-    { passive: true },
+    { passive: true }
   );
   overlay.addEventListener("touchcancel", () => {
     swipeActive = false;

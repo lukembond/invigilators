@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah014.webp",
   "image_bg": "/img/episode-bg/ah014.webp",
   "description": "Classics time! 'Nuff said.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_014.cue",
   "tracks": [
     { "n": 1, "artist": "PPK", "title": "ResuRection (Trailer Trash Remix)", "label": "Perfecto" },
     { "n": 2, "artist": "GTR", "title": "Mistral", "label": "Five AM" },

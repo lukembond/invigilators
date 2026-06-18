@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah013.webp",
   "image_bg": "/img/episode-bg/ah013.webp",
   "description": "It's another fun rainy weekend in London for Australia day! Put this trancey lot together for your listening goodness.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_013.cue",
   "tracks": [
     { "n": 1, "artist": "Orjan Nilsen", "title": "Violetta", "label": "Armind" },
     { "n": 2, "artist": "Will Atkinson", "title": "Damage", "label": "Perfecto Fluoro" },

@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah017.webp",
   "image_bg": "/img/episode-bg/ah017.webp",
   "description": "Some more lovingly selected songs chosen by us to get listening to in this one and a half hour long mix for you!",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_017.cue",
   "tracks": [
     {
       "n": 1,

@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah031.webp",
   "image_bg": "/img/episode-bg/ah031.webp",
   "description": "Only a year between drinks... Here's another Aural Homework edition recorded in London, again after Luke's bday - this time in 2021. A vinyl selection of classic trance tunes, some of which we've probably played before.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_031.cue",
   "tracks": [
     { "n": 1, "artist": "Way Out West", "title": "Killa (Orkidea Mix)", "label": "Solaris" },
     {

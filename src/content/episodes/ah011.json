@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah011.webp",
   "image_bg": "/img/episode-bg/ah011.webp",
   "description": "It's another fun weekend in London. Good tunes all weekend, culminating in this next mix for you all.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_011.cue",
   "tracks": [
     { "n": 1, "artist": "Bluestone", "title": "Capetown", "label": "Anjunabeats" },
     {

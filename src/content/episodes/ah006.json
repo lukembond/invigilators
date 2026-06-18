@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah006.webp",
   "image_bg": "/img/episode-bg/ah006.webp",
   "description": "Musically, we just seemingly play the Anjuna artist back catalogue in this one. There is a nice selection of delightful progressive trance tunes.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_006.cue",
   "tracks": [
     { "n": 1, "artist": "Wellenrausch", "title": "Shape Of Berlin", "label": "Afterglow" },
     { "n": 2, "artist": "VillaNaranjos", "title": "Granadella", "label": "Soundpiercing" },
