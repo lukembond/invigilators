@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah004.webp",
   "image_bg": "/img/episode-bg/ah004.webp",
   "description": "A farewell mix of sorts for the Invigilators' impending tour of Europe! Check out some sweet tracks of both old and new.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_004.cue",
   "tracks": [
     {
       "n": 1,

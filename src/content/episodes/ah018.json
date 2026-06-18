@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah018.webp",
   "image_bg": "/img/episode-bg/ah018.webp",
   "description": "Hard and heavy trance for you on this one, it starts at a frenetic pace and really just keeps on going all the way through to the end.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_018.cue",
   "tracks": [
     { "n": 1, "artist": "Aly & Fila", "title": "Underwater", "label": "Future Sound Of Egypt" },
     {

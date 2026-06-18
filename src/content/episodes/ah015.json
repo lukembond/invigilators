@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah015.webp",
   "image_bg": "/img/episode-bg/ah015.webp",
   "description": "Here is the first one of the thought to be gone InvigiLostTapes! A progressive tip recorded for an hour's worth of killer proggy houseness.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_015.cue",
   "tracks": [
     { "n": 1, "artist": "Matt Lange", "title": "Only You", "label": "Anjunadeep" },
     {

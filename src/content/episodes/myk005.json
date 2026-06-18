@@ -9,54 +9,95 @@
   "image_cover": "/img/episode-cover/myk005.webp",
   "image_bg": "/img/episode-bg/myk005.webp",
   "description": "The final installment for the closing set gets Luke & Chris back to what you know and love with some proper 138bpm+ uplifting trance to round things up for the weekend.",
+  "cuesheet": "../cuesheets/the_invigilators-mykonos_sessions_005.cue",
   "tracks": [
-    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "" },
-    { "n": 2, "artist": "Forerunners", "title": "Lifecycle (Amir Hussain Remix)", "label": "" },
-    { "n": 3, "artist": "ReLocate vs. Robert Nickson", "title": "Initium", "label": "" },
-    { "n": 4, "artist": "Kyau & Albert", "title": "Be There 4 U (Ferry Tayle Remix)", "label": "" },
+    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "-" },
+    {
+      "n": 2,
+      "artist": "Forerunners",
+      "title": "Lifecycle (Amir Hussain Remix)",
+      "label": "Pure Trance"
+    },
+    {
+      "n": 3,
+      "artist": "ReLocate vs. Robert Nickson",
+      "title": "Initium",
+      "label": "Amsterdam Trance"
+    },
+    {
+      "n": 4,
+      "artist": "Kyau & Albert",
+      "title": "Be There 4 U (Ferry Tayle Remix)",
+      "label": "euphonic"
+    },
     {
       "n": 5,
       "artist": "Allen & Envy feat. Neev Kennedy",
       "title": "Without You (Dan Stone Remix)",
-      "label": ""
+      "label": "Amsterdam Trance"
     },
-    { "n": 6, "artist": "Standerwick & Jennifer Rene", "title": "All Of Us", "label": "" },
-    { "n": 7, "artist": "RAM", "title": "Elijah (Sean Tyas Remix)", "label": "" },
+    {
+      "n": 6,
+      "artist": "Standerwick & Jennifer Rene",
+      "title": "All Of Us",
+      "label": "Future Sound Of Egypt"
+    },
+    { "n": 7, "artist": "RAM", "title": "Elijah (Sean Tyas Remix)", "label": "Grotesque" },
     {
       "n": 8,
       "artist": "Pulser",
       "title": "My Religion (Astuni & Manuel le Saux Re-Lift)",
-      "label": ""
+      "label": "Who's Afraid Of 138?!"
     },
-    { "n": 9, "artist": "Sneijder & The Noble Six", "title": "Far From You", "label": "" },
-    { "n": 10, "artist": "Plastic Boy", "title": "Angel Dust", "label": "" },
+    { "n": 9, "artist": "Sneijder & The Noble Six", "title": "Far From You", "label": "Afterdark" },
+    {
+      "n": 10,
+      "artist": "Plastic Boy",
+      "title": "Angel Dust",
+      "label": "Bonzai Trance Progressive"
+    },
     {
       "n": 11,
       "artist": "ReLocate vs. Robert Nickson & Sarah Lynn",
       "title": "Will You Be There (Dreamy Remix)",
-      "label": ""
+      "label": "Molekular Sounds"
     },
-    { "n": 12, "artist": "Arctic Moon", "title": "Serein", "label": "" },
-    { "n": 13, "artist": "LTN", "title": "Out Of This World (James Dymond Remix)", "label": "" },
+    { "n": 12, "artist": "Arctic Moon", "title": "Serein", "label": "Future Sound Of Egypt" },
+    {
+      "n": 13,
+      "artist": "LTN",
+      "title": "Out Of This World (James Dymond Remix)",
+      "label": "Alter Ego"
+    },
     {
       "n": 14,
       "artist": "Ronski Speed pres. Sun Decade",
       "title": "I'm Alone (Indecent Noise Remix)",
-      "label": ""
+      "label": "Maracaido"
     },
-    { "n": 15, "artist": "The Noble Six", "title": "Oddworld", "label": "" },
-    { "n": 16, "artist": "Sean Tyas", "title": "Swimming In Acid", "label": "" },
-    { "n": 17, "artist": "Amir Hussain", "title": "Bombshell", "label": "" },
+    { "n": 15, "artist": "The Noble Six", "title": "Oddworld", "label": "Subculture" },
+    { "n": 16, "artist": "Sean Tyas", "title": "Swimming In Acid", "label": "VII" },
+    { "n": 17, "artist": "Amir Hussain", "title": "Bombshell", "label": "Digital Society" },
     {
       "n": 18,
       "artist": "Yuri Kane & Ana Criado",
       "title": "Running Wild (Liam Wilson Remix)",
-      "label": ""
+      "label": "RNM"
     },
-    { "n": 19, "artist": "Aimoon", "title": "Dream Chaser (Vlind Remix)", "label": "" },
-    { "n": 20, "artist": "Ralphie B", "title": "Massive (Daniel Skyver Remix)", "label": "" },
-    { "n": 21, "artist": "Ben Nicky", "title": "Chapel Street", "label": "" },
-    { "n": 22, "artist": "John 00 Fleming", "title": "Desert Rider", "label": "" },
-    { "n": 23, "artist": "Tiesto", "title": "Traffic (Richard Durand Remix)", "label": "" }
+    { "n": 19, "artist": "Aimoon", "title": "Dream Chaser (Vlind Remix)", "label": "Full On 140" },
+    {
+      "n": 20,
+      "artist": "Ralphie B",
+      "title": "Massive (Daniel Skyver Remix)",
+      "label": "Grotesque Reworked"
+    },
+    { "n": 21, "artist": "Ben Nicky", "title": "Chapel Street", "label": "Vandit" },
+    { "n": 22, "artist": "John 00 Fleming", "title": "Desert Rider", "label": "Joof Mantra" },
+    {
+      "n": 23,
+      "artist": "Tiesto",
+      "title": "Traffic (Richard Durand Remix)",
+      "label": "Reloaded Music"
+    }
   ]
 }

@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah010.webp",
   "image_bg": "/img/episode-bg/ah010.webp",
   "description": "It's Chris' birthday! And we've got a new website to show off as well! So enjoy both of those things.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_010.cue",
   "tracks": [
     { "n": 1, "artist": "Dinka", "title": "Lotus (Johan Vilborg Remix)", "label": "Silk Royal" },
     {

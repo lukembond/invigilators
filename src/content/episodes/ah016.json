@@ -9,6 +9,7 @@
   "image_cover": "/img/episode-cover/ah016.webp",
   "image_bg": "/img/episode-bg/ah016.webp",
   "description": "What once was lost is now found and ready for you to listen to... better late than never!",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_016.cue",
   "tracks": [
     { "n": 1, "artist": "Eximinds", "title": "Phoenix", "label": "A State of Trance" },
     { "n": 2, "artist": "Aeon Flux & Anna Miracles", "title": "Why", "label": "Muz-Flame" },

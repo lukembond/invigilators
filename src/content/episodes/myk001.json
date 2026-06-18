@@ -9,45 +9,71 @@
   "image_cover": "/img/episode-cover/myk001.webp",
   "image_bg": "/img/episode-bg/myk001.webp",
   "description": "Something special from The Invigilators, we present to you the Mykonos Sessions recorded live from Greece for Chris' 30th Bday!",
+  "cuesheet": "../cuesheets/the_invigilators-mykonos_sessions_001.cue",
   "tracks": [
-    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "" },
-    { "n": 2, "artist": "Henry Saiz", "title": "Not Last Words (Guy J Remix)", "label": "" },
-    { "n": 3, "artist": "Maribou State", "title": "Rituals (Sasha House Mix)", "label": "" },
-    { "n": 4, "artist": "Dezza", "title": "Brit", "label": "" },
-    { "n": 5, "artist": "Energy 52", "title": "Cafe Del Mar (Tim Engelhardt Remix)", "label": "" },
-    { "n": 6, "artist": "Matt Fax", "title": "Horizon", "label": "" },
-    { "n": 7, "artist": "Peter Illias", "title": "Summer Vibes (Forteba Remix)", "label": "" },
+    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "-" },
+    {
+      "n": 2,
+      "artist": "Henry Saiz",
+      "title": "Not Last Words (Guy J Remix)",
+      "label": "Lost & Found"
+    },
+    {
+      "n": 3,
+      "artist": "Maribou State",
+      "title": "Rituals (Sasha House Mix)",
+      "label": "Last Night On Earth"
+    },
+    { "n": 4, "artist": "Dezza", "title": "Brit", "label": "Silk Music" },
+    {
+      "n": 5,
+      "artist": "Energy 52",
+      "title": "Cafe Del Mar (Tim Engelhardt Remix)",
+      "label": "Push Communications"
+    },
+    { "n": 6, "artist": "Matt Fax", "title": "Horizon", "label": "Colorize" },
+    {
+      "n": 7,
+      "artist": "Peter Illias",
+      "title": "Summer Vibes (Forteba Remix)",
+      "label": "Silk Textures"
+    },
     {
       "n": 8,
       "artist": "Stonebridge feat. Therese",
       "title": "Put 'Em High (Alex van Alff 2016 Mix)",
-      "label": ""
+      "label": "Stoney Boy Music"
     },
-    { "n": 9, "artist": "Pole Folder", "title": "Gare Centrale", "label": "" },
-    { "n": 10, "artist": "Dusky", "title": "Squeezer", "label": "" },
+    { "n": 9, "artist": "Pole Folder", "title": "Gare Centrale", "label": "Reworck" },
+    { "n": 10, "artist": "Dusky", "title": "Squeezer", "label": "17 Steps" },
     {
       "n": 11,
       "artist": "Audio noir feat. Jimmie Westwood",
       "title": "Far From Home (Crocy Remix)",
-      "label": ""
+      "label": "Bonzai Progressive"
     },
-    { "n": 12, "artist": "EDX", "title": "My Friend", "label": "" },
-    { "n": 13, "artist": "Yotto", "title": "Cooper's Cup", "label": "" },
-    { "n": 14, "artist": "Lancelot feat. Laura Jae", "title": "Glass Voices", "label": "" },
-    { "n": 15, "artist": "EDX", "title": "Touch Her, Feel Her", "label": "" },
-    { "n": 16, "artist": "Grace", "title": "Not Over Yet (PARKX Remix)", "label": "" },
-    { "n": 17, "artist": "Dusky", "title": "Rise For Love", "label": "" },
-    { "n": 18, "artist": "Grum", "title": "Drifting Away", "label": "" },
-    { "n": 19, "artist": "Pryda", "title": "Bytatag", "label": "" },
-    { "n": 20, "artist": "Gai Barone", "title": "Stripped", "label": "" },
-    { "n": 21, "artist": "Robert Babicz", "title": "Spiral Boogie", "label": "" },
-    { "n": 22, "artist": "Meramek", "title": "Know Me", "label": "" },
+    { "n": 12, "artist": "EDX", "title": "My Friend", "label": "Spinnin'" },
+    { "n": 13, "artist": "Yotto", "title": "Cooper's Cup", "label": "Anjunadeep" },
+    {
+      "n": 14,
+      "artist": "Lancelot feat. Laura Jae",
+      "title": "Glass Voices",
+      "label": "Anjunadeep"
+    },
+    { "n": 15, "artist": "EDX", "title": "Touch Her, Feel Her", "label": "Enormous Tunes" },
+    { "n": 16, "artist": "Grace", "title": "Not Over Yet (PARKX Remix)", "label": "Perfecto" },
+    { "n": 17, "artist": "Dusky", "title": "Rise For Love", "label": "Aus Music" },
+    { "n": 18, "artist": "Grum", "title": "Drifting Away", "label": "Anjunabeats" },
+    { "n": 19, "artist": "Pryda", "title": "Bytatag", "label": "Pryda" },
+    { "n": 20, "artist": "Gai Barone", "title": "Stripped", "label": "Afterglow" },
+    { "n": 21, "artist": "Robert Babicz", "title": "Spiral Boogie", "label": "Audiomatique" },
+    { "n": 22, "artist": "Meramek", "title": "Know Me", "label": "Anjunadeep" },
     {
       "n": 23,
       "artist": "Lane 8 feat. Matthew Dear",
       "title": "Undercover (Yotto Remix)",
-      "label": ""
+      "label": "Anjunadeep"
     },
-    { "n": 24, "artist": "Soundprank", "title": "Burner", "label": "" }
+    { "n": 24, "artist": "Soundprank", "title": "Burner", "label": "Silk Digital" }
   ]
 }
