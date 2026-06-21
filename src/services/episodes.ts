@@ -13,7 +13,8 @@ export interface Episode {
   location: string;
   length: string;
   mixcloud?: string;
-  hearthis?: string;
+  hearthis_id?: string;
+  hearthis_url?: string;
   image_cover?: string;
   image_bg?: string;
   description: string;

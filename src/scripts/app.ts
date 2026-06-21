@@ -168,21 +168,38 @@ const escapeHtml = (value: string | undefined) => {
   });
 };
 
-const renderPlayer = (container: HTMLElement, mixcloud: string, title: string) => {
-  if (!mixcloud) {
-    container.innerHTML = "";
+const renderPlayer = (container: HTMLElement, episode: Episode) => {
+  const { hearthis_id, mixcloud, title } = episode;
+
+  if (hearthis_id) {
+    container.innerHTML = `
+      <iframe
+        class="block h-37.5 w-full border-0"
+        scrolling="no"
+        src="https://app.hearthis.at/embed/${encodeURIComponent(hearthis_id)}/transparent_black/?hcolor=8c0a17&color=f0e4e4&style=2&block_size=2&block_space=1&background=1&waveform=0&cover=0&autoplay=0&css="
+        title="${escapeHtml(title)}"
+        allow="autoplay"
+        loading="lazy"
+        allowtransparency
+      ></iframe>
+    `;
     return;
   }
 
-  container.innerHTML = `
-    <iframe
-      class="block h-15 w-full border-0"
-      src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2F${encodeURIComponent(mixcloud)}%2F"
-      title="${escapeHtml(title)}"
-      allow="autoplay"
-      loading="lazy"
-    ></iframe>
-  `;
+  if (mixcloud) {
+    container.innerHTML = `
+      <iframe
+        class="block h-15 w-full border-0"
+        src="https://www.mixcloud.com/widget/iframe/?hide_cover=1&mini=1&light=1&feed=%2F${encodeURIComponent(mixcloud)}%2F"
+        title="${escapeHtml(title)}"
+        allow="autoplay"
+        loading="lazy"
+      ></iframe>
+    `;
+    return;
+  }
+
+  container.innerHTML = "";
 };
 
 const getEpisodePath = (episode: Episode) => `/episodes/${episode.id}`;
@@ -316,7 +333,7 @@ const initAlbumOverlay = () => {
       .join("");
 
     player.innerHTML = "";
-    renderPlayer(player, episode.mixcloud, episode.title);
+    renderPlayer(player, episode);
   };
 
   const closeOverlay = (updateUrl = true) => {

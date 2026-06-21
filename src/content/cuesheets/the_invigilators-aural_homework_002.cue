@@ -4,50 +4,54 @@ PERFORMER "The Invigilators"
 TITLE "Aural Homework 002"
 FILE "01-The_Invigilators-Aural_Homework_002-24-06-2009.mp3" WAVE
   TRACK 01 AUDIO
-    TITLE "Lonely Girl (Gareth Emery Remix)"
-    PERFORMER "Oceanlab"
+    PERFORMER "Aural Homework"
+    TITLE "Intro"
     INDEX 01 00:00:00
   TRACK 02 AUDIO
-    TITLE "Radio Crash"
-    PERFORMER "Ferry Corsten"
-    INDEX 01 07:07:23
+    PERFORMER "Oceanlab"
+    TITLE "Lonely Girl (Gareth Emery Remix)"
+    INDEX 01 00:54:00
   TRACK 03 AUDIO
-    TITLE "Kaleidoscope Eyes"
-    PERFORMER "Adymus"
-    INDEX 01 12:27:66
+    PERFORMER "Ferry Corsten"
+    TITLE "Radio Crash"
+    INDEX 01 08:01:23
   TRACK 04 AUDIO
-    TITLE "Timewave Zero"
-    PERFORMER "Ummet Ozcan"
-    INDEX 01 19:02:31
+    PERFORMER "Adymus"
+    TITLE "Kaleidoscope Eyes"
+    INDEX 01 13:21:66
   TRACK 05 AUDIO
-    TITLE "Universal Universe"
-    PERFORMER "Ilya Soloviev"
-    INDEX 01 23:28:69
+    PERFORMER "Ummet Ozcan"
+    TITLE "Timewave Zero"
+    INDEX 01 19:56:31
   TRACK 06 AUDIO
-    TITLE "Under The Sea (Sebastian Brandt's Zela Remix)"
-    PERFORMER "Mungo"
-    INDEX 01 29:05:01
+    PERFORMER "Ilya Soloviev"
+    TITLE "Universal Universe"
+    INDEX 01 24:22:69
   TRACK 07 AUDIO
-    TITLE "Foldback (Mike Foyle Remix)"
-    PERFORMER "David Forbes"
-    INDEX 01 35:09:22
+    PERFORMER "Mungo"
+    TITLE "Under The Sea (Sebastian Brandt's Zela Remix)"
+    INDEX 01 29:59:01
   TRACK 08 AUDIO
-    TITLE "Follow Me (Giuseppe Ottaviani Remix)"
-    PERFORMER "Jose Amnesia"
-    INDEX 01 42:36:47
+    PERFORMER "David Forbes"
+    TITLE "Foldback (Mike Foyle Remix)"
+    INDEX 01 36:03:22
   TRACK 09 AUDIO
-    TITLE "Peace (Breakfast Remix)"
-    PERFORMER "Saints & Sinners"
-    INDEX 01 48:16:29
+    PERFORMER "Jose Amnesia"
+    TITLE "Follow Me (Giuseppe Ottaviani Remix)"
+    INDEX 01 43:30:47
   TRACK 10 AUDIO
-    TITLE "This World"
-    PERFORMER "Activa"
-    INDEX 01 55:14:39
+    PERFORMER "Saints & Sinners"
+    TITLE "Peace (Breakfast Remix)"
+    INDEX 01 49:10:29
   TRACK 11 AUDIO
-    TITLE "Sand Dunes (Daniel Kandi Remix)"
-    PERFORMER "A.M.R."
-    INDEX 01 61:24:62
+    PERFORMER "Activa"
+    TITLE "This World"
+    INDEX 01 56:08:39
   TRACK 12 AUDIO
-    TITLE "Nyctalopia"
+    PERFORMER "A.M.R."
+    TITLE "Sand Dunes (Daniel Kandi Remix)"
+    INDEX 01 62:18:62
+  TRACK 13 AUDIO
     PERFORMER "Andy Blueman"
-    INDEX 01 66:53:59
+    TITLE "Nyctalopia"
+    INDEX 01 67:47:59

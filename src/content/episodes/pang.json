@@ -1,0 +1,26 @@
+{
+  "id": "pang",
+  "type": "other",
+  "title": "Pang Mix",
+  "date": "2009-03-13",
+  "location": "Canberra, AU",
+  "length": "0:31:51",
+  "image_cover": "/img/episode-cover/pang.webp",
+  "image_bg": "/img/episode-bg/pang.webp",
+  "description": "A short mix we put together as part of a local DJ competition. Managed to get to the point of playing a small 30 minute set at a local venue, at which we then proceeded to play at 10 minute long trance banger as the opener, and just stand around watching the record spin for the majority of it looking like 2 idiots not knowing what else to do. You live, you learn! At least this recorded one to get us in there is a bit more balanced than that.",
+  "cuesheet": "../cuesheets/the_invigilators-pang_mix.cue",
+  "hearthis_id": "9034462",
+  "hearthis_url": "https://hearthis.at/theinvigilators/pangmix/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "OceanLab",
+      "title": "Breaking Ties (Martin Roth Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 2, "artist": "Jaytech", "title": "Spacelift", "label": "Anjunadeep" },
+    { "n": 3, "artist": "Satoshi Tomiie", "title": "Love In Traffic", "label": "INCredible" },
+    { "n": 4, "artist": "Cressida", "title": "6AM (Kyau & Albert Remix)", "label": "euphonic" },
+    { "n": 5, "artist": "Signalrunners", "title": "Meet Me In Montauk", "label": "Anjunabeats" }
+  ]
+}
