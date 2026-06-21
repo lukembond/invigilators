@@ -8,8 +8,10 @@
   "mixcloud": "",
   "image_cover": "/img/episode-cover/ah005.webp",
   "image_bg": "/img/episode-bg/ah005.webp",
-  "description": "Recorded at one of Luke's ever changing abodes in North London, this mix was recorded to an intimate audience of 2 other housemates.",
+  "description": "Recorded at one of Luke's ever changing abodes in North London, this mix was recorded to an intimate audience of 2 other housemates who probably didn't want to listen.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_005.cue",
+  "hearthis_id": "9218004",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah005/",
   "tracks": [
     { "n": 1, "artist": "Andain", "title": "Promises (Soundprank Remix)", "label": "Black Hole" },
     { "n": 2, "artist": "Alex Pich", "title": "Heavens (Dezza Remix)", "label": "Colorize" },

@@ -1,0 +1,59 @@
+{
+  "id": "itm002",
+  "type": "other",
+  "title": "In The Mix 002",
+  "date": "2009-04-18",
+  "location": "Canberra, AU",
+  "length": "1:20:27",
+  "image_cover": "/img/episode-cover/itm002.webp",
+  "image_bg": "/img/episode-bg/itm002.webp",
+  "description": "Another early promo mix highlighting some carefully curated trance and progressive tracks. This one goes down a bit more of a techy route, with a few more of the harder trance tracks that we were enjoying at the time.",
+  "cuesheet": "../cuesheets/the_invigilators-in_the_mix_002.cue",
+  "hearthis_id": "9162330",
+  "hearthis_url": "https://hearthis.at/theinvigilators/itm002/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Sudha feat. Zoe Johnston",
+      "title": "Leche (Thomas Schwartz & Fausto Fanizza Vocal Mix)",
+      "label": "Bishbash"
+    },
+    { "n": 2, "artist": "Komytea", "title": "9", "label": "Anjunadeep" },
+    {
+      "n": 3,
+      "artist": "Tritonal feat. Cristina Soto",
+      "title": "Crash Into Reason (Moonbeam Remix)",
+      "label": "Coldharbour"
+    },
+    {
+      "n": 4,
+      "artist": "Nic Chagall",
+      "title": "What You Need (Hard Dub)",
+      "label": "High Contrast"
+    },
+    {
+      "n": 5,
+      "artist": "Sam Sharp",
+      "title": "Roundabout (Simon Patterson Remix)",
+      "label": "Doorn"
+    },
+    { "n": 6, "artist": "Cliff Coenraad", "title": "The Hazzolator", "label": "Intuition" },
+    { "n": 7, "artist": "Ummet Ozcan", "title": "TimeWave Zero", "label": "Doorn" },
+    { "n": 8, "artist": "Breakfast", "title": "The Sunlight", "label": "Flashover" },
+    {
+      "n": 9,
+      "artist": "Terry Ferminal & Jonas Stenberg",
+      "title": "A Thousand Miles, Memories (Gareth Emery Edit)",
+      "label": "High Contrast"
+    },
+    { "n": 10, "artist": "Hammer & Funabashi", "title": "Moments", "label": "Captivating Sounds" },
+    { "n": 11, "artist": "Eco", "title": "Lost Angeles (Breakfast Remix)", "label": "Lunatique" },
+    {
+      "n": 12,
+      "artist": "Purple Mood",
+      "title": "One Night In Tokyo (DJ Shah's Savanah Remix)",
+      "label": "Anjunabeats"
+    },
+    { "n": 13, "artist": "Rafael Frost", "title": "Red", "label": "Flashover" }
+  ]
+}

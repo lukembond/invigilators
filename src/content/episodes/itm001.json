@@ -1,0 +1,73 @@
+{
+  "id": "itm001",
+  "type": "other",
+  "title": "In The Mix 001",
+  "date": "2009-03-07",
+  "location": "Canberra, AU",
+  "length": "1:47:59",
+  "image_cover": "/img/episode-cover/itm001.webp",
+  "image_bg": "/img/episode-bg/itm001.webp",
+  "description": "One of the earliest recorded mixes (including some very ropey transitions!), showcasing a selection of trance and progressive tracks from our favourite labels and artists.",
+  "cuesheet": "../cuesheets/the_invigilators-in_the_mix_001.cue",
+  "hearthis_id": "9094828",
+  "hearthis_url": "https://hearthis.at/theinvigilators/itm001/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Solarstone & Alucard",
+      "title": "Late Summer Fields (Solarstone Deeper Sunrise Mix)",
+      "label": "Solaris"
+    },
+    { "n": 2, "artist": "Recluse", "title": "Emotional Void", "label": "Deepblue" },
+    { "n": 3, "artist": "Rio Addicts", "title": "The Distance", "label": "Electronic Elements" },
+    { "n": 4, "artist": "Ridgewalkers feat. El", "title": "Find", "label": "Armind" },
+    { "n": 5, "artist": "Cressida", "title": "6AM (Kyau & Albert Remix)", "label": "euphonic" },
+    { "n": 6, "artist": "Marc Marberg", "title": "Guarana (Cressida Remix)", "label": "euphonic" },
+    { "n": 7, "artist": "Rank 1", "title": "L.E.D. There Be Light", "label": "High Contrast" },
+    { "n": 8, "artist": "Breakfast", "title": "The Sunlight", "label": "Flashover" },
+    {
+      "n": 9,
+      "artist": "Above & Beyond vs. Andy Moor",
+      "title": "Air For Life (Airwave Mix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 10,
+      "artist": "tyDi feat. Manta Ray",
+      "title": "Mind Games (Max Savietto Remix)",
+      "label": "Mazeman"
+    },
+    {
+      "n": 11,
+      "artist": "Fictivision vs. Phynn",
+      "title": "Escape (Phynn Mix)",
+      "label": "In Trance We Trust"
+    },
+    {
+      "n": 12,
+      "artist": "Marc Marberg with Kyau & Albert",
+      "title": "Neo Love (Giuseppe Ottaviani Remix)",
+      "label": "euphonic"
+    },
+    { "n": 13, "artist": "Jose Amnesia", "title": "Follow Me", "label": "Amnesia Sound" },
+    {
+      "n": 14,
+      "artist": "Andy Blueman",
+      "title": "Time To Rest (Daniel Kandi Bangin' Mix)",
+      "label": "Perceptive"
+    },
+    { "n": 15, "artist": "Oliver Smith", "title": "Tomahawk", "label": "Anjunabeats" },
+    {
+      "n": 16,
+      "artist": "Kiholm",
+      "title": "Fragile (Daniel Kandi Emotional Mix)",
+      "label": "Neuroscience"
+    },
+    {
+      "n": 17,
+      "artist": "8 Wonders",
+      "title": "The Morning After (The Thrillseekers Remix)",
+      "label": "Somantic Sense"
+    }
+  ]
+}

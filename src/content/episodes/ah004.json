@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah004.webp",
   "description": "A farewell mix of sorts for the Invigilators' impending tour of Europe! Check out some sweet tracks of both old and new.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_004.cue",
+  "hearthis_id": "9217993",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah004/",
   "tracks": [
     {
       "n": 1,
@@ -27,7 +29,7 @@
     { "n": 4, "artist": "Simon Patterson", "title": "Different Feeling", "label": "Doorn" },
     { "n": 5, "artist": "Robert Burian", "title": "Recovery", "label": "Forza Music" },
     { "n": 6, "artist": "Gabriel & Dresden", "title": "Arcadia", "label": "Supra" },
-    { "n": 7, "artist": "Stoneface & Terminal", "title": "Don't Give a Fuck", "label": "Euphonic" },
+    { "n": 7, "artist": "Stoneface & Terminal", "title": "Don't Give a Fuck", "label": "euphonic" },
     {
       "n": 8,
       "artist": "Super8 & Tab",
