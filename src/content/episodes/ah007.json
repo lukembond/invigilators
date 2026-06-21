@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah007.webp",
   "description": "Recorded in Coventry @ Chris' place, this mix begins with the nostalgic sounds of the most popular N64 game ever, to mark the 007th outing.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_007.cue",
+  "hearthis_id": "9324798",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah007/",
   "tracks": [
     { "n": 0, "artist": "Goldeneye 007", "title": "Intro", "label": "Nintendo" },
     { "n": 1, "artist": "Super8", "title": "Alba (Maor Levi Remix)", "label": "Anjunabeats" },

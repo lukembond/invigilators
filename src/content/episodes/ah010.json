@@ -8,8 +8,10 @@
   "mixcloud": "theInvigilators/the-invigilators-aural-homework-010-2012-10-01",
   "image_cover": "/img/episode-cover/ah010.webp",
   "image_bg": "/img/episode-bg/ah010.webp",
-  "description": "It's Chris' birthday! And we've got a new website to show off as well! So enjoy both of those things.",
+  "description": "It's Chris' birthday! And we've got a new website to show off as well! So enjoy both of those things, oh and this music.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_010.cue",
+  "hearthis_id": "9416498",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah010/",
   "tracks": [
     { "n": 1, "artist": "Dinka", "title": "Lotus (Johan Vilborg Remix)", "label": "Silk Royal" },
     {

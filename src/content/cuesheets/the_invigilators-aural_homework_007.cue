@@ -8,56 +8,56 @@ FILE "01-the_invigilators-aural_homework_007.mp3" MP3
   TRACK 02 AUDIO
     PERFORMER "Super8"
     TITLE "Alba (Maor Levi Remix)"
-    INDEX 01 01:23:46
+    INDEX 01 01:36:46
   TRACK 03 AUDIO
     PERFORMER "P.O.S."
     TITLE "Gravity (Andrew Bayer & James Grant Remix)"
-    INDEX 01 06:47:53
+    INDEX 01 07:00:53
   TRACK 04 AUDIO
     PERFORMER "Soundprank"
     TITLE "Boundless Energy"
-    INDEX 01 11:29:27
+    INDEX 01 11:42:27
   TRACK 05 AUDIO
     PERFORMER "Aaron Camz"
     TITLE "Aqwa"
-    INDEX 01 17:25:11
+    INDEX 01 17:38:11
   TRACK 06 AUDIO
     PERFORMER "Ad Brown"
     TITLE "Far From The End"
-    INDEX 01 23:06:04
+    INDEX 01 23:19:04
   TRACK 07 AUDIO
     PERFORMER "Protoculture"
     TITLE "Cobalt"
-    INDEX 01 28:48:38
+    INDEX 01 29:01:38
   TRACK 08 AUDIO
     PERFORMER "Speed Limits"
     TITLE "Bris"
-    INDEX 01 34:56:50
+    INDEX 01 35:09:50
   TRACK 09 AUDIO
     PERFORMER "Andian"
     TITLE "Much Too Much (Mike Shiver Remix)"
-    INDEX 01 39:06:63
+    INDEX 01 39:19:63
   TRACK 10 AUDIO
     PERFORMER "Porter Robinson"
     TITLE "Language"
-    INDEX 01 44:36:00
+    INDEX 01 44:49:00
   TRACK 11 AUDIO
     PERFORMER "Daniel Kandi"
     TITLE "Insert Generic Title (Daniel Kandi vs Dennis Pedersen Remix)"
-    INDEX 01 48:58:57
+    INDEX 01 49:11:57
   TRACK 12 AUDIO
     PERFORMER "Eximinds"
     TITLE "Robobeats (Tom Fall Remix)"
-    INDEX 01 53:50:60
+    INDEX 01 54:03:60
   TRACK 13 AUDIO
     PERFORMER "Marc Marberg & Kyau & Albert"
     TITLE "Robotron"
-    INDEX 01 59:00:62
+    INDEX 01 59:13:62
   TRACK 14 AUDIO
     PERFORMER "The Blizzard"
     TITLE "Piercing The Fog"
-    INDEX 01 63:23:34
+    INDEX 01 63:36:34
   TRACK 15 AUDIO
     PERFORMER "Andrew Bayer feat. Molly Bancroft"
     TITLE "Keep Your Secrets (Myon & Shane 54 Summer Of Love Remix)"
-    INDEX 01 68:36:40
+    INDEX 01 68:49:40
