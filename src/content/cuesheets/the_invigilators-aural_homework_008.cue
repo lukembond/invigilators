@@ -2,62 +2,66 @@ PERFORMER "The Invigilators"
 TITLE "Aural Homework 008 (2012-06-15)"
 FILE "01-the_invigilators-aural_homework_008.mp3" MP3
   TRACK 01 AUDIO
-    TITLE "Alpine (Karanda Intro Remix)"
-    PERFORMER "Fast Distance"
+    PERFORMER "Aural Homework"
+    TITLE "Intro"
     INDEX 01 00:00:00
   TRACK 02 AUDIO
-    TITLE "Amazing"
-    PERFORMER "Anton Firtich & Cramp"
-    INDEX 01 06:44:31
+    PERFORMER "Fast Distance"
+    TITLE "Alpine (Karanda Intro Remix)"
+    INDEX 01 00:55:00
   TRACK 03 AUDIO
-    TITLE "Showgrounds"
-    PERFORMER "MarLo"
-    INDEX 01 12:16:68
+    PERFORMER "Anton Firtich & Cramp"
+    TITLE "Amazing"
+    INDEX 01 07:39:31
   TRACK 04 AUDIO
-    TITLE "Everafter"
-    PERFORMER "Tritonal feat. Cristina Soto"
-    INDEX 01 16:44:50
+    PERFORMER "MarLo"
+    TITLE "Showgrounds"
+    INDEX 01 13:11:68
   TRACK 05 AUDIO
-    TITLE "Pure (MarLo Remix)"
-    PERFORMER "Solarstone"
-    INDEX 01 22:00:47
+    PERFORMER "Tritonal feat. Cristina Soto"
+    TITLE "Everafter"
+    INDEX 01 17:39:50
   TRACK 06 AUDIO
-    TITLE "Shamballa"
-    PERFORMER "Erick Strong vs. Dart Rayne"
-    INDEX 01 25:59:13
+    PERFORMER "Solarstone"
+    TITLE "Pure (MarLo Remix)"
+    INDEX 01 22:55:47
   TRACK 07 AUDIO
-    TITLE "Live Forever (Shogun Remix)"
-    PERFORMER "Ferry Corsten"
-    INDEX 01 31:22:59
+    PERFORMER "Erick Strong vs. Dart Rayne"
+    TITLE "Shamballa"
+    INDEX 01 26:54:13
   TRACK 08 AUDIO
-    TITLE "Zion"
-    PERFORMER "Norin & Rad"
-    INDEX 01 37:44:38
+    PERFORMER "Ferry Corsten"
+    TITLE "Live Forever (Shogun Remix)"
+    INDEX 01 32:17:59
   TRACK 09 AUDIO
-    TITLE "Endymion"
-    PERFORMER "Orjan Nilsen"
-    INDEX 01 43:37:11
+    PERFORMER "Norin & Rad"
+    TITLE "Zion"
+    INDEX 01 38:39:38
   TRACK 10 AUDIO
-    TITLE "Stadium"
-    PERFORMER "Wezz Devall"
-    INDEX 01 49:11:46
+    PERFORMER "Orjan Nilsen"
+    TITLE "Endymion"
+    INDEX 01 44:32:11
   TRACK 11 AUDIO
-    TITLE "Watch Out"
-    PERFORMER "Radion 6"
-    INDEX 01 54:02:36
+    PERFORMER "Wezz Devall"
+    TITLE "Stadium"
+    INDEX 01 50:06:46
   TRACK 12 AUDIO
-    TITLE "Zorro"
-    PERFORMER "Ashley Wallbridge"
-    INDEX 01 57:55:12
+    PERFORMER "Radion 6"
+    TITLE "Watch Out"
+    INDEX 01 54:57:36
   TRACK 13 AUDIO
-    TITLE "Aura"
-    PERFORMER "Genix"
-    INDEX 01 62:33:24
+    PERFORMER "Ashley Wallbridge"
+    TITLE "Zorro"
+    INDEX 01 58:50:12
   TRACK 14 AUDIO
-    TITLE "Tiburon"
-    PERFORMER "Nitrous Oxide"
-    INDEX 01 68:19:02
+    PERFORMER "Genix"
+    TITLE "Aura"
+    INDEX 01 63:28:24
   TRACK 15 AUDIO
-    TITLE "Flaming June (Laptop Symphony Rework)"
+    PERFORMER "Nitrous Oxide"
+    TITLE "Tiburon"
+    INDEX 01 69:14:02
+  TRACK 16 AUDIO
     PERFORMER "BT"
-    INDEX 01 73:37:63
+    TITLE "Flaming June (Laptop Symphony Rework)"
+    INDEX 01 74:32:63
