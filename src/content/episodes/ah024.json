@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah024.webp",
   "description": "A selection of large ones for you! Mixed live in Luke's living room in London, we double up the ironing boards this time out to bring you a double dose of bangers.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_024.cue",
+  "hearthis_id": "11738879",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah024/",
   "tracks": [
     {
       "n": 1,
@@ -17,7 +19,12 @@
       "title": "Lost in Music (Solarstone Pure Mix)",
       "label": "Pure Trance"
     },
-    { "n": 2, "artist": "Tranceye", "title": "Night's Watch", "label": "In Trance We Trust" },
+    {
+      "n": 2,
+      "artist": "Tranceye",
+      "title": "Night's Watch",
+      "label": "In Trance We Trust"
+    },
     {
       "n": 3,
       "artist": "Giuseppe Ottaviani",
@@ -36,7 +43,12 @@
       "title": "The Eye Of The Storm",
       "label": "Grotesque Fusion"
     },
-    { "n": 6, "artist": "Chris Schweizer", "title": "Loaded", "label": "Who's Afraid Of 138?!" },
+    {
+      "n": 6,
+      "artist": "Chris Schweizer",
+      "title": "Loaded",
+      "label": "Who's Afraid Of 138?!"
+    },
     {
       "n": 7,
       "artist": "Ratty",
@@ -55,7 +67,12 @@
       "title": "Visionary (Vlind Remix)",
       "label": "Grotesque Reworked"
     },
-    { "n": 10, "artist": "Simon Patterson", "title": "Spike", "label": "VII" },
+    {
+      "n": 10,
+      "artist": "Simon Patterson",
+      "title": "Spike",
+      "label": "VII"
+    },
     {
       "n": 11,
       "artist": "Myde",
@@ -74,20 +91,35 @@
       "title": "Hacksaw",
       "label": "Discover Dark"
     },
-    { "n": 14, "artist": "RAM", "title": "RAMexico", "label": "Who's Afraid Of 138?!" },
+    {
+      "n": 14,
+      "artist": "RAM",
+      "title": "RAMexico",
+      "label": "Who's Afraid Of 138?!"
+    },
     {
       "n": 15,
       "artist": "DT8 Project",
       "title": "Destination (James Dymond Remix)",
       "label": "A State Of Trance"
     },
-    { "n": 16, "artist": "Robert Nickson", "title": "Euphorica", "label": "Future Sound Of Egypt" },
+    {
+      "n": 16,
+      "artist": "Robert Nickson",
+      "title": "Euphorica",
+      "label": "Future Sound Of Egypt"
+    },
     {
       "n": 17,
       "artist": "Daniel Kandi & Andrew Visior",
       "title": "Freedom",
       "label": "Always Alive"
     },
-    { "n": 18, "artist": "John Askew", "title": "Black Coffee", "label": "VII" }
+    {
+      "n": 18,
+      "artist": "John Askew",
+      "title": "Black Coffee",
+      "label": "VII"
+    }
   ]
 }

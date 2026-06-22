@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah030.webp",
   "description": "Right. So. Really into full 2020 mode now. Pandemic upon us, we managed to find a small window in which we could meet up and get some tunes together. And in a new change or scenery too!",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_030.cue",
+  "hearthis_id": "11753488",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah030/",
   "tracks": [
     {
       "n": 1,
@@ -35,15 +37,35 @@
       "title": "The Sun Is Shining (Down On Me) (Darren Tate Dub)",
       "label": "Spinnin'"
     },
-    { "n": 5, "artist": "Breakfast", "title": "The Sunlight", "label": "Flashover" },
+    {
+      "n": 5,
+      "artist": "Breakfast",
+      "title": "The Sunlight",
+      "label": "Flashover"
+    },
     {
       "n": 6,
       "artist": "Mike Foyle vs. Signalrunners",
       "title": "Love Theme Dusk (Signalrunners Sunrise Mix)",
       "label": "Armind"
     },
-    { "n": 7, "artist": "Dogzilla", "title": "Without You", "label": "High Contrast" },
-    { "n": 8, "artist": "Insigma", "title": "Open Your Eyes (Goldenscan Remix)", "label": "ATCR" },
-    { "n": 9, "artist": "Nitrous Oxide", "title": "Amnesia", "label": "Anjunabeats" }
+    {
+      "n": 7,
+      "artist": "Dogzilla",
+      "title": "Without You",
+      "label": "High Contrast"
+    },
+    {
+      "n": 8,
+      "artist": "Insigma",
+      "title": "Open Your Eyes (Goldenscan Remix)",
+      "label": "ATCR"
+    },
+    {
+      "n": 9,
+      "artist": "Nitrous Oxide",
+      "title": "Amnesia",
+      "label": "Anjunabeats"
+    }
   ]
 }

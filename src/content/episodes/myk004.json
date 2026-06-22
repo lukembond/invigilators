@@ -10,9 +10,21 @@
   "image_bg": "/img/episode-bg/myk004.webp",
   "description": "Part 4 - Some weekend warmup time and for the first time Luke & Chris get B2B and deliver some trancier goodness to get you going!",
   "cuesheet": "../cuesheets/the_invigilators-mykonos_sessions_004.cue",
+  "hearthis_id": "14511641",
+  "hearthis_url": "https://hearthis.at/theinvigilators/myk004/",
   "tracks": [
-    { "n": 1, "artist": "The Invigilators", "title": "Mykonos Sessions Intro", "label": "-" },
-    { "n": 2, "artist": "Sean Tyas", "title": "9am (Dualitik Remix)", "label": "Black Hole" },
+    {
+      "n": 1,
+      "artist": "The Invigilators",
+      "title": "Mykonos Sessions Intro",
+      "label": "-"
+    },
+    {
+      "n": 2,
+      "artist": "Sean Tyas",
+      "title": "9am (Dualitik Remix)",
+      "label": "Black Hole"
+    },
     {
       "n": 3,
       "artist": "Above & Beyond",
@@ -25,16 +37,36 @@
       "title": "Velvet Morning (Genix Remix)",
       "label": "Anjunabeats"
     },
-    { "n": 5, "artist": "Jaytech", "title": "Zulu", "label": "Positronic" },
+    {
+      "n": 5,
+      "artist": "Jaytech",
+      "title": "Zulu",
+      "label": "Positronic"
+    },
     {
       "n": 6,
       "artist": "Andain",
       "title": "Summer Calling (Daniel Wanrooy & Mark Green Remix)",
       "label": "Black Hole"
     },
-    { "n": 7, "artist": "Matt Holliday", "title": "Nothing Lasts Forever", "label": "Joof Aura" },
-    { "n": 8, "artist": "Sunny Lax", "title": "Aeons", "label": "Anjunabeats" },
-    { "n": 9, "artist": "Ashley Wallbridge", "title": "Es Vedra", "label": "Garuda" },
+    {
+      "n": 7,
+      "artist": "Matt Holliday",
+      "title": "Nothing Lasts Forever",
+      "label": "Joof Aura"
+    },
+    {
+      "n": 8,
+      "artist": "Sunny Lax",
+      "title": "Aeons",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 9,
+      "artist": "Ashley Wallbridge",
+      "title": "Es Vedra",
+      "label": "Garuda"
+    },
     {
       "n": 10,
       "artist": "Jordan Suckley",

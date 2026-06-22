@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah028.webp",
   "description": "It's May and the Invigilators have got to work on mixing up another vinyl mix for you, with a bunch more classics for you to get sunk into!",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_028.cue",
+  "hearthis_id": "11753446",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah028/",
   "tracks": [
     {
       "n": 1,
@@ -23,17 +25,42 @@
       "title": "Beautiful (John Johnson Remix)",
       "label": "Incentive"
     },
-    { "n": 3, "artist": "Ralphie B", "title": "Disclosure", "label": "In Trance We Trust" },
+    {
+      "n": 3,
+      "artist": "Ralphie B",
+      "title": "Disclosure",
+      "label": "In Trance We Trust"
+    },
     {
       "n": 4,
       "artist": "Perpetuous Dreamer",
       "title": "Dust.Wav (Armin van Buuren's Rising Star Mix)",
       "label": "Armind"
     },
-    { "n": 5, "artist": "Daniel Kandi", "title": "Child", "label": "Anjunabeats" },
-    { "n": 6, "artist": "Lemon & Einar K", "title": "Hope", "label": "Flashover" },
-    { "n": 7, "artist": "Mirco de Govia", "title": "Epic Monolith", "label": "Xtravaganza" },
-    { "n": 8, "artist": "Super 8 & Tab", "title": "Suru", "label": "Anjunabeats" },
+    {
+      "n": 5,
+      "artist": "Daniel Kandi",
+      "title": "Child",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 6,
+      "artist": "Lemon & Einar K",
+      "title": "Hope",
+      "label": "Flashover"
+    },
+    {
+      "n": 7,
+      "artist": "Mirco de Govia",
+      "title": "Epic Monolith",
+      "label": "Xtravaganza"
+    },
+    {
+      "n": 8,
+      "artist": "Super 8 & Tab",
+      "title": "Suru",
+      "label": "Anjunabeats"
+    },
     {
       "n": 9,
       "artist": "Andy Moor & Adam White pres. Whiteroom",
@@ -64,6 +91,11 @@
       "title": "Fly Away (Sean Tyas Remix)",
       "label": "Combined Forces"
     },
-    { "n": 14, "artist": "O'Callaghan & Kearney", "title": "Exactly", "label": "Discover" }
+    {
+      "n": 14,
+      "artist": "O'Callaghan & Kearney",
+      "title": "Exactly",
+      "label": "Discover"
+    }
   ]
 }

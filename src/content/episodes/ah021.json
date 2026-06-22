@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah021.webp",
   "description": "One final Aural Homework recorded to end out 2016, recorded in London. A late upload is better than no upload at all...",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_021.cue",
+  "hearthis_id": "9691753",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah021/",
   "tracks": [
     {
       "n": 1,
@@ -17,7 +19,12 @@
       "title": "Rimur",
       "label": "FSOE Clandestine"
     },
-    { "n": 2, "artist": "Liquid Soul & Neodyne", "title": "Believe", "label": "Iboga Records" },
+    {
+      "n": 2,
+      "artist": "Liquid Soul & Neodyne",
+      "title": "Believe",
+      "label": "Iboga Records"
+    },
     {
       "n": 3,
       "artist": "Standerwick & Chris Schweizer",
@@ -30,7 +37,12 @@
       "title": "Crossing the 4th Dimension (Spectro Boy Remix)",
       "label": "EDM Records"
     },
-    { "n": 5, "artist": "Allen Watts & Jak Aggas", "title": "Spitfire", "label": "Rielism" },
+    {
+      "n": 5,
+      "artist": "Allen Watts & Jak Aggas",
+      "title": "Spitfire",
+      "label": "Rielism"
+    },
     {
       "n": 6,
       "artist": "Oberon",
@@ -43,16 +55,36 @@
       "title": "Atomic (Coming Soon!!! Remix)",
       "label": "Who's Afraid Of 138?!"
     },
-    { "n": 8, "artist": "Sean Tyas", "title": "Matter Of Time", "label": "Degenerate Records" },
-    { "n": 9, "artist": "Serjan", "title": "The Cyborgs Are Here", "label": "Pharmacy" },
+    {
+      "n": 8,
+      "artist": "Sean Tyas",
+      "title": "Matter Of Time",
+      "label": "Degenerate Records"
+    },
+    {
+      "n": 9,
+      "artist": "Serjan",
+      "title": "The Cyborgs Are Here",
+      "label": "Pharmacy"
+    },
     {
       "n": 10,
       "artist": "James Dymond",
       "title": "Show The World",
       "label": "Future Sound Of Egypt"
     },
-    { "n": 11, "artist": "G8", "title": "Albino Pigs Are Cute", "label": "Discover Dark" },
-    { "n": 12, "artist": "Astrix", "title": "Deep Jungle Walk", "label": "HOMmega Productions" },
+    {
+      "n": 11,
+      "artist": "G8",
+      "title": "Albino Pigs Are Cute",
+      "label": "Discover Dark"
+    },
+    {
+      "n": 12,
+      "artist": "Astrix",
+      "title": "Deep Jungle Walk",
+      "label": "HOMmega Productions"
+    },
     {
       "n": 13,
       "artist": "Hilight Tribe",

@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah017.webp",
   "description": "Some more lovingly selected songs chosen by us to get listening to in this one and a half hour long mix for you!",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_017.cue",
+  "hearthis_id": "9606304",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah017/",
   "tracks": [
     {
       "n": 1,
@@ -29,17 +31,42 @@
       "title": "Liberation",
       "label": "Black Hole Recordings"
     },
-    { "n": 4, "artist": "4 Strings & Katty Heath", "title": "Hold In Silence", "label": "Liquid" },
-    { "n": 5, "artist": "Soundprank", "title": "Hold On", "label": "Enhanced" },
+    {
+      "n": 4,
+      "artist": "4 Strings & Katty Heath",
+      "title": "Hold In Silence",
+      "label": "Liquid"
+    },
+    {
+      "n": 5,
+      "artist": "Soundprank",
+      "title": "Hold On",
+      "label": "Enhanced"
+    },
     {
       "n": 6,
       "artist": "Paul Oakenfold & Cassandra Fox",
       "title": "Touch Me (Mike Koglin 2.0 Remix)",
       "label": "Perfecto"
     },
-    { "n": 7, "artist": "LTN & Roni Joni", "title": "In Between", "label": "Arrival" },
-    { "n": 8, "artist": "ilan Bluestone", "title": "Tesseract", "label": "Anjunabeats" },
-    { "n": 9, "artist": "Darren Tate", "title": "Twisted Robot", "label": "Mondo" },
+    {
+      "n": 7,
+      "artist": "LTN & Roni Joni",
+      "title": "In Between",
+      "label": "Arrival"
+    },
+    {
+      "n": 8,
+      "artist": "ilan Bluestone",
+      "title": "Tesseract",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 9,
+      "artist": "Darren Tate",
+      "title": "Twisted Robot",
+      "label": "Mondo"
+    },
     {
       "n": 10,
       "artist": "Kenneth Thomas feat. Colleen Riley",
@@ -64,15 +91,35 @@
       "title": "Priceless",
       "label": "Black Hole Recordings"
     },
-    { "n": 14, "artist": "Mike Sonar", "title": "Why So Serious", "label": "AVA" },
+    {
+      "n": 14,
+      "artist": "Mike Sonar",
+      "title": "Why So Serious",
+      "label": "AVA"
+    },
     {
       "n": 15,
       "artist": "First State feat. Quilla",
       "title": "Where You Are",
       "label": "Black Hole"
     },
-    { "n": 16, "artist": "BXT", "title": "White Lynx", "label": "Arrival" },
-    { "n": 17, "artist": "Pacific Nation", "title": "Waterfall", "label": "Go On Air" },
-    { "n": 18, "artist": "Chicane feat. Paul Aiden", "title": "Motion", "label": "Modena" }
+    {
+      "n": 16,
+      "artist": "BXT",
+      "title": "White Lynx",
+      "label": "Arrival"
+    },
+    {
+      "n": 17,
+      "artist": "Pacific Nation",
+      "title": "Waterfall",
+      "label": "Go On Air"
+    },
+    {
+      "n": 18,
+      "artist": "Chicane feat. Paul Aiden",
+      "title": "Motion",
+      "label": "Modena"
+    }
   ]
 }

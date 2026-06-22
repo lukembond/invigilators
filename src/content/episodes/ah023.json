@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah023.webp",
   "description": "Aural Homework, Episode 023. A bunch of trance tunes for ya. Need to get more descriptive descriptions.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_023.cue",
+  "hearthis_id": "11727138",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah023/",
   "tracks": [
     {
       "n": 1,
@@ -23,7 +25,12 @@
       "title": "Solitaire",
       "label": "Rielism"
     },
-    { "n": 3, "artist": "The Cracken", "title": "Aphrodisiac", "label": "Digital Society" },
+    {
+      "n": 3,
+      "artist": "The Cracken",
+      "title": "Aphrodisiac",
+      "label": "Digital Society"
+    },
     {
       "n": 4,
       "artist": "Indecent Noise",
@@ -48,7 +55,12 @@
       "title": "Stay (Here With Me) (Club Mix)",
       "label": "Future Sound Of Egypt"
     },
-    { "n": 8, "artist": "Sneijder", "title": "Vaporize", "label": "Subculture" },
+    {
+      "n": 8,
+      "artist": "Sneijder",
+      "title": "Vaporize",
+      "label": "Subculture"
+    },
     {
       "n": 9,
       "artist": "Re:Order",
@@ -67,16 +79,36 @@
       "title": "Revive",
       "label": "Who's Afraid Of 138?!"
     },
-    { "n": 12, "artist": "Miroslav Vrlik", "title": "Blue Moon", "label": "Full On 140" },
+    {
+      "n": 12,
+      "artist": "Miroslav Vrlik",
+      "title": "Blue Moon",
+      "label": "Full On 140"
+    },
     {
       "n": 13,
       "artist": "Delerium feat. Sarah McLachlan",
       "title": "Silence (RAM Remix)",
       "label": "CDR"
     },
-    { "n": 14, "artist": "Sean Tyas", "title": "Black & White", "label": "VII" },
-    { "n": 15, "artist": "John O'Callaghan", "title": "Two Trees", "label": "Subculture" },
-    { "n": 16, "artist": "The Digital Blonde", "title": "Symposium", "label": "Joof Mantra" },
+    {
+      "n": 14,
+      "artist": "Sean Tyas",
+      "title": "Black & White",
+      "label": "VII"
+    },
+    {
+      "n": 15,
+      "artist": "John O'Callaghan",
+      "title": "Two Trees",
+      "label": "Subculture"
+    },
+    {
+      "n": 16,
+      "artist": "The Digital Blonde",
+      "title": "Symposium",
+      "label": "Joof Mantra"
+    },
     {
       "n": 17,
       "artist": "Stoneface & Terminal",

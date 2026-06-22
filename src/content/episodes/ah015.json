@@ -10,8 +10,15 @@
   "image_bg": "/img/episode-bg/ah015.webp",
   "description": "Here is the first one of the thought to be gone InvigiLostTapes! A progressive tip recorded for an hour's worth of killer proggy houseness.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_015.cue",
+  "hearthis_id": "9605829",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah015/",
   "tracks": [
-    { "n": 1, "artist": "Matt Lange", "title": "Only You", "label": "Anjunadeep" },
+    {
+      "n": 1,
+      "artist": "Matt Lange",
+      "title": "Only You",
+      "label": "Anjunadeep"
+    },
     {
       "n": 2,
       "artist": "Above & Beyond feat. Zoe Johnston",
@@ -30,22 +37,42 @@
       "title": "Burner (Shingo Nakamura Remix)",
       "label": "Silk Digital"
     },
-    { "n": 5, "artist": "London Grammar", "title": "Strong (Judah Remix)", "label": "CDR" },
-    { "n": 6, "artist": "Ad Brown & Shawn Mitiska", "title": "Pulse", "label": "Black Hole" },
+    {
+      "n": 5,
+      "artist": "London Grammar",
+      "title": "Strong (Judah Remix)",
+      "label": "CDR"
+    },
+    {
+      "n": 6,
+      "artist": "Ad Brown & Shawn Mitiska",
+      "title": "Pulse",
+      "label": "Black Hole"
+    },
     {
       "n": 7,
       "artist": "SNR & Rikkaz feat. Jan Johnston",
       "title": "Beautiful Change (Dan & Sam Remix)",
       "label": "Arrival"
     },
-    { "n": 8, "artist": "PROFF", "title": "What It Feels Like", "label": "Intricate" },
+    {
+      "n": 8,
+      "artist": "PROFF",
+      "title": "What It Feels Like",
+      "label": "Intricate"
+    },
     {
       "n": 9,
       "artist": "Lian July feat. Eli",
       "title": "Surrender (LTN Dub Remix)",
       "label": "Silk Digital"
     },
-    { "n": 10, "artist": "Shingo Nakamura", "title": "Days", "label": "Otographic" },
+    {
+      "n": 10,
+      "artist": "Shingo Nakamura",
+      "title": "Days",
+      "label": "Otographic"
+    },
     {
       "n": 11,
       "artist": "Thomas Hayes",

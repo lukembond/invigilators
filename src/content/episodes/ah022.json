@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah022.webp",
   "description": "Episode 22 is here. Recorded New Years Day 2017, it's an hour and a half of uplifting tunes for you!",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_022.cue",
+  "hearthis_id": "11727135",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah022/",
   "tracks": [
     {
       "n": 1,
@@ -23,21 +25,36 @@
       "title": "Everyone Is Looking For Us",
       "label": "Outburst"
     },
-    { "n": 3, "artist": "Factor B", "title": "Endless", "label": "Pure Trance" },
+    {
+      "n": 3,
+      "artist": "Factor B",
+      "title": "Endless",
+      "label": "Pure Trance"
+    },
     {
       "n": 4,
       "artist": "Solarstone & Ferry Tayle",
       "title": "Lifeline (Epic Mix)",
       "label": "Pure Trance"
     },
-    { "n": 5, "artist": "Ferry Corsten pres. Gouryella", "title": "Neba", "label": "Flashover" },
+    {
+      "n": 5,
+      "artist": "Ferry Corsten pres. Gouryella",
+      "title": "Neba",
+      "label": "Flashover"
+    },
     {
       "n": 6,
       "artist": "The Thrillseekers",
       "title": "Halcyon 2016",
       "label": "Future Sound Of Egypt"
     },
-    { "n": 7, "artist": "Jorn Van Deynhoven", "title": "Space Girl", "label": "A State Of Trance" },
+    {
+      "n": 7,
+      "artist": "Jorn Van Deynhoven",
+      "title": "Space Girl",
+      "label": "A State Of Trance"
+    },
     {
       "n": 8,
       "artist": "Matt Bukovski & Katty Heath",
@@ -50,7 +67,12 @@
       "title": "Tale In Verse",
       "label": "Future Sound Of Egypt"
     },
-    { "n": 10, "artist": "PureNRG", "title": "Secret of the Sahara", "label": "Black Hole" },
+    {
+      "n": 10,
+      "artist": "PureNRG",
+      "title": "Secret of the Sahara",
+      "label": "Black Hole"
+    },
     {
       "n": 11,
       "artist": "Coast 2 Coast feat. Discovery",
@@ -63,7 +85,12 @@
       "title": "Kiksu (The Noble Six 2016 Remix)",
       "label": "euphonic"
     },
-    { "n": 13, "artist": "Lostly", "title": "Rage At The Stars", "label": "Outburst Twilight" },
+    {
+      "n": 13,
+      "artist": "Lostly",
+      "title": "Rage At The Stars",
+      "label": "Outburst Twilight"
+    },
     {
       "n": 14,
       "artist": "Driftmoon",
