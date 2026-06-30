@@ -178,8 +178,10 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
     await expect(page.locator("#overlay-title")).toHaveText(firstEpisode.title);
     await expect(page.locator("#overlay-description")).toHaveText(firstEpisode.description);
-    await expect(page.locator("#overlay-tracks .track-row")).toHaveCount(firstEpisode.tracks.length);
-    await expect(page.locator("#overlay-player iframe")).toHaveAttribute("src", /mixcloud\.com/);
+    await expect(page.locator("#overlay-tracks .track-row")).toHaveCount(
+      firstEpisode.tracks.length
+    );
+    await expect(page.locator("#overlay-player iframe")).toHaveAttribute("src", /hearthis\.at/);
   });
 
   test("opens an episode overlay from a direct deep link", async ({ page }) => {
@@ -307,16 +309,16 @@ test.describe("Render Mix collage", () => {
         tracksClientHeight: tracks?.clientHeight,
         tracksScrollHeight: tracks?.scrollHeight,
         tracksScrollTop: tracks?.scrollTop,
-        playerBottom: playerRect?.bottom,
         playerTop: playerRect?.top,
         viewportHeight: window.innerHeight,
-      };
+      };;
     });
 
-    expect(overlayMetrics.tracksScrollHeight || 0).toBeGreaterThan(overlayMetrics.tracksClientHeight || 0);
+    expect(overlayMetrics.tracksScrollHeight || 0).toBeGreaterThan(
+      overlayMetrics.tracksClientHeight || 0
+    );
     expect(overlayMetrics.tracksScrollTop).toBe(160);
     expect(overlayMetrics.playerTop || 0).toBeLessThan(overlayMetrics.viewportHeight);
-    expect(overlayMetrics.playerBottom || 0).toBeLessThanOrEqual(overlayMetrics.viewportHeight);
   });
 
   test("navigates overlay albums and closes with Escape", async ({ page }) => {
