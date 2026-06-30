@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah029.webp",
   "description": "Another Invigilators mix, this time off the back of spending Friday evening at a nice small music venue near King's Cross in London listening to the sounds of Tinlicker playing a nice intimate set.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_029.cue",
+  "hearthis_id": "11753457",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah029/",
   "tracks": [
     {
       "n": 1,
@@ -29,7 +31,12 @@
       "title": "Forward Forever (Indecent Noise Remix)",
       "label": "Pure Trance NEON"
     },
-    { "n": 4, "artist": "Dan Thompson", "title": "Spectrum", "label": "Nocturnal Animals" },
+    {
+      "n": 4,
+      "artist": "Dan Thompson",
+      "title": "Spectrum",
+      "label": "Nocturnal Animals"
+    },
     {
       "n": 5,
       "artist": "Rapid Eye",
@@ -42,17 +49,42 @@
       "title": "Heeding The Call",
       "label": "Who's Afraid Of 138?!"
     },
-    { "n": 7, "artist": "Scot Project", "title": "H (Hypnotize)", "label": "Outburst" },
-    { "n": 8, "artist": "Tastexperience", "title": "Time (Madwave Remix)", "label": "Black Hole" },
+    {
+      "n": 7,
+      "artist": "Scot Project",
+      "title": "H (Hypnotize)",
+      "label": "Outburst"
+    },
+    {
+      "n": 8,
+      "artist": "Tastexperience",
+      "title": "Time (Madwave Remix)",
+      "label": "Black Hole"
+    },
     {
       "n": 9,
       "artist": "Solarstone & Robert Nickson",
       "title": "Voyager II (Club Mix)",
       "label": "Black Hole"
     },
-    { "n": 10, "artist": "Les Hemstock", "title": "Ascension (2019 mix)", "label": "Neural Music" },
-    { "n": 11, "artist": "Sean Tyas & John Askew", "title": "Unkonscious", "label": "VII" },
-    { "n": 12, "artist": "Giuseppe Ottaviani", "title": "Moscow River", "label": "Black Hole" },
+    {
+      "n": 10,
+      "artist": "Les Hemstock",
+      "title": "Ascension (2019 mix)",
+      "label": "Neural Music"
+    },
+    {
+      "n": 11,
+      "artist": "Sean Tyas & John Askew",
+      "title": "Unkonscious",
+      "label": "VII"
+    },
+    {
+      "n": 12,
+      "artist": "Giuseppe Ottaviani",
+      "title": "Moscow River",
+      "label": "Black Hole"
+    },
     {
       "n": 13,
       "artist": "Simon O'Shine & Ahmed Romel",

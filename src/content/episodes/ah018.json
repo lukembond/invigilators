@@ -10,15 +10,27 @@
   "image_bg": "/img/episode-bg/ah018.webp",
   "description": "Hard and heavy trance for you on this one, it starts at a frenetic pace and really just keeps on going all the way through to the end.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_018.cue",
+  "hearthis_id": "9642250",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah018/",
   "tracks": [
-    { "n": 1, "artist": "Aly & Fila", "title": "Underwater", "label": "Future Sound Of Egypt" },
+    {
+      "n": 1,
+      "artist": "Aly & Fila",
+      "title": "Underwater",
+      "label": "Future Sound Of Egypt"
+    },
     {
       "n": 2,
       "artist": "Silvermine",
       "title": "Flying (Solarstone Pure Mix)",
       "label": "Pure Trance"
     },
-    { "n": 3, "artist": "Mark Sherry", "title": "The Pillars of Creation", "label": "Subculture" },
+    {
+      "n": 3,
+      "artist": "Mark Sherry",
+      "title": "The Pillars of Creation",
+      "label": "Subculture"
+    },
     {
       "n": 4,
       "artist": "Indecent Noise",
@@ -43,17 +55,42 @@
       "title": "Nothing But Chemistry Here (Sean Tyas Remix)",
       "label": "Black Hole"
     },
-    { "n": 8, "artist": "Will Atkinson", "title": "Victims", "label": "Subculture" },
-    { "n": 9, "artist": "Fred Baker", "title": "Rebirth (Adam Ellis Remix)", "label": "Kearnage" },
-    { "n": 10, "artist": "Mat Zo", "title": "Lucky Strike (Amir Hussain Bootleg)", "label": "CDR" },
+    {
+      "n": 8,
+      "artist": "Will Atkinson",
+      "title": "Victims",
+      "label": "Subculture"
+    },
+    {
+      "n": 9,
+      "artist": "Fred Baker",
+      "title": "Rebirth (Adam Ellis Remix)",
+      "label": "Kearnage"
+    },
+    {
+      "n": 10,
+      "artist": "Mat Zo",
+      "title": "Lucky Strike (Amir Hussain Bootleg)",
+      "label": "CDR"
+    },
     {
       "n": 11,
       "artist": "Pink Floyd",
       "title": "Shine On The Dark Side Of The Moon (Neptune Project's Out There With Pluto Mix)",
       "label": "CDR"
     },
-    { "n": 12, "artist": "Simon Bostock", "title": "Suraya", "label": "Monster Force" },
-    { "n": 13, "artist": "Lostly & Manuel La Saux", "title": "Lost Man", "label": "Discover" },
+    {
+      "n": 12,
+      "artist": "Simon Bostock",
+      "title": "Suraya",
+      "label": "Monster Force"
+    },
+    {
+      "n": 13,
+      "artist": "Lostly & Manuel La Saux",
+      "title": "Lost Man",
+      "label": "Discover"
+    },
     {
       "n": 14,
       "artist": "Simon Patterson",
@@ -66,8 +103,18 @@
       "title": "Glitches (Allan Morrow Remix)",
       "label": "Mental Asylum"
     },
-    { "n": 16, "artist": "Jordan Suckley", "title": "Droid", "label": "Damaged" },
-    { "n": 17, "artist": "Will Atkinson", "title": "Numb The Pain", "label": "Subculture" },
+    {
+      "n": 16,
+      "artist": "Jordan Suckley",
+      "title": "Droid",
+      "label": "Damaged"
+    },
+    {
+      "n": 17,
+      "artist": "Will Atkinson",
+      "title": "Numb The Pain",
+      "label": "Subculture"
+    },
     {
       "n": 18,
       "artist": "Alexey Selin",

@@ -10,9 +10,21 @@
   "image_bg": "/img/episode-bg/ah016.webp",
   "description": "What once was lost is now found and ready for you to listen to... better late than never!",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_016.cue",
+  "hearthis_id": "9605847",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah016/",
   "tracks": [
-    { "n": 1, "artist": "Eximinds", "title": "Phoenix", "label": "A State of Trance" },
-    { "n": 2, "artist": "Aeon Flux & Anna Miracles", "title": "Why", "label": "Muz-Flame" },
+    {
+      "n": 1,
+      "artist": "Eximinds",
+      "title": "Phoenix",
+      "label": "A State of Trance"
+    },
+    {
+      "n": 2,
+      "artist": "Aeon Flux & Anna Miracles",
+      "title": "Why",
+      "label": "Muz-Flame"
+    },
     {
       "n": 3,
       "artist": "Kyau & Albert",
@@ -25,19 +37,54 @@
       "title": "Don't Walk Away",
       "label": "Discover Digital"
     },
-    { "n": 5, "artist": "Johan Vilborg", "title": "Fall", "label": "Silk Royal" },
-    { "n": 6, "artist": "Gabriel & Dresden", "title": "Rise Up", "label": "Organized Nature" },
-    { "n": 7, "artist": "Ad Brown", "title": "Marimba", "label": "Perspectives Digital" },
-    { "n": 8, "artist": "Inva", "title": "Lonely Tonight", "label": "InfraProgressive" },
+    {
+      "n": 5,
+      "artist": "Johan Vilborg",
+      "title": "Fall",
+      "label": "Silk Royal"
+    },
+    {
+      "n": 6,
+      "artist": "Gabriel & Dresden",
+      "title": "Rise Up",
+      "label": "Organized Nature"
+    },
+    {
+      "n": 7,
+      "artist": "Ad Brown",
+      "title": "Marimba",
+      "label": "Perspectives Digital"
+    },
+    {
+      "n": 8,
+      "artist": "Inva",
+      "title": "Lonely Tonight",
+      "label": "InfraProgressive"
+    },
     {
       "n": 9,
       "artist": "PROFF",
       "title": "Starstruck (Shingo Nakamura Remix)",
       "label": "Silk Royal"
     },
-    { "n": 10, "artist": "LTN", "title": "Fair Isle", "label": "Aropa" },
-    { "n": 11, "artist": "Russell G", "title": "Solstice", "label": "Pilot 6 (Armada)" },
-    { "n": 12, "artist": "Elfsong", "title": "Seldarine", "label": "Pure Trance" },
+    {
+      "n": 10,
+      "artist": "LTN",
+      "title": "Fair Isle",
+      "label": "Aropa"
+    },
+    {
+      "n": 11,
+      "artist": "Russell G",
+      "title": "Solstice",
+      "label": "Pilot 6 (Armada)"
+    },
+    {
+      "n": 12,
+      "artist": "Elfsong",
+      "title": "Seldarine",
+      "label": "Pure Trance"
+    },
     {
       "n": 13,
       "artist": "19 Hz",

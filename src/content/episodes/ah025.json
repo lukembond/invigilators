@@ -10,8 +10,15 @@
   "image_bg": "/img/episode-bg/ah025.webp",
   "description": "And we're back again already, with episode 25. More from the trance spectrum on this one, with a bit more banter in there for you too.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_025.cue",
+  "hearthis_id": "11740684",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah025/",
   "tracks": [
-    { "n": 1, "artist": "PureNRG", "title": "Midnight Blue", "label": "Black Hole" },
+    {
+      "n": 1,
+      "artist": "PureNRG",
+      "title": "Midnight Blue",
+      "label": "Black Hole"
+    },
     {
       "n": 2,
       "artist": "Paul Oakenfold",
@@ -36,7 +43,12 @@
       "title": "Shadows Of The Night",
       "label": "Digital Society"
     },
-    { "n": 6, "artist": "Factor B", "title": "Liberator", "label": "Future Sound Of Egypt" },
+    {
+      "n": 6,
+      "artist": "Factor B",
+      "title": "Liberator",
+      "label": "Future Sound Of Egypt"
+    },
     {
       "n": 7,
       "artist": "Joint Operations Centre",
@@ -49,7 +61,17 @@
       "title": "Rain Cedes To Sunlight",
       "label": "Titan Audio"
     },
-    { "n": 9, "artist": "Tranceye", "title": "Distant Dream", "label": "Redux" },
-    { "n": 10, "artist": "Giuseppe Ottaviani", "title": "Lumina", "label": "GO Music" }
+    {
+      "n": 9,
+      "artist": "Tranceye",
+      "title": "Distant Dream",
+      "label": "Redux"
+    },
+    {
+      "n": 10,
+      "artist": "Giuseppe Ottaviani",
+      "title": "Lumina",
+      "label": "GO Music"
+    }
   ]
 }

@@ -10,18 +10,45 @@
   "image_bg": "/img/episode-bg/ah013.webp",
   "description": "It's another fun rainy weekend in London for Australia day! Put this trancey lot together for your listening goodness.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_013.cue",
+  "hearthis_id": "9522982",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah013/",
   "tracks": [
-    { "n": 1, "artist": "Orjan Nilsen", "title": "Violetta", "label": "Armind" },
-    { "n": 2, "artist": "Will Atkinson", "title": "Damage", "label": "Perfecto Fluoro" },
+    {
+      "n": 1,
+      "artist": "Orjan Nilsen",
+      "title": "Violetta",
+      "label": "Armind"
+    },
+    {
+      "n": 2,
+      "artist": "Will Atkinson",
+      "title": "Damage",
+      "label": "Perfecto Fluoro"
+    },
     {
       "n": 3,
       "artist": "J.O.C. vs. Sied van Riel",
       "title": "Adagio For Wings",
       "label": "Subculture"
     },
-    { "n": 4, "artist": "Tim Besamusca", "title": "Hyperscape", "label": "Trance All-Stars" },
-    { "n": 5, "artist": "Super8 & Tab", "title": "L.A. (Juventa Remix)", "label": "Anjunabeats" },
-    { "n": 6, "artist": "Marcos", "title": "Summer Solstice", "label": "Vandit" },
+    {
+      "n": 4,
+      "artist": "Tim Besamusca",
+      "title": "Hyperscape",
+      "label": "Trance All-Stars"
+    },
+    {
+      "n": 5,
+      "artist": "Super8 & Tab",
+      "title": "L.A. (Juventa Remix)",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 6,
+      "artist": "Marcos",
+      "title": "Summer Solstice",
+      "label": "Vandit"
+    },
     {
       "n": 7,
       "artist": "Six Senses & Terk Dawn",
@@ -52,7 +79,12 @@
       "title": "Prometheus (Araya Remix)",
       "label": "Trance All-Stars"
     },
-    { "n": 12, "artist": "Jamie Walker", "title": "Boulevard", "label": "Subculture" },
+    {
+      "n": 12,
+      "artist": "Jamie Walker",
+      "title": "Boulevard",
+      "label": "Subculture"
+    },
     {
       "n": 13,
       "artist": "RAM & Susana",

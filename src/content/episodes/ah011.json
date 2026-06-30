@@ -10,30 +10,57 @@
   "image_bg": "/img/episode-bg/ah011.webp",
   "description": "It's another fun weekend in London. Good tunes all weekend, culminating in this next mix for you all.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_011.cue",
+  "hearthis_id": "9416523",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah011/",
   "tracks": [
-    { "n": 1, "artist": "Bluestone", "title": "Capetown", "label": "Anjunabeats" },
+    {
+      "n": 1,
+      "artist": "Bluestone",
+      "title": "Capetown",
+      "label": "Anjunabeats"
+    },
     {
       "n": 2,
       "artist": "Paul van Dyk feat. Plumb",
       "title": "I Don't Deserve You (Maor Levi & Bluestone Remix)",
       "label": "Vandit"
     },
-    { "n": 3, "artist": "Juventa", "title": "Metamorphose", "label": "Enhanced" },
-    { "n": 4, "artist": "Andy Moor feat. Sue McLaren", "title": "Trespass", "label": "AVA" },
+    {
+      "n": 3,
+      "artist": "Juventa",
+      "title": "Metamorphose",
+      "label": "Enhanced"
+    },
+    {
+      "n": 4,
+      "artist": "Andy Moor feat. Sue McLaren",
+      "title": "Trespass",
+      "label": "AVA"
+    },
     {
       "n": 5,
       "artist": "Andrew Rayel feat. Jano",
       "title": "How Do I Know (Club Mix)",
       "label": "Armind"
     },
-    { "n": 6, "artist": "Running Man pres. Inca", "title": "Freefall", "label": "Unearthed Red" },
+    {
+      "n": 6,
+      "artist": "Running Man pres. Inca",
+      "title": "Freefall",
+      "label": "Unearthed Red"
+    },
     {
       "n": 7,
       "artist": "Giuseppe Ottaviani feat. Amba Shepherd",
       "title": "Lost For Words (On Air Mix)",
       "label": "Vandit"
     },
-    { "n": 8, "artist": "A.R.D.I. & Ren", "title": "Infinity", "label": "Arisa" },
+    {
+      "n": 8,
+      "artist": "A.R.D.I. & Ren",
+      "title": "Infinity",
+      "label": "Arisa"
+    },
     {
       "n": 9,
       "artist": "Pedro del Mar with ReOrder feat. Fisher",

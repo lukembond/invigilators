@@ -10,8 +10,15 @@
   "image_bg": "/img/episode-bg/ah031.webp",
   "description": "Only a year between drinks... Here's another Aural Homework edition recorded in London, again after Luke's bday - this time in 2021. A vinyl selection of classic trance tunes, some of which we've probably played before.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_031.cue",
+  "hearthis_id": "11765334",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah031/",
   "tracks": [
-    { "n": 1, "artist": "Way Out West", "title": "Killa (Orkidea Mix)", "label": "Solaris" },
+    {
+      "n": 1,
+      "artist": "Way Out West",
+      "title": "Killa (Orkidea Mix)",
+      "label": "Solaris"
+    },
     {
       "n": 2,
       "artist": "Johan Gielen",
@@ -42,7 +49,12 @@
       "title": "Razorfish (Bart Claessen 2007 Rework)",
       "label": "Anjunabeats"
     },
-    { "n": 7, "artist": "Super8 & Tab", "title": "Needs To Feel", "label": "Anjunabeats" },
+    {
+      "n": 7,
+      "artist": "Super8 & Tab",
+      "title": "Needs To Feel",
+      "label": "Anjunabeats"
+    },
     {
       "n": 8,
       "artist": "The Thrillseekers feat. Aruna",
@@ -55,17 +67,42 @@
       "title": "Deep Inside (Re-Work)",
       "label": "High Contrast"
     },
-    { "n": 10, "artist": "Above & Beyond", "title": "Can't Sleep", "label": "Anjunabeats" },
+    {
+      "n": 10,
+      "artist": "Above & Beyond",
+      "title": "Can't Sleep",
+      "label": "Anjunabeats"
+    },
     {
       "n": 11,
       "artist": "Sunlounger",
       "title": "In & Out (DJ Shah Rework)",
       "label": "A State Of Trance"
     },
-    { "n": 12, "artist": "P.O.S.", "title": "Gravity", "label": "Anjunabeats" },
-    { "n": 13, "artist": "Tenth Planet", "title": "Ghosts", "label": "Nebula" },
-    { "n": 14, "artist": "Rusch & Murray", "title": "The Promise", "label": "Anjunabeats" },
-    { "n": 15, "artist": "Super8", "title": "Alba", "label": "Anjunabeats" },
+    {
+      "n": 12,
+      "artist": "P.O.S.",
+      "title": "Gravity",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 13,
+      "artist": "Tenth Planet",
+      "title": "Ghosts",
+      "label": "Nebula"
+    },
+    {
+      "n": 14,
+      "artist": "Rusch & Murray",
+      "title": "The Promise",
+      "label": "Anjunabeats"
+    },
+    {
+      "n": 15,
+      "artist": "Super8",
+      "title": "Alba",
+      "label": "Anjunabeats"
+    },
     {
       "n": 16,
       "artist": "Delerium",

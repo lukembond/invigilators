@@ -10,6 +10,8 @@
   "image_bg": "/img/episode-bg/ah012.webp",
   "description": "Mixed out on the deck on the only beautiful summer's day London gets, this one is another full on trance set.",
   "cuesheet": "../cuesheets/the_invigilators-aural_homework_012.cue",
+  "hearthis_id": "9416590",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah012/",
   "tracks": [
     {
       "n": 1,
@@ -35,11 +37,36 @@
       "title": "I'll Follow (Menno de Jong Remix)",
       "label": "Subculture"
     },
-    { "n": 5, "artist": "Aizen", "title": "Refractive Sensor", "label": "Discover" },
-    { "n": 6, "artist": "Eddie Bitar", "title": "Juggernaut", "label": "Mental Asylum" },
-    { "n": 7, "artist": "Activa", "title": "Transmission", "label": "Discover" },
-    { "n": 8, "artist": "Greg Downey", "title": "For You", "label": "Global Code" },
-    { "n": 9, "artist": "Indecent Noise", "title": "Battlestar", "label": "Discover" },
+    {
+      "n": 5,
+      "artist": "Aizen",
+      "title": "Refractive Sensor",
+      "label": "Discover"
+    },
+    {
+      "n": 6,
+      "artist": "Eddie Bitar",
+      "title": "Juggernaut",
+      "label": "Mental Asylum"
+    },
+    {
+      "n": 7,
+      "artist": "Activa",
+      "title": "Transmission",
+      "label": "Discover"
+    },
+    {
+      "n": 8,
+      "artist": "Greg Downey",
+      "title": "For You",
+      "label": "Global Code"
+    },
+    {
+      "n": 9,
+      "artist": "Indecent Noise",
+      "title": "Battlestar",
+      "label": "Discover"
+    },
     {
       "n": 10,
       "artist": "Darren Porter & Manuel Le Saux",
@@ -64,8 +91,18 @@
       "title": "A Dream Of Peace (Neptune Project Remix)",
       "label": "Discover"
     },
-    { "n": 14, "artist": "John O'Callaghan", "title": "Vendetta", "label": "Discover Dark" },
-    { "n": 15, "artist": "A.R.D.I.", "title": "Beyond The Time", "label": "A State of Trance" },
+    {
+      "n": 14,
+      "artist": "John O'Callaghan",
+      "title": "Vendetta",
+      "label": "Discover Dark"
+    },
+    {
+      "n": 15,
+      "artist": "A.R.D.I.",
+      "title": "Beyond The Time",
+      "label": "A State of Trance"
+    },
     {
       "n": 16,
       "artist": "Ratty",
