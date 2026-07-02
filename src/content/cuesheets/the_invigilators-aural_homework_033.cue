@@ -1,6 +1,6 @@
 PERFORMER "The Invigilators"
 TITLE "Aural Homework 033 (2022-02-26)"
-FILE "invigilators-ah033-mastered.flac" FLAC
+FILE "the_invigilators-aural_homework_033.mp3" MP3
   TRACK 01 AUDIO
     PERFORMER "Aural Homework"
     TITLE "Intro"

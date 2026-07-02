@@ -181,6 +181,7 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#overlay-tracks .track-row")).toHaveCount(
       firstEpisode.tracks.length
     );
+    await expect(page.locator("#overlay-tracks .track-row").first().locator("b")).toBeHidden();
     await expect(page.locator("#overlay-player iframe")).toHaveAttribute("src", /hearthis\.at/);
   });
 
@@ -207,10 +208,29 @@ test.describe("Render Mix collage", () => {
     await page.locator(".album-tile").first().click();
 
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page).toHaveTitle(`${firstEpisode.title} | The Invigilators`);
     expect(getPathname(page)).toBe(`/episodes/${firstEpisode.id}`);
 
     await page.locator("#overlay-close").click();
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+    await expect(page).toHaveTitle("The Invigilators");
+    expect(getPathname(page)).toBe("/");
+  });
+
+  test("resets the URL and title when closing a direct episode deep link", async ({ page }) => {
+    await page.goto("/episodes/ah033");
+
+    const episodes = await getEpisodes(page);
+    const episode = episodes.find(({ id }) => id === "ah033");
+
+    expect(episode).toBeTruthy();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page).toHaveTitle(`${episode?.title} | The Invigilators`);
+    expect(getPathname(page)).toBe("/episodes/ah033");
+
+    await page.locator("#overlay-close").click();
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "true");
+    await expect(page).toHaveTitle("The Invigilators");
     expect(getPathname(page)).toBe("/");
   });
 
@@ -220,13 +240,16 @@ test.describe("Render Mix collage", () => {
     const episodes = await getEpisodes(page);
     await page.locator(".album-tile").first().click();
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page).toHaveTitle(`${episodes[0].title} | The Invigilators`);
 
     await page.locator("#overlay-next").click();
     await expect(page.locator("#overlay-title")).toHaveText(episodes[1].title);
+    await expect(page).toHaveTitle(`${episodes[1].title} | The Invigilators`);
     expect(getPathname(page)).toBe(`/episodes/${episodes[1].id}`);
 
     await page.locator("#overlay-prev").click();
     await expect(page.locator("#overlay-title")).toHaveText(episodes[0].title);
+    await expect(page).toHaveTitle(`${episodes[0].title} | The Invigilators`);
     expect(getPathname(page)).toBe(`/episodes/${episodes[0].id}`);
   });
 

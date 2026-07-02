@@ -52,6 +52,7 @@ const EPISODE_PAGE_TRANSITION_IN_MS = 360;
 const SWIPE_NAV_THRESHOLD_PX = 60;
 const SWIPE_NAV_MAX_WIDTH_PX = 700;
 const EPISODE_ROUTE_PATTERN = /^\/episodes\/([^/]+?)(?:\.html)?\/?$/;
+const SITE_TITLE = "The Invigilators";
 
 const prefersReducedMotion = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -204,6 +205,8 @@ const renderPlayer = (container: HTMLElement, episode: Episode) => {
 
 const getEpisodePath = (episode: Episode) => `/episodes/${episode.id}`;
 
+const getEpisodeTitle = (episode: Episode) => `${episode.title} | ${SITE_TITLE}`;
+
 const getEpisodeIdFromPath = () => {
   const match = window.location.pathname.match(EPISODE_ROUTE_PATTERN);
   return match ? decodeURIComponent(match[1]) : null;
@@ -294,10 +297,11 @@ const initAlbumOverlay = () => {
   };
 
   const updateEpisodeHistory = (episode: Episode, updateUrl: HistoryUpdate) => {
+    document.title = getEpisodeTitle(episode);
     if (!updateUrl) return;
     window.history[updateUrl === "push" ? "pushState" : "replaceState"](
       { episodeId: episode.id },
-      "",
+      getEpisodeTitle(episode),
       getEpisodePath(episode)
     );
   };
@@ -321,12 +325,12 @@ const initAlbumOverlay = () => {
     tracks.innerHTML = episode.tracks
       .map(
         (track) => `
-          <div class="track-row grid h-10.5 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_52px] items-center gap-3 border-b border-(--border) px-8 transition-colors duration-120 hover:bg-[rgba(140,10,23,0.07)] max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px] max-[700px]:h-auto max-[700px]:min-h-13 max-[700px]:grid-cols-[32px_minmax(0,1fr)] max-[700px]:py-2.25">
+          <div class="track-row grid h-10.5 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px] items-center gap-3 border-b border-(--border) px-8 transition-colors duration-120 hover:bg-[rgba(140,10,23,0.07)] max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px] max-[700px]:h-auto max-[700px]:min-h-13 max-[700px]:grid-cols-[32px_minmax(0,1fr)] max-[700px]:py-2.25">
             <span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>
             <strong class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium tracking-[0.03em] text-(--foreground)">${escapeHtml(track.title)}</strong>
             <em class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-light not-italic text-(--muted-foreground) max-[700px]:col-start-2">${escapeHtml(track.artist)}</em>
             <small class="overflow-hidden text-ellipsis whitespace-nowrap font-mono text-[9px] text-[rgba(154,96,104,0.7)] max-[700px]:col-start-2 max-[700px]:hidden">${escapeHtml(track.label || "-")}</small>
-            <b class="text-right font-mono text-[10px] font-normal text-(--accent) max-[900px]:hidden">-</b>
+            <b class="hidden text-right font-mono text-[10px] font-normal text-(--accent)">-</b>
           </div>
         `
       )
@@ -344,8 +348,9 @@ const initAlbumOverlay = () => {
     isPageTransitioning = false;
     window.clearTimeout(pageTransitionTimer);
     if (updateUrl && window.location.pathname !== "/") {
-      window.history.replaceState({ episodeId: null }, "", "/");
+      window.history.replaceState({ episodeId: null }, SITE_TITLE, "/");
     }
+    document.title = SITE_TITLE;
     window.clearTimeout(closeTimer);
 
     const useIris = tile && !prefersReducedMotion();
