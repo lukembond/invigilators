@@ -1,0 +1,114 @@
+{
+  "id": "ah033",
+  "type": "aural-homework",
+  "title": "Aural Homework 033",
+  "date": "2022-02-26",
+  "location": "London, UK",
+  "length": "1:14:09",
+  "image_cover": "/img/episode-cover/ah033.webp",
+  "image_bg": "/img/episode-bg/ah033.webp",
+  "description": "The Invigilators are BACK BABY! With a new upload, the first one is AAAAAAAGES. Almost 4 years in fact. It is more trance music. It is mixed on vinyl. It is a nice blend of well known and obscure classics. And it's ready for you to listen to. Right now. Do it. Listen. There's flanger.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_033.cue",
+  "hearthis_id": "14503833",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah033/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Darren Tate vs. Jono Grant",
+      "title": "Let The Light Shine In (Smith & Pledger Remix)",
+      "label": "Mondo",
+      "index": "00:54:00"
+    },
+    {
+      "n": 2,
+      "artist": "The Conductor & The Cowboy",
+      "title": "Feeling This Way",
+      "label": "Serious",
+      "index": "06:39:00"
+    },
+    {
+      "n": 3,
+      "artist": "Thomas Bronzwaer",
+      "title": "Close Horizon",
+      "label": "Yakuza",
+      "index": "12:46:00"
+    },
+    {
+      "n": 4,
+      "artist": "Super8",
+      "title": "Cre8 (Mirco De Govia Remix)",
+      "label": "Anjunabeats",
+      "index": "20:34:00"
+    },
+    {
+      "n": 5,
+      "artist": "The Thrillseekers feat. Aruna",
+      "title": "Waiting Here For You (Breakfast Club Mix)",
+      "label": "Adjusted",
+      "index": "26:50:00"
+    },
+    {
+      "n": 6,
+      "artist": "Marcos",
+      "title": "Just For A Day",
+      "label": "Vandit",
+      "index": "33:18:00"
+    },
+    {
+      "n": 7,
+      "artist": "Pulser",
+      "title": "Cloudwalking (2005 Remix)",
+      "label": "ATCR",
+      "index": "40:29:00"
+    },
+    {
+      "n": 8,
+      "artist": "PPK",
+      "title": "ResuRection (Space Club Mix)",
+      "label": "Perfecto",
+      "index": "45:42:00"
+    },
+    {
+      "n": 9,
+      "artist": "John 00 Fleming vs. Simple Minds",
+      "title": "Belfast Trance (New Vocal Mix)",
+      "label": "Nebula",
+      "index": "53:09:00"
+    },
+    {
+      "n": 10,
+      "artist": "Solid Globe",
+      "title": "Sahara",
+      "label": "Black Hole",
+      "index": "61:48:00"
+    },
+    {
+      "n": 11,
+      "artist": "Ridgewalkers feat. El",
+      "title": "Find (Kyau vs. Albert Remix)",
+      "label": "Armind",
+      "index": "67:24:00"
+    },
+    {
+      "n": 12,
+      "artist": "Agnelli & Nelson",
+      "title": "Everyday (Lange Remix)",
+      "label": "Xtravaganza",
+      "index": "73:30:00"
+    },
+    {
+      "n": 13,
+      "artist": "Matt Hardwick vs. Smith & Pledger",
+      "title": "Day One (Above & Beyond Big Room Remix)",
+      "label": "Anjunabeats",
+      "index": "79:59:00"
+    },
+    {
+      "n": 14,
+      "artist": "Carrie Skipper",
+      "title": "Time Goes By (Super8 Deep Mix)",
+      "label": "Anjunabeats",
+      "index": "86:43:00"
+    }
+  ]
+}
