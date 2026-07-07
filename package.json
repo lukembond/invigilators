@@ -18,7 +18,7 @@
     "@tailwindcss/vite": "^4",
     "@playwright/test": "^1.61.0",
     "@types/node": "^26",
-    "@typescript-eslint/eslint-plugin": "^8.62.0",
+    "@typescript-eslint/eslint-plugin": "^8.63.0",
     "@typescript-eslint/parser": "^8.62.0",
     "astro": "^7",
     "astro-eslint-parser": "^2",
