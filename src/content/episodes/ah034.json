@@ -1,0 +1,135 @@
+{
+  "id": "ah034",
+  "type": "aural-homework",
+  "title": "Aural Homework 034",
+  "date": "2022-11-13",
+  "location": "London, UK",
+  "length": "1:29:41",
+  "image_cover": "/img/episode-cover/ah034.webp",
+  "image_bg": "/img/episode-bg/ah034.webp",
+  "description": "Another post-gig episode, this time it's a mix of mostly newer(?!) trance tracks with a few classics thrown in for good measure. Plus it includes something a little different at the end about walking the dog...",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_034.cue",
+  "hearthis_id": "14566772",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah034/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Solid Globe",
+      "title": "North Pole (Giuseppe Ottaviani Other Way Remix)",
+      "label": "Amsterdam Trance Classics",
+      "index": "00:54:00"
+    },
+    {
+      "n": 2,
+      "artist": "Chris Connolly",
+      "title": "Way Out & Back Again",
+      "label": "Nocturnal Knights",
+      "index": "06:00:00"
+    },
+    {
+      "n": 3,
+      "artist": "Allen Watts",
+      "title": "Impulse",
+      "label": "Who's Afraid Of 138?!",
+      "index": "11:37:00"
+    },
+    {
+      "n": 4,
+      "artist": "Daniel Kandi & Parnassvs",
+      "title": "Diversion",
+      "label": "Always Alive",
+      "index": "17:11:00"
+    },
+    {
+      "n": 5,
+      "artist": "Alex M.O.R.P.H. & Diago",
+      "title": "Age of Infinity",
+      "label": "Morphland",
+      "index": "22:16:00"
+    },
+    {
+      "n": 6,
+      "artist": "Simon Paul",
+      "title": "Happiness Happening 2014 (Allen & Envy & Sunset Remix)",
+      "label": "Amsterdam Trance",
+      "index": "26:40:00"
+    },
+    {
+      "n": 7,
+      "artist": "Sean Tyas & Victoriya",
+      "title": "Perfect World (Amos & Riot Night Remix)",
+      "label": "Future Sound Of Egypt",
+      "index": "33:25:00"
+    },
+    {
+      "n": 8,
+      "artist": "Thomas Bronzwaer",
+      "title": "Constellation (Luke Bond pres. BOND Remix)",
+      "label": "A State Of Trance",
+      "index": "38:48:00"
+    },
+    {
+      "n": 9,
+      "artist": "Daniel Skyver",
+      "title": "Expedition",
+      "label": "Future Sound Of Egypt",
+      "index": "43:23:00"
+    },
+    {
+      "n": 10,
+      "artist": "Dan Stone",
+      "title": "Propulsion",
+      "label": "Future Sound Of Egypt",
+      "index": "49:11:00"
+    },
+    {
+      "n": 11,
+      "artist": "Kamaya Painters",
+      "title": "Endless Wave",
+      "label": "Black Hole",
+      "index": "54:48:00"
+    },
+    {
+      "n": 12,
+      "artist": "Whirlpool",
+      "title": "Under The Sun (Filo & Peri's Lighthouse Mix)",
+      "label": "Deepblue",
+      "index": "59:27:00"
+    },
+    {
+      "n": 13,
+      "artist": "David Forbes",
+      "title": "Octagon",
+      "label": "Who's Afraid Of 138?!",
+      "index": "64:05:00"
+    },
+    {
+      "n": 14,
+      "artist": "Renegade System",
+      "title": "Crush",
+      "label": "Damaged",
+      "index": "68:48:00"
+    },
+    {
+      "n": 15,
+      "artist": "NG Rezonance",
+      "title": "Frenetic",
+      "label": "Future Sound Of Egypt",
+      "index": "73:36:00"
+    },
+    {
+      "n": 16,
+      "artist": "Will Atkinson",
+      "title": "Telescope (Maddix Remix)",
+      "label": "Black Hole",
+      "index": "78:23:00"
+    },
+    {
+      "n": 17,
+      "artist": "John Askew",
+      "title": "These Dogs Trust No One",
+      "label": "VII",
+      "index": "83:30:00"
+    }
+  ]
+}
