@@ -17,39 +17,105 @@
       "n": 1,
       "artist": "Heatboyer",
       "title": "Happy Feeling (Intro Edit)",
-      "label": "Istmo Music"
+      "label": "Istmo Music",
+      "start": "0:54",
+      "startSeconds": 54
     },
     {
       "n": 2,
       "artist": "Yoshimoto",
       "title": "Du What U Du (Markus Schulz Remix)",
-      "label": "Coldharbour"
+      "label": "Coldharbour",
+      "start": "5:54",
+      "startSeconds": 354
     },
-    { "n": 3, "artist": "Mr. Pit", "title": "Simplicity", "label": "Coldharbour" },
-    { "n": 4, "artist": "Simon Patterson", "title": "Different Feeling", "label": "Doorn" },
-    { "n": 5, "artist": "Robert Burian", "title": "Recovery", "label": "Forza Music" },
-    { "n": 6, "artist": "Gabriel & Dresden", "title": "Arcadia", "label": "Supra" },
-    { "n": 7, "artist": "Stoneface & Terminal", "title": "Don't Give a Fuck", "label": "euphonic" },
+    {
+      "n": 3,
+      "artist": "Mr. Pit",
+      "title": "Simplicity",
+      "label": "Coldharbour",
+      "start": "12:07",
+      "startSeconds": 727
+    },
+    {
+      "n": 4,
+      "artist": "Simon Patterson",
+      "title": "Different Feeling",
+      "label": "Doorn",
+      "start": "16:59",
+      "startSeconds": 1019
+    },
+    {
+      "n": 5,
+      "artist": "Robert Burian",
+      "title": "Recovery",
+      "label": "Forza Music",
+      "start": "21:00",
+      "startSeconds": 1260
+    },
+    {
+      "n": 6,
+      "artist": "Gabriel & Dresden",
+      "title": "Arcadia",
+      "label": "Supra",
+      "start": "27:31",
+      "startSeconds": 1651
+    },
+    {
+      "n": 7,
+      "artist": "Stoneface & Terminal",
+      "title": "Don't Give a Fuck",
+      "label": "euphonic",
+      "start": "34:18",
+      "startSeconds": 2058
+    },
     {
       "n": 8,
       "artist": "Super8 & Tab",
       "title": "Need To Feel (Wippenberg Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "39:38",
+      "startSeconds": 2378
     },
     {
       "n": 9,
       "artist": "Southside Spinners",
       "title": "Luvstruck 2010 (Cliff Coenraad Repimp)",
-      "label": "In Charge"
+      "label": "In Charge",
+      "start": "47:31",
+      "startSeconds": 2851
     },
-    { "n": 10, "artist": "Sander van Doorn", "title": "Riff", "label": "Doorn" },
-    { "n": 11, "artist": "Solarity", "title": "DNA", "label": "Anjunadeep" },
-    { "n": 12, "artist": "Riley & Durrant", "title": "Hollow (Club Mix)", "label": "New State" },
+    {
+      "n": 10,
+      "artist": "Sander van Doorn",
+      "title": "Riff",
+      "label": "Doorn",
+      "start": "52:37",
+      "startSeconds": 3157
+    },
+    {
+      "n": 11,
+      "artist": "Solarity",
+      "title": "DNA",
+      "label": "Anjunadeep",
+      "start": "58:20",
+      "startSeconds": 3500
+    },
+    {
+      "n": 12,
+      "artist": "Riley & Durrant",
+      "title": "Hollow (Club Mix)",
+      "label": "New State",
+      "start": "1:03:11",
+      "startSeconds": 3791
+    },
     {
       "n": 13,
       "artist": "Ferry Tayle & Static Blue",
       "title": "Trapeze (Arty Remix)",
-      "label": "Enhanced"
+      "label": "Enhanced",
+      "start": "1:10:14",
+      "startSeconds": 4214
     }
   ]
 }

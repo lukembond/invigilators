@@ -17,98 +17,126 @@
       "artist": "Darren Tate vs. Jono Grant",
       "title": "Let The Light Shine In (Smith & Pledger Remix)",
       "label": "Mondo",
-      "index": "00:54:00"
+      "index": "00:54:00",
+      "start": "0:54",
+      "startSeconds": 54
     },
     {
       "n": 2,
       "artist": "The Conductor & The Cowboy",
       "title": "Feeling This Way",
       "label": "Serious",
-      "index": "06:39:00"
+      "index": "06:39:00",
+      "start": "6:39",
+      "startSeconds": 399
     },
     {
       "n": 3,
       "artist": "Thomas Bronzwaer",
       "title": "Close Horizon",
       "label": "Yakuza",
-      "index": "12:46:00"
+      "index": "12:46:00",
+      "start": "12:46",
+      "startSeconds": 766
     },
     {
       "n": 4,
       "artist": "Super8",
       "title": "Cre8 (Mirco De Govia Remix)",
       "label": "Anjunabeats",
-      "index": "20:34:00"
+      "index": "20:34:00",
+      "start": "20:34",
+      "startSeconds": 1234
     },
     {
       "n": 5,
       "artist": "The Thrillseekers feat. Aruna",
       "title": "Waiting Here For You (Breakfast Club Mix)",
       "label": "Adjusted",
-      "index": "26:50:00"
+      "index": "26:50:00",
+      "start": "26:50",
+      "startSeconds": 1610
     },
     {
       "n": 6,
       "artist": "Marcos",
       "title": "Just For A Day",
       "label": "Vandit",
-      "index": "33:18:00"
+      "index": "33:18:00",
+      "start": "33:18",
+      "startSeconds": 1998
     },
     {
       "n": 7,
       "artist": "Pulser",
       "title": "Cloudwalking (2005 Remix)",
       "label": "ATCR",
-      "index": "40:29:00"
+      "index": "40:29:00",
+      "start": "40:29",
+      "startSeconds": 2429
     },
     {
       "n": 8,
       "artist": "PPK",
       "title": "ResuRection (Space Club Mix)",
       "label": "Perfecto",
-      "index": "45:42:00"
+      "index": "45:42:00",
+      "start": "45:42",
+      "startSeconds": 2742
     },
     {
       "n": 9,
       "artist": "John 00 Fleming vs. Simple Minds",
       "title": "Belfast Trance (New Vocal Mix)",
       "label": "Nebula",
-      "index": "53:09:00"
+      "index": "53:09:00",
+      "start": "53:09",
+      "startSeconds": 3189
     },
     {
       "n": 10,
       "artist": "Solid Globe",
       "title": "Sahara",
       "label": "Black Hole",
-      "index": "61:48:00"
+      "index": "61:48:00",
+      "start": "1:01:48",
+      "startSeconds": 3708
     },
     {
       "n": 11,
       "artist": "Ridgewalkers feat. El",
       "title": "Find (Kyau vs. Albert Remix)",
       "label": "Armind",
-      "index": "67:24:00"
+      "index": "67:24:00",
+      "start": "1:07:24",
+      "startSeconds": 4044
     },
     {
       "n": 12,
       "artist": "Agnelli & Nelson",
       "title": "Everyday (Lange Remix)",
       "label": "Xtravaganza",
-      "index": "73:30:00"
+      "index": "73:30:00",
+      "start": "1:13:30",
+      "startSeconds": 4410
     },
     {
       "n": 13,
       "artist": "Matt Hardwick vs. Smith & Pledger",
       "title": "Day One (Above & Beyond Big Room Remix)",
       "label": "Anjunabeats",
-      "index": "79:59:00"
+      "index": "79:59:00",
+      "start": "1:19:59",
+      "startSeconds": 4799
     },
     {
       "n": 14,
       "artist": "Carrie Skipper",
       "title": "Time Goes By (Super8 Deep Mix)",
       "label": "Anjunabeats",
-      "index": "86:43:00"
+      "index": "86:43:00",
+      "start": "1:26:43",
+      "startSeconds": 5203
     }
   ]
 }

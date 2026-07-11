@@ -17,36 +17,121 @@
       "n": 1,
       "artist": "Fast Distance",
       "title": "Alpine (Karanda Intro Remix)",
-      "label": "Digital Society"
+      "label": "Digital Society",
+      "start": "0:55",
+      "startSeconds": 55
     },
-    { "n": 2, "artist": "Anton Firtich & Cramp", "title": "Amazing", "label": "Re*Brand" },
-    { "n": 3, "artist": "MarLo", "title": "Showgrounds", "label": "A State Of Trance" },
+    {
+      "n": 2,
+      "artist": "Anton Firtich & Cramp",
+      "title": "Amazing",
+      "label": "Re*Brand",
+      "start": "7:39",
+      "startSeconds": 459
+    },
+    {
+      "n": 3,
+      "artist": "MarLo",
+      "title": "Showgrounds",
+      "label": "A State Of Trance",
+      "start": "13:11",
+      "startSeconds": 791
+    },
     {
       "n": 4,
       "artist": "Tritonal feat. Cristina Soto",
       "title": "Everafter",
-      "label": "Air Up There"
+      "label": "Air Up There",
+      "start": "17:39",
+      "startSeconds": 1059
     },
-    { "n": 5, "artist": "Solarstone", "title": "Pure (MarLo Remix)", "label": "Black Hole" },
-    { "n": 6, "artist": "Erick Strong vs. Dart Rayne", "title": "Shamballa", "label": "Armada" },
+    {
+      "n": 5,
+      "artist": "Solarstone",
+      "title": "Pure (MarLo Remix)",
+      "label": "Black Hole",
+      "start": "22:55",
+      "startSeconds": 1375
+    },
+    {
+      "n": 6,
+      "artist": "Erick Strong vs. Dart Rayne",
+      "title": "Shamballa",
+      "label": "Armada",
+      "start": "26:54",
+      "startSeconds": 1614
+    },
     {
       "n": 7,
       "artist": "Ferry Corsten",
       "title": "Live Forever (Shogun Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "32:17",
+      "startSeconds": 1937
     },
-    { "n": 8, "artist": "Norin & Rad", "title": "Zion", "label": "Anjunabeats" },
-    { "n": 9, "artist": "Orjan Nilsen", "title": "Endymion", "label": "Armind" },
-    { "n": 10, "artist": "Wezz Devall", "title": "Stadium", "label": "Captivating Sounds" },
-    { "n": 11, "artist": "Radion 6", "title": "Watch Out", "label": "Reset" },
-    { "n": 12, "artist": "Ashley Wallbridge", "title": "Zorro", "label": "AVA" },
-    { "n": 13, "artist": "Genix", "title": "Aura", "label": "Anjunabeats" },
-    { "n": 14, "artist": "Nitrous Oxide", "title": "Tiburon", "label": "Anjunabeats" },
+    {
+      "n": 8,
+      "artist": "Norin & Rad",
+      "title": "Zion",
+      "label": "Anjunabeats",
+      "start": "38:39",
+      "startSeconds": 2319
+    },
+    {
+      "n": 9,
+      "artist": "Orjan Nilsen",
+      "title": "Endymion",
+      "label": "Armind",
+      "start": "44:32",
+      "startSeconds": 2672
+    },
+    {
+      "n": 10,
+      "artist": "Wezz Devall",
+      "title": "Stadium",
+      "label": "Captivating Sounds",
+      "start": "50:06",
+      "startSeconds": 3006
+    },
+    {
+      "n": 11,
+      "artist": "Radion 6",
+      "title": "Watch Out",
+      "label": "Reset",
+      "start": "54:57",
+      "startSeconds": 3297
+    },
+    {
+      "n": 12,
+      "artist": "Ashley Wallbridge",
+      "title": "Zorro",
+      "label": "AVA",
+      "start": "58:50",
+      "startSeconds": 3530
+    },
+    {
+      "n": 13,
+      "artist": "Genix",
+      "title": "Aura",
+      "label": "Anjunabeats",
+      "start": "1:03:28",
+      "startSeconds": 3808
+    },
+    {
+      "n": 14,
+      "artist": "Nitrous Oxide",
+      "title": "Tiburon",
+      "label": "Anjunabeats",
+      "start": "1:09:14",
+      "startSeconds": 4154
+    },
     {
       "n": 15,
       "artist": "BT",
       "title": "Flaming June (Laptop Symphony Rework)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "1:14:32",
+      "startSeconds": 4472
     }
   ]
 }

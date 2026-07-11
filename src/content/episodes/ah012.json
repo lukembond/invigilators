@@ -17,103 +17,137 @@
       "n": 1,
       "artist": "Simon Patterson & Blazer",
       "title": "Contraband (Simon Patterson Remix)",
-      "label": "Perfecto Fluoro"
+      "label": "Perfecto Fluoro",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Photographer",
       "title": "Airport (Wrechiski Remix)",
-      "label": "Monster Digital"
+      "label": "Monster Digital",
+      "start": "6:00",
+      "startSeconds": 360
     },
     {
       "n": 3,
       "artist": "Greg Downey",
       "title": "Vivid Intent (Giuseppe Ottaviani & Marc Van Linden Remix)",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "10:47",
+      "startSeconds": 647
     },
     {
       "n": 4,
       "artist": "John O'Callaghan feat. Ria",
       "title": "I'll Follow (Menno de Jong Remix)",
-      "label": "Subculture"
+      "label": "Subculture",
+      "start": "17:13",
+      "startSeconds": 1033
     },
     {
       "n": 5,
       "artist": "Aizen",
       "title": "Refractive Sensor",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "23:47",
+      "startSeconds": 1427
     },
     {
       "n": 6,
       "artist": "Eddie Bitar",
       "title": "Juggernaut",
-      "label": "Mental Asylum"
+      "label": "Mental Asylum",
+      "start": "28:43",
+      "startSeconds": 1723
     },
     {
       "n": 7,
       "artist": "Activa",
       "title": "Transmission",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "33:55",
+      "startSeconds": 2035
     },
     {
       "n": 8,
       "artist": "Greg Downey",
       "title": "For You",
-      "label": "Global Code"
+      "label": "Global Code",
+      "start": "40:52",
+      "startSeconds": 2452
     },
     {
       "n": 9,
       "artist": "Indecent Noise",
       "title": "Battlestar",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "48:18",
+      "startSeconds": 2898
     },
     {
       "n": 10,
       "artist": "Darren Porter & Manuel Le Saux",
       "title": "Stormchaser",
-      "label": "Extrema Global"
+      "label": "Extrema Global",
+      "start": "53:58",
+      "startSeconds": 3238
     },
     {
       "n": 11,
       "artist": "The Thrillseekers with York feat. Asheni",
       "title": "Daydream (Lostly Remix)",
-      "label": "Adjusted"
+      "label": "Adjusted",
+      "start": "59:52",
+      "startSeconds": 3592
     },
     {
       "n": 12,
       "artist": "The Noble Six",
       "title": "Discovering The Sphinx (Philippe El Sisi Remix)",
-      "label": "Blue Soho"
+      "label": "Blue Soho",
+      "start": "1:04:54",
+      "startSeconds": 3894
     },
     {
       "n": 13,
       "artist": "Aly & Fila vs. Amadeus",
       "title": "A Dream Of Peace (Neptune Project Remix)",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "1:10:08",
+      "startSeconds": 4208
     },
     {
       "n": 14,
       "artist": "John O'Callaghan",
       "title": "Vendetta",
-      "label": "Discover Dark"
+      "label": "Discover Dark",
+      "start": "1:16:32",
+      "startSeconds": 4592
     },
     {
       "n": 15,
       "artist": "A.R.D.I.",
       "title": "Beyond The Time",
-      "label": "A State of Trance"
+      "label": "A State of Trance",
+      "start": "1:22:28",
+      "startSeconds": 4948
     },
     {
       "n": 16,
       "artist": "Ratty",
       "title": "Sunrise (Here I Am) (Mark Sherry's 2005 Sunburst Mix)",
-      "label": "Monster Classics"
+      "label": "Monster Classics",
+      "start": "1:28:28",
+      "startSeconds": 5308
     },
     {
       "n": 17,
       "artist": "Carl B & Breaking Benjamin",
       "title": "The Diary Of Jane (Sean Tyas Rework)",
-      "label": "CDR"
+      "label": "CDR",
+      "start": "1:35:06",
+      "startSeconds": 5706
     }
   ]
 }

@@ -13,50 +13,125 @@
   "hearthis_id": "9324798",
   "hearthis_url": "https://hearthis.at/theinvigilators/ah007/",
   "tracks": [
-    { "n": 0, "artist": "Goldeneye 007", "title": "Intro", "label": "Nintendo" },
-    { "n": 1, "artist": "Super8", "title": "Alba (Maor Levi Remix)", "label": "Anjunabeats" },
+    {
+      "n": 0,
+      "artist": "Goldeneye 007",
+      "title": "Intro",
+      "label": "Nintendo",
+      "start": "0:00",
+      "startSeconds": 0
+    },
+    {
+      "n": 1,
+      "artist": "Super8",
+      "title": "Alba (Maor Levi Remix)",
+      "label": "Anjunabeats",
+      "start": "1:36",
+      "startSeconds": 96
+    },
     {
       "n": 2,
       "artist": "P.O.S.",
       "title": "Gravity (Andrew Bayer & James Grant Remix)",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "7:00",
+      "startSeconds": 420
     },
-    { "n": 3, "artist": "Soundprank", "title": "Boundless Energy", "label": "Anjunadeep" },
-    { "n": 4, "artist": "Aaron Camz", "title": "Aqwa", "label": "Coldharbour Red" },
-    { "n": 5, "artist": "Ad Brown", "title": "Far From The End", "label": "Colorize" },
-    { "n": 6, "artist": "Protoculture", "title": "Cobalt", "label": "Re*Brand" },
-    { "n": 7, "artist": "Speed Limits", "title": "Bris", "label": "Enhanced Progressive" },
+    {
+      "n": 3,
+      "artist": "Soundprank",
+      "title": "Boundless Energy",
+      "label": "Anjunadeep",
+      "start": "11:42",
+      "startSeconds": 702
+    },
+    {
+      "n": 4,
+      "artist": "Aaron Camz",
+      "title": "Aqwa",
+      "label": "Coldharbour Red",
+      "start": "17:38",
+      "startSeconds": 1058
+    },
+    {
+      "n": 5,
+      "artist": "Ad Brown",
+      "title": "Far From The End",
+      "label": "Colorize",
+      "start": "23:19",
+      "startSeconds": 1399
+    },
+    {
+      "n": 6,
+      "artist": "Protoculture",
+      "title": "Cobalt",
+      "label": "Re*Brand",
+      "start": "29:01",
+      "startSeconds": 1741
+    },
+    {
+      "n": 7,
+      "artist": "Speed Limits",
+      "title": "Bris",
+      "label": "Enhanced Progressive",
+      "start": "35:09",
+      "startSeconds": 2109
+    },
     {
       "n": 8,
       "artist": "Andian",
       "title": "Much Too Much (Mike Shiver Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "39:19",
+      "startSeconds": 2359
     },
-    { "n": 9, "artist": "Porter Robinson", "title": "Language", "label": "Big Beat" },
+    {
+      "n": 9,
+      "artist": "Porter Robinson",
+      "title": "Language",
+      "label": "Big Beat",
+      "start": "44:49",
+      "startSeconds": 2689
+    },
     {
       "n": 10,
       "artist": "Daniel Kandi",
       "title": "Insert Generic Title (Daniel Kandi vs. Dennis Pedersen Remix)",
-      "label": "Enhanced"
+      "label": "Enhanced",
+      "start": "49:11",
+      "startSeconds": 2951
     },
     {
       "n": 11,
       "artist": "Eximinds",
       "title": "Robobeats (Tom Fall Remix)",
-      "label": "Enhanced Progressive"
+      "label": "Enhanced Progressive",
+      "start": "54:03",
+      "startSeconds": 3243
     },
-    { "n": 12, "artist": "Marc Marberg & Kyau & Albert", "title": "Robotron", "label": "euphonic" },
+    {
+      "n": 12,
+      "artist": "Marc Marberg & Kyau & Albert",
+      "title": "Robotron",
+      "label": "euphonic",
+      "start": "59:13",
+      "startSeconds": 3553
+    },
     {
       "n": 13,
       "artist": "The Blizzard",
       "title": "Piercing The Fog",
-      "label": "A State Of Trance"
+      "label": "A State Of Trance",
+      "start": "1:03:36",
+      "startSeconds": 3816
     },
     {
       "n": 14,
       "artist": "Andrew Bayer feat. Molly Bancroft",
       "title": "Keep Your Secrets (Myon & Shane 54 Summer Of Love Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "1:08:49",
+      "startSeconds": 4129
     }
   ]
 }

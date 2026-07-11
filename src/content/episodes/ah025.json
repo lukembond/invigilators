@@ -17,61 +17,81 @@
       "n": 1,
       "artist": "PureNRG",
       "title": "Midnight Blue",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "0:53",
+      "startSeconds": 53
     },
     {
       "n": 2,
       "artist": "Paul Oakenfold",
       "title": "Dreamstate Theme (M.I.K.E. Push Remix)",
-      "label": "Perfecto"
+      "label": "Perfecto",
+      "start": "7:21",
+      "startSeconds": 441
     },
     {
       "n": 3,
       "artist": "Robert Nickson",
       "title": "Somewhere In Spacetime",
-      "label": "Pure Trance"
+      "label": "Pure Trance",
+      "start": "12:40",
+      "startSeconds": 760
     },
     {
       "n": 4,
       "artist": "Nitrous Oxide & 2sher",
       "title": "Chimera (Trance Mix)",
-      "label": "Phatbull"
+      "label": "Phatbull",
+      "start": "18:45",
+      "startSeconds": 1125
     },
     {
       "n": 5,
       "artist": "The Cracken",
       "title": "Shadows Of The Night",
-      "label": "Digital Society"
+      "label": "Digital Society",
+      "start": "24:15",
+      "startSeconds": 1455
     },
     {
       "n": 6,
       "artist": "Factor B",
       "title": "Liberator",
-      "label": "Future Sound Of Egypt"
+      "label": "Future Sound Of Egypt",
+      "start": "29:47",
+      "startSeconds": 1787
     },
     {
       "n": 7,
       "artist": "Joint Operations Centre",
       "title": "Pathological Effect",
-      "label": "Kearnage"
+      "label": "Kearnage",
+      "start": "36:27",
+      "startSeconds": 2187
     },
     {
       "n": 8,
       "artist": "James Kitcher",
       "title": "Rain Cedes To Sunlight",
-      "label": "Titan Audio"
+      "label": "Titan Audio",
+      "start": "42:10",
+      "startSeconds": 2530
     },
     {
       "n": 9,
       "artist": "Tranceye",
       "title": "Distant Dream",
-      "label": "Redux"
+      "label": "Redux",
+      "start": "49:17",
+      "startSeconds": 2957
     },
     {
       "n": 10,
       "artist": "Giuseppe Ottaviani",
       "title": "Lumina",
-      "label": "GO Music"
+      "label": "GO Music",
+      "start": "54:38",
+      "startSeconds": 3278
     }
   ]
 }

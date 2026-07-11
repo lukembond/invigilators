@@ -16,11 +16,41 @@
       "n": 1,
       "artist": "OceanLab",
       "title": "Breaking Ties (Martin Roth Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "0:00",
+      "startSeconds": 0
     },
-    { "n": 2, "artist": "Jaytech", "title": "Spacelift", "label": "Anjunadeep" },
-    { "n": 3, "artist": "Satoshi Tomiie", "title": "Love In Traffic", "label": "INCredible" },
-    { "n": 4, "artist": "Cressida", "title": "6AM (Kyau & Albert Remix)", "label": "euphonic" },
-    { "n": 5, "artist": "Signalrunners", "title": "Meet Me In Montauk", "label": "Anjunabeats" }
+    {
+      "n": 2,
+      "artist": "Jaytech",
+      "title": "Spacelift",
+      "label": "Anjunadeep",
+      "start": "7:00",
+      "startSeconds": 420
+    },
+    {
+      "n": 3,
+      "artist": "Satoshi Tomiie",
+      "title": "Love In Traffic",
+      "label": "INCredible",
+      "start": "12:55",
+      "startSeconds": 775
+    },
+    {
+      "n": 4,
+      "artist": "Cressida",
+      "title": "6AM (Kyau & Albert Remix)",
+      "label": "euphonic",
+      "start": "19:19",
+      "startSeconds": 1159
+    },
+    {
+      "n": 5,
+      "artist": "Signalrunners",
+      "title": "Meet Me In Montauk",
+      "label": "Anjunabeats",
+      "start": "24:22",
+      "startSeconds": 1462
+    }
   ]
 }

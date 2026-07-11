@@ -6,8 +6,9 @@ Trance and progressive music mixers.
 
 - **Astro** - Static site generator
 - **Bun** - Package manager
-- **Tailwind CSS 4** - Styling
+- **Tailwind** - Styling
 - **TypeScript** - Type safety
+- **Playwright** - End-to-End test suite
 
 ## Development
 
@@ -27,7 +28,7 @@ bun run preview
 
 ## Project Structure
 
-```
+```plaintext
 src/
 ├── components/    # Astro components
 ├── content/      # Episode JSON data

@@ -109,7 +109,9 @@ test.describe("Render Mix collage", () => {
     });
 
     await page.locator(".album-tile").first().hover();
-    await page.waitForFunction(() => getComputedStyle(document.querySelector(".album-tile") as HTMLElement).scale !== "none");
+    await page.waitForFunction(
+      () => getComputedStyle(document.querySelector(".album-tile") as HTMLElement).scale !== "none"
+    );
     const hoverEnd = await page.evaluate(() => {
       const firstTile = document.querySelector<HTMLElement>(".album-tile");
       const image = firstTile?.querySelector("img");
@@ -152,7 +154,9 @@ test.describe("Render Mix collage", () => {
     });
 
     expect(mobileSummary.columns).toBeLessThan(desktopColumns);
-    expect(Math.round(mobileSummary.tileWidth || 0)).toBe(Math.round(mobileSummary.tileHeight || 0));
+    expect(Math.round(mobileSummary.tileWidth || 0)).toBe(
+      Math.round(mobileSummary.tileHeight || 0)
+    );
     expect(mobileSummary.tileWidth || 0).toBeGreaterThan(130);
   });
 
@@ -160,11 +164,12 @@ test.describe("Render Mix collage", () => {
     await openBooklet(page);
 
     const brokenVisibleArt = await page.evaluate(() => {
-      const albumImages = Array.from(document.querySelectorAll<HTMLImageElement>(".album-tile img"));
+      const albumImages = Array.from(
+        document.querySelectorAll<HTMLImageElement>(".album-tile img")
+      );
       return albumImages
         .filter((image) => image.getBoundingClientRect().top < window.innerHeight)
-        .filter((image) => image.complete && image.naturalWidth === 0)
-        .length;
+        .filter((image) => image.complete && image.naturalWidth === 0).length;
     });
     expect(brokenVisibleArt).toBe(0);
   });
@@ -181,8 +186,10 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#overlay-tracks .track-row")).toHaveCount(
       firstEpisode.tracks.length
     );
-    await expect(page.locator("#overlay-tracks .track-row").first().locator("b")).toBeHidden();
-    await expect(page.locator("#overlay-player iframe")).toHaveAttribute("src", /hearthis\.at/);
+    await expect(page.locator("#overlay-tracks .track-row").first().locator("b")).toBeVisible();
+    await expect(
+      page.locator("#overlay-player iframe, #overlay-player [data-native-player]")
+    ).toHaveCount(1);
   });
 
   test("opens an episode overlay from a direct deep link", async ({ page }) => {
@@ -197,8 +204,81 @@ test.describe("Render Mix collage", () => {
     await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
     await expect(page.locator("#overlay-title")).toHaveText(episode?.title || "");
     await expect(page).toHaveTitle(`${episode?.title} | The Invigilators`);
-    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute("href", /\/episodes\/ah001$/);
-    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute("content", /\/img\/episode-/);
+    await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
+      "href",
+      /\/episodes\/ah001$/
+    );
+    await expect(page.locator('meta[property="og:image"]')).toHaveAttribute(
+      "content",
+      /\/img\/episode-/
+    );
+  });
+
+  test("uses timestamped tracks to seek the native hearthis player", async ({ page }) => {
+    await page.route("https://api-v2.hearthis.at/theinvigilators/ah002/", async (route) => {
+      await route.fulfill({
+        contentType: "application/json",
+        body: JSON.stringify({
+          stream_url: "https://example.com/ah002.mp3",
+          waveform_url:
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1000' height='200'%3E%3Cpath fill='%23e8e8e8' d='M0 90h100v-40h100v80h100V20h100v160h100V60h100v80h100V35h100v130h100V75h100v50H0z'/%3E%3C/svg%3E",
+        }),
+      });
+    });
+
+    await page.goto("/episodes/ah002");
+    await expect(page.locator("#mix-overlay")).toHaveAttribute("aria-hidden", "false");
+    await expect(page.locator("#overlay-player [data-native-player]")).toBeVisible();
+    await expect(page.locator("#overlay-player iframe")).toHaveCount(0);
+    await expect(page.locator("#overlay-player audio")).toHaveAttribute("src", /ah002\.mp3/);
+    await expect(page.locator("#overlay-tracks .track-row").first()).toHaveAttribute(
+      "data-start-seconds",
+      "54"
+    );
+    await expect(page.locator(".tracklist-columns span").last()).toHaveText("Length");
+    await expect(page.locator("#overlay-tracks .track-row").first().locator("b")).toHaveText(
+      "7:07"
+    );
+    await expect(page.locator("[data-track-marker]")).toHaveCount(12);
+    await expect(page.locator("[data-player-waveform-canvas]")).toHaveAttribute(
+      "data-waveform-rendered",
+      "true"
+    );
+
+    await page.locator("#overlay-player audio").evaluate((element) => {
+      const audio = element as HTMLAudioElement;
+      let currentTime = 0;
+      Object.defineProperty(audio, "currentTime", {
+        configurable: true,
+        get: () => currentTime,
+        set: (value) => {
+          currentTime = value;
+        },
+      });
+      audio.play = () => Promise.resolve();
+    });
+
+    await page.locator('#overlay-tracks [data-start-seconds="481"]').click();
+    await expect(page.locator('#overlay-tracks [data-start-seconds="481"]')).toHaveAttribute(
+      "aria-current",
+      "true"
+    );
+
+    await page.locator("#overlay-player audio").evaluate((element) => {
+      const audio = element as HTMLAudioElement;
+      audio.currentTime = 810;
+      audio.dispatchEvent(new Event("timeupdate", { bubbles: true }));
+    });
+    await expect(page.locator('#overlay-tracks [data-start-seconds="801"]')).toHaveAttribute(
+      "aria-current",
+      "true"
+    );
+
+    const currentTime = await page.locator("#overlay-player audio").evaluate((element) => {
+      const audio = element as HTMLAudioElement;
+      return audio.currentTime;
+    });
+    expect(currentTime).toBe(810);
   });
 
   test("updates the URL when opening and closing an episode", async ({ page }) => {
@@ -334,7 +414,7 @@ test.describe("Render Mix collage", () => {
         tracksScrollTop: tracks?.scrollTop,
         playerTop: playerRect?.top,
         viewportHeight: window.innerHeight,
-      };;
+      };
     });
 
     expect(overlayMetrics.tracksScrollHeight || 0).toBeGreaterThan(

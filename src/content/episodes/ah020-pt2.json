@@ -17,97 +17,129 @@
       "n": 1,
       "artist": "Darren Porter",
       "title": "To Feel Again",
-      "label": "Future Sound Of Egypt"
+      "label": "Future Sound Of Egypt",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Factor B",
       "title": "Sapera",
-      "label": "Pure Trance"
+      "label": "Pure Trance",
+      "start": "6:10",
+      "startSeconds": 370
     },
     {
       "n": 3,
       "artist": "Abstract Vision & Aimoon",
       "title": "#energy",
-      "label": "Who's Afraid Of 138?!"
+      "label": "Who's Afraid Of 138?!",
+      "start": "13:01",
+      "startSeconds": 781
     },
     {
       "n": 4,
       "artist": "Mark Sherry",
       "title": "Gravitational Waves",
-      "label": "Outburst"
+      "label": "Outburst",
+      "start": "18:30",
+      "startSeconds": 1110
     },
     {
       "n": 5,
       "artist": "M.I.K.E. Push pres. Plastic Boy",
       "title": "Now & Forever",
-      "label": "A State Of Trance"
+      "label": "A State Of Trance",
+      "start": "24:25",
+      "startSeconds": 1465
     },
     {
       "n": 6,
       "artist": "Fady & Mina",
       "title": "The Temple",
-      "label": "Future Sound Of Egypt"
+      "label": "Future Sound Of Egypt",
+      "start": "29:13",
+      "startSeconds": 1753
     },
     {
       "n": 7,
       "artist": "Indecent Noise",
       "title": "Blade Dancer",
-      "label": "Future Sound Of Egypt"
+      "label": "Future Sound Of Egypt",
+      "start": "35:37",
+      "startSeconds": 2137
     },
     {
       "n": 8,
       "artist": "Sean Tyas",
       "title": "Now You See (Darren Porter Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "41:54",
+      "startSeconds": 2514
     },
     {
       "n": 9,
       "artist": "Jase Thirlwall",
       "title": "Standby (Indecent Noise Remix)",
-      "label": "Mental Asylum"
+      "label": "Mental Asylum",
+      "start": "46:59",
+      "startSeconds": 2819
     },
     {
       "n": 10,
       "artist": "Neelix",
       "title": "Born & Raised (Harmonika Remix)",
-      "label": "SpinTwist"
+      "label": "SpinTwist",
+      "start": "51:47",
+      "startSeconds": 3107
     },
     {
       "n": 11,
       "artist": "REverse",
       "title": "Distant Destiny (Magnus Remix)",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "57:11",
+      "startSeconds": 3431
     },
     {
       "n": 12,
       "artist": "John Askew",
       "title": "A Million Stars",
-      "label": "VII"
+      "label": "VII",
+      "start": "1:03:13",
+      "startSeconds": 3793
     },
     {
       "n": 13,
       "artist": "John 00 Fleming & Ovnimoon",
       "title": "Ascension",
-      "label": "Joof Mantra"
+      "label": "Joof Mantra",
+      "start": "1:07:59",
+      "startSeconds": 4079
     },
     {
       "n": 14,
       "artist": "Vini Vici & Ace Ventura",
       "title": "The Calling",
-      "label": "Iboga"
+      "label": "Iboga",
+      "start": "1:15:34",
+      "startSeconds": 4534
     },
     {
       "n": 15,
       "artist": "Astrix",
       "title": "Type 1 (Sideform Remix)",
-      "label": "Iboga"
+      "label": "Iboga",
+      "start": "1:20:51",
+      "startSeconds": 4851
     },
     {
       "n": 16,
       "artist": "Vini Vici",
       "title": "The Tribe",
-      "label": "Iboga"
+      "label": "Iboga",
+      "start": "1:26:22",
+      "startSeconds": 5182
     }
   ]
 }
