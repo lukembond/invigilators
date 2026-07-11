@@ -113,15 +113,22 @@ export const initAlbumOverlay = () => {
       .map((track, trackIndex) => {
         const startSeconds = getTrackStartSeconds(track);
         const durationSeconds = getTrackDurationSeconds(episode, trackIndex);
-        const element = startSeconds === null ? "div" : "button";
-        const startAttributes =
-          startSeconds === null
-            ? ""
-            : ` type="button" data-start-seconds="${startSeconds}" aria-label="Play ${escapeHtml(track.title)} at ${formatTrackTime(startSeconds)}"`;
+        const seekable = startSeconds !== null;
+        const element = seekable ? "button" : "div";
+        const startAttributes = seekable
+          ? ` type="button" data-start-seconds="${startSeconds}" aria-label="Play ${escapeHtml(track.title)} at ${formatTrackTime(startSeconds)}"`
+          : "";
+        const seekableClasses = seekable ? " group cursor-pointer" : "";
+        const numberCell = seekable
+          ? `<span class="relative inline-flex items-center font-mono text-[10px] font-normal text-(--muted-foreground)">
+              <span class="tabular-nums transition-opacity duration-120 group-hover:opacity-0 group-focus-visible:opacity-0 group-aria-[current=true]:opacity-0">${String(track.n).padStart(2, "0")}</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-[current=true]:opacity-100"><path d="M8 5v14l11-7z"></path></svg>
+            </span>`
+          : `<span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>`;
 
         return `
-          <${element}${startAttributes} class="track-row grid h-10.5 w-full grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_58px] items-center gap-3 border-0 border-b border-(--border) bg-transparent px-8 text-left transition-colors duration-120 aria-current:bg-[rgba(140,10,23,0.2)] aria-current:shadow-[inset_3px_0_0_var(--accent)] hover:bg-[rgba(140,10,23,0.07)] focus-visible:bg-[rgba(140,10,23,0.12)] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[rgba(240,228,228,0.7)] max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px_50px] max-[700px]:h-auto max-[700px]:min-h-13 max-[700px]:grid-cols-[32px_minmax(0,1fr)_50px] max-[700px]:py-2.25">
-            <span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>
+          <${element}${startAttributes} class="track-row grid h-10.5 w-full grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_58px] items-center gap-3 border-0 border-b border-(--border) bg-transparent px-8 text-left transition-colors duration-120 aria-current:bg-[rgba(140,10,23,0.2)] aria-current:shadow-[inset_3px_0_0_var(--accent)] hover:bg-[rgba(140,10,23,0.07)] focus-visible:bg-[rgba(140,10,23,0.12)] focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-[rgba(240,228,228,0.7)] max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px_50px] max-[700px]:h-auto max-[700px]:min-h-13 max-[700px]:grid-cols-[32px_minmax(0,1fr)_50px] max-[700px]:py-2.25${seekableClasses}">
+            ${numberCell}
             <strong class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium tracking-[0.03em] text-(--foreground)">${escapeHtml(track.title)}</strong>
             <em class="overflow-hidden text-ellipsis whitespace-nowrap text-xs font-light not-italic text-(--muted-foreground) max-[700px]:col-start-2">${escapeHtml(track.artist)}</em>
             <small class="overflow-hidden text-ellipsis whitespace-nowrap font-mono text-[9px] text-[rgba(154,96,104,0.7)] max-[700px]:hidden">${escapeHtml(track.label || "-")}</small>
