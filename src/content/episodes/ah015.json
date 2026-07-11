@@ -17,67 +17,89 @@
       "n": 1,
       "artist": "Matt Lange",
       "title": "Only You",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Above & Beyond feat. Zoe Johnston",
       "title": "Alchemy (Jody Wisternoff Remix)",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "7:15",
+      "startSeconds": 435
     },
     {
       "n": 3,
       "artist": "Blood Groove & Kikis feat. Victoria Ray",
       "title": "Free Like A Bird (Dub Mix)",
-      "label": "Silk Digital"
+      "label": "Silk Digital",
+      "start": "13:58",
+      "startSeconds": 838
     },
     {
       "n": 4,
       "artist": "Soundprank",
       "title": "Burner (Shingo Nakamura Remix)",
-      "label": "Silk Digital"
+      "label": "Silk Digital",
+      "start": "19:38",
+      "startSeconds": 1178
     },
     {
       "n": 5,
       "artist": "London Grammar",
       "title": "Strong (Judah Remix)",
-      "label": "CDR"
+      "label": "CDR",
+      "start": "25:50",
+      "startSeconds": 1550
     },
     {
       "n": 6,
       "artist": "Ad Brown & Shawn Mitiska",
       "title": "Pulse",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "32:02",
+      "startSeconds": 1922
     },
     {
       "n": 7,
       "artist": "SNR & Rikkaz feat. Jan Johnston",
       "title": "Beautiful Change (Dan & Sam Remix)",
-      "label": "Arrival"
+      "label": "Arrival",
+      "start": "36:25",
+      "startSeconds": 2185
     },
     {
       "n": 8,
       "artist": "PROFF",
       "title": "What It Feels Like",
-      "label": "Intricate"
+      "label": "Intricate",
+      "start": "42:50",
+      "startSeconds": 2570
     },
     {
       "n": 9,
       "artist": "Lian July feat. Eli",
       "title": "Surrender (LTN Dub Remix)",
-      "label": "Silk Digital"
+      "label": "Silk Digital",
+      "start": "47:57",
+      "startSeconds": 2877
     },
     {
       "n": 10,
       "artist": "Shingo Nakamura",
       "title": "Days",
-      "label": "Otographic"
+      "label": "Otographic",
+      "start": "52:18",
+      "startSeconds": 3138
     },
     {
       "n": 11,
       "artist": "Thomas Hayes",
       "title": "Some Things Never Change (Mrmilkcarton Remix)",
-      "label": "Arrival"
+      "label": "Arrival",
+      "start": "58:25",
+      "startSeconds": 3505
     }
   ]
 }

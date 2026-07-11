@@ -1,0 +1,11 @@
+export const OVERLAY_TRANSITION_MS = 280;
+export const LANDING_EXIT_MS = 260;
+export const BOOKLET_IRIS_TRANSITION_MS = 620;
+export const OVERLAY_IRIS_OPEN_MS = 460;
+export const OVERLAY_IRIS_CLOSE_MS = 380;
+export const EPISODE_PAGE_TRANSITION_OUT_MS = 220;
+export const EPISODE_PAGE_TRANSITION_IN_MS = 360;
+export const SWIPE_NAV_THRESHOLD_PX = 60;
+export const SWIPE_NAV_MAX_WIDTH_PX = 700;
+export const EPISODE_ROUTE_PATTERN = /^\/episodes\/([^/]+?)(?:\.html)?\/?$/;
+export const SITE_TITLE = "The Invigilators";

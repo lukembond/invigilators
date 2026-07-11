@@ -17,97 +17,129 @@
       "n": 1,
       "artist": "Eximinds",
       "title": "Phoenix",
-      "label": "A State of Trance"
+      "label": "A State of Trance",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Aeon Flux & Anna Miracles",
       "title": "Why",
-      "label": "Muz-Flame"
+      "label": "Muz-Flame",
+      "start": "4:04",
+      "startSeconds": 244
     },
     {
       "n": 3,
       "artist": "Kyau & Albert",
       "title": "Do You Still Know (Joseph Areas Dirty Rock Mix)",
-      "label": "euphonic"
+      "label": "euphonic",
+      "start": "9:39",
+      "startSeconds": 579
     },
     {
       "n": 4,
       "artist": "Bissen & Tiff Lacey",
       "title": "Don't Walk Away",
-      "label": "Discover Digital"
+      "label": "Discover Digital",
+      "start": "14:39",
+      "startSeconds": 879
     },
     {
       "n": 5,
       "artist": "Johan Vilborg",
       "title": "Fall",
-      "label": "Silk Royal"
+      "label": "Silk Royal",
+      "start": "21:40",
+      "startSeconds": 1300
     },
     {
       "n": 6,
       "artist": "Gabriel & Dresden",
       "title": "Rise Up",
-      "label": "Organized Nature"
+      "label": "Organized Nature",
+      "start": "28:00",
+      "startSeconds": 1680
     },
     {
       "n": 7,
       "artist": "Ad Brown",
       "title": "Marimba",
-      "label": "Perspectives Digital"
+      "label": "Perspectives Digital",
+      "start": "33:45",
+      "startSeconds": 2025
     },
     {
       "n": 8,
       "artist": "Inva",
       "title": "Lonely Tonight",
-      "label": "InfraProgressive"
+      "label": "InfraProgressive",
+      "start": "40:05",
+      "startSeconds": 2405
     },
     {
       "n": 9,
       "artist": "PROFF",
       "title": "Starstruck (Shingo Nakamura Remix)",
-      "label": "Silk Royal"
+      "label": "Silk Royal",
+      "start": "45:41",
+      "startSeconds": 2741
     },
     {
       "n": 10,
       "artist": "LTN",
       "title": "Fair Isle",
-      "label": "Aropa"
+      "label": "Aropa",
+      "start": "51:45",
+      "startSeconds": 3105
     },
     {
       "n": 11,
       "artist": "Russell G",
       "title": "Solstice",
-      "label": "Pilot 6 (Armada)"
+      "label": "Pilot 6 (Armada)",
+      "start": "56:23",
+      "startSeconds": 3383
     },
     {
       "n": 12,
       "artist": "Elfsong",
       "title": "Seldarine",
-      "label": "Pure Trance"
+      "label": "Pure Trance",
+      "start": "1:01:58",
+      "startSeconds": 3718
     },
     {
       "n": 13,
       "artist": "19 Hz",
       "title": "Round & Round (Sundriver Remix)",
-      "label": "Silk Royal"
+      "label": "Silk Royal",
+      "start": "1:08:34",
+      "startSeconds": 4114
     },
     {
       "n": 14,
       "artist": "Max Graham feat. Jessica Jacobs",
       "title": "I Know You're Gone",
-      "label": "Shine Music"
+      "label": "Shine Music",
+      "start": "1:14:56",
+      "startSeconds": 4496
     },
     {
       "n": 15,
       "artist": "Greg Downey & Mansun",
       "title": "(I'm In A) Wide Open Space",
-      "label": "Nebula"
+      "label": "Nebula",
+      "start": "1:21:08",
+      "startSeconds": 4868
     },
     {
       "n": 16,
       "artist": "Above & Beyond feat. Zoë Johnston vs. Arty",
       "title": "You Got To Believe",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "1:26:06",
+      "startSeconds": 5166
     }
   ]
 }

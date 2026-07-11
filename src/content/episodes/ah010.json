@@ -13,49 +13,117 @@
   "hearthis_id": "9416498",
   "hearthis_url": "https://hearthis.at/theinvigilators/ah010/",
   "tracks": [
-    { "n": 1, "artist": "Dinka", "title": "Lotus (Johan Vilborg Remix)", "label": "Silk Royal" },
+    {
+      "n": 1,
+      "artist": "Dinka",
+      "title": "Lotus (Johan Vilborg Remix)",
+      "label": "Silk Royal",
+      "start": "0:55",
+      "startSeconds": 55
+    },
     {
       "n": 2,
       "artist": "Velvetine",
       "title": "The Great Divide (Soundprank Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "7:48",
+      "startSeconds": 468
     },
     {
       "n": 3,
       "artist": "Solis & Sean Truby feat. Andy Tau",
       "title": "Summer Heights (Karanda Remix)",
-      "label": "Infra Progressive"
+      "label": "Infra Progressive",
+      "start": "12:25",
+      "startSeconds": 745
     },
-    { "n": 4, "artist": "Bobina", "title": "The Space Track", "label": "Magik Muzik" },
-    { "n": 5, "artist": "Bluestone", "title": "Namaste", "label": "Anjunabeats" },
-    { "n": 6, "artist": "Jochen Miller & W&W", "title": "Summer", "label": "Mainstage" },
+    {
+      "n": 4,
+      "artist": "Bobina",
+      "title": "The Space Track",
+      "label": "Magik Muzik",
+      "start": "17:40",
+      "startSeconds": 1060
+    },
+    {
+      "n": 5,
+      "artist": "Bluestone",
+      "title": "Namaste",
+      "label": "Anjunabeats",
+      "start": "22:33",
+      "startSeconds": 1353
+    },
+    {
+      "n": 6,
+      "artist": "Jochen Miller & W&W",
+      "title": "Summer",
+      "label": "Mainstage",
+      "start": "28:48",
+      "startSeconds": 1728
+    },
     {
       "n": 7,
       "artist": "Artur Akopov",
       "title": "Starwalker (Andrew StetS Remix)",
-      "label": "Vendace"
+      "label": "Vendace",
+      "start": "32:29",
+      "startSeconds": 1949
     },
-    { "n": 8, "artist": "Skytech", "title": "Comet", "label": "Coldharbour" },
+    {
+      "n": 8,
+      "artist": "Skytech",
+      "title": "Comet",
+      "label": "Coldharbour",
+      "start": "37:59",
+      "startSeconds": 2279
+    },
     {
       "n": 9,
       "artist": "Poison Pro & Miusha",
       "title": "Alien (Shingo Nakamura Remix)",
-      "label": "Proton"
+      "label": "Proton",
+      "start": "42:44",
+      "startSeconds": 2564
     },
-    { "n": 10, "artist": "Ashley Wallbridge", "title": "Grenade", "label": "AVA" },
+    {
+      "n": 10,
+      "artist": "Ashley Wallbridge",
+      "title": "Grenade",
+      "label": "AVA",
+      "start": "48:14",
+      "startSeconds": 2894
+    },
     {
       "n": 11,
       "artist": "Above & Beyond",
       "title": "Anjunabeach (Jerome Isma-Ae Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "53:01",
+      "startSeconds": 3181
     },
     {
       "n": 12,
       "artist": "Andain",
       "title": "Turn Up The Sound (Gabriel & Dresden Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "59:01",
+      "startSeconds": 3541
     },
-    { "n": 13, "artist": "Airsoul", "title": "Asia", "label": "Alter Ego" },
-    { "n": 14, "artist": "Andy Moor", "title": "K Ta", "label": "AVA" }
+    {
+      "n": 13,
+      "artist": "Airsoul",
+      "title": "Asia",
+      "label": "Alter Ego",
+      "start": "1:04:46",
+      "startSeconds": 3886
+    },
+    {
+      "n": 14,
+      "artist": "Andy Moor",
+      "title": "K Ta",
+      "label": "AVA",
+      "start": "1:10:46",
+      "startSeconds": 4246
+    }
   ]
 }

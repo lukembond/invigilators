@@ -17,145 +17,193 @@
       "n": 1,
       "artist": "The Invigilators",
       "title": "Mykonos Sessions Intro",
-      "label": "-"
+      "label": "-",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Henry Saiz",
       "title": "Not Last Words (Guy J Remix)",
-      "label": "Lost & Found"
+      "label": "Lost & Found",
+      "start": "1:04",
+      "startSeconds": 64
     },
     {
       "n": 3,
       "artist": "Maribou State",
       "title": "Rituals (Sasha House Mix)",
-      "label": "Last Night On Earth"
+      "label": "Last Night On Earth",
+      "start": "7:36",
+      "startSeconds": 456
     },
     {
       "n": 4,
       "artist": "Dezza",
       "title": "Brit",
-      "label": "Silk Music"
+      "label": "Silk Music",
+      "start": "14:23",
+      "startSeconds": 863
     },
     {
       "n": 5,
       "artist": "Energy 52",
       "title": "Cafe Del Mar (Tim Engelhardt Remix)",
-      "label": "Push Communications"
+      "label": "Push Communications",
+      "start": "19:13",
+      "startSeconds": 1153
     },
     {
       "n": 6,
       "artist": "Matt Fax",
       "title": "Horizon",
-      "label": "Colorize"
+      "label": "Colorize",
+      "start": "27:42",
+      "startSeconds": 1662
     },
     {
       "n": 7,
       "artist": "Peter Illias",
       "title": "Summer Vibes (Forteba Remix)",
-      "label": "Silk Textures"
+      "label": "Silk Textures",
+      "start": "33:53",
+      "startSeconds": 2033
     },
     {
       "n": 8,
       "artist": "Stonebridge feat. Therese",
       "title": "Put 'Em High (Alex van Alff 2016 Mix)",
-      "label": "Stoney Boy Music"
+      "label": "Stoney Boy Music",
+      "start": "41:23",
+      "startSeconds": 2483
     },
     {
       "n": 9,
       "artist": "Pole Folder",
       "title": "Gare Centrale",
-      "label": "Reworck"
+      "label": "Reworck",
+      "start": "47:05",
+      "startSeconds": 2825
     },
     {
       "n": 10,
       "artist": "Dusky",
       "title": "Squeezer",
-      "label": "17 Steps"
+      "label": "17 Steps",
+      "start": "53:32",
+      "startSeconds": 3212
     },
     {
       "n": 11,
       "artist": "Audio noir feat. Jimmie Westwood",
       "title": "Far From Home (Crocy Remix)",
-      "label": "Bonzai Progressive"
+      "label": "Bonzai Progressive",
+      "start": "58:41",
+      "startSeconds": 3521
     },
     {
       "n": 12,
       "artist": "EDX",
       "title": "My Friend",
-      "label": "Spinnin'"
+      "label": "Spinnin'",
+      "start": "1:04:02",
+      "startSeconds": 3842
     },
     {
       "n": 13,
       "artist": "Yotto",
       "title": "Cooper's Cup",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "1:08:53",
+      "startSeconds": 4133
     },
     {
       "n": 14,
       "artist": "Lancelot feat. Laura Jae",
       "title": "Glass Voices",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "1:15:48",
+      "startSeconds": 4548
     },
     {
       "n": 15,
       "artist": "EDX",
       "title": "Touch Her, Feel Her",
-      "label": "Enormous Tunes"
+      "label": "Enormous Tunes",
+      "start": "1:19:46",
+      "startSeconds": 4786
     },
     {
       "n": 16,
       "artist": "Grace",
       "title": "Not Over Yet (PARKX Remix)",
-      "label": "Perfecto"
+      "label": "Perfecto",
+      "start": "1:23:48",
+      "startSeconds": 5028
     },
     {
       "n": 17,
       "artist": "Dusky",
       "title": "Rise For Love",
-      "label": "Aus Music"
+      "label": "Aus Music",
+      "start": "1:28:48",
+      "startSeconds": 5328
     },
     {
       "n": 18,
       "artist": "Grum",
       "title": "Drifting Away",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "1:33:28",
+      "startSeconds": 5608
     },
     {
       "n": 19,
       "artist": "Pryda",
       "title": "Bytatag",
-      "label": "Pryda"
+      "label": "Pryda",
+      "start": "1:38:22",
+      "startSeconds": 5902
     },
     {
       "n": 20,
       "artist": "Gai Barone",
       "title": "Stripped",
-      "label": "Afterglow"
+      "label": "Afterglow",
+      "start": "1:44:24",
+      "startSeconds": 6264
     },
     {
       "n": 21,
       "artist": "Robert Babicz",
       "title": "Spiral Boogie",
-      "label": "Audiomatique"
+      "label": "Audiomatique",
+      "start": "1:51:04",
+      "startSeconds": 6664
     },
     {
       "n": 22,
       "artist": "Meramek",
       "title": "Know Me",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "1:56:24",
+      "startSeconds": 6984
     },
     {
       "n": 23,
       "artist": "Lane 8 feat. Matthew Dear",
       "title": "Undercover (Yotto Remix)",
-      "label": "Anjunadeep"
+      "label": "Anjunadeep",
+      "start": "2:01:50",
+      "startSeconds": 7310
     },
     {
       "n": 24,
       "artist": "Soundprank",
       "title": "Burner",
-      "label": "Silk Digital"
+      "label": "Silk Digital",
+      "start": "2:07:42",
+      "startSeconds": 7662
     }
   ]
 }

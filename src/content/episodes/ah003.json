@@ -13,64 +13,117 @@
   "hearthis_id": "9161499",
   "hearthis_url": "https://hearthis.at/theinvigilators/ah003/",
   "tracks": [
-    { "n": 1, "artist": "Oliver Smith", "title": "Cadence", "label": "Anjunabeats" },
-    { "n": 2, "artist": "Daniel Heatcliff", "title": "Phoenix", "label": "In Trance We Trust" },
-    { "n": 3, "artist": "Solarity", "title": "Terminal 6 (Jaytech Remix)", "label": "Anjunadeep" },
+    {
+      "n": 1,
+      "artist": "Oliver Smith",
+      "title": "Cadence",
+      "label": "Anjunabeats",
+      "start": "0:54",
+      "startSeconds": 54
+    },
+    {
+      "n": 2,
+      "artist": "Daniel Heatcliff",
+      "title": "Phoenix",
+      "label": "In Trance We Trust",
+      "start": "6:48",
+      "startSeconds": 408
+    },
+    {
+      "n": 3,
+      "artist": "Solarity",
+      "title": "Terminal 6 (Jaytech Remix)",
+      "label": "Anjunadeep",
+      "start": "12:13",
+      "startSeconds": 733
+    },
     {
       "n": 4,
       "artist": "Above & Beyond",
       "title": "Anjunabeach (Jerome Isma-ae Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "17:08",
+      "startSeconds": 1028
     },
-    { "n": 5, "artist": "Boom Jinx & Andrew Bayer", "title": "To The Six", "label": "Anjunadeep" },
+    {
+      "n": 5,
+      "artist": "Boom Jinx & Andrew Bayer",
+      "title": "To The Six",
+      "label": "Anjunadeep",
+      "start": "23:16",
+      "startSeconds": 1396
+    },
     {
       "n": 6,
       "artist": "Sia",
       "title": "Buttons (Markus Schulz Coldharbour Dub)",
-      "label": "Ultra"
+      "label": "Ultra",
+      "start": "30:50",
+      "startSeconds": 1850
     },
     {
       "n": 7,
       "artist": "Dakota",
       "title": "Steel Libido (Ashley Wallbridge Remix)",
-      "label": "Coldharbour"
+      "label": "Coldharbour",
+      "start": "34:58",
+      "startSeconds": 2098
     },
     {
       "n": 8,
       "artist": "Delerium vs. Gareth Emery",
       "title": "This Is That Silence (Myon Collision)",
-      "label": "CDR"
+      "label": "CDR",
+      "start": "40:33",
+      "startSeconds": 2433
     },
-    { "n": 9, "artist": "Lange & Andy Moor", "title": "Stadium Four", "label": "AVA" },
+    {
+      "n": 9,
+      "artist": "Lange & Andy Moor",
+      "title": "Stadium Four",
+      "label": "AVA",
+      "start": "45:38",
+      "startSeconds": 2738
+    },
     {
       "n": 10,
       "artist": "Bakke & Ljungquist",
       "title": "Fanatic (Invigilators Edit)",
-      "label": "CDR"
+      "label": "CDR",
+      "start": "51:13",
+      "startSeconds": 3073
     },
     {
       "n": 11,
       "artist": "John O'Callaghan feat. Josie",
       "title": "Out of Nowhere (Stoneface & Terminal Remix)",
-      "label": "Captivating Sounds"
+      "label": "Captivating Sounds",
+      "start": "57:02",
+      "startSeconds": 3422
     },
     {
       "n": 12,
       "artist": "Van Der Vleuten",
       "title": "Find My Way (Michael de Kooker Remix)",
-      "label": "Combined Forces"
+      "label": "Combined Forces",
+      "start": "1:03:48",
+      "startSeconds": 3828
     },
     {
       "n": 13,
       "artist": "Josh Gabriel pres. Winter Kills",
       "title": "Deep Down (Alex M.O.R.P.H. Remix)",
-      "label": "Different Pieces"
+      "label": "Different Pieces",
+      "start": "1:09:05",
+      "startSeconds": 4145
     },
     {
       "n": 14,
       "artist": "Ali Wilson",
       "title": "Boombox (Jochen Miller Remix)",
-      "label": "In Charge"
+      "label": "In Charge",
+      "start": "1:16:02",
+      "startSeconds": 4562
     }
   ]
 }

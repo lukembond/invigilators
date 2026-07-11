@@ -17,73 +17,97 @@
       "n": 1,
       "artist": "The Invigilators",
       "title": "Mykonos Sessions Intro",
-      "label": "-"
+      "label": "-",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Sean Tyas",
       "title": "9am (Dualitik Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "1:08",
+      "startSeconds": 68
     },
     {
       "n": 3,
       "artist": "Above & Beyond",
       "title": "Alone Tonight (Jason Ross Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "8:26",
+      "startSeconds": 506
     },
     {
       "n": 4,
       "artist": "Kyau vs. Albert",
       "title": "Velvet Morning (Genix Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "13:11",
+      "startSeconds": 791
     },
     {
       "n": 5,
       "artist": "Jaytech",
       "title": "Zulu",
-      "label": "Positronic"
+      "label": "Positronic",
+      "start": "18:11",
+      "startSeconds": 1091
     },
     {
       "n": 6,
       "artist": "Andain",
       "title": "Summer Calling (Daniel Wanrooy & Mark Green Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "22:41",
+      "startSeconds": 1361
     },
     {
       "n": 7,
       "artist": "Matt Holliday",
       "title": "Nothing Lasts Forever",
-      "label": "Joof Aura"
+      "label": "Joof Aura",
+      "start": "26:26",
+      "startSeconds": 1586
     },
     {
       "n": 8,
       "artist": "Sunny Lax",
       "title": "Aeons",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "35:27",
+      "startSeconds": 2127
     },
     {
       "n": 9,
       "artist": "Ashley Wallbridge",
       "title": "Es Vedra",
-      "label": "Garuda"
+      "label": "Garuda",
+      "start": "38:57",
+      "startSeconds": 2337
     },
     {
       "n": 10,
       "artist": "Jordan Suckley",
       "title": "Contaminated (Argy Remix)",
-      "label": "Damaged"
+      "label": "Damaged",
+      "start": "44:28",
+      "startSeconds": 2668
     },
     {
       "n": 11,
       "artist": "Stoneface & Terminal",
       "title": "Keep Going (Dub)",
-      "label": "Flashover Black"
+      "label": "Flashover Black",
+      "start": "48:16",
+      "startSeconds": 2896
     },
     {
       "n": 12,
       "artist": "Boom Jinx & Aruna",
       "title": "Light As A Feather (Sunny Lax Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "53:24",
+      "startSeconds": 3204
     }
   ]
 }

@@ -17,43 +17,97 @@
       "n": 1,
       "artist": "Lustral & Terry Bones vs. Karen Overton",
       "title": "Put Your Satellite Around Me (Bootleg Mix)",
-      "label": "White Label"
+      "label": "White Label",
+      "start": "0:54",
+      "startSeconds": 54
     },
-    { "n": 2, "artist": "Jaytech", "title": "Sundance", "label": "Anjunadeep" },
+    {
+      "n": 2,
+      "artist": "Jaytech",
+      "title": "Sundance",
+      "label": "Anjunadeep",
+      "start": "9:06",
+      "startSeconds": 546
+    },
     {
       "n": 3,
       "artist": "David West",
       "title": "Suffering Island (Joonas Hahmo Remix)",
-      "label": "Solaris"
+      "label": "Solaris",
+      "start": "15:22",
+      "startSeconds": 922
     },
-    { "n": 4, "artist": "Gabriel Batz", "title": "Decepcionaide", "label": "Coldharbour" },
+    {
+      "n": 4,
+      "artist": "Gabriel Batz",
+      "title": "Decepcionaide",
+      "label": "Coldharbour",
+      "start": "21:06",
+      "startSeconds": 1266
+    },
     {
       "n": 5,
       "artist": "Selu Vibra",
       "title": "Divine (Funabashi Remix)",
-      "label": "Somantic Sense"
+      "label": "Somantic Sense",
+      "start": "26:51",
+      "startSeconds": 1611
     },
     {
       "n": 6,
       "artist": "Geert Huinick & Sied Van Riel",
       "title": "Minimal Symphony",
-      "label": "Liquid"
+      "label": "Liquid",
+      "start": "32:14",
+      "startSeconds": 1934
     },
     {
       "n": 7,
       "artist": "West Out West",
       "title": "The Fall (Richard Durand Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "38:36",
+      "startSeconds": 2316
     },
-    { "n": 8, "artist": "Mat Zo", "title": "Out Of Minority", "label": "Coldharbour" },
-    { "n": 9, "artist": "Menno de Jong", "title": "Nothold", "label": "Intuition" },
-    { "n": 10, "artist": "Rafael Frost", "title": "Red", "label": "Flashover" },
+    {
+      "n": 8,
+      "artist": "Mat Zo",
+      "title": "Out Of Minority",
+      "label": "Coldharbour",
+      "start": "45:39",
+      "startSeconds": 2739
+    },
+    {
+      "n": 9,
+      "artist": "Menno de Jong",
+      "title": "Nothold",
+      "label": "Intuition",
+      "start": "51:25",
+      "startSeconds": 3085
+    },
+    {
+      "n": 10,
+      "artist": "Rafael Frost",
+      "title": "Red",
+      "label": "Flashover",
+      "start": "57:23",
+      "startSeconds": 3443
+    },
     {
       "n": 11,
       "artist": "Above & Beyond",
       "title": "Far From In Love (Airbase Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "1:03:34",
+      "startSeconds": 3814
     },
-    { "n": 12, "artist": "Nu NRG", "title": "Freefall", "label": "Monster Tunes" }
+    {
+      "n": 12,
+      "artist": "Nu NRG",
+      "title": "Freefall",
+      "label": "Monster Tunes",
+      "start": "1:09:03",
+      "startSeconds": 4143
+    }
   ]
 }

@@ -17,79 +17,105 @@
       "n": 1,
       "artist": "Bluestone",
       "title": "Capetown",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Paul van Dyk feat. Plumb",
       "title": "I Don't Deserve You (Maor Levi & Bluestone Remix)",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "6:41",
+      "startSeconds": 401
     },
     {
       "n": 3,
       "artist": "Juventa",
       "title": "Metamorphose",
-      "label": "Enhanced"
+      "label": "Enhanced",
+      "start": "12:03",
+      "startSeconds": 723
     },
     {
       "n": 4,
       "artist": "Andy Moor feat. Sue McLaren",
       "title": "Trespass",
-      "label": "AVA"
+      "label": "AVA",
+      "start": "17:18",
+      "startSeconds": 1038
     },
     {
       "n": 5,
       "artist": "Andrew Rayel feat. Jano",
       "title": "How Do I Know (Club Mix)",
-      "label": "Armind"
+      "label": "Armind",
+      "start": "23:09",
+      "startSeconds": 1389
     },
     {
       "n": 6,
       "artist": "Running Man pres. Inca",
       "title": "Freefall",
-      "label": "Unearthed Red"
+      "label": "Unearthed Red",
+      "start": "27:41",
+      "startSeconds": 1661
     },
     {
       "n": 7,
       "artist": "Giuseppe Ottaviani feat. Amba Shepherd",
       "title": "Lost For Words (On Air Mix)",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "33:47",
+      "startSeconds": 2027
     },
     {
       "n": 8,
       "artist": "A.R.D.I. & Ren",
       "title": "Infinity",
-      "label": "Arisa"
+      "label": "Arisa",
+      "start": "39:04",
+      "startSeconds": 2344
     },
     {
       "n": 9,
       "artist": "Pedro del Mar with ReOrder feat. Fisher",
       "title": "Reaching Out (Banging Dub Version)",
-      "label": "In-Telligance"
+      "label": "In-Telligance",
+      "start": "45:39",
+      "startSeconds": 2739
     },
     {
       "n": 10,
       "artist": "Federation",
       "title": "Innocent Desire (Dub Mix)",
-      "label": "Perfecto Fluoro"
+      "label": "Perfecto Fluoro",
+      "start": "51:49",
+      "startSeconds": 3109
     },
     {
       "n": 11,
       "artist": "Bryan Kearney & Indecent Noise",
       "title": "Uncommon World (James Dymond Remix)",
-      "label": "Mental Asylum"
+      "label": "Mental Asylum",
+      "start": "57:16",
+      "startSeconds": 3436
     },
     {
       "n": 12,
       "artist": "Simon O'Shine",
       "title": "Your Distant World",
-      "label": "Trance All-Stars"
+      "label": "Trance All-Stars",
+      "start": "1:02:36",
+      "startSeconds": 3756
     },
     {
       "n": 13,
       "artist": "Tritonal feat. Cristina Soto",
       "title": "Still With Me (Suncatcher's Digitally Enhanced Outro Mix)",
-      "label": "Air Up There"
+      "label": "Air Up There",
+      "start": "1:10:47",
+      "startSeconds": 4247
     }
   ]
 }

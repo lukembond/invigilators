@@ -17,119 +17,153 @@
       "artist": "Solid Globe",
       "title": "North Pole (Giuseppe Ottaviani Other Way Remix)",
       "label": "Amsterdam Trance Classics",
-      "index": "00:54:00"
+      "index": "00:54:00",
+      "start": "0:54",
+      "startSeconds": 54
     },
     {
       "n": 2,
       "artist": "Chris Connolly",
       "title": "Way Out & Back Again",
       "label": "Nocturnal Knights",
-      "index": "06:00:00"
+      "index": "06:00:00",
+      "start": "6:00",
+      "startSeconds": 360
     },
     {
       "n": 3,
       "artist": "Allen Watts",
       "title": "Impulse",
       "label": "Who's Afraid Of 138?!",
-      "index": "11:37:00"
+      "index": "11:37:00",
+      "start": "11:37",
+      "startSeconds": 697
     },
     {
       "n": 4,
       "artist": "Daniel Kandi & Parnassvs",
       "title": "Diversion",
       "label": "Always Alive",
-      "index": "17:11:00"
+      "index": "17:11:00",
+      "start": "17:11",
+      "startSeconds": 1031
     },
     {
       "n": 5,
       "artist": "Alex M.O.R.P.H. & Diago",
       "title": "Age of Infinity",
       "label": "Morphland",
-      "index": "22:16:00"
+      "index": "22:16:00",
+      "start": "22:16",
+      "startSeconds": 1336
     },
     {
       "n": 6,
       "artist": "Simon Paul",
       "title": "Happiness Happening 2014 (Allen & Envy & Sunset Remix)",
       "label": "Amsterdam Trance",
-      "index": "26:40:00"
+      "index": "26:40:00",
+      "start": "26:40",
+      "startSeconds": 1600
     },
     {
       "n": 7,
       "artist": "Sean Tyas & Victoriya",
       "title": "Perfect World (Amos & Riot Night Remix)",
       "label": "Future Sound Of Egypt",
-      "index": "33:25:00"
+      "index": "33:25:00",
+      "start": "33:25",
+      "startSeconds": 2005
     },
     {
       "n": 8,
       "artist": "Thomas Bronzwaer",
       "title": "Constellation (Luke Bond pres. BOND Remix)",
       "label": "A State Of Trance",
-      "index": "38:48:00"
+      "index": "38:48:00",
+      "start": "38:48",
+      "startSeconds": 2328
     },
     {
       "n": 9,
       "artist": "Daniel Skyver",
       "title": "Expedition",
       "label": "Future Sound Of Egypt",
-      "index": "43:23:00"
+      "index": "43:23:00",
+      "start": "43:23",
+      "startSeconds": 2603
     },
     {
       "n": 10,
       "artist": "Dan Stone",
       "title": "Propulsion",
       "label": "Future Sound Of Egypt",
-      "index": "49:11:00"
+      "index": "49:11:00",
+      "start": "49:11",
+      "startSeconds": 2951
     },
     {
       "n": 11,
       "artist": "Kamaya Painters",
       "title": "Endless Wave",
       "label": "Black Hole",
-      "index": "54:48:00"
+      "index": "54:48:00",
+      "start": "54:48",
+      "startSeconds": 3288
     },
     {
       "n": 12,
       "artist": "Whirlpool",
       "title": "Under The Sun (Filo & Peri's Lighthouse Mix)",
       "label": "Deepblue",
-      "index": "59:27:00"
+      "index": "59:27:00",
+      "start": "59:27",
+      "startSeconds": 3567
     },
     {
       "n": 13,
       "artist": "David Forbes",
       "title": "Octagon",
       "label": "Who's Afraid Of 138?!",
-      "index": "64:05:00"
+      "index": "64:05:00",
+      "start": "1:04:05",
+      "startSeconds": 3845
     },
     {
       "n": 14,
       "artist": "Renegade System",
       "title": "Crush",
       "label": "Damaged",
-      "index": "68:48:00"
+      "index": "68:48:00",
+      "start": "1:08:48",
+      "startSeconds": 4128
     },
     {
       "n": 15,
       "artist": "NG Rezonance",
       "title": "Frenetic",
       "label": "Future Sound Of Egypt",
-      "index": "73:36:00"
+      "index": "73:36:00",
+      "start": "1:13:36",
+      "startSeconds": 4416
     },
     {
       "n": 16,
       "artist": "Will Atkinson",
       "title": "Telescope (Maddix Remix)",
       "label": "Black Hole",
-      "index": "78:23:00"
+      "index": "78:23:00",
+      "start": "1:18:23",
+      "startSeconds": 4703
     },
     {
       "n": 17,
       "artist": "John Askew",
       "title": "These Dogs Trust No One",
       "label": "VII",
-      "index": "83:30:00"
+      "index": "83:30:00",
+      "start": "1:23:30",
+      "startSeconds": 5010
     }
   ]
 }

@@ -17,121 +17,161 @@
       "n": 1,
       "artist": "PPK",
       "title": "ResuRection (Trailer Trash Remix)",
-      "label": "Perfecto"
+      "label": "Perfecto",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "GTR",
       "title": "Mistral",
-      "label": "Five AM"
+      "label": "Five AM",
+      "start": "8:26",
+      "startSeconds": 506
     },
     {
       "n": 3,
       "artist": "Filterheadz",
       "title": "Yimanya",
-      "label": "ID&T"
+      "label": "ID&T",
+      "start": "15:54",
+      "startSeconds": 954
     },
     {
       "n": 4,
       "artist": "DJ Tiësto",
       "title": "Traffic",
-      "label": "Magik Muzik"
+      "label": "Magik Muzik",
+      "start": "20:08",
+      "startSeconds": 1208
     },
     {
       "n": 5,
       "artist": "Solid Globe",
       "title": "North Pole",
-      "label": "Fundamental"
+      "label": "Fundamental",
+      "start": "25:53",
+      "startSeconds": 1553
     },
     {
       "n": 6,
       "artist": "Holden & Thompson",
       "title": "Nothing (93 Returning Mix)",
-      "label": "Loaded"
+      "label": "Loaded",
+      "start": "30:50",
+      "startSeconds": 1850
     },
     {
       "n": 7,
       "artist": "Gaia",
       "title": "4 Elements",
-      "label": "Captivating Sounds"
+      "label": "Captivating Sounds",
+      "start": "35:54",
+      "startSeconds": 2154
     },
     {
       "n": 8,
       "artist": "Saltwater",
       "title": "The Legacy (Alphazone Remix)",
-      "label": "Zenith"
+      "label": "Zenith",
+      "start": "40:02",
+      "startSeconds": 2402
     },
     {
       "n": 9,
       "artist": "Solarstone",
       "title": "Solarcoaster",
-      "label": "Solaris"
+      "label": "Solaris",
+      "start": "45:26",
+      "startSeconds": 2726
     },
     {
       "n": 10,
       "artist": "Dogzilla",
       "title": "Without You",
-      "label": "Maelstrom"
+      "label": "Maelstrom",
+      "start": "50:03",
+      "startSeconds": 3003
     },
     {
       "n": 11,
       "artist": "Solid Sessions",
       "title": "Janeiro (Armin van Buuren Remix)",
-      "label": "Positiva"
+      "label": "Positiva",
+      "start": "1:10:59",
+      "startSeconds": 4259
     },
     {
       "n": 12,
       "artist": "Binary Finary",
       "title": "1998 (Gouryella Remix)",
-      "label": "Positiva"
+      "label": "Positiva",
+      "start": "1:15:25",
+      "startSeconds": 4525
     },
     {
       "n": 13,
       "artist": "Traveller",
       "title": "Bright Sign",
-      "label": "Suck Me Plasma"
+      "label": "Suck Me Plasma",
+      "start": "1:20:04",
+      "startSeconds": 4804
     },
     {
       "n": 14,
       "artist": "Push",
       "title": "Strange World (2000 Remake)",
-      "label": "Bonzai"
+      "label": "Bonzai",
+      "start": "1:26:00",
+      "startSeconds": 5160
     },
     {
       "n": 15,
       "artist": "Nalin & Kane",
       "title": "Beachball (Original Club Mix)",
-      "label": "Urban"
+      "label": "Urban",
+      "start": "1:32:00",
+      "startSeconds": 5520
     },
     {
       "n": 16,
       "artist": "Paul van Dyk feat. Second Sun",
       "title": "Crush (PvD Original Mix)",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "1:40:00",
+      "startSeconds": 6000
     },
     {
       "n": 17,
       "artist": "BT feat. Jes",
       "title": "Every Other Way (Armin Van Buuren Remix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "1:45:00",
+      "startSeconds": 6300
     },
     {
       "n": 18,
       "artist": "Conjure One",
       "title": "Tears From The Moon (DJ Tiësto's In Search Of Sunrise Mix)",
-      "label": "Nettwerk"
+      "label": "Nettwerk",
+      "start": "1:50:00",
+      "startSeconds": 6600
     },
     {
       "n": 19,
       "artist": "Aly & Fila",
       "title": "Lost Language",
-      "label": "Soundpiercing"
+      "label": "Soundpiercing",
+      "start": "1:55:00",
+      "startSeconds": 6900
     },
     {
       "n": 20,
       "artist": "Paul van Dyk",
       "title": "For An Angel (Pvd E-Werk Club Mix)",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "2:00:00",
+      "startSeconds": 7200
     }
   ]
 }

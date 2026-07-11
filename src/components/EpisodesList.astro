@@ -194,7 +194,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         </p>
         <div
           id="overlay-player"
-          class="overlay-player overflow-hidden border border-(--border) bg-(--card)"
+          class="overlay-player overflow-hidden"
         >
         </div>
       </div>
@@ -219,14 +219,14 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         <span id="overlay-track-count"></span>
       </div>
       <div
-        class="tracklist-columns grid shrink-0 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px] gap-3 border-b border-(--border) px-8 py-2.5 font-mono text-[8px] uppercase tracking-[0.14em] text-(--muted-foreground) max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px] max-[700px]:hidden"
+        class="tracklist-columns grid shrink-0 grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_120px_58px] gap-3 border-b border-(--border) px-8 py-2.5 font-mono text-[8px] uppercase tracking-[0.14em] text-(--muted-foreground) max-[900px]:grid-cols-[32px_minmax(0,1fr)_minmax(0,1fr)_80px_50px] max-[700px]:hidden"
         aria-hidden="true"
       >
         <span>#</span>
         <span>Title</span>
         <span>Artist</span>
         <span>Label</span>
-        <span class="hidden">Time</span>
+        <span class="text-right">Length</span>
       </div>
       <div id="overlay-tracks" class="overlay-tracks min-h-0 flex-1 overflow-y-auto"></div>
     </section>

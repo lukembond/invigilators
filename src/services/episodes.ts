@@ -3,6 +3,8 @@ export interface Track {
   artist: string;
   title: string;
   label: string;
+  start?: string;
+  startSeconds?: number;
 }
 
 export interface Episode {
@@ -19,15 +21,24 @@ export interface Episode {
   image_bg?: string;
   description: string;
   tracks: Track[];
+  waveform?: number[];
 }
 
 export async function getEpisodes(): Promise<Episode[]> {
   const episodesDir = "./src/content/episodes";
+  const waveformsDir = "./src/content/waveforms";
   const fs = await import("node:fs");
   const files = fs.readdirSync(episodesDir);
   const episodes = files
     .filter((f) => f.endsWith(".json"))
     .map((f) => JSON.parse(fs.readFileSync(`${episodesDir}/${f}`, "utf-8")));
+
+  for (const episode of episodes) {
+    const waveformPath = `${waveformsDir}/${episode.id}.json`;
+    if (fs.existsSync(waveformPath)) {
+      episode.waveform = JSON.parse(fs.readFileSync(waveformPath, "utf-8"));
+    }
+  }
 
   episodes.sort((a, b) => {
     const dateA = new Date(a.date).getTime();

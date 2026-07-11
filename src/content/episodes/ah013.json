@@ -17,79 +17,105 @@
       "n": 1,
       "artist": "Orjan Nilsen",
       "title": "Violetta",
-      "label": "Armind"
+      "label": "Armind",
+      "start": "0:00",
+      "startSeconds": 0
     },
     {
       "n": 2,
       "artist": "Will Atkinson",
       "title": "Damage",
-      "label": "Perfecto Fluoro"
+      "label": "Perfecto Fluoro",
+      "start": "6:26",
+      "startSeconds": 386
     },
     {
       "n": 3,
       "artist": "J.O.C. vs. Sied van Riel",
       "title": "Adagio For Wings",
-      "label": "Subculture"
+      "label": "Subculture",
+      "start": "11:54",
+      "startSeconds": 714
     },
     {
       "n": 4,
       "artist": "Tim Besamusca",
       "title": "Hyperscape",
-      "label": "Trance All-Stars"
+      "label": "Trance All-Stars",
+      "start": "16:08",
+      "startSeconds": 968
     },
     {
       "n": 5,
       "artist": "Super8 & Tab",
       "title": "L.A. (Juventa Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "21:24",
+      "startSeconds": 1284
     },
     {
       "n": 6,
       "artist": "Marcos",
       "title": "Summer Solstice",
-      "label": "Vandit"
+      "label": "Vandit",
+      "start": "25:56",
+      "startSeconds": 1556
     },
     {
       "n": 7,
       "artist": "Six Senses & Terk Dawn",
       "title": "Dedication (Suncatcher Remix)",
-      "label": "Blue Soho"
+      "label": "Blue Soho",
+      "start": "32:07",
+      "startSeconds": 1927
     },
     {
       "n": 8,
       "artist": "Ferry Corsten feat. Jenny Wahlstrom",
       "title": "Many Ways (Will Atkinson Midnight Remix)",
-      "label": "Flashover"
+      "label": "Flashover",
+      "start": "38:14",
+      "startSeconds": 2294
     },
     {
       "n": 9,
       "artist": "Manuel Le Saul feat. TranceEye",
       "title": "Beautiful Moments Of Life",
-      "label": "Discover"
+      "label": "Discover",
+      "start": "43:29",
+      "startSeconds": 2609
     },
     {
       "n": 10,
       "artist": "Driftmoon",
       "title": "Howl At The Moon (Solarstone Pure Mix)",
-      "label": "Pure Trance"
+      "label": "Pure Trance",
+      "start": "51:10",
+      "startSeconds": 3070
     },
     {
       "n": 11,
       "artist": "Andrew Stets",
       "title": "Prometheus (Araya Remix)",
-      "label": "Trance All-Stars"
+      "label": "Trance All-Stars",
+      "start": "56:57",
+      "startSeconds": 3417
     },
     {
       "n": 12,
       "artist": "Jamie Walker",
       "title": "Boulevard",
-      "label": "Subculture"
+      "label": "Subculture",
+      "start": "1:02:35",
+      "startSeconds": 3755
     },
     {
       "n": 13,
       "artist": "RAM & Susana",
       "title": "RAMelia (Tribute To Amelia)",
-      "label": "Future Sound Of Egypt"
+      "label": "Future Sound Of Egypt",
+      "start": "1:09:05",
+      "startSeconds": 4145
     }
   ]
 }

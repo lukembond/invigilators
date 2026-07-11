@@ -17,43 +17,97 @@
       "n": 1,
       "artist": "Oceanlab",
       "title": "Lonely Girl (Gareth Emery Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "0:54",
+      "startSeconds": 54
     },
-    { "n": 2, "artist": "Ferry Corsten", "title": "Radio Crash", "label": "Flashover" },
-    { "n": 3, "artist": "Adymus", "title": "Kaleidoscope Eyes", "label": "Enhanced" },
-    { "n": 4, "artist": "Ummet Ozcan", "title": "Time Wave Zero", "label": "Doorn" },
-    { "n": 5, "artist": "Ilya Soloviev", "title": "Universal Universe", "label": "Timeline" },
+    {
+      "n": 2,
+      "artist": "Ferry Corsten",
+      "title": "Radio Crash",
+      "label": "Flashover",
+      "start": "8:01",
+      "startSeconds": 481
+    },
+    {
+      "n": 3,
+      "artist": "Adymus",
+      "title": "Kaleidoscope Eyes",
+      "label": "Enhanced",
+      "start": "13:21",
+      "startSeconds": 801
+    },
+    {
+      "n": 4,
+      "artist": "Ummet Ozcan",
+      "title": "Time Wave Zero",
+      "label": "Doorn",
+      "start": "19:56",
+      "startSeconds": 1196
+    },
+    {
+      "n": 5,
+      "artist": "Ilya Soloviev",
+      "title": "Universal Universe",
+      "label": "Timeline",
+      "start": "24:22",
+      "startSeconds": 1462
+    },
     {
       "n": 6,
       "artist": "Mungo",
       "title": "Under The Sea (Sebastian Brandt's Vela Remix)",
-      "label": "A State of Trance"
+      "label": "A State of Trance",
+      "start": "29:59",
+      "startSeconds": 1799
     },
     {
       "n": 7,
       "artist": "David Forbes",
       "title": "Foldback (Mike Foyle Remix)",
-      "label": "Fraction"
+      "label": "Fraction",
+      "start": "36:03",
+      "startSeconds": 2163
     },
     {
       "n": 8,
       "artist": "Jose Amnesia",
       "title": "Follow Me (Giuseppe Ottaviani Remix)",
-      "label": "Digital Only"
+      "label": "Digital Only",
+      "start": "43:30",
+      "startSeconds": 2610
     },
     {
       "n": 9,
       "artist": "Saints & Sinners",
       "title": "Peace (Breakfast Remix)",
-      "label": "Lost Language"
+      "label": "Lost Language",
+      "start": "49:10",
+      "startSeconds": 2950
     },
-    { "n": 10, "artist": "Activa", "title": "This World", "label": "Discover" },
+    {
+      "n": 10,
+      "artist": "Activa",
+      "title": "This World",
+      "label": "Discover",
+      "start": "56:08",
+      "startSeconds": 3368
+    },
     {
       "n": 11,
       "artist": "A.M.R.",
       "title": "Sand Dunes (Daniel Kandi Remix)",
-      "label": "Enhanced"
+      "label": "Enhanced",
+      "start": "1:02:18",
+      "startSeconds": 3738
     },
-    { "n": 12, "artist": "Andy Blueman", "title": "Nyctalopia", "label": "Digital Only" }
+    {
+      "n": 12,
+      "artist": "Andy Blueman",
+      "title": "Nyctalopia",
+      "label": "Digital Only",
+      "start": "1:07:47",
+      "startSeconds": 4067
+    }
   ]
 }

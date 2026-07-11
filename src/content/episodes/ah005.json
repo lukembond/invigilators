@@ -13,56 +13,133 @@
   "hearthis_id": "9218004",
   "hearthis_url": "https://hearthis.at/theinvigilators/ah005/",
   "tracks": [
-    { "n": 1, "artist": "Andain", "title": "Promises (Soundprank Remix)", "label": "Black Hole" },
-    { "n": 2, "artist": "Alex Pich", "title": "Heavens (Dezza Remix)", "label": "Colorize" },
-    { "n": 3, "artist": "Creep", "title": "Days (Super8 & Tab Remix)", "label": "Young Turks" },
-    { "n": 4, "artist": "Norin & Rad", "title": "Bloom", "label": "Anjunabeats" },
+    {
+      "n": 1,
+      "artist": "Andain",
+      "title": "Promises (Soundprank Remix)",
+      "label": "Black Hole",
+      "start": "0:43",
+      "startSeconds": 43
+    },
+    {
+      "n": 2,
+      "artist": "Alex Pich",
+      "title": "Heavens (Dezza Remix)",
+      "label": "Colorize",
+      "start": "8:43",
+      "startSeconds": 523
+    },
+    {
+      "n": 3,
+      "artist": "Creep",
+      "title": "Days (Super8 & Tab Remix)",
+      "label": "Young Turks",
+      "start": "14:43",
+      "startSeconds": 883
+    },
+    {
+      "n": 4,
+      "artist": "Norin & Rad",
+      "title": "Bloom",
+      "label": "Anjunabeats",
+      "start": "21:08",
+      "startSeconds": 1268
+    },
     {
       "n": 5,
       "artist": "Ad Brown feat. Kerry Leva",
       "title": "Memorial (You Were Loved) (Maor Levi Remix)",
-      "label": "Enhanced Progressive"
+      "label": "Enhanced Progressive",
+      "start": "25:26",
+      "startSeconds": 1526
     },
     {
       "n": 6,
       "artist": "Cosmic Gate",
       "title": "London Rain (New Club Mix)",
-      "label": "Black Hole"
+      "label": "Black Hole",
+      "start": "32:04",
+      "startSeconds": 1924
     },
-    { "n": 7, "artist": "Ashley Wallbridge", "title": "Jynx", "label": "AVA" },
-    { "n": 8, "artist": "Orjan Nilsen", "title": "Viking", "label": "Armind" },
+    {
+      "n": 7,
+      "artist": "Ashley Wallbridge",
+      "title": "Jynx",
+      "label": "AVA",
+      "start": "37:30",
+      "startSeconds": 2250
+    },
+    {
+      "n": 8,
+      "artist": "Orjan Nilsen",
+      "title": "Viking",
+      "label": "Armind",
+      "start": "43:00",
+      "startSeconds": 2580
+    },
     {
       "n": 9,
       "artist": "Matt Darey feat. Leah",
       "title": "Hold Your Breath (Khomha Remix)",
-      "label": "S107"
+      "label": "S107",
+      "start": "49:10",
+      "startSeconds": 2950
     },
-    { "n": 10, "artist": "W&W", "title": "AK-47", "label": "Captivating Sounds" },
+    {
+      "n": 10,
+      "artist": "W&W",
+      "title": "AK-47",
+      "label": "Captivating Sounds",
+      "start": "53:51",
+      "startSeconds": 3231
+    },
     {
       "n": 11,
       "artist": "Above & Beyond feat. Richard Bedford",
       "title": "Every Little Beat (Myon & Shane54 Summer Of Love Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "59:49",
+      "startSeconds": 3589
     },
     {
       "n": 12,
       "artist": "Emery & Kirsch",
       "title": "Lose Yourself (Tritonal's Air Up There Remix)",
-      "label": "Enhanced"
+      "label": "Enhanced",
+      "start": "1:05:09",
+      "startSeconds": 3909
     },
     {
       "n": 13,
       "artist": "Boom Jinx feat. Justine Suissa",
       "title": "Phoenix From The Flames (Omnia & The Blizzard Remix)",
-      "label": "Anjunabeats"
+      "label": "Anjunabeats",
+      "start": "1:11:30",
+      "startSeconds": 4290
     },
     {
       "n": 14,
       "artist": "Bobina feat. Betsie Larkin",
       "title": "You Belong To Me (Original Dub Mix)",
-      "label": "Maelstrom"
+      "label": "Maelstrom",
+      "start": "1:17:34",
+      "startSeconds": 4654
     },
-    { "n": 15, "artist": "tyDi", "title": "Acting Crazy (Tom Fall Remix)", "label": "S107" },
-    { "n": 16, "artist": "Gareth Emery", "title": "Tokyo (Ben Gold Remix)", "label": "Garuda" }
+    {
+      "n": 15,
+      "artist": "tyDi",
+      "title": "Acting Crazy (Tom Fall Remix)",
+      "label": "S107",
+      "start": "1:22:59",
+      "startSeconds": 4979
+    },
+    {
+      "n": 16,
+      "artist": "Gareth Emery",
+      "title": "Tokyo (Ben Gold Remix)",
+      "label": "Garuda",
+      "start": "1:28:37",
+      "startSeconds": 5317
+    }
   ]
 }
