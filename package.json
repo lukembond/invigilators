@@ -24,7 +24,7 @@
     "@typescript-eslint/eslint-plugin": "^8",
     "@typescript-eslint/parser": "^8",
     "astro": "^7",
-    "astro-eslint-parser": "^2",
+    "astro-eslint-parser": "^3",
     "eslint": "^10",
     "eslint-config-prettier": "^10",
     "eslint-plugin-astro": "^2",
