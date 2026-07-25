@@ -27,7 +27,7 @@
     "astro-eslint-parser": "^3",
     "eslint": "^10",
     "eslint-config-prettier": "^10",
-    "eslint-plugin-astro": "^2",
+    "eslint-plugin-astro": "^3",
     "globals": "^17",
     "pngjs": "^7",
     "prettier": "^3",
