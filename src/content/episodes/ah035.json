@@ -1,0 +1,151 @@
+{
+  "id": "ah035",
+  "type": "aural-homework",
+  "title": "Aural Homework 035",
+  "date": "2024-06-30",
+  "location": "London, UK",
+  "length": "1:33:00",
+  "image_cover": "/img/episode-cover/ah035.webp",
+  "image_bg": "/img/episode-bg/ah035.webp",
+  "description": "It's summertime in London, and we're putting another mix together to celebrate Luke's birthday. Back on the vinyl classics for this mix, with back to back bangers across the board and featuring some new additions to the shelves.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_035.cue",
+  "hearthis_id": "14609663",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah035/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Inertia",
+      "title": "The Chamber",
+      "label": "Discover",
+      "index": "00:55:00",
+      "start": "0:55",
+      "startSeconds": 55
+    },
+    {
+      "n": 2,
+      "artist": "Ridgewalkers feat. El",
+      "title": "Find (Kyau vs. Albert Remix)",
+      "label": "Armind",
+      "index": "08:58:00",
+      "start": "08:58",
+      "startSeconds": 538
+    },
+    {
+      "n": 3,
+      "artist": "Smith & Pledger",
+      "title": "Believe (Smith & Pledger's 2004 Mix)",
+      "label": "Anjunabeats",
+      "index": "14:39:00",
+      "start": "14:39",
+      "startSeconds": 879
+    },
+    {
+      "n": 4,
+      "artist": "Madonna",
+      "title": "What It Feels Like For A Girl (Above & Beyond 12\" Club Mix)",
+      "label": "Maverick",
+      "index": "20:14:00",
+      "start": "20:14",
+      "startSeconds": 1214
+    },
+    {
+      "n": 5,
+      "artist": "Filo & Peri feat. Eric Lumiere",
+      "title": "Anthem (John O'Callaghan Remix)",
+      "label": "Vandit",
+      "index": "26:02:00",
+      "start": "26:02",
+      "startSeconds": 1562
+    },
+    {
+      "n": 6,
+      "artist": "King Of Clubs",
+      "title": "Revelation (Airwave Remix)",
+      "label": "In Trance We Trust",
+      "index": "31:37:00",
+      "start": "31:37",
+      "startSeconds": 1897
+    },
+    {
+      "n": 7,
+      "artist": "Thomas Bronzwaer",
+      "title": "Resound",
+      "label": "Vandit",
+      "index": "39:19:00",
+      "start": "39:19",
+      "startSeconds": 2359
+    },
+    {
+      "n": 8,
+      "artist": "Mystery Islands",
+      "title": "Solace (Ronski Speed Remix)",
+      "label": "Monster Force",
+      "index": "44:25:00",
+      "start": "44:25",
+      "startSeconds": 2665
+    },
+    {
+      "n": 9,
+      "artist": "Cliff Coenraad",
+      "title": "Manjula",
+      "label": "Intuition",
+      "index": "50:55:00",
+      "start": "50:55",
+      "startSeconds": 3055
+    },
+    {
+      "n": 10,
+      "artist": "Greg Downey",
+      "title": "K.I.A.",
+      "label": "Discover",
+      "index": "57:12:00",
+      "start": "57:12",
+      "startSeconds": 3432
+    },
+    {
+      "n": 11,
+      "artist": "Daniel Kandi",
+      "title": "Turnmills",
+      "label": "Fundamental",
+      "index": "63:43:00",
+      "start": "63:43",
+      "startSeconds": 3823
+    },
+    {
+      "n": 12,
+      "artist": "Yahel with Eyal Barkan",
+      "title": "Voyage",
+      "label": "Black Hole",
+      "index": "68:35:00",
+      "start": "68:35",
+      "startSeconds": 4115
+    },
+    {
+      "n": 13,
+      "artist": "Alena",
+      "title": "Turn It Around (Space Brothers Rethink)",
+      "label": "Wonderboy",
+      "index": "74:11:00",
+      "start": "74:11",
+      "startSeconds": 4451
+    },
+    {
+      "n": 14,
+      "artist": "Stoneface & Terminal",
+      "title": "Don't Give A Fuck (Dub Mix)",
+      "label": "euphonic",
+      "index": "80:56:00",
+      "start": "80:56",
+      "startSeconds": 4856
+    },
+    {
+      "n": 15,
+      "artist": "Super8 & Tab",
+      "title": "Needs To Feel",
+      "label": "Anjunabeats",
+      "index": "86:01:00",
+      "start": "86:01",
+      "startSeconds": 5161
+    }
+  ]
+}
