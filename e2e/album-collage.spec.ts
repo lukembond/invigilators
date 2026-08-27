@@ -93,7 +93,8 @@ test.describe("Render Mix collage", () => {
     expect(gridSummary.wrapOverflowY).toBe("auto");
   });
 
-  test("expands hovered tiles without reflowing neighboring tiles", async ({ page }) => {
+  test("expands hovered tiles without reflowing neighboring tiles", async ({ page, isMobile }) => {
+    test.skip(isMobile, "hover behavior only applies to pointer devices");
     await openBooklet(page);
 
     await page.mouse.move(5, 5);
@@ -132,7 +133,8 @@ test.describe("Render Mix collage", () => {
     expect(hoverEnd.imageScale).toBe("none");
   });
 
-  test("reflows the tile grid on mobile", async ({ page }) => {
+  test("reflows the tile grid on mobile", async ({ page, isMobile }) => {
+    test.skip(isMobile, "test requires a desktop viewport before resizing to mobile");
     await openBooklet(page);
 
     const desktopColumns = await page.evaluate(() => {
@@ -472,23 +474,23 @@ test.describe("Render Mix collage", () => {
     const endX = overlayBox.x + 30;
 
     await page.locator("#mix-overlay").dispatchEvent("touchstart", {
-      touches: [{ clientX: startX, clientY: centerY }],
-      changedTouches: [{ clientX: startX, clientY: centerY }],
+      touches: [{ identifier: 0, clientX: startX, clientY: centerY }],
+      changedTouches: [{ identifier: 0, clientX: startX, clientY: centerY }],
     });
     await page.locator("#mix-overlay").dispatchEvent("touchend", {
       touches: [],
-      changedTouches: [{ clientX: endX, clientY: centerY }],
+      changedTouches: [{ identifier: 0, clientX: endX, clientY: centerY }],
     });
 
     await expect(page.locator("#overlay-title")).toHaveText(episodes[1].title);
 
     await page.locator("#mix-overlay").dispatchEvent("touchstart", {
-      touches: [{ clientX: endX, clientY: centerY }],
-      changedTouches: [{ clientX: endX, clientY: centerY }],
+      touches: [{ identifier: 1, clientX: endX, clientY: centerY }],
+      changedTouches: [{ identifier: 1, clientX: endX, clientY: centerY }],
     });
     await page.locator("#mix-overlay").dispatchEvent("touchend", {
       touches: [],
-      changedTouches: [{ clientX: startX, clientY: centerY }],
+      changedTouches: [{ identifier: 1, clientX: startX, clientY: centerY }],
     });
 
     await expect(page.locator("#overlay-title")).toHaveText(episodes[0].title);

@@ -27,6 +27,12 @@ const toApiUrl = (hearthisUrl) => {
   return `https://api-v2.hearthis.at${url.pathname}`;
 };
 
+const toWaveformUrl = (hearthisId) => {
+  const id = String(hearthisId || "");
+  if (!/^\d{2,}$/.test(id)) return null;
+  return `https://cdn.hearthis.at/_/cache/waveform_mask/${id[0]}/${id[1]}/${id}.png`;
+};
+
 const fetchJson = async (url) => {
   const response = await fetch(url);
   if (!response.ok) throw new Error(`${url} responded ${response.status}`);
@@ -86,13 +92,22 @@ const run = async () => {
     if (requestedIds.length > 0 && !requestedIds.includes(episode.id)) continue;
 
     try {
-      const meta = await fetchJson(toApiUrl(episode.hearthis_url));
-      if (!meta.waveform_url) {
+      let waveformUrl;
+      try {
+        const meta = await fetchJson(toApiUrl(episode.hearthis_url));
+        waveformUrl = meta.waveform_url;
+      } catch (error) {
+        waveformUrl = toWaveformUrl(episode.hearthis_id);
+        if (!waveformUrl) throw error;
+        console.warn(`~ ${episode.id}: metadata unavailable, using hearthis_id`);
+      }
+
+      if (!waveformUrl) {
         console.warn(`- ${episode.id}: no waveform_url available`);
         continue;
       }
 
-      const png = await fetchBuffer(meta.waveform_url);
+      const png = await fetchBuffer(waveformUrl);
       const peaks = extractPeaks(png);
       writeFileSync(join(waveformsDir, `${episode.id}.json`), `${JSON.stringify(peaks)}\n`);
       written++;
