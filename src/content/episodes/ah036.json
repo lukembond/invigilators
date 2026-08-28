@@ -1,0 +1,142 @@
+{
+  "id": "ah036",
+  "type": "aural-homework",
+  "title": "Aural Homework 036",
+  "date": "2025-01-26",
+  "location": "London, UK",
+  "length": "1:34:00",
+  "image_cover": "/img/episode-cover/ah036.webp",
+  "image_bg": "/img/episode-bg/ah036.webp",
+  "description": "It's wintertime in London. Our mate Mitch has stopped by, and we've been checking out the Emirates Stadium. Then, onto some tunes. New and old songs make up this mix, again recorded on vinyl.",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_036.cue",
+  "hearthis_id": "14647184",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah036/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Super8",
+      "title": "Dawn",
+      "label": "Anjunabeats",
+      "index": "00:54:00",
+      "start": "0:54",
+      "startSeconds": 54
+    },
+    {
+      "n": 2,
+      "artist": "Narcotic Thrust",
+      "title": "When The Dawn Breaks (Dogzilla Remix)",
+      "label": "free2air",
+      "index": "08:40:00",
+      "start": "8:40",
+      "startSeconds": 520
+    },
+    {
+      "n": 3,
+      "artist": "Activa feat. Shannon Hurley",
+      "title": "Return To Life",
+      "label": "Activa Music",
+      "index": "14:40:00",
+      "start": "14:40",
+      "startSeconds": 880
+    },
+    {
+      "n": 4,
+      "artist": "Andy Moor & Adam White pres. Whiteroom",
+      "title": "The Whiteroom",
+      "label": "Liquid Asset",
+      "index": "20:20:00",
+      "start": "20:20",
+      "startSeconds": 1220
+    },
+    {
+      "n": 5,
+      "artist": "Slipstream",
+      "title": "Lagrange Point (12” Mix)",
+      "label": "Borderline",
+      "index": "27:21:00",
+      "start": "27:21",
+      "startSeconds": 1641
+    },
+    {
+      "n": 6,
+      "artist": "Recluse",
+      "title": "Yellow Moon (Octagen Mix)",
+      "label": "Lost Language",
+      "index": "33:55:00",
+      "start": "33:55",
+      "startSeconds": 2035
+    },
+    {
+      "n": 7,
+      "artist": "Mark Otten",
+      "title": "Tranquility",
+      "label": "Armada",
+      "index": "39:06:00",
+      "start": "39:06",
+      "startSeconds": 2346
+    },
+    {
+      "n": 8,
+      "artist": "Oceanlab",
+      "title": "Sky Falls Down (Armin van Buuren Remix)",
+      "label": "Anjunabeats",
+      "index": "45:59:00",
+      "start": "45:59",
+      "startSeconds": 2759
+    },
+    {
+      "n": 9,
+      "artist": "Bryan Kearney",
+      "title": "From The Inside",
+      "label": "Future Sound Of Egypt",
+      "index": "54:04:00",
+      "start": "54:04",
+      "startSeconds": 3244
+    },
+    {
+      "n": 10,
+      "artist": "Solarstone",
+      "title": "Eastern Sea (Woody van Eyeden Mix)",
+      "label": "Solaris",
+      "index": "59:12:00",
+      "start": "59:12",
+      "startSeconds": 3552
+    },
+    {
+      "n": 11,
+      "artist": "Sneijder",
+      "title": "Magika",
+      "label": "Afterdark",
+      "index": "64:17:00",
+      "start": "1:04:17",
+      "startSeconds": 3857
+    },
+    {
+      "n": 12,
+      "artist": "Gouryella",
+      "title": "Tenshi",
+      "label": "Code Blue",
+      "index": "70:19:00",
+      "start": "1:10:19",
+      "startSeconds": 4219
+    },
+    {
+      "n": 13,
+      "artist": "Solarstone & Scott Bond",
+      "title": "3rd Earth (Agnelli & Nelson's Afterburn Remix)",
+      "label": "Made In England",
+      "index": "77:24:00",
+      "start": "1:17:24",
+      "startSeconds": 4644
+    },
+    {
+      "n": 14,
+      "artist": "Lost Tribe",
+      "title": "Gamemaster (Digital Blonde Remix)",
+      "label": "Liquid Asset",
+      "index": "84:33:00",
+      "start": "1:24:33",
+      "startSeconds": 5073
+    }
+  ]
+}
