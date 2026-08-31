@@ -73,6 +73,33 @@ body {
   display: none !important;
 }
 
+.mix-detail-right.is-tracklist-hidden .tracklist-heading,
+.mix-detail-right.is-tracklist-hidden .tracklist-columns,
+.mix-detail-right.is-tracklist-hidden .overlay-tracks {
+  display: none;
+}
+
+.track-row[data-playing="true"] .track-play-icon {
+  display: block;
+  opacity: 1;
+}
+
+.track-row[data-playing="true"]:hover .track-play-icon,
+.track-row[data-playing="true"]:focus-visible .track-play-icon {
+  display: none;
+}
+
+.track-pause-icon {
+  display: none;
+}
+
+.track-row[data-playing="true"] .track-pause-icon {
+  display: block;
+}
+
+.track-row[data-playing="true"]:not(:hover):not(:focus-visible) .track-pause-icon {
+  display: none;
+}
 .landing-view.is-exiting {
   opacity: 0;
 }
