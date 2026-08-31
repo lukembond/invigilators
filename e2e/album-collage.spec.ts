@@ -192,6 +192,17 @@ test.describe("Render Mix collage", () => {
     await expect(
       page.locator("#overlay-player iframe, #overlay-player [data-native-player]")
     ).toHaveCount(1);
+    const playerLayout = await page.locator("#overlay-player").evaluate((player) => {
+      const panel = player.closest("#overlay-track-panel");
+      const heading = panel?.querySelector<HTMLElement>(".tracklist-heading");
+      return {
+        isInTrackPanel: Boolean(panel),
+        playerTop: player.getBoundingClientRect().top,
+        headingTop: heading?.getBoundingClientRect().top,
+      };
+    });
+    expect(playerLayout.isInTrackPanel).toBe(true);
+    expect(playerLayout.playerTop).toBeLessThan(playerLayout.headingTop || 0);
   });
 
   test("opens an episode overlay from a direct deep link", async ({ page }) => {
@@ -257,7 +268,20 @@ test.describe("Render Mix collage", () => {
           currentTime = value;
         },
       });
-      audio.play = () => Promise.resolve();
+      let paused = true;
+      Object.defineProperty(audio, "paused", {
+        configurable: true,
+        get: () => paused,
+      });
+      audio.play = () => {
+        paused = false;
+        audio.dispatchEvent(new Event("play", { bubbles: true }));
+        return Promise.resolve();
+      };
+      audio.pause = () => {
+        paused = true;
+        audio.dispatchEvent(new Event("pause", { bubbles: true }));
+      };
     });
 
     await page.locator('#overlay-tracks [data-start-seconds="481"]').click();
@@ -265,6 +289,27 @@ test.describe("Render Mix collage", () => {
       "aria-current",
       "true"
     );
+    await expect(page.locator('#overlay-tracks [data-start-seconds="481"]')).toHaveAttribute(
+      "data-playing",
+      "true"
+    );
+    await page.mouse.move(0, 0);
+    await expect(
+      page.locator('#overlay-tracks [data-start-seconds="481"] .track-play-icon')
+    ).toHaveCSS("display", "block");
+    await page.locator('#overlay-tracks [data-start-seconds="481"]').hover();
+    await expect(
+      page.locator('#overlay-tracks [data-start-seconds="481"] .track-pause-icon')
+    ).toHaveCSS("display", "block");
+
+    await page.locator('#overlay-tracks [data-start-seconds="481"]').click();
+    await expect(page.locator('#overlay-tracks [data-start-seconds="481"]')).not.toHaveAttribute(
+      "data-playing"
+    );
+    await page.mouse.move(0, 0);
+    await expect(
+      page.locator('#overlay-tracks [data-start-seconds="481"] .track-play-icon')
+    ).toHaveCSS("display", "block");
 
     await page.locator("#overlay-player audio").evaluate((element) => {
       const audio = element as HTMLAudioElement;

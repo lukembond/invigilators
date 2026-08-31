@@ -184,26 +184,22 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         </p>
       </div>
 
-      <div
-        class="detail-player-panel shrink-0 px-5 py-4 [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
-      >
-        <p
-          class="mb-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground) [@media(min-width:701px)_and_(max-height:700px)]:mb-2"
-        >
-          Listen
-        </p>
-        <div
-          id="overlay-player"
-          class="overlay-player overflow-hidden"
-        >
-        </div>
-      </div>
     </aside>
 
     <section
       id="overlay-track-panel"
       class="mix-detail-right flex min-h-0 flex-col overflow-hidden bg-bg bg-cover bg-center bg-no-repeat max-[700px]:overflow-visible"
     >
+      <div
+        class="detail-player-panel shrink-0 border-b border-(--border) px-8 py-4 [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
+      >
+        <p
+          class="mb-2.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground) [@media(min-width:701px)_and_(max-height:700px)]:mb-2"
+        >
+          Listen
+        </p>
+        <div id="overlay-player" class="overlay-player overflow-hidden"></div>
+      </div>
       <div
         class="tracklist-heading flex shrink-0 items-center gap-2.5 border-b border-(--border) px-8 pb-3.5 pt-4.5 font-mono text-[9px] uppercase tracking-[0.16em] text-(--muted-foreground)"
       >

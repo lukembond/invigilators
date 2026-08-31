@@ -50,6 +50,8 @@ export const initAlbumOverlay = () => {
   let closeTimer: number | undefined;
   let pageTransitionTimer: number | undefined;
   let isPageTransitioning = false;
+  let isTracklistHidden = false;
+  let episodeBackground = "";
 
   if (
     !overlay ||
@@ -93,6 +95,14 @@ export const initAlbumOverlay = () => {
     );
   };
 
+  const setTracklistVisibility = (hidden: boolean) => {
+    isTracklistHidden = hidden;
+    trackPanel.classList.toggle("is-tracklist-hidden", hidden);
+    trackPanel.style.backgroundImage = hidden
+      ? `url("${episodeBackground}")`
+      : `linear-gradient(90deg, rgba(13, 2, 5, 0.94) 0%, rgba(13, 2, 5, 0.82) 42%, rgba(13, 2, 5, 0.68) 100%), linear-gradient(0deg, rgba(13, 2, 5, 0.62), rgba(13, 2, 5, 0.62)), url("${episodeBackground}")`;
+  };
+
   const renderEpisode = (episode: Episode, index: number) => {
     currentIndex = index;
     image.src = getEpisodeImage(episode);
@@ -105,7 +115,8 @@ export const initAlbumOverlay = () => {
     length.textContent = episode.length;
     description.textContent = episode.description;
     trackCount.textContent = `Tracklist - ${episode.tracks.length} tracks`;
-    trackPanel.style.backgroundImage = `linear-gradient(90deg, rgba(13, 2, 5, 0.94) 0%, rgba(13, 2, 5, 0.82) 42%, rgba(13, 2, 5, 0.68) 100%), linear-gradient(0deg, rgba(13, 2, 5, 0.62), rgba(13, 2, 5, 0.62)), url("${getEpisodeBackground(episode)}")`;
+    episodeBackground = getEpisodeBackground(episode);
+    setTracklistVisibility(isTracklistHidden);
     prevButton.disabled = index <= 0;
     nextButton.disabled = index >= window.episodes.length - 1;
     tracks.scrollTop = 0;
@@ -122,7 +133,8 @@ export const initAlbumOverlay = () => {
         const numberCell = seekable
           ? `<span class="relative inline-flex items-center font-mono text-[10px] font-normal text-(--muted-foreground)">
               <span class="tabular-nums transition-opacity duration-120 group-hover:opacity-0 group-focus-visible:opacity-0 group-aria-[current=true]:opacity-0">${String(track.n).padStart(2, "0")}</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-[current=true]:opacity-100"><path d="M8 5v14l11-7z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="track-play-icon pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-[current=true]:opacity-100"><path d="M8 5v14l11-7z"></path></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="track-pause-icon pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100"><path d="M7 5h3v14H7zM14 5h3v14h-3z"></path></svg>
             </span>`
           : `<span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>`;
 
@@ -311,6 +323,14 @@ export const initAlbumOverlay = () => {
     });
   };
 
+  const updatePlayingTrack = (audio: HTMLAudioElement) => {
+    tracks.querySelectorAll<HTMLElement>("[data-start-seconds]").forEach((row) => {
+      const isPlaying = row.getAttribute("aria-current") === "true" && !audio.paused;
+      if (isPlaying) row.setAttribute("data-playing", "true");
+      else row.removeAttribute("data-playing");
+    });
+  };
+
   player.addEventListener("click", async (event) => {
     const target = event.target as HTMLElement | null;
     const audio = player.querySelector<HTMLAudioElement>("audio");
@@ -346,24 +366,28 @@ export const initAlbumOverlay = () => {
 
   player.addEventListener(
     "play",
-    () => {
+    (event) => {
       const toggle = player.querySelector<HTMLElement>("[data-player-toggle]");
       if (toggle) {
         toggle.textContent = "II";
         toggle.setAttribute("aria-label", "Pause");
       }
+      const audio = event.target;
+      if (audio instanceof HTMLAudioElement) updatePlayingTrack(audio);
     },
     true
   );
 
   player.addEventListener(
     "pause",
-    () => {
+    (event) => {
       const toggle = player.querySelector<HTMLElement>("[data-player-toggle]");
       if (toggle) {
         toggle.textContent = "▶";
         toggle.setAttribute("aria-label", "Play");
       }
+      const audio = event.target;
+      if (audio instanceof HTMLAudioElement) updatePlayingTrack(audio);
     },
     true
   );
@@ -375,6 +399,7 @@ export const initAlbumOverlay = () => {
       if (!(audio instanceof HTMLAudioElement)) return;
       updatePlayerProgress(audio);
       updateActiveTrackForTime(audio.currentTime);
+      updatePlayingTrack(audio);
     },
     true
   );
@@ -398,12 +423,18 @@ export const initAlbumOverlay = () => {
     const startSeconds = Number(row.dataset.startSeconds);
     if (!audio || !audio.src || Number.isNaN(startSeconds)) return;
 
+    if (row.getAttribute("aria-current") === "true" && !audio.paused) {
+      audio.pause();
+      return;
+    }
+
     audio.currentTime = startSeconds;
     updatePlayerProgress(audio);
     updateActiveTrackForTime(startSeconds);
 
     try {
       await audio.play();
+      updatePlayingTrack(audio);
     } catch {
       audio.focus();
     }
@@ -413,9 +444,17 @@ export const initAlbumOverlay = () => {
   });
   document.addEventListener("keydown", (event) => {
     if (!overlay.classList.contains("is-open")) return;
+    const target = event.target as HTMLElement | null;
+    if (
+      target?.isContentEditable ||
+      target instanceof HTMLInputElement ||
+      target instanceof HTMLTextAreaElement
+    )
+      return;
     if (event.key === "Escape") closeOverlay();
     if (event.key === "ArrowLeft") openByIndex(currentIndex - 1, "replace", "prev");
     if (event.key === "ArrowRight") openByIndex(currentIndex + 1, "replace", "next");
+    if (event.key.toLowerCase() === "h") setTracklistVisibility(!isTracklistHidden);
   });
   window.addEventListener("popstate", () => {
     const episodeId = getEpisodeIdFromPath();
