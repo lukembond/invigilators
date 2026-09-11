@@ -33,7 +33,7 @@
     "prettier": "^3",
     "prettier-plugin-astro": "^0.14.1",
     "tailwindcss": "^4",
-    "typescript": "^6"
+    "typescript": "^7"
   },
   "overrides": {
     "yocto-queue": "0.1.0"
