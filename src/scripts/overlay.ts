@@ -132,8 +132,8 @@ export const initAlbumOverlay = () => {
         const seekableClasses = seekable ? " group cursor-pointer" : "";
         const numberCell = seekable
           ? `<span class="relative inline-flex items-center font-mono text-[10px] font-normal text-(--muted-foreground)">
-              <span class="tabular-nums transition-opacity duration-120 group-hover:opacity-0 group-focus-visible:opacity-0 group-aria-[current=true]:opacity-0">${String(track.n).padStart(2, "0")}</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true" class="track-play-icon pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-[current=true]:opacity-100"><path d="M8 5v14l11-7z"></path></svg>
+              <span class="tabular-nums transition-opacity duration-120 group-hover:opacity-0 group-focus-visible:opacity-0 group-aria-current:opacity-0">${String(track.n).padStart(2, "0")}</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="track-play-icon pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100 group-aria-current:opacity-100"><path d="M8 5v14l11-7z"></path></svg>
               <svg viewBox="0 0 24 24" aria-hidden="true" class="track-pause-icon pointer-events-none absolute left-0 top-1/2 size-3 -translate-y-1/2 fill-(--accent) opacity-0 transition-opacity duration-120 group-hover:opacity-100 group-focus-visible:opacity-100"><path d="M7 5h3v14H7zM14 5h3v14h-3z"></path></svg>
             </span>`
           : `<span class="font-mono text-[10px] font-normal text-(--muted-foreground)">${String(track.n).padStart(2, "0")}</span>`;
