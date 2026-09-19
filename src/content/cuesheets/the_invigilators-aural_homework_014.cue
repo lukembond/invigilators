@@ -14,7 +14,7 @@ FILE "01-the_invigilators-aural_homework_014.mp3" MP3
     TITLE "Yimanya"
     INDEX 01 15:54:00
   TRACK 04 AUDIO
-    PERFORMER "DJ Tiësto"
+    PERFORMER "DJ Tiesto"
     TITLE "Traffic"
     INDEX 01 20:08:00
   TRACK 05 AUDIO
@@ -71,7 +71,7 @@ FILE "01-the_invigilators-aural_homework_014.mp3" MP3
     INDEX 01 105:00:00
   TRACK 18 AUDIO
     PERFORMER "Conjure One"
-    TITLE "Tears From The Moon (DJ Tiësto's In Search Of Sunrise Mix)"
+    TITLE "Tears From The Moon (DJ Tiesto's In Search Of Sunrise Mix)"
     INDEX 01 110:00:00
   TRACK 19 AUDIO
     PERFORMER "Aly & Fila"

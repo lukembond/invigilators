@@ -59,7 +59,7 @@ FILE "01-the_invigilators-aural_homework_017.mp3" MP3
     INDEX 01 66:30:17
   TRACK 15 AUDIO
     PERFORMER "First State feat. Quilla"
-    TITLE "Where You Are (Extended Mix)"
+    TITLE "Where You Are"
     INDEX 01 70:43:50
   TRACK 16 AUDIO
     PERFORMER "BXT"

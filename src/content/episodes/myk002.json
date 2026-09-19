@@ -17,7 +17,8 @@
       "n": 1,
       "artist": "The Invigilators",
       "title": "Mykonos Sessions Intro",
-      "label": "-",
+      "label": "",
+      "index": "00:00:00",
       "start": "0:00",
       "startSeconds": 0
     },
@@ -26,6 +27,7 @@
       "artist": "Chicane feat. Moya Brennan",
       "title": "Saltwater (Jody Wisternoff Remix)",
       "label": "Armada",
+      "index": "01:04:00",
       "start": "1:04",
       "startSeconds": 64
     },
@@ -34,6 +36,7 @@
       "artist": "Orkidea",
       "title": "Nana (Gai Barone Remix)",
       "label": "Black Hole",
+      "index": "08:03:00",
       "start": "8:03",
       "startSeconds": 483
     },
@@ -42,6 +45,7 @@
       "artist": "Super8 & Tab",
       "title": "Nino",
       "label": "Armind",
+      "index": "14:36:00",
       "start": "14:36",
       "startSeconds": 876
     },
@@ -50,6 +54,7 @@
       "artist": "Jaytech",
       "title": "Awakening (Club Mix)",
       "label": "Positronic",
+      "index": "18:58:00",
       "start": "18:58",
       "startSeconds": 1138
     },
@@ -58,6 +63,7 @@
       "artist": "ReLocate vs. Robert Nickson & Carol Lee",
       "title": "Built To Last (RNX Remix)",
       "label": "Molekular Sounds",
+      "index": "24:21:00",
       "start": "24:21",
       "startSeconds": 1461
     },
@@ -66,6 +72,7 @@
       "artist": "Driftmoon",
       "title": "Grindstone (Original Guitar Mix)",
       "label": "A State Of Trance",
+      "index": "29:40:00",
       "start": "29:40",
       "startSeconds": 1780
     }

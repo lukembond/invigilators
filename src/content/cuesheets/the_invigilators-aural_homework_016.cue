@@ -62,6 +62,6 @@ FILE "01-the_invigilators-aural_homework_016.mp3" MP3
     TITLE "(I'm In A) Wide Open Space"
     INDEX 01 81:08:00
   TRACK 16 AUDIO
-    PERFORMER "Above & Beyond feat. Zoë Johnston vs. Arty"
+    PERFORMER "Above & Beyond feat. Zoe Johnston vs. Arty"
     TITLE "You Got To Believe"
     INDEX 01 86:06:00

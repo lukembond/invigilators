@@ -18,6 +18,7 @@
       "artist": "Matt Lange",
       "title": "Only You",
       "label": "Anjunadeep",
+      "index": "00:00:00",
       "start": "0:00",
       "startSeconds": 0
     },
@@ -26,6 +27,7 @@
       "artist": "Above & Beyond feat. Zoe Johnston",
       "title": "Alchemy (Jody Wisternoff Remix)",
       "label": "Anjunadeep",
+      "index": "07:15:44",
       "start": "7:15",
       "startSeconds": 435
     },
@@ -34,6 +36,7 @@
       "artist": "Blood Groove & Kikis feat. Victoria Ray",
       "title": "Free Like A Bird (Dub Mix)",
       "label": "Silk Digital",
+      "index": "13:58:12",
       "start": "13:58",
       "startSeconds": 838
     },
@@ -42,6 +45,7 @@
       "artist": "Soundprank",
       "title": "Burner (Shingo Nakamura Remix)",
       "label": "Silk Digital",
+      "index": "19:38:60",
       "start": "19:38",
       "startSeconds": 1178
     },
@@ -50,6 +54,7 @@
       "artist": "London Grammar",
       "title": "Strong (Judah Remix)",
       "label": "CDR",
+      "index": "25:50:29",
       "start": "25:50",
       "startSeconds": 1550
     },
@@ -58,6 +63,7 @@
       "artist": "Ad Brown & Shawn Mitiska",
       "title": "Pulse",
       "label": "Black Hole",
+      "index": "32:02:01",
       "start": "32:02",
       "startSeconds": 1922
     },
@@ -66,6 +72,7 @@
       "artist": "SNR & Rikkaz feat. Jan Johnston",
       "title": "Beautiful Change (Dan & Sam Remix)",
       "label": "Arrival",
+      "index": "36:25:19",
       "start": "36:25",
       "startSeconds": 2185
     },
@@ -74,6 +81,7 @@
       "artist": "PROFF",
       "title": "What It Feels Like",
       "label": "Intricate",
+      "index": "42:50:42",
       "start": "42:50",
       "startSeconds": 2570
     },
@@ -82,6 +90,7 @@
       "artist": "Lian July feat. Eli",
       "title": "Surrender (LTN Dub Remix)",
       "label": "Silk Digital",
+      "index": "47:57:65",
       "start": "47:57",
       "startSeconds": 2877
     },
@@ -90,6 +99,7 @@
       "artist": "Shingo Nakamura",
       "title": "Days",
       "label": "Otographic",
+      "index": "52:18:74",
       "start": "52:18",
       "startSeconds": 3138
     },
@@ -98,6 +108,7 @@
       "artist": "Thomas Hayes",
       "title": "Some Things Never Change (Mrmilkcarton Remix)",
       "label": "Arrival",
+      "index": "58:25:14",
       "start": "58:25",
       "startSeconds": 3505
     }

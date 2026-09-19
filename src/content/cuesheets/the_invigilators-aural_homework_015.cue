@@ -11,7 +11,7 @@ FILE "01-the_invigilators-aural_homework_015.mp3" MP3
     INDEX 01 07:15:44
   TRACK 03 AUDIO
     PERFORMER "Blood Groove & Kikis feat. Victoria Ray"
-    TITLE "Free Like A Bird (Original Dub Mix)"
+    TITLE "Free Like A Bird (Dub Mix)"
     INDEX 01 13:58:12
   TRACK 04 AUDIO
     PERFORMER "Soundprank"

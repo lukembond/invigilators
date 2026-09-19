@@ -18,6 +18,7 @@
       "artist": "PureNRG",
       "title": "Midnight Blue",
       "label": "Black Hole",
+      "index": "00:53:00",
       "start": "0:53",
       "startSeconds": 53
     },
@@ -26,6 +27,7 @@
       "artist": "Paul Oakenfold",
       "title": "Dreamstate Theme (M.I.K.E. Push Remix)",
       "label": "Perfecto",
+      "index": "07:21:00",
       "start": "7:21",
       "startSeconds": 441
     },
@@ -34,6 +36,7 @@
       "artist": "Robert Nickson",
       "title": "Somewhere In Spacetime",
       "label": "Pure Trance",
+      "index": "12:40:00",
       "start": "12:40",
       "startSeconds": 760
     },
@@ -42,6 +45,7 @@
       "artist": "Nitrous Oxide & 2sher",
       "title": "Chimera (Trance Mix)",
       "label": "Phatbull",
+      "index": "18:45:00",
       "start": "18:45",
       "startSeconds": 1125
     },
@@ -50,6 +54,7 @@
       "artist": "The Cracken",
       "title": "Shadows Of The Night",
       "label": "Digital Society",
+      "index": "24:15:00",
       "start": "24:15",
       "startSeconds": 1455
     },
@@ -58,6 +63,7 @@
       "artist": "Factor B",
       "title": "Liberator",
       "label": "Future Sound Of Egypt",
+      "index": "29:47:00",
       "start": "29:47",
       "startSeconds": 1787
     },
@@ -66,6 +72,7 @@
       "artist": "Joint Operations Centre",
       "title": "Pathological Effect",
       "label": "Kearnage",
+      "index": "36:27:00",
       "start": "36:27",
       "startSeconds": 2187
     },
@@ -74,6 +81,7 @@
       "artist": "James Kitcher",
       "title": "Rain Cedes To Sunlight",
       "label": "Titan Audio",
+      "index": "42:10:00",
       "start": "42:10",
       "startSeconds": 2530
     },
@@ -82,6 +90,7 @@
       "artist": "Tranceye",
       "title": "Distant Dream",
       "label": "Redux",
+      "index": "49:17:00",
       "start": "49:17",
       "startSeconds": 2957
     },
@@ -90,6 +99,7 @@
       "artist": "Giuseppe Ottaviani",
       "title": "Lumina",
       "label": "GO Music",
+      "index": "54:38:00",
       "start": "54:38",
       "startSeconds": 3278
     }

@@ -18,6 +18,7 @@
       "artist": "Lange & Gareth Emery",
       "title": "This Is All Out (Heatbeat vs. Andy Moor Remix / Lange Mashup)",
       "label": "Lange",
+      "index": "00:54:00",
       "start": "0:54",
       "startSeconds": 54
     },
@@ -26,6 +27,7 @@
       "artist": "Sean Tyas & Giuseppe Ottaviani",
       "title": "Arcobaleno (Classic Mix)",
       "label": "Vandit",
+      "index": "06:50:53",
       "start": "6:50",
       "startSeconds": 410
     },
@@ -34,6 +36,7 @@
       "artist": "Activa",
       "title": "The Fall (John Askew Remix)",
       "label": "Discover",
+      "index": "12:28:39",
       "start": "12:28",
       "startSeconds": 748
     },
@@ -42,6 +45,7 @@
       "artist": "Vast Vision",
       "title": "Black Shores",
       "label": "Future Sound Of Egypt",
+      "index": "19:12:61",
       "start": "19:12",
       "startSeconds": 1152
     },
@@ -50,6 +54,7 @@
       "artist": "James Dymond",
       "title": "Paladin",
       "label": "Soundpiercing",
+      "index": "25:42:29",
       "start": "25:42",
       "startSeconds": 1542
     },
@@ -58,6 +63,7 @@
       "artist": "Ralphie B",
       "title": "Icarus",
       "label": "A State Of Trance",
+      "index": "31:33:52",
       "start": "31:33",
       "startSeconds": 1893
     },
@@ -66,6 +72,7 @@
       "artist": "Luke Bond feat. Emel",
       "title": "Amaze",
       "label": "Future Sound Of Egypt",
+      "index": "38:17:54",
       "start": "38:17",
       "startSeconds": 2297
     },
@@ -74,6 +81,7 @@
       "artist": "Vast Vision feat. Fisher",
       "title": "Hurricane (Ost & Meyer Remix)",
       "label": "Enhanced",
+      "index": "43:52:63",
       "start": "43:52",
       "startSeconds": 2632
     },
@@ -82,6 +90,7 @@
       "artist": "Rapid Eye",
       "title": "Circa Forever (Rapid Eye's Mix)",
       "label": "A Trance Communication Release",
+      "index": "51:35:33",
       "start": "51:35",
       "startSeconds": 3095
     },
@@ -90,6 +99,7 @@
       "artist": "Akira Kayosa & Hugh Tolland",
       "title": "Disconnected (Classic Mix)",
       "label": "Perceptive",
+      "index": "57:11:72",
       "start": "57:11",
       "startSeconds": 3431
     },
@@ -98,6 +108,7 @@
       "artist": "John O'Callaghan",
       "title": "Smokescreen (Sneijder Remix)",
       "label": "Armada",
+      "index": "62:46:08",
       "start": "1:02:46",
       "startSeconds": 3766
     },
@@ -106,6 +117,7 @@
       "artist": "Estigma",
       "title": "Renovatio",
       "label": "Perceptive",
+      "index": "67:38:22",
       "start": "1:07:38",
       "startSeconds": 4058
     },
@@ -114,6 +126,7 @@
       "artist": "Poshout feat. Ange",
       "title": "Beside (Daniel Kandi Dub Mix)",
       "label": "Timeline Music",
+      "index": "74:14:60",
       "start": "1:14:14",
       "startSeconds": 4454
     },
@@ -122,6 +135,7 @@
       "artist": "Andy Moor",
       "title": "In Your Arms (Aly & Fila Remix)",
       "label": "AVA",
+      "index": "79:08:57",
       "start": "1:19:08",
       "startSeconds": 4748
     },
@@ -130,6 +144,7 @@
       "artist": "RAM",
       "title": "RAMplify",
       "label": "Digital Society",
+      "index": "85:17:35",
       "start": "1:25:17",
       "startSeconds": 5117
     }

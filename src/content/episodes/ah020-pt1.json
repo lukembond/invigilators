@@ -18,6 +18,7 @@
       "artist": "Sean Tyas",
       "title": "Reach Out (Giuseppe Ottaviani Remix Edit)",
       "label": "Who's Afraid Of 138?!",
+      "index": "00:00:00",
       "start": "0:00",
       "startSeconds": 0
     },
@@ -26,6 +27,7 @@
       "artist": "Standerwick & Jennifer Rene",
       "title": "All Of Us",
       "label": "Future Sound Of Egypt",
+      "index": "05:41:08",
       "start": "5:41",
       "startSeconds": 341
     },
@@ -34,6 +36,7 @@
       "artist": "Manuel le Saux",
       "title": "Bushido",
       "label": "Extrema Global",
+      "index": "11:05:03",
       "start": "11:05",
       "startSeconds": 665
     },
@@ -42,6 +45,7 @@
       "artist": "Local Heroes",
       "title": "Ares (Uplifting Mix)",
       "label": "euphonic",
+      "index": "15:15:02",
       "start": "15:15",
       "startSeconds": 915
     },
@@ -50,6 +54,7 @@
       "artist": "RAM",
       "title": "Heartfelt (Allen Watts Remix)",
       "label": "In Trance We Trust",
+      "index": "20:48:72",
       "start": "20:48",
       "startSeconds": 1248
     },
@@ -58,6 +63,7 @@
       "artist": "Martin Roth & Alex Bartlett",
       "title": "Off The World (Eddie Bitar Remix)",
       "label": "Vandit",
+      "index": "25:55:02",
       "start": "25:55",
       "startSeconds": 1555
     },
@@ -66,6 +72,7 @@
       "artist": "Miroslav Vrlik",
       "title": "Fly Away",
       "label": "Always Alive",
+      "index": "31:28:72",
       "start": "31:28",
       "startSeconds": 1888
     },
@@ -74,6 +81,7 @@
       "artist": "Aly & Fila with Ahmed Romel",
       "title": "Kingdoms",
       "label": "Future Sound Of Egypt",
+      "index": "37:02:64",
       "start": "37:02",
       "startSeconds": 2222
     },
@@ -82,6 +90,7 @@
       "artist": "James Dymond",
       "title": "Defector",
       "label": "Future Sound Of Egypt",
+      "index": "43:32:32",
       "start": "43:32",
       "startSeconds": 2612
     },
@@ -90,6 +99,7 @@
       "artist": "Suncatcher",
       "title": "Clue Is In The Title",
       "label": "Always Alive",
+      "index": "49:51:42",
       "start": "49:51",
       "startSeconds": 2991
     },
@@ -98,6 +108,7 @@
       "artist": "Filo & Peri feat. Aruna",
       "title": "Ashley (Maria Healy Remix)",
       "label": "Vandit",
+      "index": "55:53:22",
       "start": "55:53",
       "startSeconds": 3353
     },
@@ -106,6 +117,7 @@
       "artist": "Sneijder & Giuseppe Ottaviani",
       "title": "Nero (Solarstone Retouch)",
       "label": "Pure Trance",
+      "index": "61:55:01",
       "start": "1:01:55",
       "startSeconds": 3715
     },
@@ -114,6 +126,7 @@
       "artist": "Giuseppe Ottaviani & Orkidea",
       "title": "North Star (Factor B Southern Star Remix)",
       "label": "Black Hole",
+      "index": "68:38:38",
       "start": "1:08:38",
       "startSeconds": 4118
     },
@@ -122,6 +135,7 @@
       "artist": "Andy Moor vs. Orkidea",
       "title": "Year Zero (Mike Sanders Remix)",
       "label": "AVA",
+      "index": "74:26:70",
       "start": "1:14:26",
       "startSeconds": 4466
     },
@@ -130,6 +144,7 @@
       "artist": "John O'Callaghan & Clare Stagg",
       "title": "Lies Cost Nothing (Will Atkinson Remix)",
       "label": "Subculture",
+      "index": "79:30:25",
       "start": "1:19:30",
       "startSeconds": 4770
     }

@@ -18,6 +18,7 @@
       "artist": "Lustral & Terry Bones vs. Karen Overton",
       "title": "Put Your Satellite Around Me (Bootleg Mix)",
       "label": "White Label",
+      "index": "00:54:00",
       "start": "0:54",
       "startSeconds": 54
     },
@@ -26,6 +27,7 @@
       "artist": "Jaytech",
       "title": "Sundance",
       "label": "Anjunadeep",
+      "index": "09:06:14",
       "start": "9:06",
       "startSeconds": 546
     },
@@ -34,6 +36,7 @@
       "artist": "David West",
       "title": "Suffering Island (Joonas Hahmo Remix)",
       "label": "Solaris",
+      "index": "15:22:02",
       "start": "15:22",
       "startSeconds": 922
     },
@@ -42,6 +45,7 @@
       "artist": "Gabriel Batz",
       "title": "Decepcionaide",
       "label": "Coldharbour",
+      "index": "21:06:48",
       "start": "21:06",
       "startSeconds": 1266
     },
@@ -50,6 +54,7 @@
       "artist": "Selu Vibra",
       "title": "Divine (Funabashi Remix)",
       "label": "Somantic Sense",
+      "index": "26:51:00",
       "start": "26:51",
       "startSeconds": 1611
     },
@@ -58,14 +63,16 @@
       "artist": "Geert Huinick & Sied Van Riel",
       "title": "Minimal Symphony",
       "label": "Liquid",
+      "index": "32:14:60",
       "start": "32:14",
       "startSeconds": 1934
     },
     {
       "n": 7,
-      "artist": "West Out West",
+      "artist": "Way Out West",
       "title": "The Fall (Richard Durand Remix)",
       "label": "Black Hole",
+      "index": "38:36:09",
       "start": "38:36",
       "startSeconds": 2316
     },
@@ -74,14 +81,16 @@
       "artist": "Mat Zo",
       "title": "Out Of Minority",
       "label": "Coldharbour",
+      "index": "45:39:59",
       "start": "45:39",
       "startSeconds": 2739
     },
     {
       "n": 9,
       "artist": "Menno de Jong",
-      "title": "Nothold",
-      "label": "Intuition",
+      "title": "Nolthando (Extended Mix)",
+      "label": "",
+      "index": "51:25:70",
       "start": "51:25",
       "startSeconds": 3085
     },
@@ -90,6 +99,7 @@
       "artist": "Rafael Frost",
       "title": "Red",
       "label": "Flashover",
+      "index": "57:23:69",
       "start": "57:23",
       "startSeconds": 3443
     },
@@ -98,6 +108,7 @@
       "artist": "Above & Beyond",
       "title": "Far From In Love (Airbase Remix)",
       "label": "Anjunabeats",
+      "index": "63:34:29",
       "start": "1:03:34",
       "startSeconds": 3814
     },
@@ -106,6 +117,7 @@
       "artist": "Nu NRG",
       "title": "Freefall",
       "label": "Monster Tunes",
+      "index": "69:03:28",
       "start": "1:09:03",
       "startSeconds": 4143
     }

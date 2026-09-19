@@ -75,7 +75,7 @@ FILE "05-The_Invigilators-Mykonos_Sessions-Sunday_Closing_Set-2016-10-02.mp3" MP
     INDEX 01 92:00:00
   TRACK 19 AUDIO
     PERFORMER "Aimoon"
-    TITLE "Dream Chaser (Vlind Extended Remix)"
+    TITLE "Dream Chaser (Vlind Remix)"
     INDEX 01 97:01:00
   TRACK 20 AUDIO
     PERFORMER "Ralphie B"

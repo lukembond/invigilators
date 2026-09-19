@@ -1,0 +1,115 @@
+{
+  "id": "ah037",
+  "type": "aural-homework",
+  "title": "Aural Homework 037",
+  "date": "2025-10-04",
+  "location": "London, UK",
+  "length": "1:06:38",
+  "image_cover": "/img/episode-cover/ah037.webp",
+  "image_bg": "/img/episode-bg/ah037.webp",
+  "description": "Back and bringing you quite a wide selection of tunes in this episode! Recorded not long after Chris' birthday, down in London for the weekend to watch some football, and have some drinks, and a few more, then a mix... smashed it! But which of those was it?...",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_037.cue",
+  "hearthis_id": "14675189",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah037/",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Dosem",
+      "title": "Infinity Mirror",
+      "label": "Anjunadeep",
+      "index": "00:54:00",
+      "start": "0:54",
+      "startSeconds": 54
+    },
+    {
+      "n": 2,
+      "artist": "Jay Lumen",
+      "title": "12 Hours From Paris",
+      "label": "Anjunadeep",
+      "index": "05:18:00",
+      "start": "5:18",
+      "startSeconds": 318
+    },
+    {
+      "n": 3,
+      "artist": "Double Touch & Reigan",
+      "title": "Storm",
+      "label": "All Day I Dream",
+      "index": "12:03:00",
+      "start": "12:03",
+      "startSeconds": 723
+    },
+    {
+      "n": 4,
+      "artist": "Arapu",
+      "title": "Tribal Nation",
+      "label": "Satya",
+      "index": "18:12:00",
+      "start": "18:12",
+      "startSeconds": 1092
+    },
+    {
+      "n": 5,
+      "artist": "Reflekt feat. Delline Bass",
+      "title": "Need To Feel Loved (Adam K & Soha Vocal Mix)",
+      "label": "Adjusted",
+      "index": "22:59:00",
+      "start": "22:59",
+      "startSeconds": 1379
+    },
+    {
+      "n": 6,
+      "artist": "Aalto",
+      "title": "Rush",
+      "label": "Anjunabeats",
+      "index": "28:54:00",
+      "start": "28:54",
+      "startSeconds": 1734
+    },
+    {
+      "n": 7,
+      "artist": "Solarstone feat. Jes",
+      "title": "Like A Waterfall (Solarstone Club Mix)",
+      "label": "Deep Blue",
+      "index": "34:46:00",
+      "start": "34:46",
+      "startSeconds": 2086
+    },
+    {
+      "n": 8,
+      "artist": "Above & Beyond feat. Richard Bedford",
+      "title": "Thing Called Love (Above & Beyond Club Mix)",
+      "label": "Anjunabeats",
+      "index": "41:57:00",
+      "start": "41:57",
+      "startSeconds": 2517
+    },
+    {
+      "n": 9,
+      "artist": "OceanLab",
+      "title": "Lonely Girl (Gareth Emery Remix)",
+      "label": "Anjunabeats",
+      "index": "47:12:00",
+      "start": "47:12",
+      "startSeconds": 2832
+    },
+    {
+      "n": 10,
+      "artist": "Aly & Fila",
+      "title": "Eye Of Horus (Ronski Speed Remix)",
+      "label": "euphonic",
+      "index": "53:17:00",
+      "start": "53:17",
+      "startSeconds": 3197
+    },
+    {
+      "n": 11,
+      "artist": "Neal Scarborough",
+      "title": "Stung On The River",
+      "label": "Discover",
+      "index": "60:31:00",
+      "start": "1:00:31",
+      "startSeconds": 3631
+    }
+  ]
+}
