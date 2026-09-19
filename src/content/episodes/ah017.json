@@ -18,6 +18,7 @@
       "artist": "The Blizzard",
       "title": "Piercing The Fog (Matt Fax Remix)",
       "label": "ARVAS",
+      "index": "00:00:00",
       "start": "0:00",
       "startSeconds": 0
     },
@@ -26,6 +27,7 @@
       "artist": "Danilo Ercole",
       "title": "Flash (Max Freegrant Remix)",
       "label": "Freegrant Music",
+      "index": "06:12:33",
       "start": "6:12",
       "startSeconds": 372
     },
@@ -34,6 +36,7 @@
       "artist": "Eco & Brooke Forman",
       "title": "Liberation",
       "label": "Black Hole Recordings",
+      "index": "10:10:20",
       "start": "10:10",
       "startSeconds": 610
     },
@@ -42,6 +45,7 @@
       "artist": "4 Strings & Katty Heath",
       "title": "Hold In Silence",
       "label": "Liquid",
+      "index": "16:06:00",
       "start": "16:06",
       "startSeconds": 966
     },
@@ -50,6 +54,7 @@
       "artist": "Soundprank",
       "title": "Hold On",
       "label": "Enhanced",
+      "index": "21:19:00",
       "start": "21:19",
       "startSeconds": 1279
     },
@@ -58,6 +63,7 @@
       "artist": "Paul Oakenfold & Cassandra Fox",
       "title": "Touch Me (Mike Koglin 2.0 Remix)",
       "label": "Perfecto",
+      "index": "25:54:00",
       "start": "25:54",
       "startSeconds": 1554
     },
@@ -66,6 +72,7 @@
       "artist": "LTN & Roni Joni",
       "title": "In Between",
       "label": "Arrival",
+      "index": "32:09:00",
       "start": "32:09",
       "startSeconds": 1929
     },
@@ -74,6 +81,7 @@
       "artist": "ilan Bluestone",
       "title": "Tesseract",
       "label": "Anjunabeats",
+      "index": "36:37:00",
       "start": "36:37",
       "startSeconds": 2197
     },
@@ -82,6 +90,7 @@
       "artist": "Darren Tate",
       "title": "Twisted Robot",
       "label": "Mondo",
+      "index": "41:34:00",
       "start": "41:34",
       "startSeconds": 2494
     },
@@ -90,6 +99,7 @@
       "artist": "Kenneth Thomas feat. Colleen Riley",
       "title": "Ghost In The Machine 2014 (LTN Dub)",
       "label": "Alter Ego",
+      "index": "46:42:00",
       "start": "46:42",
       "startSeconds": 2802
     },
@@ -98,6 +108,7 @@
       "artist": "The Thrillseekers",
       "title": "This Is All We Have (Andy Moor Remix)",
       "label": "Adjusted Music",
+      "index": "51:59:00",
       "start": "51:59",
       "startSeconds": 3119
     },
@@ -106,6 +117,7 @@
       "artist": "Speed Limits & Jaco feat. Joni Fatora",
       "title": "Palm Of Your Hand (Kago Pengchi Remix)",
       "label": "Enhanced",
+      "index": "56:49:62",
       "start": "56:49",
       "startSeconds": 3409
     },
@@ -114,6 +126,7 @@
       "artist": "Fisher & Mike Shiver",
       "title": "Priceless",
       "label": "Black Hole Recordings",
+      "index": "61:47:30",
       "start": "1:01:47",
       "startSeconds": 3707
     },
@@ -122,6 +135,7 @@
       "artist": "Mike Sonar",
       "title": "Why So Serious",
       "label": "AVA",
+      "index": "66:30:17",
       "start": "1:06:30",
       "startSeconds": 3990
     },
@@ -130,6 +144,7 @@
       "artist": "First State feat. Quilla",
       "title": "Where You Are",
       "label": "Black Hole",
+      "index": "70:43:50",
       "start": "1:10:43",
       "startSeconds": 4243
     },
@@ -138,6 +153,7 @@
       "artist": "BXT",
       "title": "White Lynx",
       "label": "Arrival",
+      "index": "74:45:07",
       "start": "1:14:45",
       "startSeconds": 4485
     },
@@ -146,6 +162,7 @@
       "artist": "Pacific Nation",
       "title": "Waterfall",
       "label": "Go On Air",
+      "index": "79:42:56",
       "start": "1:19:42",
       "startSeconds": 4782
     },
@@ -154,6 +171,7 @@
       "artist": "Chicane feat. Paul Aiden",
       "title": "Motion",
       "label": "Modena",
+      "index": "84:12:40",
       "start": "1:24:12",
       "startSeconds": 5052
     }

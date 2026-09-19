@@ -18,6 +18,7 @@
       "artist": "Dinka",
       "title": "Lotus (Johan Vilborg Remix)",
       "label": "Silk Royal",
+      "index": "00:55:00",
       "start": "0:55",
       "startSeconds": 55
     },
@@ -26,6 +27,7 @@
       "artist": "Velvetine",
       "title": "The Great Divide (Soundprank Remix)",
       "label": "Anjunabeats",
+      "index": "07:48:26",
       "start": "7:48",
       "startSeconds": 468
     },
@@ -34,6 +36,7 @@
       "artist": "Solis & Sean Truby feat. Andy Tau",
       "title": "Summer Heights (Karanda Remix)",
       "label": "Infra Progressive",
+      "index": "12:25:64",
       "start": "12:25",
       "startSeconds": 745
     },
@@ -42,6 +45,7 @@
       "artist": "Bobina",
       "title": "The Space Track",
       "label": "Magik Muzik",
+      "index": "17:40:73",
       "start": "17:40",
       "startSeconds": 1060
     },
@@ -50,14 +54,16 @@
       "artist": "Bluestone",
       "title": "Namaste",
       "label": "Anjunabeats",
+      "index": "22:33:29",
       "start": "22:33",
       "startSeconds": 1353
     },
     {
       "n": 6,
-      "artist": "Jochen Miller & W&W",
+      "artist": "W&W & Jochen Miller",
       "title": "Summer",
       "label": "Mainstage",
+      "index": "28:48:41",
       "start": "28:48",
       "startSeconds": 1728
     },
@@ -66,6 +72,7 @@
       "artist": "Artur Akopov",
       "title": "Starwalker (Andrew StetS Remix)",
       "label": "Vendace",
+      "index": "32:29:58",
       "start": "32:29",
       "startSeconds": 1949
     },
@@ -74,6 +81,7 @@
       "artist": "Skytech",
       "title": "Comet",
       "label": "Coldharbour",
+      "index": "37:59:56",
       "start": "37:59",
       "startSeconds": 2279
     },
@@ -82,6 +90,7 @@
       "artist": "Poison Pro & Miusha",
       "title": "Alien (Shingo Nakamura Remix)",
       "label": "Proton",
+      "index": "42:44:63",
       "start": "42:44",
       "startSeconds": 2564
     },
@@ -90,6 +99,7 @@
       "artist": "Ashley Wallbridge",
       "title": "Grenade",
       "label": "AVA",
+      "index": "48:14:66",
       "start": "48:14",
       "startSeconds": 2894
     },
@@ -98,6 +108,7 @@
       "artist": "Above & Beyond",
       "title": "Anjunabeach (Jerome Isma-Ae Remix)",
       "label": "Anjunabeats",
+      "index": "53:01:60",
       "start": "53:01",
       "startSeconds": 3181
     },
@@ -106,6 +117,7 @@
       "artist": "Andain",
       "title": "Turn Up The Sound (Gabriel & Dresden Remix)",
       "label": "Black Hole",
+      "index": "59:01:60",
       "start": "59:01",
       "startSeconds": 3541
     },
@@ -114,6 +126,7 @@
       "artist": "Airsoul",
       "title": "Asia",
       "label": "Alter Ego",
+      "index": "64:46:62",
       "start": "1:04:46",
       "startSeconds": 3886
     },
@@ -122,6 +135,7 @@
       "artist": "Andy Moor",
       "title": "K Ta",
       "label": "AVA",
+      "index": "70:46:69",
       "start": "1:10:46",
       "startSeconds": 4246
     }

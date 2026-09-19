@@ -39,7 +39,7 @@ FILE "03-The_Invigilators-Mykonos_Sessions-Luke-Saturday_DnB_Session-2016-10-01.
     INDEX 01 31:38:00
   TRACK 10 AUDIO
     PERFORMER "deadmau5"
-    TITLE "Some Chords (Cyantific Remix)"
+    TITLE "Some Chords (Cyantific Bootleg)"
     INDEX 01 35:40:00
   TRACK 11 AUDIO
     PERFORMER "Rene LaVice"

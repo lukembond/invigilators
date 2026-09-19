@@ -1,10 +1,8 @@
-// Applies per-track start timings from the `.cue` sheets into the episode JSON.
+// Generates per-track metadata and start timings from the `.cue` sheets into the episode JSON.
 //
 // The cue sheets list tracks in play order with an `INDEX 01 MM:SS:FF` marker
-// (MM can exceed 59; frames are ignored to match the existing data). Some cues
-// include a leading "intro" entry that is absent from the JSON tracklist, so we
-// pick the leading offset that best aligns cue entries to JSON tracks by title
-// similarity, and only write when the alignment is confident.
+// (MM can exceed 59; frames are ignored for playback timing). Some cues include
+// a leading "intro" entry that is absent from the JSON tracklist.
 //
 // Usage:
 //   node scripts/apply-cuesheet-timings.mjs           # dry-run report
@@ -18,42 +16,6 @@ const rootDir = join(dirname(fileURLToPath(import.meta.url)), "..");
 const episodesDir = join(rootDir, "src/content/episodes");
 
 const shouldWrite = process.argv.includes("--write");
-const MIN_AVG_SIMILARITY = 0.5;
-
-const normalize = (value) =>
-  String(value || "")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, " ")
-    .trim();
-
-const levenshtein = (a, b) => {
-  if (a === b) return 0;
-  if (!a.length) return b.length;
-  if (!b.length) return a.length;
-  const previous = Array.from({ length: b.length + 1 }, (_, i) => i);
-  for (let i = 0; i < a.length; i++) {
-    let prev = previous[0];
-    previous[0] = i + 1;
-    for (let j = 0; j < b.length; j++) {
-      const temp = previous[j + 1];
-      previous[j + 1] =
-        a[i] === b[j] ? prev : Math.min(prev + 1, previous[j + 1] + 1, previous[j] + 1);
-      prev = temp;
-    }
-  }
-  return previous[b.length];
-};
-
-const similarity = (a, b) => {
-  const na = normalize(a);
-  const nb = normalize(b);
-  if (!na && !nb) return 1;
-  const maxLen = Math.max(na.length, nb.length) || 1;
-  return 1 - levenshtein(na, nb) / maxLen;
-};
-
-const trackKey = (artist, title) => `${artist} ${title}`;
-
 const parseCue = (text) => {
   const entries = [];
   let current = null;
@@ -62,7 +24,7 @@ const parseCue = (text) => {
     const line = rawLine.trim();
     const trackMatch = line.match(/^TRACK\s+\d+\s+AUDIO$/i);
     if (trackMatch) {
-      current = { performer: "", title: "", seconds: null };
+      current = { performer: "", title: "", index: "", seconds: null };
       entries.push(current);
       continue;
     }
@@ -80,6 +42,7 @@ const parseCue = (text) => {
     }
     const indexMatch = line.match(/^INDEX\s+01\s+(\d+):(\d+):(\d+)$/i);
     if (indexMatch && current.seconds === null) {
+      current.index = indexMatch[0].replace(/^INDEX\s+01\s+/i, "");
       const minutes = Number(indexMatch[1]);
       const secs = Number(indexMatch[2]);
       current.seconds = minutes * 60 + secs;
@@ -87,6 +50,21 @@ const parseCue = (text) => {
   }
 
   return entries.filter((entry) => entry.seconds !== null);
+};
+
+const isIntro = (entry, index) => index === 0 && entry.title.trim().toLowerCase() === "intro";
+
+const normalizeTrackValue = (value) => String(value || "").toLowerCase().trim();
+
+const findExistingTrack = (tracks, cue) => {
+  const artist = normalizeTrackValue(cue.performer);
+  const title = normalizeTrackValue(cue.title);
+  return (
+    tracks.find(
+      (track) =>
+        normalizeTrackValue(track.artist) === artist && normalizeTrackValue(track.title) === title
+    ) || tracks.find((track) => normalizeTrackValue(track.title) === title)
+  );
 };
 
 const formatStart = (totalSeconds) => {
@@ -99,17 +77,6 @@ const formatStart = (totalSeconds) => {
   return `${minutes}:${String(seconds).padStart(2, "0")}`;
 };
 
-const scoreOffset = (tracks, cueEntries, offset) => {
-  if (cueEntries.length - offset < tracks.length) return -1;
-  let total = 0;
-  for (let i = 0; i < tracks.length; i++) {
-    const track = tracks[i];
-    const cue = cueEntries[i + offset];
-    total += similarity(trackKey(track.artist, track.title), trackKey(cue.performer, cue.title));
-  }
-  return total / tracks.length;
-};
-
 const run = () => {
   const files = readdirSync(episodesDir).filter((file) => file.endsWith(".json"));
   const report = [];
@@ -119,7 +86,7 @@ const run = () => {
     const path = join(episodesDir, file);
     const episode = JSON.parse(readFileSync(path, "utf-8"));
 
-    if (!episode.cuesheet || !Array.isArray(episode.tracks) || episode.tracks.length === 0) {
+    if (!episode.cuesheet) {
       continue;
     }
 
@@ -135,42 +102,29 @@ const run = () => {
       continue;
     }
 
-    const maxOffset = Math.max(0, cueEntries.length - episode.tracks.length);
-    let bestOffset = 0;
-    let bestScore = -1;
-    for (let offset = 0; offset <= maxOffset; offset++) {
-      const score = scoreOffset(episode.tracks, cueEntries, offset);
-      if (score > bestScore) {
-        bestScore = score;
-        bestOffset = offset;
-      }
-    }
-
-    if (bestScore < MIN_AVG_SIMILARITY) {
-      report.push({
-        id: episode.id,
-        status: "low-confidence",
-        score: bestScore.toFixed(2),
-        offset: bestOffset,
-        cue: cueEntries.length,
-        json: episode.tracks.length,
+    const existingTracks = Array.isArray(episode.tracks) ? episode.tracks : [];
+    const tracks = cueEntries
+      .filter((entry, index) => !isIntro(entry, index))
+      .map((cue, index) => {
+        const existingTrack = findExistingTrack(existingTracks, cue);
+        return {
+          n: index + 1,
+          artist: cue.performer,
+          title: cue.title,
+          label: existingTrack?.label || "",
+          index: cue.index,
+          start: formatStart(cue.seconds),
+          startSeconds: cue.seconds,
+        };
       });
-      continue;
-    }
 
-    for (let i = 0; i < episode.tracks.length; i++) {
-      const cue = cueEntries[i + bestOffset];
-      episode.tracks[i].start = formatStart(cue.seconds);
-      episode.tracks[i].startSeconds = cue.seconds;
-    }
+    episode.tracks = tracks;
 
     report.push({
       id: episode.id,
       status: "matched",
-      score: bestScore.toFixed(2),
-      offset: bestOffset,
       cue: cueEntries.length,
-      json: episode.tracks.length,
+      json: tracks.length,
     });
 
     if (shouldWrite) {
@@ -182,7 +136,7 @@ const run = () => {
   for (const entry of report.sort((a, b) => a.id.localeCompare(b.id))) {
     if (entry.status === "matched") {
       console.log(
-        `+ ${entry.id}: offset ${entry.offset}, score ${entry.score} (cue ${entry.cue} / json ${entry.json})`
+        `+ ${entry.id}: generated ${entry.json} track(s) from ${entry.cue} cue entr${entry.cue === 1 ? "y" : "ies"}`
       );
     } else {
       console.log(`? ${entry.id}: ${entry.status}${entry.score ? ` score ${entry.score}` : ""}`);

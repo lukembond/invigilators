@@ -18,6 +18,7 @@
       "artist": "Gai Barone",
       "title": "Lost in Music (Solarstone Pure Mix)",
       "label": "Pure Trance",
+      "index": "00:53:00",
       "start": "0:53",
       "startSeconds": 53
     },
@@ -26,6 +27,7 @@
       "artist": "Tranceye",
       "title": "Night's Watch",
       "label": "In Trance We Trust",
+      "index": "07:57:00",
       "start": "7:57",
       "startSeconds": 477
     },
@@ -34,6 +36,7 @@
       "artist": "Giuseppe Ottaviani",
       "title": "Countdown (OnAir Mix)",
       "label": "Black Hole",
+      "index": "13:17:00",
       "start": "13:17",
       "startSeconds": 797
     },
@@ -42,6 +45,7 @@
       "artist": "Sean Tyas & Darren Porter",
       "title": "The Potion",
       "label": "Future Sound Of Egypt",
+      "index": "20:15:00",
       "start": "20:15",
       "startSeconds": 1215
     },
@@ -50,6 +54,7 @@
       "artist": "Mike Sanders",
       "title": "The Eye Of The Storm",
       "label": "Grotesque Fusion",
+      "index": "27:10:00",
       "start": "27:10",
       "startSeconds": 1630
     },
@@ -58,6 +63,7 @@
       "artist": "Chris Schweizer",
       "title": "Loaded",
       "label": "Who's Afraid Of 138?!",
+      "index": "32:12:00",
       "start": "32:12",
       "startSeconds": 1932
     },
@@ -66,6 +72,7 @@
       "artist": "Ratty",
       "title": "Sunrise (Indecent Noise's Dreamstate Remix)",
       "label": "Kontor",
+      "index": "37:36:00",
       "start": "37:36",
       "startSeconds": 2256
     },
@@ -74,6 +81,7 @@
       "artist": "Solarstone & Alex Karweit",
       "title": "Breakaway (John Askew Remix)",
       "label": "Pure Trance",
+      "index": "43:05:00",
       "start": "43:05",
       "startSeconds": 2585
     },
@@ -82,6 +90,7 @@
       "artist": "Mark Sixma",
       "title": "Visionary (Vlind Remix)",
       "label": "Grotesque Reworked",
+      "index": "48:11:00",
       "start": "48:11",
       "startSeconds": 2891
     },
@@ -90,6 +99,7 @@
       "artist": "Simon Patterson",
       "title": "Spike",
       "label": "VII",
+      "index": "54:18:00",
       "start": "54:18",
       "startSeconds": 3258
     },
@@ -98,6 +108,7 @@
       "artist": "Myde",
       "title": "Night Rider (Myde's Night Rider Mix)",
       "label": "Redux 138",
+      "index": "60:03:00",
       "start": "1:00:03",
       "startSeconds": 3603
     },
@@ -106,6 +117,7 @@
       "artist": "Arctic Moon",
       "title": "Nocturnal Horizons",
       "label": "Future Sound Of Egypt",
+      "index": "64:58:00",
       "start": "1:04:58",
       "startSeconds": 3898
     },
@@ -114,6 +126,7 @@
       "artist": "Jens Jakob & Diego Morrill",
       "title": "Hacksaw",
       "label": "Discover Dark",
+      "index": "70:09:00",
       "start": "1:10:09",
       "startSeconds": 4209
     },
@@ -122,6 +135,7 @@
       "artist": "RAM",
       "title": "RAMexico",
       "label": "Who's Afraid Of 138?!",
+      "index": "74:57:00",
       "start": "1:14:57",
       "startSeconds": 4497
     },
@@ -130,6 +144,7 @@
       "artist": "DT8 Project",
       "title": "Destination (James Dymond Remix)",
       "label": "A State Of Trance",
+      "index": "79:35:00",
       "start": "1:19:35",
       "startSeconds": 4775
     },
@@ -138,6 +153,7 @@
       "artist": "Robert Nickson",
       "title": "Euphorica",
       "label": "Future Sound Of Egypt",
+      "index": "86:03:00",
       "start": "1:26:03",
       "startSeconds": 5163
     },
@@ -146,6 +162,7 @@
       "artist": "Daniel Kandi & Andrew Visior",
       "title": "Freedom",
       "label": "Always Alive",
+      "index": "90:56:00",
       "start": "1:30:56",
       "startSeconds": 5456
     },
@@ -154,6 +171,7 @@
       "artist": "John Askew",
       "title": "Black Coffee",
       "label": "VII",
+      "index": "95:20:00",
       "start": "1:35:20",
       "startSeconds": 5720
     }

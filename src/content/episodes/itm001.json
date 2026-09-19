@@ -18,7 +18,12 @@
       "title": "Late Summer Fields (Solarstone Deeper Sunrise Mix)",
       "label": "Solaris"
     },
-    { "n": 2, "artist": "Recluse", "title": "Emotional Void", "label": "Deepblue" },
+    {
+      "n": 2,
+      "artist": "Recluse",
+      "title": "Emotional Void",
+      "label": "Deep Blue"
+    },
     { "n": 3, "artist": "Rio Addicts", "title": "The Distance", "label": "Electronic Elements" },
     { "n": 4, "artist": "Ridgewalkers feat. El", "title": "Find", "label": "Armind" },
     { "n": 5, "artist": "Cressida", "title": "6AM (Kyau & Albert Remix)", "label": "euphonic" },

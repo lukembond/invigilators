@@ -18,6 +18,7 @@
       "artist": "Oliver Smith",
       "title": "Cadence",
       "label": "Anjunabeats",
+      "index": "00:54:00",
       "start": "0:54",
       "startSeconds": 54
     },
@@ -26,6 +27,7 @@
       "artist": "Daniel Heatcliff",
       "title": "Phoenix",
       "label": "In Trance We Trust",
+      "index": "06:48:55",
       "start": "6:48",
       "startSeconds": 408
     },
@@ -34,6 +36,7 @@
       "artist": "Solarity",
       "title": "Terminal 6 (Jaytech Remix)",
       "label": "Anjunadeep",
+      "index": "12:13:09",
       "start": "12:13",
       "startSeconds": 733
     },
@@ -42,6 +45,7 @@
       "artist": "Above & Beyond",
       "title": "Anjunabeach (Jerome Isma-ae Remix)",
       "label": "Anjunabeats",
+      "index": "17:08:02",
       "start": "17:08",
       "startSeconds": 1028
     },
@@ -50,6 +54,7 @@
       "artist": "Boom Jinx & Andrew Bayer",
       "title": "To The Six",
       "label": "Anjunadeep",
+      "index": "23:16:53",
       "start": "23:16",
       "startSeconds": 1396
     },
@@ -58,6 +63,7 @@
       "artist": "Sia",
       "title": "Buttons (Markus Schulz Coldharbour Dub)",
       "label": "Ultra",
+      "index": "30:50:52",
       "start": "30:50",
       "startSeconds": 1850
     },
@@ -66,14 +72,16 @@
       "artist": "Dakota",
       "title": "Steel Libido (Ashley Wallbridge Remix)",
       "label": "Coldharbour",
+      "index": "34:58:20",
       "start": "34:58",
       "startSeconds": 2098
     },
     {
       "n": 8,
-      "artist": "Delerium vs. Gareth Emery",
+      "artist": "Delerium vs Gareth Emery",
       "title": "This Is That Silence (Myon Collision)",
       "label": "CDR",
+      "index": "40:33:14",
       "start": "40:33",
       "startSeconds": 2433
     },
@@ -82,6 +90,7 @@
       "artist": "Lange & Andy Moor",
       "title": "Stadium Four",
       "label": "AVA",
+      "index": "45:38:74",
       "start": "45:38",
       "startSeconds": 2738
     },
@@ -90,6 +99,7 @@
       "artist": "Bakke & Ljungquist",
       "title": "Fanatic (Invigilators Edit)",
       "label": "CDR",
+      "index": "51:13:66",
       "start": "51:13",
       "startSeconds": 3073
     },
@@ -98,6 +108,7 @@
       "artist": "John O'Callaghan feat. Josie",
       "title": "Out of Nowhere (Stoneface & Terminal Remix)",
       "label": "Captivating Sounds",
+      "index": "57:02:35",
       "start": "57:02",
       "startSeconds": 3422
     },
@@ -106,6 +117,7 @@
       "artist": "Van Der Vleuten",
       "title": "Find My Way (Michael de Kooker Remix)",
       "label": "Combined Forces",
+      "index": "63:48:10",
       "start": "1:03:48",
       "startSeconds": 3828
     },
@@ -114,6 +126,7 @@
       "artist": "Josh Gabriel pres. Winter Kills",
       "title": "Deep Down (Alex M.O.R.P.H. Remix)",
       "label": "Different Pieces",
+      "index": "69:05:16",
       "start": "1:09:05",
       "startSeconds": 4145
     },
@@ -122,6 +135,7 @@
       "artist": "Ali Wilson",
       "title": "Boombox (Jochen Miller Remix)",
       "label": "In Charge",
+      "index": "76:02:14",
       "start": "1:16:02",
       "startSeconds": 4562
     }

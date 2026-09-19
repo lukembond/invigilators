@@ -18,6 +18,7 @@
       "artist": "Wellenrausch",
       "title": "Shape Of Berlin",
       "label": "Afterglow",
+      "index": "00:54:00",
       "start": "0:54",
       "startSeconds": 54
     },
@@ -26,6 +27,7 @@
       "artist": "VillaNaranjos",
       "title": "Granadella",
       "label": "Soundpiercing",
+      "index": "07:34:47",
       "start": "7:34",
       "startSeconds": 454
     },
@@ -34,6 +36,7 @@
       "artist": "Jaytech",
       "title": "Synergy",
       "label": "Anjunadeep",
+      "index": "12:44:65",
       "start": "12:44",
       "startSeconds": 764
     },
@@ -42,6 +45,7 @@
       "artist": "Ashley Wallbridge",
       "title": "Mumbai Traffic",
       "label": "AVA",
+      "index": "17:55:01",
       "start": "17:55",
       "startSeconds": 1075
     },
@@ -50,6 +54,7 @@
       "artist": "Ferry Corsten feat. Ben Hague",
       "title": "Ain't No Stoppin'",
       "label": "Flashover",
+      "index": "22:54:07",
       "start": "22:54",
       "startSeconds": 1374
     },
@@ -58,6 +63,7 @@
       "artist": "Ost & Meyer",
       "title": "Safari (Maor Levi Remix)",
       "label": "Enhanced",
+      "index": "27:27:23",
       "start": "27:27",
       "startSeconds": 1647
     },
@@ -66,6 +72,7 @@
       "artist": "Styller",
       "title": "All That Remains (Basil O'Glue Remix)",
       "label": "Coldharbour",
+      "index": "33:36:41",
       "start": "33:36",
       "startSeconds": 2016
     },
@@ -74,6 +81,7 @@
       "artist": "Rex Mundi",
       "title": "Shocking Blue",
       "label": "Coldharbour",
+      "index": "38:01:41",
       "start": "38:01",
       "startSeconds": 2281
     },
@@ -82,6 +90,7 @@
       "artist": "Solarstone & Haris C",
       "title": "Ultraviolet (Solarstone Pure Mix)",
       "label": "Touchstone",
+      "index": "42:46:65",
       "start": "42:46",
       "startSeconds": 2566
     },
@@ -90,6 +99,7 @@
       "artist": "Heatbeat",
       "title": "Rocker Monster",
       "label": "Captivating Sounds",
+      "index": "48:39:31",
       "start": "48:39",
       "startSeconds": 2919
     },
@@ -98,6 +108,7 @@
       "artist": "Cosmic Gate & Jes",
       "title": "Flying Blind (Norin & Rad Remix)",
       "label": "Black Hole",
+      "index": "53:15:53",
       "start": "53:15",
       "startSeconds": 3195
     },
@@ -106,14 +117,16 @@
       "artist": "Above & Beyond feat. Zoe Johnston",
       "title": "Love Is Not Enough (Maor Levi & Bluestone Remix)",
       "label": "Anjunabeats",
+      "index": "57:59:32",
       "start": "57:59",
       "startSeconds": 3479
     },
     {
       "n": 13,
-      "artist": "Gabriel & Dresden vs. Secret Panda Society",
-      "title": "No Reservations (KhoMha Remix)",
+      "artist": "Gabriel & Dresden",
+      "title": "No Reservations (Khomha Remix)",
       "label": "Organized Nature",
+      "index": "63:19:21",
       "start": "1:03:19",
       "startSeconds": 3799
     },
@@ -122,6 +135,7 @@
       "artist": "Wezz Devall",
       "title": "Kill Of The Year (Dave Schiemann MILF Revenge Remix)",
       "label": "Captivating Sounds",
+      "index": "67:41:00",
       "start": "1:07:41",
       "startSeconds": 4061
     },
@@ -130,6 +144,7 @@
       "artist": "Markus Schulz & Departure with Gabriel & Dresden",
       "title": "Without You Near (Gabriel & Dresden Mix)",
       "label": "Coldharbour",
+      "index": "72:02:57",
       "start": "1:12:02",
       "startSeconds": 4322
     }

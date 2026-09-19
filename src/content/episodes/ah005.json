@@ -18,6 +18,7 @@
       "artist": "Andain",
       "title": "Promises (Soundprank Remix)",
       "label": "Black Hole",
+      "index": "00:43:25",
       "start": "0:43",
       "startSeconds": 43
     },
@@ -26,6 +27,7 @@
       "artist": "Alex Pich",
       "title": "Heavens (Dezza Remix)",
       "label": "Colorize",
+      "index": "08:43:28",
       "start": "8:43",
       "startSeconds": 523
     },
@@ -34,6 +36,7 @@
       "artist": "Creep",
       "title": "Days (Super8 & Tab Remix)",
       "label": "Young Turks",
+      "index": "14:43:27",
       "start": "14:43",
       "startSeconds": 883
     },
@@ -42,6 +45,7 @@
       "artist": "Norin & Rad",
       "title": "Bloom",
       "label": "Anjunabeats",
+      "index": "21:08:37",
       "start": "21:08",
       "startSeconds": 1268
     },
@@ -50,6 +54,7 @@
       "artist": "Ad Brown feat. Kerry Leva",
       "title": "Memorial (You Were Loved) (Maor Levi Remix)",
       "label": "Enhanced Progressive",
+      "index": "25:26:16",
       "start": "25:26",
       "startSeconds": 1526
     },
@@ -58,6 +63,7 @@
       "artist": "Cosmic Gate",
       "title": "London Rain (New Club Mix)",
       "label": "Black Hole",
+      "index": "32:04:72",
       "start": "32:04",
       "startSeconds": 1924
     },
@@ -66,6 +72,7 @@
       "artist": "Ashley Wallbridge",
       "title": "Jynx",
       "label": "AVA",
+      "index": "37:30:07",
       "start": "37:30",
       "startSeconds": 2250
     },
@@ -74,6 +81,7 @@
       "artist": "Orjan Nilsen",
       "title": "Viking",
       "label": "Armind",
+      "index": "43:00:51",
       "start": "43:00",
       "startSeconds": 2580
     },
@@ -82,6 +90,7 @@
       "artist": "Matt Darey feat. Leah",
       "title": "Hold Your Breath (Khomha Remix)",
       "label": "S107",
+      "index": "49:10:32",
       "start": "49:10",
       "startSeconds": 2950
     },
@@ -90,6 +99,7 @@
       "artist": "W&W",
       "title": "AK-47",
       "label": "Captivating Sounds",
+      "index": "53:51:02",
       "start": "53:51",
       "startSeconds": 3231
     },
@@ -98,6 +108,7 @@
       "artist": "Above & Beyond feat. Richard Bedford",
       "title": "Every Little Beat (Myon & Shane54 Summer Of Love Remix)",
       "label": "Anjunabeats",
+      "index": "59:49:26",
       "start": "59:49",
       "startSeconds": 3589
     },
@@ -106,6 +117,7 @@
       "artist": "Emery & Kirsch",
       "title": "Lose Yourself (Tritonal's Air Up There Remix)",
       "label": "Enhanced",
+      "index": "65:09:12",
       "start": "1:05:09",
       "startSeconds": 3909
     },
@@ -114,6 +126,7 @@
       "artist": "Boom Jinx feat. Justine Suissa",
       "title": "Phoenix From The Flames (Omnia & The Blizzard Remix)",
       "label": "Anjunabeats",
+      "index": "71:30:58",
       "start": "1:11:30",
       "startSeconds": 4290
     },
@@ -122,6 +135,7 @@
       "artist": "Bobina feat. Betsie Larkin",
       "title": "You Belong To Me (Original Dub Mix)",
       "label": "Maelstrom",
+      "index": "77:34:30",
       "start": "1:17:34",
       "startSeconds": 4654
     },
@@ -130,6 +144,7 @@
       "artist": "tyDi",
       "title": "Acting Crazy (Tom Fall Remix)",
       "label": "S107",
+      "index": "82:59:64",
       "start": "1:22:59",
       "startSeconds": 4979
     },
@@ -138,6 +153,7 @@
       "artist": "Gareth Emery",
       "title": "Tokyo (Ben Gold Remix)",
       "label": "Garuda",
+      "index": "88:37:73",
       "start": "1:28:37",
       "startSeconds": 5317
     }
