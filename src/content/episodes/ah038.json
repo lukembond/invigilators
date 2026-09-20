@@ -1,0 +1,124 @@
+{
+  "id": "ah038",
+  "type": "aural-homework",
+  "title": "Aural Homework 038",
+  "date": "2026-04-24",
+  "location": "London, UK",
+  "length": "1:22:45",
+  "image_cover": "/img/episode-cover/ah038.webp",
+  "image_bg": "/img/episode-bg/ah038.webp",
+  "description": "Back for a big one, this time out the Invigilators deliver another vinyl mix of their favourite trance tracks. Expect some high-energy moments inspired by a double dose of music at Ministry of Sound that weekend, with Factor B taking the cake!",
+  "cuesheet": "../cuesheets/the_invigilators-aural_homework_038.cue",
+  "hearthis_id": "14685793",
+  "hearthis_url": "https://hearthis.at/theinvigilators/ah038/Qd0",
+  "tracks": [
+    {
+      "n": 1,
+      "artist": "Lemon & Einar K",
+      "title": "Hope",
+      "label": "Flashover",
+      "index": "00:54:00",
+      "start": "0:54",
+      "startSeconds": 54
+    },
+    {
+      "n": 2,
+      "artist": "Michael Dow",
+      "title": "Orbit",
+      "label": "Captivating Sounds",
+      "index": "06:38:00",
+      "start": "6:38",
+      "startSeconds": 398
+    },
+    {
+      "n": 3,
+      "artist": "Mike Koglin vs. P.O.S.",
+      "title": "Untitled Audio (Nitrous Oxide Remix)",
+      "label": "Anjunabeats",
+      "index": "13:36:00",
+      "start": "13:36",
+      "startSeconds": 816
+    },
+    {
+      "n": 4,
+      "artist": "Pulser",
+      "title": "In My World (Activa Remix)",
+      "label": "Toneplay",
+      "index": "20:07:00",
+      "start": "20:07",
+      "startSeconds": 1207
+    },
+    {
+      "n": 5,
+      "artist": "Aly & Fila meets Roger Shah & Susana",
+      "title": "Unbreakable",
+      "label": "Future Sound Of Egypt",
+      "index": "25:13:00",
+      "start": "25:13",
+      "startSeconds": 1513
+    },
+    {
+      "n": 6,
+      "artist": "Matt Hardwick vs. Smith & Pledger",
+      "title": "Day One",
+      "label": "Anjunabeats",
+      "index": "31:43:00",
+      "start": "31:43",
+      "startSeconds": 1903
+    },
+    {
+      "n": 7,
+      "artist": "Factor B feat. Craig Costello",
+      "title": "Burn For You",
+      "label": "Theatre Of The Mind",
+      "index": "38:54:00",
+      "start": "38:54",
+      "startSeconds": 2334
+    },
+    {
+      "n": 8,
+      "artist": "Nu NRG",
+      "title": "Bonsai",
+      "label": "Monster Tunes",
+      "index": "45:10:00",
+      "start": "45:10",
+      "startSeconds": 2710
+    },
+    {
+      "n": 9,
+      "artist": "Goldenscan",
+      "title": "Of Our Times (Super8 Remix)",
+      "label": "Lost Language",
+      "index": "50:18:00",
+      "start": "50:18",
+      "startSeconds": 3018
+    },
+    {
+      "n": 10,
+      "artist": "Moogwai",
+      "title": "Viola (Armin van Buuren Remix)",
+      "label": "Platipus",
+      "index": "56:47:00",
+      "start": "56:47",
+      "startSeconds": 3407
+    },
+    {
+      "n": 11,
+      "artist": "M.I.K.E.",
+      "title": "Sunrise At Palamos",
+      "label": "Bonzai",
+      "index": "65:15:00",
+      "start": "1:05:15",
+      "startSeconds": 3915
+    },
+    {
+      "n": 12,
+      "artist": "Delerium feat. Sarah McLachlan",
+      "title": "Silence (DJ Tiesto In Search Of Sunrise Remix)",
+      "label": "Nettwerk",
+      "index": "71:32:00",
+      "start": "1:11:32",
+      "startSeconds": 4292
+    }
+  ]
+}
