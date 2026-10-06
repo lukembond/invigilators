@@ -45,6 +45,61 @@ const fetchBuffer = async (url) => {
   return Buffer.from(await response.arrayBuffer());
 };
 
+const fetchEncodedWaveform = async (episode) => {
+  const meta = await fetchJson(toApiUrl(episode.hearthis_url));
+  if (!/^\d+$/.test(String(meta.user_id)) || !/^\d+$/.test(String(meta.id))) {
+    throw new Error("waveform IDs unavailable");
+  }
+  const [imageBuffer, maskBuffer] = await Promise.all([
+    fetchBuffer(`https://hearthis.at/_/cache/waveform_png/${meta.user_id}/${meta.id}.png`),
+    fetchBuffer("https://hearthis.at/_/images/logo_mask.png"),
+  ]);
+  const image = PNG.sync.read(imageBuffer);
+  const mask = PNG.sync.read(maskBuffer);
+  if (image.width !== mask.width || image.height !== mask.height) {
+    throw new Error("waveform image and mask dimensions differ");
+  }
+  const samples = [];
+  for (let pixel = image.width * image.height - 1; pixel >= 0 && samples.length < 3000; pixel--) {
+    const offset = pixel * 4;
+    if (mask.data[offset] === 0) continue;
+    for (let channel = 0; channel < 3 && samples.length < 3000; channel++) {
+      samples.push(mask.data[offset + channel] - image.data[offset + channel]);
+    }
+  }
+  if (samples.length !== 3000 || samples.some((value) => value < 0 || value > 255)) {
+    throw new Error("invalid encoded waveform samples");
+  }
+  return samples;
+};
+
+const fetchWaveData = async (episode) => {
+  const response = await fetch(episode.hearthis_url);
+  if (!response.ok) throw new Error(`${episode.hearthis_url} responded ${response.status}`);
+  const html = await response.text();
+  const canvas = [...html.matchAll(/<canvas\b[^>]*>/g)].map(([tag]) => tag).find((tag) =>
+    tag.includes('is="waveform-display"') && tag.includes(`data-track_id="${episode.hearthis_id}"`),
+  );
+  const dataUrl = canvas?.match(/data-url="([^"]+)"/)?.[1];
+  if (!dataUrl) throw new Error("waveform data URL unavailable");
+  const data = await fetchJson(new URL(dataUrl, episode.hearthis_url));
+  if (!Array.isArray(data) || !data.length || !data.every((value) => Number.isInteger(value) && value >= 0 && value <= 255)) {
+    throw new Error("invalid waveform data");
+  }
+  return data;
+};
+
+const extractDataPeaks = (data) => {
+  const peaks = Array.from({ length: PEAK_COUNT }, (_, bucket) => {
+    const start = Math.floor((bucket / PEAK_COUNT) * data.length);
+    const end = Math.max(start + 1, Math.ceil(((bucket + 1) / PEAK_COUNT) * data.length));
+    const samples = data.slice(start, end);
+    return samples.reduce((total, value) => total + Math.abs(value - 128), 0) / samples.length;
+  });
+  const max = Math.max(1, ...peaks);
+  return peaks.map((peak) => Math.max(MIN_PEAK, Math.round((peak / max) * 100)));
+};
+
 const extractPeaks = (pngBuffer) => {
   // The hearthis waveform mask encodes amplitude in the alpha channel. Collapse
   // each of PEAK_COUNT column buckets to its mean opacity, then normalize with a
@@ -92,23 +147,26 @@ const run = async () => {
     if (requestedIds.length > 0 && !requestedIds.includes(episode.id)) continue;
 
     try {
-      let waveformUrl;
+      let peaks;
       try {
-        const meta = await fetchJson(toApiUrl(episode.hearthis_url));
-        waveformUrl = meta.waveform_url;
+        peaks = extractDataPeaks(await fetchEncodedWaveform(episode));
       } catch (error) {
-        waveformUrl = toWaveformUrl(episode.hearthis_id);
-        if (!waveformUrl) throw error;
-        console.warn(`~ ${episode.id}: metadata unavailable, using hearthis_id`);
+        console.warn(`~ ${episode.id}: ${error.message}; trying waveform data`);
+        try {
+          peaks = extractDataPeaks(await fetchWaveData(episode));
+        } catch (dataError) {
+          console.warn(`~ ${episode.id}: ${dataError.message}; trying waveform mask`);
+          let waveformUrl;
+          try {
+            const meta = await fetchJson(toApiUrl(episode.hearthis_url));
+            waveformUrl = meta.waveform_url;
+          } catch {
+            waveformUrl = toWaveformUrl(episode.hearthis_id);
+          }
+          if (!waveformUrl) throw dataError;
+          peaks = extractPeaks(await fetchBuffer(waveformUrl));
+        }
       }
-
-      if (!waveformUrl) {
-        console.warn(`- ${episode.id}: no waveform_url available`);
-        continue;
-      }
-
-      const png = await fetchBuffer(waveformUrl);
-      const peaks = extractPeaks(png);
       writeFileSync(join(waveformsDir, `${episode.id}.json`), `${JSON.stringify(peaks)}\n`);
       written++;
       console.log(`+ ${episode.id}: stored ${peaks.length} peaks`);
