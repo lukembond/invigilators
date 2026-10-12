@@ -15,11 +15,19 @@ Fourthwall-hosted checkout. Payment details are never collected by this site.
    - `PUBLIC_FOURTHWALL_STOREFRONT_API_URL` to
      `https://storefront-api.fourthwall.com`, unless Fourthwall supplies a
      different host.
-3. Add the same variables to the static-site build environment in the hosting
-   provider before building. Astro embeds `PUBLIC_` variables in client assets;
-   the Storefront token is public by design. Never use an admin API token,
-   password, OAuth client secret, or other private credential here.
-4. Keep `.env` out of version control. `.env.example` contains placeholders only.
+3. In GitHub, open **Settings > Secrets and variables > Actions > Variables** and
+   add repository variables named `PUBLIC_FOURTHWALL_STOREFRONT_TOKEN` and
+   `PUBLIC_FOURTHWALL_SHOP_DOMAIN`. The Pages deploy workflow passes them to the
+   Astro build. The API URL defaults to
+   `https://storefront-api.fourthwall.com`.
+4. Astro embeds `PUBLIC_` variables in client assets. Fourthwall's Storefront
+   token is intended for public storefront requests: the API requires it as a
+   `storefront_token` query parameter and documents catalog access and cart
+   operations for custom frontends. Treat it as public, not as an admin secret;
+   never use an Open API user credential, password, OAuth client secret, or
+   other private credential here. GitHub Actions variables are appropriate;
+   do not use them for private credentials.
+5. Keep `.env` out of version control. `.env.example` contains placeholders only.
 
 ## Connectivity checks
 
