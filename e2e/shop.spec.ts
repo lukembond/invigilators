@@ -57,7 +57,9 @@ const makeCart = (quantity: number) => ({
 });
 
 test.describe("Fourthwall shop", () => {
-  test("renders products, opens details, manages cart, and redirects to checkout", async ({ page }) => {
+  test("renders products, opens details, manages cart, and redirects to checkout", async ({
+    page,
+  }) => {
     let cart = makeCart(1);
 
     await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
@@ -71,7 +73,7 @@ test.describe("Fourthwall shop", () => {
 
       if (url.pathname === "/v1/carts" && request.method() === "POST") {
         const body = request.postDataJSON() as { items: Array<{ variantId: string }> };
-        expect(body.items[0]?.variantId).toBe("variant-s");
+        expect(body.items[0]?.variantId).toBe("variant-l");
         cart = makeCart(1);
         await route.fulfill({ json: cart });
         return;
