@@ -1,5 +1,6 @@
 ---
 import Episode from "./Episode.astro";
+import SectionNav from "./SectionNav.astro";
 import type { Episode as EpisodeType } from "../services/episodes";
 
 interface Props {
@@ -17,12 +18,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
   <div
     class="booklet-topbar grid h-14 shrink-0 grid-cols-[1fr_auto_1fr] items-center border-b border-(--border) bg-(--background) px-8 max-[700px]:grid-cols-[auto_1fr] max-[700px]:px-4"
   >
-    <div
-      class="booklet-count justify-self-start font-mono text-[10px] tracking-[0.08em] text-(--muted-foreground)"
-      aria-label={`${allEpisodes.length} mixes`}
-    >
-      <span id="selected-counter">{allEpisodes.length} Mixes</span>
-    </div>
+    <SectionNav mixCount={allEpisodes.length} active="mixes" />
     <div
       class="booklet-wordmark col-start-3 flex flex-col items-end justify-self-end leading-none text-(--foreground) max-[700px]:col-start-2"
       aria-label="the Invigilators"

@@ -1,0 +1,115 @@
+---
+import SectionNav from "./SectionNav.astro";
+
+interface Props {
+  storefrontToken?: string;
+  apiUrl: string;
+  shopDomain?: string;
+  mixCount: number;
+}
+
+const { storefrontToken = "", apiUrl, shopDomain = "", mixCount } = Astro.props;
+---
+
+<main
+  id="shop-app"
+  class="booklet-view is-visible flex h-screen w-screen flex-col overflow-hidden bg-(--background)"
+  data-storefront-token={storefrontToken}
+  data-api-url={apiUrl}
+  data-shop-domain={shopDomain}
+  aria-label="Shop"
+>
+  <div
+    class="booklet-topbar grid h-14 shrink-0 grid-cols-[1fr_auto_1fr] items-center border-b border-(--border) bg-(--background) px-8 max-[700px]:grid-cols-[auto_1fr] max-[700px]:px-4"
+  >
+    <SectionNav mixCount={mixCount} active="shop" showCart />
+    <span
+      id="shop-product-count"
+      class="justify-self-center font-mono text-[10px] tracking-[0.08em] text-(--muted-foreground) max-[700px]:hidden"
+      aria-live="polite"
+    >
+      Shop
+    </span>
+    <div class="booklet-wordmark col-start-3 flex flex-col items-end justify-self-end leading-none text-(--foreground) max-[700px]:col-start-2" aria-label="the Invigilators">
+      <span class="text-[9px] font-light uppercase tracking-[0.45em] text-[rgba(240,228,228,0.55)] indent-[0.45em]">the</span>
+      <strong class="text-[17px] font-bold uppercase tracking-[0.18em] indent-[0.18em]">Invigilators</strong>
+    </div>
+  </div>
+
+  <div class="booklet-grid-wrap flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]">
+    <div class="w-[min(100%,1360px)]">
+      <p id="shop-status" class="py-16 text-center font-mono text-xs text-(--muted-foreground)" role="status" aria-live="polite">
+        Connecting to the shop...
+      </p>
+      <div
+        id="shop-products-list"
+        class="grid w-full grid-cols-[repeat(auto-fill,minmax(min(100%,220px),1fr))] gap-[clamp(14px,2vw,26px)]"
+        aria-label="Shop products"
+      ></div>
+    </div>
+  </div>
+</main>
+
+<section
+  id="shop-product-overlay"
+  class="mix-detail pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="shop-product-title"
+>
+  <div class="mix-detail-topbar flex h-14 shrink-0 items-center justify-between border-b border-(--border) bg-(--background) px-6 max-[900px]:px-4">
+    <div id="shop-overlay-counter" class="font-mono text-[10px] tracking-[0.08em] text-(--muted-foreground)"></div>
+    <div id="shop-overlay-nav-title" class="max-w-[55%] overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs font-semibold uppercase tracking-[0.12em]"></div>
+    <button id="shop-product-close" class="detail-close flex cursor-pointer items-center justify-center bg-transparent p-1.5 text-(--muted-foreground) transition-colors hover:text-(--accent) focus-visible:text-(--accent) focus-visible:outline-none" type="button" aria-label="Close product details">
+      <svg class="size-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+    </button>
+  </div>
+  <div class="grid min-h-0 flex-1 grid-cols-[minmax(280px,44%)_minmax(0,1fr)] overflow-hidden max-[700px]:block max-[700px]:overflow-y-auto">
+    <div class="flex min-h-0 items-center justify-center overflow-hidden border-r border-(--border) bg-[#0a0104] p-8 max-[700px]:max-h-[48vh] max-[700px]:border-r-0 max-[700px]:p-4">
+      <img id="shop-product-image" class="max-h-full max-w-full object-contain" src="" alt="" />
+    </div>
+    <div class="min-h-0 overflow-y-auto px-[clamp(24px,5vw,72px)] py-10 max-[700px]:overflow-visible max-[700px]:px-6 max-[700px]:py-7">
+      <p class="mb-3 font-mono text-[9px] uppercase tracking-[0.16em] text-(--accent)">The Invigilators Shop</p>
+      <h1 id="shop-product-title" class="mb-4 text-2xl font-bold leading-tight text-(--foreground)"></h1>
+      <p id="shop-product-price" class="mb-7 font-mono text-base text-(--foreground)"></p>
+      <p id="shop-product-description" class="mb-8 whitespace-pre-line text-sm font-light leading-[1.8] text-(--muted-foreground)"></p>
+      <div id="shop-product-variants" class="mb-6 flex flex-col gap-4"></div>
+      <p id="shop-product-availability" class="mb-5 font-mono text-[10px] text-(--muted-foreground)"></p>
+      <button id="shop-add-to-cart" class="w-full cursor-pointer border border-(--accent) bg-(--accent) px-6 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-(--foreground) transition-colors hover:bg-(--primary) disabled:cursor-not-allowed disabled:opacity-45" type="button">Add to cart</button>
+      <div id="shop-product-information" class="mt-8 flex flex-col gap-5"></div>
+    </div>
+  </div>
+</section>
+
+<section
+  id="shop-cart-overlay"
+  class="mix-detail pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)]"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="shop-cart-title"
+>
+  <div class="mix-detail-topbar flex h-14 shrink-0 items-center justify-between border-b border-(--border) bg-(--background) px-6 max-[900px]:px-4">
+    <span id="shop-cart-title" class="font-mono text-xs uppercase tracking-[0.14em]">Your cart</span>
+    <button id="shop-cart-close" class="detail-close flex cursor-pointer items-center justify-center bg-transparent p-1.5 text-(--muted-foreground) transition-colors hover:text-(--accent) focus-visible:text-(--accent) focus-visible:outline-none" type="button" aria-label="Close cart">
+      <svg class="size-4 fill-none stroke-current stroke-2" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12" /></svg>
+    </button>
+  </div>
+  <div class="mx-auto flex h-[calc(100%-3.5rem)] w-full max-w-3xl flex-col px-6 py-8">
+    <div id="shop-cart-items" class="min-h-0 flex-1 overflow-y-auto"></div>
+    <p id="shop-cart-status" class="py-3 font-mono text-[10px] text-(--accent)" role="status" aria-live="polite"></p>
+    <div class="flex items-center justify-between border-t border-(--border) py-5 font-mono text-xs">
+      <span>Subtotal</span>
+      <strong id="shop-cart-subtotal" class="font-medium"></strong>
+    </div>
+    <p class="mb-4 text-[10px] text-(--muted-foreground)">Shipping and taxes are calculated at checkout.</p>
+    <button id="shop-checkout" class="w-full cursor-pointer border border-(--accent) bg-(--accent) px-6 py-3 font-mono text-[10px] uppercase tracking-[0.12em] text-(--foreground) transition-colors hover:bg-(--primary) disabled:cursor-not-allowed disabled:opacity-45" type="button" disabled>Checkout</button>
+  </div>
+</section>
+
+<script>
+  import { initShop } from "../scripts/shop";
+
+  initShop();
+</script>

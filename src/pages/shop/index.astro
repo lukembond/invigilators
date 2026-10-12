@@ -1,0 +1,25 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import ShopCatalog from "../../components/ShopCatalog.astro";
+import { getEpisodes } from "../../services/episodes";
+
+const episodes = await getEpisodes();
+const storefrontToken = import.meta.env.PUBLIC_FOURTHWALL_STOREFRONT_TOKEN ?? "";
+const apiUrl =
+  import.meta.env.PUBLIC_FOURTHWALL_STOREFRONT_API_URL ??
+  "https://storefront-api.fourthwall.com";
+const shopDomain = import.meta.env.PUBLIC_FOURTHWALL_SHOP_DOMAIN ?? "";
+---
+
+<Layout
+  title="Shop | The Invigilators"
+  description="Official merchandise from The Invigilators."
+  canonicalPath="/shop/"
+>
+  <ShopCatalog
+    storefrontToken={storefrontToken}
+    apiUrl={apiUrl}
+    shopDomain={shopDomain}
+    mixCount={episodes.length}
+  />
+</Layout>
