@@ -1,7 +1,9 @@
 .astro
+.env
+.env.local
 dist
 node_modules
 npm-debug.log
 package-lock.json
-Thumbs.db
 test-results
+Thumbs.db

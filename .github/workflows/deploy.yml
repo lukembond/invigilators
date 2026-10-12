@@ -31,6 +31,9 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          PUBLIC_FOURTHWALL_STOREFRONT_TOKEN: ${{ vars.PUBLIC_FOURTHWALL_STOREFRONT_TOKEN }}
+          PUBLIC_FOURTHWALL_SHOP_DOMAIN: ${{ vars.PUBLIC_FOURTHWALL_SHOP_DOMAIN }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
