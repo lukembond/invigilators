@@ -134,4 +134,49 @@ test.describe("Fourthwall shop", () => {
     await expect(page).toHaveURL(/\/shop\/$/);
     await expect(page.locator("#shop-app")).toBeVisible();
   });
+
+  test("defaults currency from browser region and persists a manual override", async ({
+    browser,
+  }) => {
+    const context = await browser.newContext({ locale: "en-GB" });
+    const page = await context.newPage();
+    const requestedCurrencies: string[] = [];
+
+    await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
+      const url = new URL(route.request().url());
+      const currency = url.searchParams.get("currency") || "";
+      requestedCurrencies.push(currency);
+
+      if (url.pathname === "/v1/collections/all/products") {
+        const localizedProduct = structuredClone(product);
+        localizedProduct.variants = localizedProduct.variants.map((variant) => ({
+          ...variant,
+          unitPrice: { ...variant.unitPrice, currency },
+        }));
+        await route.fulfill({
+          json: { results: [localizedProduct], paging: { hasNextPage: false } },
+        });
+        return;
+      }
+
+      await route.fulfill({ status: 404, json: { code: "NOT_FOUND" } });
+    });
+
+    await page.goto("/shop/");
+    await expect(page.locator("#shop-product-count")).toHaveText("1 Item");
+    await expect(page.locator("#shop-currency")).toHaveValue("GBP");
+    await expect(page.locator("#shop-products-list article")).toContainText("£24.00");
+    expect(requestedCurrencies).toEqual(["GBP"]);
+
+    await page.locator("#shop-currency").selectOption("USD");
+    await expect(page.locator("#shop-currency")).toHaveValue("USD");
+    await expect(page.locator("#shop-products-list article")).toContainText("$24.00");
+    expect(requestedCurrencies).toEqual(["GBP", "USD"]);
+
+    await page.reload();
+    await expect(page.locator("#shop-product-count")).toHaveText("1 Item");
+    await expect(page.locator("#shop-currency")).toHaveValue("USD");
+    expect(requestedCurrencies).toEqual(["GBP", "USD", "USD"]);
+    await context.close();
+  });
 });

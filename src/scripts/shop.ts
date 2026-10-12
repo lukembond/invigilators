@@ -1,6 +1,8 @@
 import {
   createFourthwallClient,
+  getCurrencyFromLocales,
   formatFourthwallMoney,
+  isFourthwallCurrency,
   type FourthwallBundle,
   type FourthwallCart,
   type FourthwallCartRequestItem,
@@ -10,9 +12,9 @@ import {
 } from "../services/fourthwall";
 
 const CART_STORAGE_KEY = "invigilators-fourthwall-cart";
+const CURRENCY_STORAGE_KEY = "invigilators-fourthwall-currency";
 
-const text = (parent: ParentNode, selector: string) =>
-  parent.querySelector<HTMLElement>(selector);
+const text = (parent: ParentNode, selector: string) => parent.querySelector<HTMLElement>(selector);
 
 const isBundle = (offer: FourthwallOffer): offer is FourthwallBundle => offer.type === "BUNDLE";
 
@@ -53,6 +55,7 @@ export const initShop = () => {
   const cartSubtotal = text(cartOverlay, "#shop-cart-subtotal");
   const cartStatus = text(cartOverlay, "#shop-cart-status");
   const cartCount = text(root, "#shop-cart-count");
+  const currencySelect = root.querySelector<HTMLSelectElement>("#shop-currency");
   const checkoutButton = text(cartOverlay, "#shop-checkout") as HTMLButtonElement | null;
   const overlayCounter = text(overlay, "#shop-overlay-counter");
   const overlayNavTitle = text(overlay, "#shop-overlay-nav-title");
@@ -72,12 +75,28 @@ export const initShop = () => {
     !cartSubtotal ||
     !cartStatus ||
     !cartCount ||
+    !currencySelect ||
     !checkoutButton ||
     !overlayCounter ||
     !overlayNavTitle
   ) {
     return;
   }
+
+  const storedCurrency = window.localStorage.getItem(CURRENCY_STORAGE_KEY);
+  let selectedCurrency =
+    storedCurrency && isFourthwallCurrency(storedCurrency)
+      ? storedCurrency
+      : getCurrencyFromLocales(
+          navigator.languages.length ? navigator.languages : [navigator.language]
+        );
+  currencySelect.value = selectedCurrency;
+  currencySelect.addEventListener("change", () => {
+    if (!isFourthwallCurrency(currencySelect.value)) return;
+    selectedCurrency = currencySelect.value;
+    window.localStorage.setItem(CURRENCY_STORAGE_KEY, selectedCurrency);
+    window.location.reload();
+  });
 
   if (!token) {
     status.textContent = "The shop is not connected yet. Configure its Storefront API token.";
@@ -113,12 +132,14 @@ export const initShop = () => {
     card.className = "group min-w-0 border border-(--border) bg-(--card)";
 
     const imageButton = document.createElement("button");
-    imageButton.className = "shop-product-open block aspect-square w-full cursor-pointer overflow-hidden border-0 bg-[#0a0104] p-0 text-left";
+    imageButton.className =
+      "shop-product-open block aspect-square w-full cursor-pointer overflow-hidden border-0 bg-[#0a0104] p-0 text-left";
     imageButton.type = "button";
     imageButton.dataset.productSlug = offer.slug;
     imageButton.setAttribute("aria-label", `View ${offer.name}`);
     const image = document.createElement("img");
-    image.className = "h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]";
+    image.className =
+      "h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.035]";
     image.src = offerImage(offer);
     image.alt = offer.name;
     image.loading = index < 4 ? "eager" : "lazy";
@@ -133,12 +154,15 @@ export const initShop = () => {
     const price = document.createElement("p");
     price.className = "font-mono text-[10px] text-(--muted-foreground)";
     price.textContent = formatFourthwallMoney(
-      isBundle(offer) ? offer.price : offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" }
+      isBundle(offer)
+        ? offer.price
+        : (offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" })
     );
     title.append(name, price);
 
     const detailButton = document.createElement("button");
-    detailButton.className = "shop-product-open mt-0.5 shrink-0 cursor-pointer border border-(--border) bg-transparent px-2.5 py-1.5 font-mono text-[8px] uppercase tracking-[0.08em] text-(--foreground) transition-colors hover:border-(--accent)";
+    detailButton.className =
+      "shop-product-open mt-0.5 shrink-0 cursor-pointer border border-(--border) bg-transparent px-2.5 py-1.5 font-mono text-[8px] uppercase tracking-[0.08em] text-(--foreground) transition-colors hover:border-(--accent)";
     detailButton.type = "button";
     detailButton.dataset.productSlug = offer.slug;
     detailButton.textContent = "Details";
@@ -170,9 +194,11 @@ export const initShop = () => {
       productPrice.textContent = formatFourthwallMoney(activeOffer.price);
       return;
     }
-    const selectedId = productVariants.querySelector<HTMLSelectElement>("select[name='variant']")?.value;
+    const selectedId =
+      productVariants.querySelector<HTMLSelectElement>("select[name='variant']")?.value;
     const selectedVariant = activeOffer.variants.find((variant) => variant.id === selectedId);
-    if (selectedVariant) productPrice.textContent = formatFourthwallMoney(selectedVariant.unitPrice);
+    if (selectedVariant)
+      productPrice.textContent = formatFourthwallMoney(selectedVariant.unitPrice);
   };
 
   const openProduct = (offer: FourthwallOffer, updateHistory: boolean) => {
@@ -189,10 +215,12 @@ export const initShop = () => {
     const productSets = isBundle(offer) ? offer.offers : [offer];
     for (const [setIndex, product] of productSets.entries()) {
       const label = document.createElement("label");
-      label.className = "flex flex-col gap-2 font-mono text-[9px] uppercase tracking-[0.1em] text-(--muted-foreground)";
+      label.className =
+        "flex flex-col gap-2 font-mono text-[9px] uppercase tracking-[0.1em] text-(--muted-foreground)";
       label.textContent = isBundle(offer) ? product.name : "Select option";
       const select = document.createElement("select");
-      select.className = "w-full border border-(--border) bg-[#150306] px-3 py-3 text-xs normal-case tracking-normal text-(--foreground) focus-visible:border-(--accent) focus-visible:outline-none";
+      select.className =
+        "w-full border border-(--border) bg-[#150306] px-3 py-3 text-xs normal-case tracking-normal text-(--foreground) focus-visible:border-(--accent) focus-visible:outline-none";
       select.dataset.bundleOffer = isBundle(offer) ? product.id : "";
       select.name = isBundle(offer) ? `bundle-${product.id}` : "variant";
 
@@ -223,16 +251,20 @@ export const initShop = () => {
     }
 
     if (isBundle(offer)) {
-      productAvailability.textContent = offer.state.type === "SOLD_OUT" ? "Currently unavailable" : "Bundle";
+      productAvailability.textContent =
+        offer.state.type === "SOLD_OUT" ? "Currently unavailable" : "Bundle";
     }
-    addButton.disabled = offer.state.type === "SOLD_OUT" || !productSets.every((product) => product.variants.some(availability));
+    addButton.disabled =
+      offer.state.type === "SOLD_OUT" ||
+      !productSets.every((product) => product.variants.some(availability));
     updateProductPrice();
 
     for (const info of offer.additionalInformation ?? []) {
       const section = document.createElement("section");
       section.className = "border-t border-(--border) pt-4";
       const heading = document.createElement("h2");
-      heading.className = "mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-(--foreground)";
+      heading.className =
+        "mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-(--foreground)";
       heading.textContent = info.title;
       const body = document.createElement("p");
       body.className = "whitespace-pre-line text-[11px] leading-relaxed text-(--muted-foreground)";
@@ -245,7 +277,8 @@ export const initShop = () => {
       const guide = document.createElement("section");
       guide.className = "border-t border-(--border) pt-4";
       const heading = document.createElement("h2");
-      heading.className = "mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-(--foreground)";
+      heading.className =
+        "mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-(--foreground)";
       heading.textContent = "Size guide";
       const body = document.createElement("p");
       body.className = "text-[11px] leading-relaxed text-(--muted-foreground)";
@@ -253,7 +286,8 @@ export const initShop = () => {
       guide.append(heading, body);
       if (offer.sizeGuide.previewUrl || offer.sizeGuide.fileUrl) {
         const link = document.createElement("a");
-        link.className = "mt-2 inline-block text-[11px] text-(--foreground) underline underline-offset-4";
+        link.className =
+          "mt-2 inline-block text-[11px] text-(--foreground) underline underline-offset-4";
         link.href = offer.sizeGuide.previewUrl || offer.sizeGuide.fileUrl || "";
         link.target = "_blank";
         link.rel = "noreferrer";
@@ -290,11 +324,12 @@ export const initShop = () => {
     cartItems.replaceChildren();
     const items = cart?.items ?? [];
     let subtotal = 0;
-    let currency = "USD";
+    let currency = selectedCurrency;
 
     for (const item of items) {
       const row = document.createElement("article");
-      row.className = "grid grid-cols-[64px_minmax(0,1fr)_auto] items-center gap-4 border-b border-(--border) py-4";
+      row.className =
+        "grid grid-cols-[64px_minmax(0,1fr)_auto] items-center gap-4 border-b border-(--border) py-4";
       const image = document.createElement("img");
       image.className = "size-16 object-cover";
       image.src = item.variant.images[0]?.transformedUrl || item.variant.images[0]?.url || "";
@@ -309,7 +344,8 @@ export const initShop = () => {
       const controls = document.createElement("div");
       controls.className = "flex items-center gap-2 font-mono text-[10px]";
       const decrease = document.createElement("button");
-      decrease.className = "grid size-6 cursor-pointer place-items-center border border-(--border) bg-transparent text-(--foreground) hover:border-(--accent) disabled:opacity-40";
+      decrease.className =
+        "grid size-6 cursor-pointer place-items-center border border-(--border) bg-transparent text-(--foreground) hover:border-(--accent) disabled:opacity-40";
       decrease.type = "button";
       decrease.dataset.cartAction = "quantity";
       decrease.dataset.variantId = item.variant.id;
@@ -321,7 +357,8 @@ export const initShop = () => {
       quantity.className = "min-w-5 text-center tabular-nums";
       quantity.textContent = String(item.quantity);
       const increase = document.createElement("button");
-      increase.className = "grid size-6 cursor-pointer place-items-center border border-(--border) bg-transparent text-(--foreground) hover:border-(--accent)";
+      increase.className =
+        "grid size-6 cursor-pointer place-items-center border border-(--border) bg-transparent text-(--foreground) hover:border-(--accent)";
       increase.type = "button";
       increase.dataset.cartAction = "quantity";
       increase.dataset.variantId = item.variant.id;
@@ -329,7 +366,8 @@ export const initShop = () => {
       increase.textContent = "+";
       increase.setAttribute("aria-label", `Increase ${item.variant.product.name} quantity`);
       const remove = document.createElement("button");
-      remove.className = "cursor-pointer border-0 bg-transparent p-1 text-(--muted-foreground) underline underline-offset-2 hover:text-(--accent)";
+      remove.className =
+        "cursor-pointer border-0 bg-transparent p-1 text-(--muted-foreground) underline underline-offset-2 hover:text-(--accent)";
       remove.type = "button";
       remove.dataset.cartAction = "remove";
       remove.dataset.variantId = item.variant.id;
@@ -355,7 +393,8 @@ export const initShop = () => {
 
     cartSubtotal.textContent = formatFourthwallMoney({ value: subtotal, currency });
     checkoutButton.disabled = items.length === 0 || cartBusy || !shopDomain;
-    if (!shopDomain) cartStatus.textContent = "Checkout is unavailable until the shop domain is configured.";
+    if (!shopDomain)
+      cartStatus.textContent = "Checkout is unavailable until the shop domain is configured.";
     updateCartIndicator();
   };
 
@@ -364,7 +403,7 @@ export const initShop = () => {
     const savedCartId = window.localStorage.getItem(CART_STORAGE_KEY);
     if (savedCartId) {
       try {
-        cart = await client.getCart(savedCartId);
+        cart = await client.getCart(savedCartId, selectedCurrency);
         return cart;
       } catch {
         window.localStorage.removeItem(CART_STORAGE_KEY);
@@ -381,7 +420,7 @@ export const initShop = () => {
       return;
     }
     try {
-      cart = await client.getCart(savedCartId);
+      cart = await client.getCart(savedCartId, selectedCurrency);
     } catch {
       cart = null;
       window.localStorage.removeItem(CART_STORAGE_KEY);
@@ -401,7 +440,8 @@ export const initShop = () => {
       window.localStorage.setItem(CART_STORAGE_KEY, cart.id);
       cartStatus.textContent = successMessage;
     } catch (error) {
-      cartStatus.textContent = error instanceof Error ? error.message : "Unable to update the cart.";
+      cartStatus.textContent =
+        error instanceof Error ? error.message : "Unable to update the cart.";
     } finally {
       cartBusy = false;
       addButton.disabled = !activeOffer || activeOffer.state.type === "SOLD_OUT";
@@ -412,7 +452,7 @@ export const initShop = () => {
   const loadProducts = async () => {
     status.textContent = "Connecting to the shop...";
     try {
-      const offers = await client.getAllProducts();
+      const offers = await client.getAllProducts(selectedCurrency);
       for (const offer of offers) products.set(offer.slug, offer);
       productList.replaceChildren();
       offers.forEach(appendProductCard);
@@ -424,13 +464,16 @@ export const initShop = () => {
       const requestedProduct = requestedSlug ? products.get(requestedSlug) : undefined;
       if (requestedProduct) openProduct(requestedProduct, false);
     } catch (error) {
-      status.textContent = error instanceof Error ? error.message : "Unable to connect to the shop.";
+      status.textContent =
+        error instanceof Error ? error.message : "Unable to connect to the shop.";
       status.classList.remove("hidden");
     }
   };
 
   productList.addEventListener("click", (event) => {
-    const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>("[data-product-slug]");
+    const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>(
+      "[data-product-slug]"
+    );
     if (!button) return;
     const offer = products.get(button.dataset.productSlug || "");
     if (offer) openProduct(offer, true);
@@ -442,8 +485,8 @@ export const initShop = () => {
     await withCartRequest(async () => {
       const existingCart = await ensureCart();
       return existingCart
-        ? client.addToCart(existingCart.id, items)
-        : client.createCart(items);
+        ? client.addToCart(existingCart.id, items, selectedCurrency)
+        : client.createCart(items, selectedCurrency);
     }, `${activeOffer.name} added to cart.`);
   });
 
@@ -455,7 +498,9 @@ export const initShop = () => {
   });
 
   cartItems.addEventListener("click", async (event) => {
-    const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>("[data-cart-action]");
+    const button = (event.target as HTMLElement | null)?.closest<HTMLButtonElement>(
+      "[data-cart-action]"
+    );
     const variantId = button?.dataset.variantId;
     if (!cart || !variantId) return;
     const item = cart.items.find((cartItem) => cartItem.variant.id === variantId);
@@ -464,25 +509,32 @@ export const initShop = () => {
       const quantity = Number(button.dataset.quantity);
       if (!Number.isInteger(quantity) || quantity < 1 || quantity > 1000) return;
       await withCartRequest(
-        () => client.changeCart(cart?.id || "", [{ variantId, quantity }]),
+        () => client.changeCart(cart?.id || "", [{ variantId, quantity }], selectedCurrency),
         "Cart quantity updated."
       );
       return;
     }
     await withCartRequest(
-      () => client.removeFromCart(cart?.id || "", [{ variantId, quantity: item.quantity }]),
+      () =>
+        client.removeFromCart(
+          cart?.id || "",
+          [{ variantId, quantity: item.quantity }],
+          selectedCurrency
+        ),
       "Item removed from cart."
     );
   });
 
   checkoutButton.addEventListener("click", () => {
     if (!cart || !shopDomain || cart.items.length === 0) return;
-    const params = new URLSearchParams({ cartCurrency: cart.items[0]?.variant.unitPrice.currency || "USD", cartId: cart.id });
+    const params = new URLSearchParams({ cartCurrency: selectedCurrency, cartId: cart.id });
     window.location.assign(`https://${shopDomain}/checkout/?${params.toString()}`);
   });
 
   text(overlay, "#shop-product-close")?.addEventListener("click", () => closeProduct(true));
-  text(cartOverlay, "#shop-cart-close")?.addEventListener("click", () => setOverlayOpen(cartOverlay, false));
+  text(cartOverlay, "#shop-cart-close")?.addEventListener("click", () =>
+    setOverlayOpen(cartOverlay, false)
+  );
   overlay.addEventListener("click", (event) => {
     if (event.target === overlay) closeProduct(true);
   });

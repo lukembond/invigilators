@@ -66,6 +66,11 @@ and verify the cart count and item totals update. Use the checkout action only
 when ready to leave the site; it must redirect to the configured Fourthwall
 shop's hosted checkout. Do not submit a real order as a connectivity test.
 
+The currency selector initially uses the country region in the browser locale
+(for example, `en-GB` selects GBP). This is a convenience default, not precise
+geolocation; shoppers can override it, and their choice persists in local
+storage. Product/cart requests and checkout use the selected currency.
+
 For a production build, provide the variables to the build process first, then
 run `npm run build`. A successful local API request does not confirm that the
 production host permits browser requests; check the browser console and Network

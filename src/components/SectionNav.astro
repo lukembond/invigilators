@@ -3,16 +3,21 @@ interface Props {
   mixCount: number;
   active: "mixes" | "shop";
   showCart?: boolean;
+  showCurrency?: boolean;
+  currencies?: readonly { code: string; label: string }[];
 }
 
-const { mixCount, active, showCart = false } = Astro.props;
+const { mixCount, active, showCart = false, showCurrency = false, currencies = [] } = Astro.props;
 ---
 
-<nav class="flex items-center gap-5 justify-self-start font-mono text-[10px] tracking-[0.08em] max-[700px]:gap-3" aria-label="Sections">
+<nav
+  class="flex items-center gap-5 justify-self-start font-mono text-[10px] tracking-[0.08em] max-[700px]:gap-2 max-[360px]:gap-1"
+  aria-label="Sections"
+>
   <a
     id="mixes-nav-link"
     class:list={[
-      "border-b border-transparent py-1 text-(--muted-foreground) transition-colors hover:text-(--foreground)",
+      "border-b border-transparent py-1 text-(--muted-foreground) transition-colors hover:text-(--foreground) max-[360px]:text-[9px]",
       { "border-(--accent) text-(--foreground)": active === "mixes" },
     ]}
     href="/?view=mixes"
@@ -23,12 +28,32 @@ const { mixCount, active, showCart = false } = Astro.props;
   <a
     id="shop-nav-link"
     class:list={[
-      "border-b border-transparent py-1 text-(--muted-foreground) transition-colors hover:text-(--foreground)",
+      "border-b border-transparent py-1 text-(--muted-foreground) transition-colors hover:text-(--foreground) max-[360px]:text-[9px]",
       { "border-(--accent) text-(--foreground)": active === "shop" },
     ]}
     href="/shop/"
     aria-current={active === "shop" ? "page" : undefined}
-  >Shop</a>
+  >
+    Shop
+  </a>
+  {showCurrency && (
+    <div class="flex items-center">
+      <label class="sr-only" for="shop-currency">
+        Currency
+      </label>
+      <select
+        id="shop-currency"
+        class="w-[4.5rem] cursor-pointer border border-(--border) bg-(--background) px-2 py-1.5 font-mono text-[9px] text-(--foreground) focus-visible:border-(--accent) focus-visible:outline-none max-[700px]:w-14 max-[700px]:px-1 max-[360px]:w-12"
+        aria-label="Currency"
+      >
+        {currencies.map(({ code, label }) => (
+          <option value={code}>
+            {code} · {label}
+          </option>
+        ))}
+      </select>
+    </div>
+  )}
   {showCart && (
     <button
       id="shop-cart-open"
@@ -41,8 +66,10 @@ const { mixCount, active, showCart = false } = Astro.props;
         <circle cx="10" cy="20" r="1" />
         <circle cx="18" cy="20" r="1" />
       </svg>
-      <span>Cart</span>
-      <span id="shop-cart-count" class="min-w-4 text-center tabular-nums">0</span>
+      <span class="max-[440px]:hidden">Cart</span>
+      <span id="shop-cart-count" class="min-w-4 text-center tabular-nums">
+        0
+      </span>
     </button>
   )}
 </nav>
