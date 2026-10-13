@@ -154,6 +154,51 @@ test.describe("Fourthwall shop", () => {
     await expect(page.locator("#shop-app")).toBeVisible();
   });
 
+  test("shows sold out on the card and product details when the offer is sold out", async ({
+    page,
+  }) => {
+    await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
+      await route.fulfill({
+        json: {
+          results: [{ ...product, state: { type: "SOLD_OUT" } }],
+          paging: { hasNextPage: false },
+        },
+      });
+    });
+
+    await page.goto("/shop/");
+    await expect(page.locator("#shop-products-list article")).toContainText("Sold out");
+    await expect(page.locator("#shop-products-list article")).not.toContainText("$24.00");
+    await page.getByRole("button", { name: `View ${product.name}` }).click();
+    await expect(page.locator("#shop-product-availability")).toHaveText("Sold out");
+    await expect(page.locator("#shop-add-to-cart")).toBeDisabled();
+  });
+
+  test("shows sold out when no variants have stock", async ({ page }) => {
+    await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
+      await route.fulfill({
+        json: {
+          results: [
+            {
+              ...product,
+              variants: product.variants.map((variant) => ({
+                ...variant,
+                stock: { type: "LIMITED", inStock: 0 },
+              })),
+            },
+          ],
+          paging: { hasNextPage: false },
+        },
+      });
+    });
+
+    await page.goto("/shop/");
+    await expect(page.locator("#shop-products-list article")).toContainText("Sold out");
+    await page.getByRole("button", { name: `View ${product.name}` }).click();
+    await expect(page.locator("#shop-product-availability")).toHaveText("Sold out");
+    await expect(page.locator("#shop-add-to-cart")).toBeDisabled();
+  });
+
   test("keeps single-image products simple and strips unsafe rich text", async ({ page }) => {
     await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
       const singleImageProduct = {

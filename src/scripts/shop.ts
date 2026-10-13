@@ -26,6 +26,14 @@ const availability = (variant: FourthwallVariant) => {
   return (variant.stock.inStock ?? 0) > 0;
 };
 
+const isSoldOut = (offer: FourthwallOffer) =>
+  offer.state.type === "SOLD_OUT" ||
+  (isBundle(offer)
+    ? offer.offers.some(
+        (product) => product.state.type === "SOLD_OUT" || !product.variants.some(availability)
+      )
+    : !offer.variants.some(availability));
+
 const richTextTags = new Set([
   "P",
   "BR",
@@ -214,11 +222,13 @@ export const initShop = () => {
     name.textContent = offer.name;
     const price = document.createElement("p");
     price.className = "font-mono text-[10px] text-(--muted-foreground)";
-    price.textContent = formatFourthwallMoney(
-      isBundle(offer)
-        ? offer.price
-        : (offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" })
-    );
+    price.textContent = isSoldOut(offer)
+      ? "Sold out"
+      : formatFourthwallMoney(
+          isBundle(offer)
+            ? offer.price
+            : (offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" })
+        );
     title.append(name, price);
 
     const detailButton = document.createElement("button");
@@ -335,19 +345,16 @@ export const initShop = () => {
       label.append(select);
       productVariants.append(label);
       if (setIndex === 0 && !isBundle(offer)) {
-        productAvailability.textContent = product.variants.some(availability)
-          ? "In stock or made to order"
-          : "Currently unavailable";
+        productAvailability.textContent = isSoldOut(offer)
+          ? "Sold out"
+          : "In stock or made to order";
       }
     }
 
     if (isBundle(offer)) {
-      productAvailability.textContent =
-        offer.state.type === "SOLD_OUT" ? "Currently unavailable" : "Bundle";
+      productAvailability.textContent = isSoldOut(offer) ? "Sold out" : "Bundle";
     }
-    addButton.disabled =
-      offer.state.type === "SOLD_OUT" ||
-      !productSets.every((product) => product.variants.some(availability));
+    addButton.disabled = isSoldOut(offer);
     updateProductPrice();
 
     for (const info of offer.additionalInformation ?? []) {
@@ -535,7 +542,7 @@ export const initShop = () => {
         error instanceof Error ? error.message : "Unable to update the cart.";
     } finally {
       cartBusy = false;
-      addButton.disabled = !activeOffer || activeOffer.state.type === "SOLD_OUT";
+      addButton.disabled = !activeOffer || isSoldOut(activeOffer);
       renderCart();
     }
   };
