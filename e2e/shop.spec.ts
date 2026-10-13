@@ -5,13 +5,20 @@ const product = {
   id: "product-1",
   name: "Invigilators Tee",
   slug: "invigilators-tee",
-  description: "A test product for the shop overlay.",
+  description:
+    "<p>A test product for the shop overlay.</p><p>Printed <strong>front and back</strong>.</p>",
   state: { type: "AVAILABLE" },
   access: { type: "PUBLIC" },
   images: [
     {
       url: "https://images.example.com/tee.jpg",
       transformedUrl: "https://images.example.com/tee.jpg",
+      width: 800,
+      height: 800,
+    },
+    {
+      url: "https://images.example.com/tee-back.jpg",
+      transformedUrl: "https://images.example.com/tee-back.jpg",
       width: 800,
       height: 800,
     },
@@ -34,7 +41,9 @@ const product = {
       images: [],
     },
   ],
-  additionalInformation: [{ title: "Care", bodyHtml: "Wash cold." }],
+  additionalInformation: [
+    { title: "Care", bodyHtml: "<p>Wash cold.</p><ul><li>Hang dry</li></ul>" },
+  ],
 };
 
 const makeCart = (quantity: number) => ({
@@ -102,11 +111,21 @@ test.describe("Fourthwall shop", () => {
     await expect(page.locator("#shop-product-count")).toHaveText("1 Item");
     await expect(page.getByRole("heading", { name: product.name })).toBeVisible();
     await expect(page.locator("#mixes-nav-link")).toContainText(/Mixes/);
+    const cardImage = page.locator("#shop-products-list article img").first();
+    await expect(cardImage).toHaveAttribute("src", product.images[0].url);
+    await page.getByRole("button", { name: `View ${product.name}` }).hover();
+    await expect(cardImage).toHaveAttribute("src", product.images[1].url);
+    await page.mouse.move(0, 0);
+    await expect(cardImage).toHaveAttribute("src", product.images[0].url);
 
     await page.getByRole("button", { name: `View ${product.name}` }).click();
     await expect(page.locator("#shop-product-overlay")).toHaveAttribute("aria-hidden", "false");
-    await expect(page.locator("#shop-product-description")).toHaveText(product.description);
-    await expect(page.locator("#shop-product-information")).toContainText("Wash cold.");
+    await expect(page.locator("#shop-product-description p")).toHaveCount(2);
+    await expect(page.locator("#shop-product-description strong")).toHaveText("front and back");
+    await expect(page.locator("#shop-product-information li")).toHaveText("Hang dry");
+    await expect(page.locator("#shop-product-image")).toHaveAttribute("src", product.images[0].url);
+    await page.getByRole("button", { name: "View image 2 of 2" }).click();
+    await expect(page.locator("#shop-product-image")).toHaveAttribute("src", product.images[1].url);
     await page.locator("#shop-product-variants select").selectOption("variant-l");
     await expect(page.locator("#shop-product-price")).toHaveText("$28.00");
     await page.locator("#shop-add-to-cart").click();
@@ -133,6 +152,26 @@ test.describe("Fourthwall shop", () => {
     await page.locator("#shop-nav-link").click();
     await expect(page).toHaveURL(/\/shop\/$/);
     await expect(page.locator("#shop-app")).toBeVisible();
+  });
+
+  test("keeps single-image products simple and strips unsafe rich text", async ({ page }) => {
+    await page.route("https://storefront-api.fourthwall.com/**", async (route) => {
+      const singleImageProduct = {
+        ...product,
+        images: product.images.slice(0, 1),
+        description:
+          '<p>Safe <a href="javascript:alert(1)">link</a></p><script>window.insecure = true</script>',
+      };
+      await route.fulfill({
+        json: { results: [singleImageProduct], paging: { hasNextPage: false } },
+      });
+    });
+
+    await page.goto("/shop/");
+    await page.getByRole("button", { name: `View ${product.name}` }).click();
+    await expect(page.locator("#shop-product-gallery")).toBeHidden();
+    await expect(page.locator("#shop-product-description a")).not.toHaveAttribute("href");
+    await expect(page.locator("#shop-product-description")).not.toContainText("window.insecure");
   });
 
   test("defaults currency from browser region and persists a manual override", async ({

@@ -73,6 +73,27 @@ body {
   display: none !important;
 }
 
+.shop-rich-text {
+  white-space: pre-line;
+}
+
+.shop-rich-text p + p,
+.shop-rich-text p + ul,
+.shop-rich-text p + ol {
+  margin-top: 0.75em;
+}
+
+.shop-rich-text ul,
+.shop-rich-text ol {
+  padding-left: 1.5em;
+  list-style: revert;
+}
+
+.shop-rich-text a {
+  color: var(--foreground);
+  text-decoration: underline;
+}
+
 .mix-detail-right.is-tracklist-hidden .tracklist-heading,
 .mix-detail-right.is-tracklist-hidden .tracklist-columns,
 .mix-detail-right.is-tracklist-hidden .overlay-tracks {
