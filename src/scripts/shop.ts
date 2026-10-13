@@ -26,9 +26,62 @@ const availability = (variant: FourthwallVariant) => {
   return (variant.stock.inStock ?? 0) > 0;
 };
 
-const cleanHtmlText = (html: string) => {
+const isSoldOut = (offer: FourthwallOffer) =>
+  offer.state.type === "SOLD_OUT" ||
+  (isBundle(offer)
+    ? offer.offers.some(
+        (product) => product.state.type === "SOLD_OUT" || !product.variants.some(availability)
+      )
+    : !offer.variants.some(availability));
+
+const richTextTags = new Set([
+  "P",
+  "BR",
+  "STRONG",
+  "B",
+  "EM",
+  "I",
+  "UL",
+  "OL",
+  "LI",
+  "A",
+  "H2",
+  "H3",
+  "H4",
+  "BLOCKQUOTE",
+]);
+
+const renderRichText = (container: HTMLElement, html: string) => {
   const parsed = new DOMParser().parseFromString(html, "text/html");
-  return parsed.body.textContent?.trim() ?? "";
+  const copy = (source: Node, destination: Node) => {
+    if (source.nodeType === Node.TEXT_NODE) {
+      destination.appendChild(document.createTextNode(source.textContent || ""));
+      return;
+    }
+    if (!(source instanceof Element) || ["SCRIPT", "STYLE", "IFRAME"].includes(source.tagName))
+      return;
+    const element = richTextTags.has(source.tagName)
+      ? document.createElement(source.tagName.toLowerCase())
+      : null;
+    if (element?.tagName === "A") {
+      const href = source.getAttribute("href");
+      if (href) {
+        try {
+          const url = new URL(href, window.location.href);
+          if (["https:", "http:", "mailto:"].includes(url.protocol))
+            element.setAttribute("href", url.href);
+        } catch {
+          // Ignore malformed links in storefront content.
+        }
+      }
+    }
+    const target = element ?? destination;
+    for (const child of source.childNodes) copy(child, target);
+    if (element) destination.appendChild(element);
+  };
+  const fragment = document.createDocumentFragment();
+  for (const child of parsed.body.childNodes) copy(child, fragment);
+  container.replaceChildren(fragment);
 };
 
 export const initShop = () => {
@@ -44,6 +97,7 @@ export const initShop = () => {
   const productList = text(root, "#shop-products-list");
   const productCount = text(root, "#shop-product-count");
   const productImage = text(overlay, "#shop-product-image") as HTMLImageElement | null;
+  const productGallery = text(overlay, "#shop-product-gallery");
   const productTitle = text(overlay, "#shop-product-title");
   const productPrice = text(overlay, "#shop-product-price");
   const productDescription = text(overlay, "#shop-product-description");
@@ -64,6 +118,7 @@ export const initShop = () => {
     !status ||
     !productList ||
     !productImage ||
+    !productGallery ||
     !productTitle ||
     !productPrice ||
     !productDescription ||
@@ -143,6 +198,20 @@ export const initShop = () => {
     image.src = offerImage(offer);
     image.alt = offer.name;
     image.loading = index < 4 ? "eager" : "lazy";
+    if (offer.images[1]) {
+      imageButton.addEventListener("mouseenter", () => {
+        image.src = offer.images[1].transformedUrl || offer.images[1].url;
+      });
+      imageButton.addEventListener("mouseleave", () => {
+        image.src = offerImage(offer);
+      });
+      imageButton.addEventListener("focus", () => {
+        image.src = offer.images[1].transformedUrl || offer.images[1].url;
+      });
+      imageButton.addEventListener("blur", () => {
+        image.src = offerImage(offer);
+      });
+    }
     imageButton.append(image);
 
     const info = document.createElement("div");
@@ -153,11 +222,13 @@ export const initShop = () => {
     name.textContent = offer.name;
     const price = document.createElement("p");
     price.className = "font-mono text-[10px] text-(--muted-foreground)";
-    price.textContent = formatFourthwallMoney(
-      isBundle(offer)
-        ? offer.price
-        : (offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" })
-    );
+    price.textContent = isSoldOut(offer)
+      ? "Sold out"
+      : formatFourthwallMoney(
+          isBundle(offer)
+            ? offer.price
+            : (offer.variants[0]?.unitPrice ?? { value: 0, currency: "USD" })
+        );
     title.append(name, price);
 
     const detailButton = document.createElement("button");
@@ -204,9 +275,39 @@ export const initShop = () => {
   const openProduct = (offer: FourthwallOffer, updateHistory: boolean) => {
     activeOffer = offer;
     productTitle.textContent = offer.name;
-    productDescription.textContent = cleanHtmlText(offer.description);
-    productImage.src = offerImage(offer);
-    productImage.alt = offer.name;
+    renderRichText(productDescription, offer.description);
+    productGallery.replaceChildren();
+    const galleryButtons: HTMLButtonElement[] = [];
+    const selectImage = (index: number) => {
+      const image = offer.images[index];
+      productImage.src = image?.transformedUrl || image?.url || "";
+      productImage.alt = offer.images.length
+        ? `${offer.name}, image ${index + 1} of ${offer.images.length}`
+        : offer.name;
+      galleryButtons.forEach((button, buttonIndex) => {
+        button.setAttribute("aria-pressed", String(buttonIndex === index));
+        button.classList.toggle("border-(--accent)", buttonIndex === index);
+        button.classList.toggle("border-(--border)", buttonIndex !== index);
+      });
+    };
+    offer.images.forEach((image, index) => {
+      if (offer.images.length < 2) return;
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className =
+        "size-16 shrink-0 cursor-pointer overflow-hidden border bg-transparent p-0 focus-visible:outline-2 focus-visible:outline-(--accent)";
+      button.setAttribute("aria-label", `View image ${index + 1} of ${offer.images.length}`);
+      const thumbnail = document.createElement("img");
+      thumbnail.src = image.transformedUrl || image.url;
+      thumbnail.alt = "";
+      thumbnail.className = "size-full object-cover";
+      button.append(thumbnail);
+      button.addEventListener("click", () => selectImage(index));
+      galleryButtons.push(button);
+      productGallery.append(button);
+    });
+    productGallery.classList.toggle("hidden", offer.images.length < 2);
+    selectImage(0);
     productVariants.replaceChildren();
     productInformation.replaceChildren();
     overlayNavTitle.textContent = offer.name;
@@ -244,19 +345,16 @@ export const initShop = () => {
       label.append(select);
       productVariants.append(label);
       if (setIndex === 0 && !isBundle(offer)) {
-        productAvailability.textContent = product.variants.some(availability)
-          ? "In stock or made to order"
-          : "Currently unavailable";
+        productAvailability.textContent = isSoldOut(offer)
+          ? "Sold out"
+          : "In stock or made to order";
       }
     }
 
     if (isBundle(offer)) {
-      productAvailability.textContent =
-        offer.state.type === "SOLD_OUT" ? "Currently unavailable" : "Bundle";
+      productAvailability.textContent = isSoldOut(offer) ? "Sold out" : "Bundle";
     }
-    addButton.disabled =
-      offer.state.type === "SOLD_OUT" ||
-      !productSets.every((product) => product.variants.some(availability));
+    addButton.disabled = isSoldOut(offer);
     updateProductPrice();
 
     for (const info of offer.additionalInformation ?? []) {
@@ -266,9 +364,9 @@ export const initShop = () => {
       heading.className =
         "mb-2 font-mono text-[9px] uppercase tracking-[0.12em] text-(--foreground)";
       heading.textContent = info.title;
-      const body = document.createElement("p");
-      body.className = "whitespace-pre-line text-[11px] leading-relaxed text-(--muted-foreground)";
-      body.textContent = cleanHtmlText(info.bodyHtml);
+      const body = document.createElement("div");
+      body.className = "shop-rich-text text-[11px] leading-relaxed text-(--muted-foreground)";
+      renderRichText(body, info.bodyHtml);
       section.append(heading, body);
       productInformation.append(section);
     }
@@ -444,7 +542,7 @@ export const initShop = () => {
         error instanceof Error ? error.message : "Unable to update the cart.";
     } finally {
       cartBusy = false;
-      addButton.disabled = !activeOffer || activeOffer.state.type === "SOLD_OUT";
+      addButton.disabled = !activeOffer || isSoldOut(activeOffer);
       renderCart();
     }
   };

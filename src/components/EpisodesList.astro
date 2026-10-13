@@ -34,7 +34,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
   </div>
 
   <div
-    class="booklet-grid-wrap flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]"
+    class="booklet-grid-wrap site-scrollbar flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]"
   >
     <div
       id="episodes-list"
@@ -47,7 +47,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
 
 <section
   id="mix-overlay"
-  class="mix-detail pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
+  class="mix-detail site-scrollbar pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
   aria-hidden="true"
   role="dialog"
   aria-modal="true"
@@ -171,7 +171,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
       </div>
 
       <div
-        class="detail-description-panel min-h-0 flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
+        class="detail-description-panel site-scrollbar min-h-0 flex-1 overflow-y-auto border-b border-(--border) px-5 py-4 max-[700px]:overflow-visible [@media(min-width:701px)_and_(max-height:700px)]:py-3.5"
       >
         <p
           id="overlay-description"
@@ -220,7 +220,7 @@ const allEpisodes = Astro.props.allEpisodes ?? [];
         <span>Label</span>
         <span class="text-right">Length</span>
       </div>
-      <div id="overlay-tracks" class="overlay-tracks min-h-0 flex-1 overflow-y-auto"></div>
+      <div id="overlay-tracks" class="overlay-tracks site-scrollbar min-h-0 flex-1 overflow-y-auto"></div>
     </section>
   </div>
 </section>
