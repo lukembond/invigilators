@@ -48,7 +48,7 @@ const { storefrontToken = "", apiUrl, shopDomain = "", mixCount } = Astro.props;
     </div>
   </div>
 
-  <div class="booklet-grid-wrap flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]">
+  <div class="booklet-grid-wrap site-scrollbar flex flex-1 items-start justify-center overflow-x-hidden overflow-y-auto p-[clamp(18px,4vw,48px)]">
     <div class="w-[min(100%,1360px)]">
       <p
         id="shop-status"
@@ -69,7 +69,7 @@ const { storefrontToken = "", apiUrl, shopDomain = "", mixCount } = Astro.props;
 
 <section
   id="shop-product-overlay"
-  class="mix-detail pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
+  class="mix-detail site-scrollbar pointer-events-none fixed inset-0 z-100 overflow-hidden bg-(--background) text-(--foreground) opacity-0 transition-[opacity,transform] duration-280 ease-[cubic-bezier(0.16,1,0.3,1)] transform-[translateY(14px)_scale(0.985)] max-[700px]:overflow-y-auto"
   aria-hidden="true"
   role="dialog"
   aria-modal="true"
@@ -95,18 +95,18 @@ const { storefrontToken = "", apiUrl, shopDomain = "", mixCount } = Astro.props;
       </svg>
     </button>
   </div>
-  <div class="grid min-h-0 flex-1 grid-cols-[minmax(280px,44%)_minmax(0,1fr)] overflow-hidden max-[700px]:block max-[700px]:overflow-y-auto">
+  <div class="site-scrollbar grid min-h-0 flex-1 grid-cols-[minmax(280px,44%)_minmax(0,1fr)] overflow-hidden max-[700px]:block max-[700px]:overflow-y-auto">
     <div class="flex min-h-0 flex-col gap-4 overflow-hidden border-r border-(--border) bg-[#0a0104] p-8 max-[700px]:border-r-0 max-[700px]:p-4">
       <div class="flex min-h-0 flex-1 items-center justify-center max-[700px]:h-[38vh] max-[700px]:flex-none">
         <img id="shop-product-image" class="max-h-full max-w-full object-contain" src="" alt="" />
       </div>
       <div
         id="shop-product-gallery"
-        class="flex shrink-0 gap-2 overflow-x-auto"
+        class="site-scrollbar flex shrink-0 gap-2 overflow-x-auto"
         aria-label="Product images"
       ></div>
     </div>
-    <div class="min-h-0 overflow-y-auto px-[clamp(24px,5vw,72px)] py-10 max-[700px]:overflow-visible max-[700px]:px-6 max-[700px]:py-7">
+    <div class="site-scrollbar min-h-0 overflow-y-auto px-[clamp(24px,5vw,72px)] py-10 max-[700px]:overflow-visible max-[700px]:px-6 max-[700px]:py-7">
       <p class="mb-3 font-mono text-[9px] uppercase tracking-[0.16em] text-(--accent)">
         The Invigilators Shop
       </p>
@@ -160,7 +160,7 @@ const { storefrontToken = "", apiUrl, shopDomain = "", mixCount } = Astro.props;
     </button>
   </div>
   <div class="mx-auto flex h-[calc(100%-3.5rem)] w-full max-w-3xl flex-col px-6 py-8">
-    <div id="shop-cart-items" class="min-h-0 flex-1 overflow-y-auto"></div>
+    <div id="shop-cart-items" class="site-scrollbar min-h-0 flex-1 overflow-y-auto"></div>
     <p
       id="shop-cart-status"
       class="py-3 font-mono text-[10px] text-(--accent)"

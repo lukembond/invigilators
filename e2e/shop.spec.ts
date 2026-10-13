@@ -124,6 +124,10 @@ test.describe("Fourthwall shop", () => {
     await expect(page.locator("#shop-product-description strong")).toHaveText("front and back");
     await expect(page.locator("#shop-product-information li")).toHaveText("Hang dry");
     await expect(page.locator("#shop-product-image")).toHaveAttribute("src", product.images[0].url);
+    await expect(page.locator("#shop-product-gallery")).toHaveCSS(
+      "scrollbar-color",
+      "rgba(196, 17, 42, 0.42) rgba(13, 2, 5, 0.42)"
+    );
     await page.getByRole("button", { name: "View image 2 of 2" }).click();
     await expect(page.locator("#shop-product-image")).toHaveAttribute("src", product.images[1].url);
     await page.locator("#shop-product-variants select").selectOption("variant-l");
@@ -148,6 +152,10 @@ test.describe("Fourthwall shop", () => {
     await page.goto("/?view=mixes");
     await expect(page.locator("#landing")).toBeHidden();
     await expect(page.locator("#booklet")).toBeVisible();
+    await expect(page.locator("#booklet .booklet-grid-wrap")).toHaveCSS(
+      "scrollbar-color",
+      "rgba(196, 17, 42, 0.42) rgba(13, 2, 5, 0.42)"
+    );
     await expect(page.locator("#mixes-nav-link")).toHaveAttribute("aria-current", "page");
     await page.locator("#shop-nav-link").click();
     await expect(page).toHaveURL(/\/shop\/$/);

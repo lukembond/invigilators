@@ -252,31 +252,27 @@ body {
   animation: episodeSlideInLeft 360ms cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
-.detail-description-panel,
-.overlay-tracks {
+@utility site-scrollbar {
   scrollbar-color: rgba(196, 17, 42, 0.42) rgba(13, 2, 5, 0.42);
   scrollbar-width: thin;
-}
 
-.detail-description-panel::-webkit-scrollbar,
-.overlay-tracks::-webkit-scrollbar {
-  width: 0.5rem;
-}
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
 
-.detail-description-panel::-webkit-scrollbar-track,
-.overlay-tracks::-webkit-scrollbar-track {
-  background: rgba(13, 2, 5, 0.42);
-}
+  &::-webkit-scrollbar-track {
+    background: rgba(13, 2, 5, 0.42);
+  }
 
-.detail-description-panel::-webkit-scrollbar-thumb,
-.overlay-tracks::-webkit-scrollbar-thumb {
-  border: 2px solid rgba(13, 2, 5, 0.42);
-  background: rgba(196, 17, 42, 0.38);
-}
+  &::-webkit-scrollbar-thumb {
+    border: 2px solid rgba(13, 2, 5, 0.42);
+    background: rgba(196, 17, 42, 0.38);
+  }
 
-.detail-description-panel::-webkit-scrollbar-thumb:hover,
-.overlay-tracks::-webkit-scrollbar-thumb:hover {
-  background: rgba(196, 17, 42, 0.58);
+  &::-webkit-scrollbar-thumb:hover {
+    background: rgba(196, 17, 42, 0.58);
+  }
 }
 
 @keyframes fadeIn {
