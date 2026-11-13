@@ -21,7 +21,7 @@
     "@tailwindcss/vite": "^4.3.5",
     "@types/node": "^26.6.6",
     "@types/pngjs": "^6.0.5",
-    "@typescript-eslint/eslint-plugin": "^8.72.1",
+    "@typescript-eslint/eslint-plugin": "^8.72.2",
     "@typescript-eslint/parser": "^8.72.1",
     "astro": "^7.4.7",
     "astro-eslint-parser": "^3.2.0",
