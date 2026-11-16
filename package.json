@@ -30,7 +30,7 @@
     "eslint-plugin-astro": "^3.2.1",
     "globals": "^17.14.0",
     "pngjs": "^7.0.0",
-    "prettier": "^3.9.10",
+    "prettier": "^3.10.1",
     "prettier-plugin-astro": "^1.1.2",
     "tailwindcss": "^4.3.5",
     "typescript": "^6.0.3"
