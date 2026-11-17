@@ -23,7 +23,7 @@
     "@types/pngjs": "^6.0.5",
     "@typescript-eslint/eslint-plugin": "^8.72.2",
     "@typescript-eslint/parser": "^8.72.2",
-    "astro": "^7.4.11",
+    "astro": "^7.4.12",
     "astro-eslint-parser": "^3.2.0",
     "eslint": "^10.14.0",
     "eslint-config-prettier": "^10.1.8",
